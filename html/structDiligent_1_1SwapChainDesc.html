@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Diligent::SwapChainDesc struct | Diligent Engine</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i%7CSource+Code+Pro:400,400i,600" />
+  <link rel="stylesheet" href="m-dark+documentation.compiled.css" />
+  <link rel="icon" href="favicon-dark.png" type="image/png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#22272e" />
+</head>
+<body>
+<header><nav id="navigation">
+  <div class="m-container">
+    <div class="m-row">
+      <a href="index.html" id="m-navbar-brand" class="m-col-t-8 m-col-m-none m-left-m">Diligent Engine</a>
+      <div class="m-col-t-4 m-hide-m m-text-right m-nopadr">
+        <a href="#search" class="m-doc-search-icon" title="Search" onclick="return showSearch()"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
+          <path id="m-doc-search-icon-path" d="m6 0c-3.31 0-6 2.69-6 6 0 3.31 2.69 6 6 6 1.49 0 2.85-0.541 3.89-1.44-0.0164 0.338 0.147 0.759 0.5 1.15l3.22 3.79c0.552 0.614 1.45 0.665 2 0.115 0.55-0.55 0.499-1.45-0.115-2l-3.79-3.22c-0.392-0.353-0.812-0.515-1.15-0.5 0.895-1.05 1.44-2.41 1.44-3.89 0-3.31-2.69-6-6-6zm0 1.56a4.44 4.44 0 0 1 4.44 4.44 4.44 4.44 0 0 1-4.44 4.44 4.44 4.44 0 0 1-4.44-4.44 4.44 4.44 0 0 1 4.44-4.44z"/>
+        </svg></a>
+        <a id="m-navbar-show" href="#navigation" title="Show navigation"></a>
+        <a id="m-navbar-hide" href="#" title="Hide navigation"></a>
+      </div>
+      <div id="m-navbar-collapse" class="m-col-t-12 m-show-m m-col-m-none m-right-m">
+        <div class="m-row">
+          <ol class="m-col-t-6 m-col-m-none">
+            <li><a href="pages.html">Pages</a></li>
+            <li><a href="namespaces.html">Namespaces</a></li>
+          </ol>
+          <ol class="m-col-t-6 m-col-m-none" start="3">
+            <li><a href="annotated.html">Classes</a></li>
+            <li><a href="files.html">Files</a></li>
+            <li class="m-show-m"><a href="#search" class="m-doc-search-icon" title="Search" onclick="return showSearch()"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
+              <use href="#m-doc-search-icon-path" />
+            </svg></a></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav></header>
+<main><article>
+  <div class="m-container m-container-inflatable">
+    <div class="m-row">
+      <div class="m-col-l-10 m-push-l-1">
+        <h1>
+          <span class="m-breadcrumb"><a href="namespaceDiligent.html">Diligent</a>::<wbr/></span>SwapChainDesc <span class="m-thin">struct</span>
+          <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="GraphicsTypes_8h.html">&lt;Graphics/GraphicsEngine/interface/GraphicsTypes.h&gt;</a></div>
+        </h1>
+        <p>Swap chain description.</p>
+        <div class="m-block m-default">
+          <h3>Contents</h3>
+          <ul>
+            <li>
+              Reference
+              <ul>
+                <li><a href="#typeless-methods">Constructors, destructors, conversion operators</a></li>
+                <li><a href="#pub-attribs">Public variables</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <section id="typeless-methods">
+          <h2><a href="#typeless-methods">Constructors, destructors, conversion operators</a></h2>
+          <dl class="m-doc">
+            <dt id="a8c2ca4ee1dd74d74659231fe866230ae">
+              <span class="m-doc-wrap-bumper"><a href="#a8c2ca4ee1dd74d74659231fe866230ae" class="m-doc-self">SwapChainDesc</a>(</span><span class="m-doc-wrap"><a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> _Width,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> _Height,
+              <a href="namespaceDiligent.html#afb09d7198220b667023b6d0858abf24e" class="m-doc">TEXTURE_<wbr />FORMAT</a> _ColorBufferFormat,
+              <a href="namespaceDiligent.html#afb09d7198220b667023b6d0858abf24e" class="m-doc">TEXTURE_<wbr />FORMAT</a> _DepthBufferFormat,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> _BufferCount = <a href="structDiligent_1_1SwapChainDesc.html" class="m-doc">SwapChainDesc</a>{}.<a href="structDiligent_1_1SwapChainDesc.html#a05d5e9d8ca0869dd19d753d987b1454b" class="m-doc">BufferCount</a>,
+              <a href="namespaceDiligent.html#a32283d7134e62a58530ba1b0afb4e59e" class="m-doc">Float32</a> _DefaultDepthValue = <a href="structDiligent_1_1SwapChainDesc.html" class="m-doc">SwapChainDesc</a>{}.<a href="structDiligent_1_1SwapChainDesc.html#a4c098ffed1ea02069fe6141d80dd6d77" class="m-doc">DefaultDepthValue</a>,
+              <a href="namespaceDiligent.html#a3392c10112f826c3bcc60366e0f533db" class="m-doc">Uint8</a> _DefaultStencilValue = <a href="structDiligent_1_1SwapChainDesc.html" class="m-doc">SwapChainDesc</a>{}.<a href="structDiligent_1_1SwapChainDesc.html#a5d225a31e09f3cefab7a1146841c2abf" class="m-doc">DefaultStencilValue</a>,
+              bool _IsPrimary = <a href="structDiligent_1_1SwapChainDesc.html" class="m-doc">SwapChainDesc</a>{}.<a href="structDiligent_1_1SwapChainDesc.html#ab87df91c0d4365bd618caf55c0c144bd" class="m-doc">IsPrimary</a>)</span>
+            </dt>
+            <dd>Constructor intializes the structure members with default values.</dd>
+          </dl>
+        </section>
+        <section id="pub-attribs">
+          <h2><a href="#pub-attribs">Public variables</a></h2>
+          <dl class="m-doc">
+            <dt id="a93578e91e15e6546d33e292a9a43397a">
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> <a href="#a93578e91e15e6546d33e292a9a43397a" class="m-doc-self">Width</a>
+            </dt>
+            <dd>The swap chain width. Default value is 0.</dd>
+            <dt id="abdfe5c1308ae6a670d4a27ee289fd945">
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> <a href="#abdfe5c1308ae6a670d4a27ee289fd945" class="m-doc-self">Height</a>
+            </dt>
+            <dd>The swap chain height. Default value is 0.</dd>
+            <dt id="a43f3ed5e1426f6260d8d55d252180a6d">
+              <a href="namespaceDiligent.html#afb09d7198220b667023b6d0858abf24e" class="m-doc">TEXTURE_<wbr />FORMAT</a> <a href="#a43f3ed5e1426f6260d8d55d252180a6d" class="m-doc-self">ColorBufferFormat</a>
+            </dt>
+            <dd>Back buffer format. Default value is <a href="namespaceDiligent.html#afb09d7198220b667023b6d0858abf24ea86a2e99aecff070023e1dd0331fb9a95" class="m-doc">Diligent::<wbr />TEX_FORMAT_RGBA8_UNORM_SRGB</a>.</dd>
+            <dt id="a73cf565892611df8559aa13d1ff8f038">
+              <a href="namespaceDiligent.html#afb09d7198220b667023b6d0858abf24e" class="m-doc">TEXTURE_<wbr />FORMAT</a> <a href="#a73cf565892611df8559aa13d1ff8f038" class="m-doc-self">DepthBufferFormat</a>
+            </dt>
+            <dd>Depth buffer format. Default value is <a href="namespaceDiligent.html#afb09d7198220b667023b6d0858abf24eac2f008275b02ec4c7a85ac5da386958b" class="m-doc">Diligent::<wbr />TEX_FORMAT_D32_FLOAT</a>. Use <a href="namespaceDiligent.html#afb09d7198220b667023b6d0858abf24eabbb06fb704822d0fd64d9e1e9e07eb7d" class="m-doc">Diligent::<wbr />TEX_FORMAT_UNKNOWN</a> to create the swap chain without depth buffer.</dd>
+            <dt id="a1afec4e30ccbbff59bfe8528561917d8">
+              <a href="namespaceDiligent.html#aaec706149985ed8d8b2c22b88957167d" class="m-doc">SWAP_<wbr />CHAIN_<wbr />USAGE_<wbr />FLAGS</a> <a href="#a1afec4e30ccbbff59bfe8528561917d8" class="m-doc-self">Usage</a>
+            </dt>
+            <dd>Swap chain usage flags. Default value is <a href="namespaceDiligent.html#aaec706149985ed8d8b2c22b88957167daf0b077a72dad9bc4350e0d0989323a2c" class="m-doc">Diligent::<wbr />SWAP_CHAIN_USAGE_RENDER_TARGET</a>.</dd>
+            <dt>
+              <a href="namespaceDiligent.html#ae98858aabce64a8a802e82dc1e2ed93a" class="m-doc">SURFACE_<wbr />TRANSFORM</a> <a href="#a1d618eb623c3c656ca0ba95943cb57f6" class="m-doc">PreTransform</a>
+            </dt>
+            <dd>The transform, relative to the presentation engine&#x27;s natural orientation, applied to the image content prior to presentation.</dd>
+            <dt id="a05d5e9d8ca0869dd19d753d987b1454b">
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> <a href="#a05d5e9d8ca0869dd19d753d987b1454b" class="m-doc-self">BufferCount</a>
+            </dt>
+            <dd>The number of buffers in the swap chain.</dd>
+            <dt id="a4c098ffed1ea02069fe6141d80dd6d77">
+              <a href="namespaceDiligent.html#a32283d7134e62a58530ba1b0afb4e59e" class="m-doc">Float32</a> <a href="#a4c098ffed1ea02069fe6141d80dd6d77" class="m-doc-self">DefaultDepthValue</a>
+            </dt>
+            <dd>Default depth value, which is used as optimized depth clear value in D3D12.</dd>
+            <dt id="a5d225a31e09f3cefab7a1146841c2abf">
+              <a href="namespaceDiligent.html#a3392c10112f826c3bcc60366e0f533db" class="m-doc">Uint8</a> <a href="#a5d225a31e09f3cefab7a1146841c2abf" class="m-doc-self">DefaultStencilValue</a>
+            </dt>
+            <dd>Default stencil value, which is used as optimized stencil clear value in D3D12.</dd>
+            <dt id="ab87df91c0d4365bd618caf55c0c144bd">
+              bool <a href="#ab87df91c0d4365bd618caf55c0c144bd" class="m-doc-self">IsPrimary</a>
+            </dt>
+            <dd>Indicates if this is a primary swap chain. When Present() is called for the primary swap chain, the engine releases stale resources.</dd>
+          </dl>
+        </section>
+        <section>
+          <h2>Variable documentation</h2>
+          <section class="m-doc-details" id="a1d618eb623c3c656ca0ba95943cb57f6"><div>
+            <h3>
+              <a href="namespaceDiligent.html#ae98858aabce64a8a802e82dc1e2ed93a" class="m-doc">SURFACE_<wbr />TRANSFORM</a> Diligent::<wbr />SwapChainDesc::<wbr /><a href="#a1d618eb623c3c656ca0ba95943cb57f6" class="m-doc-self">PreTransform</a>
+            </h3>
+            <p>The transform, relative to the presentation engine&#x27;s natural orientation, applied to the image content prior to presentation.</p>
+<aside class="m-note m-info"><h4>Note</h4><p>When default value (SURFACE_TRANSFORM_OPTIMAL) is used, the engine will select the most optimal surface transformation. An application may request specific transform (e.g. SURFACE_TRANSFORM_IDENTITY) and the engine will try to use that. However, if the transform is not available, the engine will select the most optimal transform. After the swap chain has been created, this member will contain the actual transform selected by the engine and can be queried through <a href="structDiligent_1_1ISwapChain.html#a008f36fcd6e4007d72e1887c568462f1" class="m-doc">ISwapChain::<wbr />GetDesc()</a> method.</p></aside>
+          </div></section>
+        </section>
+      </div>
+    </div>
+  </div>
+</article></main>
+<div class="m-doc-search" id="search">
+  <a href="#!" onclick="return hideSearch()"></a>
+  <div class="m-container">
+    <div class="m-row">
+      <div class="m-col-m-8 m-push-m-2">
+        <div class="m-doc-search-header m-text m-small">
+          <div><span class="m-label m-default">Tab</span> / <span class="m-label m-default">T</span> to search, <span class="m-label m-default">Esc</span> to close</div>
+          <div id="search-symbolcount">&hellip;</div>
+        </div>
+        <div class="m-doc-search-content">
+          <form>
+            <input type="search" name="q" id="search-input" placeholder="Loading &hellip;" disabled="disabled" autofocus="autofocus" autocomplete="off" spellcheck="false" />
+          </form>
+          <noscript class="m-text m-danger m-text-center">Unlike everything else in the docs, the search functionality <em>requires</em> JavaScript.</noscript>
+          <div id="search-help" class="m-text m-dim m-text-center">
+            <p class="m-noindent">Search for symbols, directories, files, pages or
+            modules. You can omit any prefix from the symbol or file path; adding a
+            <code>:</code> or <code>/</code> suffix lists all members of given symbol or
+            directory.</p>
+            <p class="m-noindent">Use <span class="m-label m-dim">&darr;</span>
+            / <span class="m-label m-dim">&uarr;</span> to navigate through the list,
+            <span class="m-label m-dim">Enter</span> to go.
+            <span class="m-label m-dim">Tab</span> autocompletes common prefix, you can
+            copy a link to the result using <span class="m-label m-dim">⌘</span>
+            <span class="m-label m-dim">L</span> while <span class="m-label m-dim">⌘</span>
+            <span class="m-label m-dim">M</span> produces a Markdown link.</p>
+          </div>
+          <div id="search-notfound" class="m-text m-warning m-text-center">Sorry, nothing was found.</div>
+          <ul id="search-results"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="search-v1.js"></script>
+<script src="searchdata-v1.js" async="async"></script>
+<footer><nav>
+  <div class="m-container">
+    <div class="m-row">
+      <div class="m-col-l-10 m-push-l-1">
+        <p>Diligent Engine. Created with <a href="https://doxygen.org/">Doxygen</a> 1.8.17 and <a href="https://mcss.mosra.cz/">m.css</a>.</p>
+      </div>
+    </div>
+  </div>
+</nav></footer>
+</body>
+</html>

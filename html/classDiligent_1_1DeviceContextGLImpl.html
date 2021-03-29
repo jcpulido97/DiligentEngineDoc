@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Diligent::DeviceContextGLImpl class | Diligent Engine</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i%7CSource+Code+Pro:400,400i,600" />
+  <link rel="stylesheet" href="m-dark+documentation.compiled.css" />
+  <link rel="icon" href="favicon-dark.png" type="image/png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#22272e" />
+</head>
+<body>
+<header><nav id="navigation">
+  <div class="m-container">
+    <div class="m-row">
+      <a href="index.html" id="m-navbar-brand" class="m-col-t-8 m-col-m-none m-left-m">Diligent Engine</a>
+      <div class="m-col-t-4 m-hide-m m-text-right m-nopadr">
+        <a href="#search" class="m-doc-search-icon" title="Search" onclick="return showSearch()"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
+          <path id="m-doc-search-icon-path" d="m6 0c-3.31 0-6 2.69-6 6 0 3.31 2.69 6 6 6 1.49 0 2.85-0.541 3.89-1.44-0.0164 0.338 0.147 0.759 0.5 1.15l3.22 3.79c0.552 0.614 1.45 0.665 2 0.115 0.55-0.55 0.499-1.45-0.115-2l-3.79-3.22c-0.392-0.353-0.812-0.515-1.15-0.5 0.895-1.05 1.44-2.41 1.44-3.89 0-3.31-2.69-6-6-6zm0 1.56a4.44 4.44 0 0 1 4.44 4.44 4.44 4.44 0 0 1-4.44 4.44 4.44 4.44 0 0 1-4.44-4.44 4.44 4.44 0 0 1 4.44-4.44z"/>
+        </svg></a>
+        <a id="m-navbar-show" href="#navigation" title="Show navigation"></a>
+        <a id="m-navbar-hide" href="#" title="Hide navigation"></a>
+      </div>
+      <div id="m-navbar-collapse" class="m-col-t-12 m-show-m m-col-m-none m-right-m">
+        <div class="m-row">
+          <ol class="m-col-t-6 m-col-m-none">
+            <li><a href="pages.html">Pages</a></li>
+            <li><a href="namespaces.html">Namespaces</a></li>
+          </ol>
+          <ol class="m-col-t-6 m-col-m-none" start="3">
+            <li><a href="annotated.html">Classes</a></li>
+            <li><a href="files.html">Files</a></li>
+            <li class="m-show-m"><a href="#search" class="m-doc-search-icon" title="Search" onclick="return showSearch()"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
+              <use href="#m-doc-search-icon-path" />
+            </svg></a></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav></header>
+<main><article>
+  <div class="m-container m-container-inflatable">
+    <div class="m-row">
+      <div class="m-col-l-10 m-push-l-1">
+        <h1>
+          <span class="m-breadcrumb"><a href="namespaceDiligent.html">Diligent</a>::<wbr/></span>DeviceContextGLImpl <span class="m-thin">class</span> <span class="m-label m-flat m-warning">final</span>
+        </h1>
+        <p>Device context implementation in OpenGL backend.</p>
+        <div class="m-block m-default">
+          <h3>Contents</h3>
+          <ul>
+            <li>
+              Reference
+              <ul>
+                <li><a href="#base-classes">Base classes</a></li>
+                <li><a href="#pub-methods">Public functions</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <section id="base-classes">
+          <h2><a href="#base-classes">Base classes</a></h2>
+          <dl class="m-doc">
+            <dt>
+              <div class="m-doc-template">template&lt;typename EngineImplTraits&gt;</div>
+              class <a href="classDiligent_1_1DeviceContextBase.html" class="m-doc">DeviceContextBase&lt;EngineGLImplTraits&gt;</a>
+            </dt>
+            <dd>Base implementation of the device context.</dd>
+          </dl>
+        </section>
+        <section id="pub-methods">
+          <h2><a href="#pub-methods">Public functions</a></h2>
+          <dl class="m-doc">
+            <dt id="ace04db97feaad903a6173e30c4382839">
+              <span class="m-doc-wrap-bumper">void <a href="#ace04db97feaad903a6173e30c4382839" class="m-doc-self">QueryInterface</a>(</span><span class="m-doc-wrap">const <a href="structDiligent_1_1INTERFACE__ID.html" class="m-doc">INTERFACE_<wbr />ID</a>&amp; IID,
+              <a href="structDiligent_1_1IObject.html" class="m-doc">IObject</a>** ppInterface) <span class="m-label m-flat m-warning">final</span></span>
+            </dt>
+            <dd>Queries the specific interface, see <a href="structDiligent_1_1IObject.html#a67a64ae99b067d498c56cc0433e4847e" class="m-doc">IObject::<wbr />QueryInterface()</a> for details.</dd>
+            <dt id="a6f833e7d9144b73eebe1d8c012807c4e">
+              <span class="m-doc-wrap-bumper">void <a href="#a6f833e7d9144b73eebe1d8c012807c4e" class="m-doc-self">SetPipelineState</a>(</span><span class="m-doc-wrap"><a href="structDiligent_1_1IPipelineState.html" class="m-doc">IPipelineState</a>* pPipelineState) <span class="m-label m-flat m-warning">final</span></span>
+            </dt>
+            <dd>Implementation of <a href="structDiligent_1_1IDeviceContext.html#af4a6e47ff8ead2a402196d5ea9550a70" class="m-doc">IDeviceContext::<wbr />SetPipelineState()</a> in OpenGL backend.</dd>
+            <dt id="a7e8c475f0861a6feeb55befa51559b0c">
+              <span class="m-doc-wrap-bumper">void <a href="#a7e8c475f0861a6feeb55befa51559b0c" class="m-doc-self">TransitionShaderResources</a>(</span><span class="m-doc-wrap"><a href="structDiligent_1_1IPipelineState.html" class="m-doc">IPipelineState</a>* pPipelineState,
+              <a href="structDiligent_1_1IShaderResourceBinding.html" class="m-doc">IShaderResourceBinding</a>* pShaderResourceBinding) <span class="m-label m-flat m-warning">final</span></span>
+            </dt>
+            <dd>Implementation of <a href="structDiligent_1_1IDeviceContext.html#a2616e1f70ce6e9df377bf9b7c971cbc5" class="m-doc">IDeviceContext::<wbr />TransitionShaderResources()</a> in OpenGL backend.</dd>
+            <dt id="a592c899ac6ba5f048a7f3c4a34b7aa82">
+              <span class="m-doc-wrap-bumper">void <a href="#a592c899ac6ba5f048a7f3c4a34b7aa82" class="m-doc-self">CommitShaderResources</a>(</span><span class="m-doc-wrap"><a href="structDiligent_1_1IShaderResourceBinding.html" class="m-doc">IShaderResourceBinding</a>* pShaderResourceBinding,
+              <a href="namespaceDiligent.html#a98f5c3e5380889788f96c5d5be690d25" class="m-doc">RESOURCE_<wbr />STATE_<wbr />TRANSITION_<wbr />MODE</a> StateTransitionMode) <span class="m-label m-flat m-warning">final</span></span>
+            </dt>
+            <dd>Implementation of <a href="structDiligent_1_1IDeviceContext.html#a24e82a3c38e7d3a496a82e67d02c9b57" class="m-doc">IDeviceContext::<wbr />CommitShaderResources()</a> in OpenGL backend.</dd>
+            <dt id="a172afff42241e5d35d08201a8b8e5d25">
+              <span class="m-doc-wrap-bumper">void <a href="#a172afff42241e5d35d08201a8b8e5d25" class="m-doc-self">SetStencilRef</a>(</span><span class="m-doc-wrap"><a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> StencilRef) <span class="m-label m-flat m-warning">final</span></span>
+            </dt>
+            <dd>Implementation of <a href="structDiligent_1_1IDeviceContext.html#a2288a7ff92ad792bed06a5b6ed064316" class="m-doc">IDeviceContext::<wbr />SetStencilRef()</a> in OpenGL backend.</dd>
+            <dt id="a41e56bc52ac83c0760046a6bb32ed7cb">
+              <span class="m-doc-wrap-bumper">void <a href="#a41e56bc52ac83c0760046a6bb32ed7cb" class="m-doc-self">SetBlendFactors</a>(</span><span class="m-doc-wrap">const float* pBlendFactors = nullptr) <span class="m-label m-flat m-warning">final</span></span>
+            </dt>
+            <dd>Implementation of <a href="structDiligent_1_1IDeviceContext.html#afbaacfa9752d4b4a629a6938149d039e" class="m-doc">IDeviceContext::<wbr />SetBlendFactors()</a> in OpenGL backend.</dd>
+            <dt id="a2557f3cac0c8674029789e94e7b4857e">
+              <span class="m-doc-wrap-bumper">void <a href="#a2557f3cac0c8674029789e94e7b4857e" class="m-doc-self">SetVertexBuffers</a>(</span><span class="m-doc-wrap"><a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> StartSlot,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> NumBuffersSet,
+              <a href="structDiligent_1_1IBuffer.html" class="m-doc">IBuffer</a>** ppBuffers,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a>* pOffsets,
+              <a href="namespaceDiligent.html#a98f5c3e5380889788f96c5d5be690d25" class="m-doc">RESOURCE_<wbr />STATE_<wbr />TRANSITION_<wbr />MODE</a> StateTransitionMode,
+              <a href="namespaceDiligent.html#acd12f4066d547aa66c98e96b0e66ebe5" class="m-doc">SET_<wbr />VERTEX_<wbr />BUFFERS_<wbr />FLAGS</a> Flags) <span class="m-label m-flat m-warning">final</span></span>
+            </dt>
+            <dd>Implementation of <a href="structDiligent_1_1IDeviceContext.html#ab6cf19eaf1087d020fa445983a38106a" class="m-doc">IDeviceContext::<wbr />SetVertexBuffers()</a> in OpenGL backend.</dd>
+            <dt id="a6283cc1c6ab1d1ebb9d0e2b3431729ca">
+              <span class="m-doc-wrap-bumper">void <a href="#a6283cc1c6ab1d1ebb9d0e2b3431729ca" class="m-doc-self">InvalidateState</a>(</span><span class="m-doc-wrap">) <span class="m-label m-flat m-warning">final</span></span>
+            </dt>
+            <dd>Implementation of <a href="structDiligent_1_1IDeviceContext.html#a5b75652981655918dd759a8320730440" class="m-doc">IDeviceContext::<wbr />InvalidateState()</a> in OpenGL backend.</dd>
+            <dt id="a345176412b30434f1db1193c0bbca2ea">
+              <span class="m-doc-wrap-bumper">void <a href="#a345176412b30434f1db1193c0bbca2ea" class="m-doc-self">SetIndexBuffer</a>(</span><span class="m-doc-wrap"><a href="structDiligent_1_1IBuffer.html" class="m-doc">IBuffer</a>* pIndexBuffer,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> ByteOffset,
+              <a href="namespaceDiligent.html#a98f5c3e5380889788f96c5d5be690d25" class="m-doc">RESOURCE_<wbr />STATE_<wbr />TRANSITION_<wbr />MODE</a> StateTransitionMode) <span class="m-label m-flat m-warning">final</span></span>
+            </dt>
+            <dd>Implementation of <a href="structDiligent_1_1IDeviceContext.html#a7223ba351e883d66de749cd936892d1c" class="m-doc">IDeviceContext::<wbr />SetIndexBuffer()</a> in OpenGL backend.</dd>
+            <dt id="ab8f6aefa72856012408567b660c08005">
+              <span class="m-doc-wrap-bumper">void <a href="#ab8f6aefa72856012408567b660c08005" class="m-doc-self">SetViewports</a>(</span><span class="m-doc-wrap"><a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> NumViewports,
+              const <a href="structDiligent_1_1Viewport.html" class="m-doc">Viewport</a>* pViewports,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> RTWidth,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> RTHeight) <span class="m-label m-flat m-warning">final</span></span>
+            </dt>
+            <dd>Implementation of <a href="structDiligent_1_1IDeviceContext.html#af82cd1fbb88febb8f19a6ab4226dea19" class="m-doc">IDeviceContext::<wbr />SetViewports()</a> in OpenGL backend.</dd>
+            <dt id="a38ddf7f7f6113a774586e79d4fbb0a34">
+              <span class="m-doc-wrap-bumper">void <a href="#a38ddf7f7f6113a774586e79d4fbb0a34" class="m-doc-self">SetScissorRects</a>(</span><span class="m-doc-wrap"><a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> NumRects,
+              const <a href="structDiligent_1_1Rect.html" class="m-doc">Rect</a>* pRects,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> RTWidth,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> RTHeight) <span class="m-label m-flat m-warning">final</span></span>
+            </dt>
+            <dd>Implementation of <a href="structDiligent_1_1IDeviceContext.html#ade3b55e65461253aa02fa48b2c1908c9" class="m-doc">IDeviceContext::<wbr />SetScissorRects()</a> in OpenGL backend.</dd>
+            <dt id="acd7a5b6e1c26b6c5fcf51943e01b31d7">
+              <span class="m-doc-wrap-bumper">void <a href="#acd7a5b6e1c26b6c5fcf51943e01b31d7" class="m-doc-self">SetRenderTargets</a>(</span><span class="m-doc-wrap"><a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> NumRenderTargets,
+              <a href="structDiligent_1_1ITextureView.html" class="m-doc">ITextureView</a>* ppRenderTargets[],
+              <a href="structDiligent_1_1ITextureView.html" class="m-doc">ITextureView</a>* pDepthStencil,
+              <a href="namespaceDiligent.html#a98f5c3e5380889788f96c5d5be690d25" class="m-doc">RESOURCE_<wbr />STATE_<wbr />TRANSITION_<wbr />MODE</a> StateTransitionMode) <span class="m-label m-flat m-warning">final</span></span>
+            </dt>
+            <dd>Implementation of <a href="structDiligent_1_1IDeviceContext.html#a9f860cf38e7957e9a9a6842e59135400" class="m-doc">IDeviceContext::<wbr />SetRenderTargets()</a> in OpenGL backend.</dd>
+            <dt id="aa7788a6ba356484eddd246d2e672d020">
+              <span class="m-doc-wrap-bumper">void <a href="#aa7788a6ba356484eddd246d2e672d020" class="m-doc-self">BeginRenderPass</a>(</span><span class="m-doc-wrap">const <a href="structDiligent_1_1BeginRenderPassAttribs.html" class="m-doc">BeginRenderPassAttribs</a>&amp; Attribs) <span class="m-label m-flat m-warning">final</span></span>
+            </dt>
+            <dd>Implementation of <a href="structDiligent_1_1IDeviceContext.html#a873e85ef4a5d4eae499dfd472d0f24a5" class="m-doc">IDeviceContext::<wbr />BeginRenderPass()</a> in Direct3D11 backend.</dd>
+            <dt id="a60f9fa48156ba33466e9e0baca81ce40">
+              <span class="m-doc-wrap-bumper">void <a href="#a60f9fa48156ba33466e9e0baca81ce40" class="m-doc-self">NextSubpass</a>(</span><span class="m-doc-wrap">) <span class="m-label m-flat m-warning">final</span></span>
+            </dt>
+            <dd>Implementation of <a href="structDiligent_1_1IDeviceContext.html#abe3fa17fede6a5c230455976326bd50e" class="m-doc">IDeviceContext::<wbr />NextSubpass()</a> in Direct3D11 backend.</dd>
+            <dt id="a7af80ab8b88e9485df7b0930ddb598f8">
+              <span class="m-doc-wrap-bumper">void <a href="#a7af80ab8b88e9485df7b0930ddb598f8" class="m-doc-self">EndRenderPass</a>(</span><span class="m-doc-wrap">) <span class="m-label m-flat m-warning">final</span></span>
+            </dt>
+            <dd>Implementation of <a href="structDiligent_1_1IDeviceContext.html#ab956846e37b6ef715d3dccaaaf27da35" class="m-doc">IDeviceContext::<wbr />EndRenderPass()</a> in Direct3D11 backend.</dd>
+            <dt id="aa819a899e57ad1ca4a152e71c31c392b">
+              <span class="m-doc-wrap-bumper">void <a href="#aa819a899e57ad1ca4a152e71c31c392b" class="m-doc-self">Draw</a>(</span><span class="m-doc-wrap">const <a href="structDiligent_1_1DrawAttribs.html" class="m-doc">DrawAttribs</a>&amp; Attribs) <span class="m-label m-flat m-warning">final</span></span>
+            </dt>
+            <dd>Implementation of <a href="structDiligent_1_1IDeviceContext.html#aa624c433889d7cc4e3bb1dabc56ddb94" class="m-doc">IDeviceContext::<wbr />Draw()</a> in OpenGL backend.</dd>
+            <dt id="afa3f8be76da1facdf15914b9bb1ab394">
+              <span class="m-doc-wrap-bumper">void <a href="#afa3f8be76da1facdf15914b9bb1ab394" class="m-doc-self">DrawIndexed</a>(</span><span class="m-doc-wrap">const <a href="structDiligent_1_1DrawIndexedAttribs.html" class="m-doc">DrawIndexedAttribs</a>&amp; Attribs) <span class="m-label m-flat m-warning">final</span></span>
+            </dt>
+            <dd>Implementation of <a href="structDiligent_1_1IDeviceContext.html#a51d3cb7fa1bfd78dad43e8e7fee98e84" class="m-doc">IDeviceContext::<wbr />DrawIndexed()</a> in OpenGL backend.</dd>
+            <dt id="a2c0ce5e55fab9999ea6a090b135cf57d">
+              <span class="m-doc-wrap-bumper">void <a href="#a2c0ce5e55fab9999ea6a090b135cf57d" class="m-doc-self">DrawIndirect</a>(</span><span class="m-doc-wrap">const <a href="structDiligent_1_1DrawIndirectAttribs.html" class="m-doc">DrawIndirectAttribs</a>&amp; Attribs,
+              <a href="structDiligent_1_1IBuffer.html" class="m-doc">IBuffer</a>* pAttribsBuffer) <span class="m-label m-flat m-warning">final</span></span>
+            </dt>
+            <dd>Implementation of <a href="structDiligent_1_1IDeviceContext.html#a045369ea09159295a39b200f57668b82" class="m-doc">IDeviceContext::<wbr />DrawIndirect()</a> in OpenGL backend.</dd>
+            <dt id="a32bfc103bde6f6c5fbb1b1aadcdefad4">
+              <span class="m-doc-wrap-bumper">void <a href="#a32bfc103bde6f6c5fbb1b1aadcdefad4" class="m-doc-self">DrawIndexedIndirect</a>(</span><span class="m-doc-wrap">const <a href="structDiligent_1_1DrawIndexedIndirectAttribs.html" class="m-doc">DrawIndexedIndirectAttribs</a>&amp; Attribs,
+              <a href="structDiligent_1_1IBuffer.html" class="m-doc">IBuffer</a>* pAttribsBuffer) <span class="m-label m-flat m-warning">final</span></span>
+            </dt>
+            <dd>Implementation of <a href="structDiligent_1_1IDeviceContext.html#a82144365757da5027de8ddfdad9d9863" class="m-doc">IDeviceContext::<wbr />DrawIndexedIndirect()</a> in OpenGL backend.</dd>
+            <dt id="a938f61c71a25b8685923f85083ed1f1f">
+              <span class="m-doc-wrap-bumper">void <a href="#a938f61c71a25b8685923f85083ed1f1f" class="m-doc-self">DrawMesh</a>(</span><span class="m-doc-wrap">const <a href="structDiligent_1_1DrawMeshAttribs.html" class="m-doc">DrawMeshAttribs</a>&amp; Attribs) <span class="m-label m-flat m-warning">final</span></span>
+            </dt>
+            <dd>Implementation of <a href="structDiligent_1_1IDeviceContext.html#a39391aec36be3c7d13b90fba08792945" class="m-doc">IDeviceContext::<wbr />DrawMesh()</a> in OpenGL backend.</dd>
+            <dt id="a8f986f72cac68d2de92c2147a5a88ccd">
+              <span class="m-doc-wrap-bumper">void <a href="#a8f986f72cac68d2de92c2147a5a88ccd" class="m-doc-self">DrawMeshIndirect</a>(</span><span class="m-doc-wrap">const <a href="structDiligent_1_1DrawMeshIndirectAttribs.html" class="m-doc">DrawMeshIndirectAttribs</a>&amp; Attribs,
+              <a href="structDiligent_1_1IBuffer.html" class="m-doc">IBuffer</a>* pAttribsBuffer) <span class="m-label m-flat m-warning">final</span></span>
+            </dt>
+            <dd>Implementation of <a href="structDiligent_1_1IDeviceContext.html#aff9bed598888c3a474fb4730e860174e" class="m-doc">IDeviceContext::<wbr />DrawMeshIndirect()</a> in OpenGL backend.</dd>
+            <dt id="a7312c4fae6f302f1947fd535239a4f60">
+              <span class="m-doc-wrap-bumper">void <a href="#a7312c4fae6f302f1947fd535239a4f60" class="m-doc-self">DrawMeshIndirectCount</a>(</span><span class="m-doc-wrap">const <a href="structDiligent_1_1DrawMeshIndirectCountAttribs.html" class="m-doc">DrawMeshIndirectCountAttribs</a>&amp; Attribs,
+              <a href="structDiligent_1_1IBuffer.html" class="m-doc">IBuffer</a>* pAttribsBuffer,
+              <a href="structDiligent_1_1IBuffer.html" class="m-doc">IBuffer</a>* pCountBuffer) <span class="m-label m-flat m-warning">final</span></span>
+            </dt>
+            <dd>Implementation of <a href="structDiligent_1_1IDeviceContext.html#a753bdaf1e1266de38484aa3baa605d1c" class="m-doc">IDeviceContext::<wbr />DrawMeshIndirectCount()</a> in OpenGL backend.</dd>
+            <dt id="a3906fcf842f78dd4d466fd549c877944">
+              <span class="m-doc-wrap-bumper">void <a href="#a3906fcf842f78dd4d466fd549c877944" class="m-doc-self">DispatchCompute</a>(</span><span class="m-doc-wrap">const <a href="structDiligent_1_1DispatchComputeAttribs.html" class="m-doc">DispatchComputeAttribs</a>&amp; Attribs) <span class="m-label m-flat m-warning">final</span></span>
+            </dt>
+            <dd>Implementation of <a href="structDiligent_1_1IDeviceContext.html#a93bbc3bcf3dd623122cbf3a0a0fc8a94" class="m-doc">IDeviceContext::<wbr />DispatchCompute()</a> in OpenGL backend.</dd>
+            <dt id="a88cb89a1e8f6e69daab86fc45028889d">
+              <span class="m-doc-wrap-bumper">void <a href="#a88cb89a1e8f6e69daab86fc45028889d" class="m-doc-self">DispatchComputeIndirect</a>(</span><span class="m-doc-wrap">const <a href="structDiligent_1_1DispatchComputeIndirectAttribs.html" class="m-doc">DispatchComputeIndirectAttribs</a>&amp; Attribs,
+              <a href="structDiligent_1_1IBuffer.html" class="m-doc">IBuffer</a>* pAttribsBuffer) <span class="m-label m-flat m-warning">final</span></span>
+            </dt>
+            <dd>Implementation of <a href="structDiligent_1_1IDeviceContext.html#ab98ba753a0c72d6c7e4492a2b186eea7" class="m-doc">IDeviceContext::<wbr />DispatchComputeIndirect()</a> in OpenGL backend.</dd>
+            <dt id="a7631e353d4802ea1a01cd76e75fe5915">
+              <span class="m-doc-wrap-bumper">void <a href="#a7631e353d4802ea1a01cd76e75fe5915" class="m-doc-self">ClearDepthStencil</a>(</span><span class="m-doc-wrap"><a href="structDiligent_1_1ITextureView.html" class="m-doc">ITextureView</a>* pView,
+              <a href="namespaceDiligent.html#af57c7d3ed407283c49ab3751f6a46358" class="m-doc">CLEAR_<wbr />DEPTH_<wbr />STENCIL_<wbr />FLAGS</a> ClearFlags,
+              float fDepth,
+              <a href="namespaceDiligent.html#a3392c10112f826c3bcc60366e0f533db" class="m-doc">Uint8</a> Stencil,
+              <a href="namespaceDiligent.html#a98f5c3e5380889788f96c5d5be690d25" class="m-doc">RESOURCE_<wbr />STATE_<wbr />TRANSITION_<wbr />MODE</a> StateTransitionMode) <span class="m-label m-flat m-warning">final</span></span>
+            </dt>
+            <dd>Implementation of <a href="structDiligent_1_1IDeviceContext.html#a6b9d095ef678c1216dcce51af19254af" class="m-doc">IDeviceContext::<wbr />ClearDepthStencil()</a> in OpenGL backend.</dd>
+            <dt id="a75991d7642c569914af5e94b8cd2523b">
+              <span class="m-doc-wrap-bumper">void <a href="#a75991d7642c569914af5e94b8cd2523b" class="m-doc-self">ClearRenderTarget</a>(</span><span class="m-doc-wrap"><a href="structDiligent_1_1ITextureView.html" class="m-doc">ITextureView</a>* pView,
+              const float* RGBA,
+              <a href="namespaceDiligent.html#a98f5c3e5380889788f96c5d5be690d25" class="m-doc">RESOURCE_<wbr />STATE_<wbr />TRANSITION_<wbr />MODE</a> StateTransitionMode) <span class="m-label m-flat m-warning">final</span></span>
+            </dt>
+            <dd>Implementation of <a href="structDiligent_1_1IDeviceContext.html#aa5715220150119fa685159ef8a8dd728" class="m-doc">IDeviceContext::<wbr />ClearRenderTarget()</a> in OpenGL backend.</dd>
+            <dt id="a030a886cbaefb6b18821f9fb0fa271cb">
+              <span class="m-doc-wrap-bumper">void <a href="#a030a886cbaefb6b18821f9fb0fa271cb" class="m-doc-self">UpdateBuffer</a>(</span><span class="m-doc-wrap"><a href="structDiligent_1_1IBuffer.html" class="m-doc">IBuffer</a>* pBuffer,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> Offset,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> Size,
+              const void* pData,
+              <a href="namespaceDiligent.html#a98f5c3e5380889788f96c5d5be690d25" class="m-doc">RESOURCE_<wbr />STATE_<wbr />TRANSITION_<wbr />MODE</a> StateTransitionMode) <span class="m-label m-flat m-warning">final</span></span>
+            </dt>
+            <dd>Implementation of <a href="structDiligent_1_1IDeviceContext.html#af3419d0e2e6b807c820b044e641c9b02" class="m-doc">IDeviceContext::<wbr />UpdateBuffer()</a> in OpenGL backend.</dd>
+            <dt id="a26eb3a0056bc79fab4c52d48fbdb2ebb">
+              <span class="m-doc-wrap-bumper">void <a href="#a26eb3a0056bc79fab4c52d48fbdb2ebb" class="m-doc-self">CopyBuffer</a>(</span><span class="m-doc-wrap"><a href="structDiligent_1_1IBuffer.html" class="m-doc">IBuffer</a>* pSrcBuffer,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> SrcOffset,
+              <a href="namespaceDiligent.html#a98f5c3e5380889788f96c5d5be690d25" class="m-doc">RESOURCE_<wbr />STATE_<wbr />TRANSITION_<wbr />MODE</a> SrcBufferTransitionMode,
+              <a href="structDiligent_1_1IBuffer.html" class="m-doc">IBuffer</a>* pDstBuffer,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> DstOffset,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> Size,
+              <a href="namespaceDiligent.html#a98f5c3e5380889788f96c5d5be690d25" class="m-doc">RESOURCE_<wbr />STATE_<wbr />TRANSITION_<wbr />MODE</a> DstBufferTransitionMode) <span class="m-label m-flat m-warning">final</span></span>
+            </dt>
+            <dd>Implementation of <a href="structDiligent_1_1IDeviceContext.html#af6b64b9da6b81609de66e79af4b01588" class="m-doc">IDeviceContext::<wbr />CopyBuffer()</a> in OpenGL backend.</dd>
+            <dt id="accd02fab2da278c10494c5bfc84adf7d">
+              <span class="m-doc-wrap-bumper">void <a href="#accd02fab2da278c10494c5bfc84adf7d" class="m-doc-self">MapBuffer</a>(</span><span class="m-doc-wrap"><a href="structDiligent_1_1IBuffer.html" class="m-doc">IBuffer</a>* pBuffer,
+              <a href="namespaceDiligent.html#ae99eefec15316dbbafa59a5152549c85" class="m-doc">MAP_<wbr />TYPE</a> MapType,
+              <a href="namespaceDiligent.html#ac1596c9005fe32da5e301ce461e429b0" class="m-doc">MAP_<wbr />FLAGS</a> MapFlags,
+              <a href="namespaceDiligent.html#ab746b3990e4a102158fee263db57425a" class="m-doc">PVoid</a>&amp; pMappedData) <span class="m-label m-flat m-warning">final</span></span>
+            </dt>
+            <dd>Implementation of <a href="structDiligent_1_1IDeviceContext.html#a6b144284efaec465addf3d682f7a9879" class="m-doc">IDeviceContext::<wbr />MapBuffer()</a> in OpenGL backend.</dd>
+            <dt id="afe592d8045341f84b533831d18364921">
+              <span class="m-doc-wrap-bumper">void <a href="#afe592d8045341f84b533831d18364921" class="m-doc-self">UnmapBuffer</a>(</span><span class="m-doc-wrap"><a href="structDiligent_1_1IBuffer.html" class="m-doc">IBuffer</a>* pBuffer,
+              <a href="namespaceDiligent.html#ae99eefec15316dbbafa59a5152549c85" class="m-doc">MAP_<wbr />TYPE</a> MapType) <span class="m-label m-flat m-warning">final</span></span>
+            </dt>
+            <dd>Implementation of <a href="structDiligent_1_1IDeviceContext.html#a70db5f1760415d1635ef9cbd45a8552e" class="m-doc">IDeviceContext::<wbr />UnmapBuffer()</a> in OpenGL backend.</dd>
+            <dt id="a75e4d963da499a9d9ba525ec79c40243">
+              <span class="m-doc-wrap-bumper">void <a href="#a75e4d963da499a9d9ba525ec79c40243" class="m-doc-self">UpdateTexture</a>(</span><span class="m-doc-wrap"><a href="structDiligent_1_1ITexture.html" class="m-doc">ITexture</a>* pTexture,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> MipLevel,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> Slice,
+              const <a href="structDiligent_1_1Box.html" class="m-doc">Box</a>&amp; DstBox,
+              const <a href="structDiligent_1_1TextureSubResData.html" class="m-doc">TextureSubResData</a>&amp; SubresData,
+              <a href="namespaceDiligent.html#a98f5c3e5380889788f96c5d5be690d25" class="m-doc">RESOURCE_<wbr />STATE_<wbr />TRANSITION_<wbr />MODE</a> SrcBufferStateTransitionMode,
+              <a href="namespaceDiligent.html#a98f5c3e5380889788f96c5d5be690d25" class="m-doc">RESOURCE_<wbr />STATE_<wbr />TRANSITION_<wbr />MODE</a> TextureStateTransitionMode) <span class="m-label m-flat m-warning">final</span></span>
+            </dt>
+            <dd>Implementation of <a href="structDiligent_1_1IDeviceContext.html#a932875a3b618199bbb2b7d9ad9ddf038" class="m-doc">IDeviceContext::<wbr />UpdateTexture()</a> in OpenGL backend.</dd>
+            <dt id="a940d90ac72330c53d45402976a51d063">
+              <span class="m-doc-wrap-bumper">void <a href="#a940d90ac72330c53d45402976a51d063" class="m-doc-self">CopyTexture</a>(</span><span class="m-doc-wrap">const <a href="structDiligent_1_1CopyTextureAttribs.html" class="m-doc">CopyTextureAttribs</a>&amp; CopyAttribs) <span class="m-label m-flat m-warning">final</span></span>
+            </dt>
+            <dd>Implementation of <a href="structDiligent_1_1IDeviceContext.html#aaa03a7bc175c5abe6e1a2129553efa3d" class="m-doc">IDeviceContext::<wbr />CopyTexture()</a> in OpenGL backend.</dd>
+            <dt id="a2055172bcf214669f63144d86886f0b7">
+              <span class="m-doc-wrap-bumper">void <a href="#a2055172bcf214669f63144d86886f0b7" class="m-doc-self">MapTextureSubresource</a>(</span><span class="m-doc-wrap"><a href="structDiligent_1_1ITexture.html" class="m-doc">ITexture</a>* pTexture,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> MipLevel,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> ArraySlice,
+              <a href="namespaceDiligent.html#ae99eefec15316dbbafa59a5152549c85" class="m-doc">MAP_<wbr />TYPE</a> MapType,
+              <a href="namespaceDiligent.html#ac1596c9005fe32da5e301ce461e429b0" class="m-doc">MAP_<wbr />FLAGS</a> MapFlags,
+              const <a href="structDiligent_1_1Box.html" class="m-doc">Box</a>* pMapRegion,
+              <a href="structDiligent_1_1MappedTextureSubresource.html" class="m-doc">MappedTextureSubresource</a>&amp; MappedData) <span class="m-label m-flat m-warning">final</span></span>
+            </dt>
+            <dd>Implementation of <a href="structDiligent_1_1IDeviceContext.html#a8b5aa2e397cbc3500d22764fdddd3930" class="m-doc">IDeviceContext::<wbr />MapTextureSubresource()</a> in OpenGL backend.</dd>
+            <dt id="aa0c42b734346a6ebbdd352d7f8905592">
+              <span class="m-doc-wrap-bumper">void <a href="#aa0c42b734346a6ebbdd352d7f8905592" class="m-doc-self">UnmapTextureSubresource</a>(</span><span class="m-doc-wrap"><a href="structDiligent_1_1ITexture.html" class="m-doc">ITexture</a>* pTexture,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> MipLevel,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> ArraySlice) <span class="m-label m-flat m-warning">final</span></span>
+            </dt>
+            <dd>Implementation of <a href="structDiligent_1_1IDeviceContext.html#ad0c19b40b711b39e4a91caef88a78e7f" class="m-doc">IDeviceContext::<wbr />UnmapTextureSubresource()</a> in OpenGL backend.</dd>
+            <dt id="a76f8f3275085008f294de4ed05ebaccc">
+              <span class="m-doc-wrap-bumper">void <a href="#a76f8f3275085008f294de4ed05ebaccc" class="m-doc-self">GenerateMips</a>(</span><span class="m-doc-wrap"><a href="structDiligent_1_1ITextureView.html" class="m-doc">ITextureView</a>* pTexView) <span class="m-label m-flat m-warning">override</span></span>
+            </dt>
+            <dd>Implementation of <a href="structDiligent_1_1IDeviceContext.html#a8d864e69c0d1b8dc3875077b9c9a626d" class="m-doc">IDeviceContext::<wbr />GenerateMips()</a> in OpenGL backend.</dd>
+            <dt id="ab3d0b43a20febf4b266c64600bbbb1e4">
+              <span class="m-doc-wrap-bumper">void <a href="#ab3d0b43a20febf4b266c64600bbbb1e4" class="m-doc-self">FinishFrame</a>(</span><span class="m-doc-wrap">) <span class="m-label m-flat m-warning">final</span></span>
+            </dt>
+            <dd>Implementation of <a href="structDiligent_1_1IDeviceContext.html#a5d7b2da64c084f4fb71f5366d293ec20" class="m-doc">IDeviceContext::<wbr />FinishFrame()</a> in OpenGL backend.</dd>
+            <dt id="abe4a12c21d5ae55cf746d4dc4d1cb326">
+              <span class="m-doc-wrap-bumper">void <a href="#abe4a12c21d5ae55cf746d4dc4d1cb326" class="m-doc-self">TransitionResourceStates</a>(</span><span class="m-doc-wrap"><a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> BarrierCount,
+              <a href="structDiligent_1_1StateTransitionDesc.html" class="m-doc">StateTransitionDesc</a>* pResourceBarriers) <span class="m-label m-flat m-warning">final</span></span>
+            </dt>
+            <dd>Implementation of <a href="structDiligent_1_1IDeviceContext.html#ad70dbcda9db81d06f3641baabf02f5c4" class="m-doc">IDeviceContext::<wbr />TransitionResourceStates()</a> in OpenGL backend.</dd>
+            <dt id="a2d114eec3ef92fef2498ec08b89b7161">
+              <span class="m-doc-wrap-bumper">void <a href="#a2d114eec3ef92fef2498ec08b89b7161" class="m-doc-self">ResolveTextureSubresource</a>(</span><span class="m-doc-wrap"><a href="structDiligent_1_1ITexture.html" class="m-doc">ITexture</a>* pSrcTexture,
+              <a href="structDiligent_1_1ITexture.html" class="m-doc">ITexture</a>* pDstTexture,
+              const <a href="structDiligent_1_1ResolveTextureSubresourceAttribs.html" class="m-doc">ResolveTextureSubresourceAttribs</a>&amp; ResolveAttribs) <span class="m-label m-flat m-warning">final</span></span>
+            </dt>
+            <dd>Implementation of <a href="structDiligent_1_1IDeviceContext.html#adee0f7797e3e655c9b1371a8fc3b011b" class="m-doc">IDeviceContext::<wbr />ResolveTextureSubresource()</a> in OpenGL backend.</dd>
+            <dt id="a38612e7fcab39ecd04375aa02287e4fc">
+              <span class="m-doc-wrap-bumper">void <a href="#a38612e7fcab39ecd04375aa02287e4fc" class="m-doc-self">FinishCommandList</a>(</span><span class="m-doc-wrap">class <a href="classDiligent_1_1ICommandList.html" class="m-doc">ICommandList</a>** ppCommandList) <span class="m-label m-flat m-warning">final</span></span>
+            </dt>
+            <dd>Implementation of <a href="structDiligent_1_1IDeviceContext.html#a5c683e708259f324ceb4af195aa2a95d" class="m-doc">IDeviceContext::<wbr />FinishCommandList()</a> in OpenGL backend.</dd>
+            <dt id="a132a219566a72c309cbf0251617ca19b">
+              <span class="m-doc-wrap-bumper">void <a href="#a132a219566a72c309cbf0251617ca19b" class="m-doc-self">ExecuteCommandLists</a>(</span><span class="m-doc-wrap"><a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> NumCommandLists,
+              <a href="classDiligent_1_1ICommandList.html" class="m-doc">ICommandList</a>*const* ppCommandLists) <span class="m-label m-flat m-warning">final</span></span>
+            </dt>
+            <dd>Implementation of <a href="structDiligent_1_1IDeviceContext.html#ae788037b1bcfdbfb6a6e52fd97f83116" class="m-doc">IDeviceContext::<wbr />ExecuteCommandLists()</a> in OpenGL backend.</dd>
+            <dt id="acad8ae9e17e1558afe1476d95dbe191b">
+              <span class="m-doc-wrap-bumper">void <a href="#acad8ae9e17e1558afe1476d95dbe191b" class="m-doc-self">SignalFence</a>(</span><span class="m-doc-wrap"><a href="structDiligent_1_1IFence.html" class="m-doc">IFence</a>* pFence,
+              <a href="namespaceDiligent.html#a217aba875c8d4bd7843939762d6ff492" class="m-doc">Uint64</a> Value) <span class="m-label m-flat m-warning">final</span></span>
+            </dt>
+            <dd>Implementation of <a href="structDiligent_1_1IDeviceContext.html#aa477c378514974d97845d0720a5d5775" class="m-doc">IDeviceContext::<wbr />SignalFence()</a> in OpenGL backend.</dd>
+            <dt id="a4eb384ca7882a06111f5354f52c0e039">
+              <span class="m-doc-wrap-bumper">void <a href="#a4eb384ca7882a06111f5354f52c0e039" class="m-doc-self">WaitForFence</a>(</span><span class="m-doc-wrap"><a href="structDiligent_1_1IFence.html" class="m-doc">IFence</a>* pFence,
+              <a href="namespaceDiligent.html#a217aba875c8d4bd7843939762d6ff492" class="m-doc">Uint64</a> Value,
+              bool FlushContext) <span class="m-label m-flat m-warning">final</span></span>
+            </dt>
+            <dd>Implementation of <a href="structDiligent_1_1IDeviceContext.html#af6ab8c4386c130917e1f51b79833661a" class="m-doc">IDeviceContext::<wbr />WaitForFence()</a> in OpenGL backend.</dd>
+            <dt id="afc492e6d275154a34cb92397c11196b8">
+              <span class="m-doc-wrap-bumper">void <a href="#afc492e6d275154a34cb92397c11196b8" class="m-doc-self">WaitForIdle</a>(</span><span class="m-doc-wrap">) <span class="m-label m-flat m-warning">final</span></span>
+            </dt>
+            <dd>Implementation of <a href="structDiligent_1_1IDeviceContext.html#a0b4d0b8d3b6e8859d29df8ae4607f6c8" class="m-doc">IDeviceContext::<wbr />WaitForIdle()</a> in OpenGL backend.</dd>
+            <dt id="a44b2b94d2f562b7f04fc5111a89132c4">
+              <span class="m-doc-wrap-bumper">void <a href="#a44b2b94d2f562b7f04fc5111a89132c4" class="m-doc-self">BeginQuery</a>(</span><span class="m-doc-wrap"><a href="structDiligent_1_1IQuery.html" class="m-doc">IQuery</a>* pQuery) <span class="m-label m-flat m-warning">final</span></span>
+            </dt>
+            <dd>Implementation of <a href="structDiligent_1_1IDeviceContext.html#ae63099621d51fed55262295e9ba3da69" class="m-doc">IDeviceContext::<wbr />BeginQuery()</a> in OpenGL backend.</dd>
+            <dt id="a677ea50f846bec2a2edaf6f14f3e32bb">
+              <span class="m-doc-wrap-bumper">void <a href="#a677ea50f846bec2a2edaf6f14f3e32bb" class="m-doc-self">EndQuery</a>(</span><span class="m-doc-wrap"><a href="structDiligent_1_1IQuery.html" class="m-doc">IQuery</a>* pQuery) <span class="m-label m-flat m-warning">final</span></span>
+            </dt>
+            <dd>Implementation of <a href="structDiligent_1_1IDeviceContext.html#a3f66ae2389fb243fdd62f240ce895013" class="m-doc">IDeviceContext::<wbr />EndQuery()</a> in OpenGL backend.</dd>
+            <dt id="a7472b84061b6197b0358e4c8a59dcb11">
+              <span class="m-doc-wrap-bumper">void <a href="#a7472b84061b6197b0358e4c8a59dcb11" class="m-doc-self">Flush</a>(</span><span class="m-doc-wrap">) <span class="m-label m-flat m-warning">final</span></span>
+            </dt>
+            <dd>Implementation of <a href="structDiligent_1_1IDeviceContext.html#a41bf41de5f483dcbe550e6cb2f3ddecb" class="m-doc">IDeviceContext::<wbr />Flush()</a> in OpenGL backend.</dd>
+            <dt id="a3a4681d49ca254e46de9459cbaf6183c">
+              <span class="m-doc-wrap-bumper">void <a href="#a3a4681d49ca254e46de9459cbaf6183c" class="m-doc-self">BuildBLAS</a>(</span><span class="m-doc-wrap">const <a href="structDiligent_1_1BuildBLASAttribs.html" class="m-doc">BuildBLASAttribs</a>&amp; Attribs) <span class="m-label m-flat m-warning">final</span></span>
+            </dt>
+            <dd>Implementation of <a href="structDiligent_1_1IDeviceContext.html#a89db6e03acac373db00f0684662e88ab" class="m-doc">IDeviceContext::<wbr />BuildBLAS()</a> in OpenGL backend.</dd>
+            <dt id="a601529139860e62da0208769fe6a0a59">
+              <span class="m-doc-wrap-bumper">void <a href="#a601529139860e62da0208769fe6a0a59" class="m-doc-self">BuildTLAS</a>(</span><span class="m-doc-wrap">const <a href="structDiligent_1_1BuildTLASAttribs.html" class="m-doc">BuildTLASAttribs</a>&amp; Attribs) <span class="m-label m-flat m-warning">final</span></span>
+            </dt>
+            <dd>Implementation of <a href="structDiligent_1_1IDeviceContext.html#a1fb8b288eb8c248a6382886a2eba7826" class="m-doc">IDeviceContext::<wbr />BuildTLAS()</a> in OpenGL backend.</dd>
+            <dt id="a5d5b676a75a837105011ab5e4b637a6c">
+              <span class="m-doc-wrap-bumper">void <a href="#a5d5b676a75a837105011ab5e4b637a6c" class="m-doc-self">CopyBLAS</a>(</span><span class="m-doc-wrap">const <a href="structDiligent_1_1CopyBLASAttribs.html" class="m-doc">CopyBLASAttribs</a>&amp; Attribs) <span class="m-label m-flat m-warning">final</span></span>
+            </dt>
+            <dd>Implementation of <a href="structDiligent_1_1IDeviceContext.html#af02bf98912c0b6cee78e2a4bae149db4" class="m-doc">IDeviceContext::<wbr />CopyBLAS()</a> in OpenGL backend.</dd>
+            <dt id="a5ef3fc8951991337161f97bb17739a8e">
+              <span class="m-doc-wrap-bumper">void <a href="#a5ef3fc8951991337161f97bb17739a8e" class="m-doc-self">CopyTLAS</a>(</span><span class="m-doc-wrap">const <a href="structDiligent_1_1CopyTLASAttribs.html" class="m-doc">CopyTLASAttribs</a>&amp; Attribs) <span class="m-label m-flat m-warning">final</span></span>
+            </dt>
+            <dd>Implementation of <a href="structDiligent_1_1IDeviceContext.html#a4ed3b8f22faf96cfb7c11890474b724c" class="m-doc">IDeviceContext::<wbr />CopyTLAS()</a> in OpenGL backend.</dd>
+            <dt id="aea18e3cb3fe6f35584b373fa125214a4">
+              <span class="m-doc-wrap-bumper">void <a href="#aea18e3cb3fe6f35584b373fa125214a4" class="m-doc-self">WriteBLASCompactedSize</a>(</span><span class="m-doc-wrap">const <a href="structDiligent_1_1WriteBLASCompactedSizeAttribs.html" class="m-doc">WriteBLASCompactedSizeAttribs</a>&amp; Attribs) <span class="m-label m-flat m-warning">final</span></span>
+            </dt>
+            <dd>Implementation of <a href="structDiligent_1_1IDeviceContext.html#aa8dabc934efda7ac25b0a111c1b73337" class="m-doc">IDeviceContext::<wbr />WriteBLASCompactedSize()</a> in OpenGL backend.</dd>
+            <dt id="ab38d1b81916bb501e568d4c71e8ba80b">
+              <span class="m-doc-wrap-bumper">void <a href="#ab38d1b81916bb501e568d4c71e8ba80b" class="m-doc-self">WriteTLASCompactedSize</a>(</span><span class="m-doc-wrap">const <a href="structDiligent_1_1WriteTLASCompactedSizeAttribs.html" class="m-doc">WriteTLASCompactedSizeAttribs</a>&amp; Attribs) <span class="m-label m-flat m-warning">final</span></span>
+            </dt>
+            <dd>Implementation of <a href="structDiligent_1_1IDeviceContext.html#ad28d9d361f25966138ffa8c8baeba935" class="m-doc">IDeviceContext::<wbr />WriteTLASCompactedSize()</a> in OpenGL backend.</dd>
+            <dt id="ac92f62203ddfeabfd75abbce4be3e393">
+              <span class="m-doc-wrap-bumper">void <a href="#ac92f62203ddfeabfd75abbce4be3e393" class="m-doc-self">TraceRays</a>(</span><span class="m-doc-wrap">const <a href="structDiligent_1_1TraceRaysAttribs.html" class="m-doc">TraceRaysAttribs</a>&amp; Attribs) <span class="m-label m-flat m-warning">final</span></span>
+            </dt>
+            <dd>Implementation of <a href="structDiligent_1_1IDeviceContext.html#a94c8be3284566605f3e148f64b6a1b48" class="m-doc">IDeviceContext::<wbr />TraceRays()</a> in OpenGL backend.</dd>
+            <dt id="a4c5951d5d9616751797fec0eb16b4482">
+              <span class="m-doc-wrap-bumper">void <a href="#a4c5951d5d9616751797fec0eb16b4482" class="m-doc-self">TraceRaysIndirect</a>(</span><span class="m-doc-wrap">const <a href="structDiligent_1_1TraceRaysIndirectAttribs.html" class="m-doc">TraceRaysIndirectAttribs</a>&amp; Attribs,
+              <a href="structDiligent_1_1IBuffer.html" class="m-doc">IBuffer</a>* pAttribsBuffer) <span class="m-label m-flat m-warning">final</span></span>
+            </dt>
+            <dd>Implementation of <a href="structDiligent_1_1IDeviceContext.html#aec2ceb7575300c297dc263581237edda" class="m-doc">IDeviceContext::<wbr />TraceRaysIndirect()</a> in OpenGL backend.</dd>
+            <dt id="a8650c1e010e2efc1c7ac3db0392ebfde">
+              <span class="m-doc-wrap-bumper">void <a href="#a8650c1e010e2efc1c7ac3db0392ebfde" class="m-doc-self">UpdateSBT</a>(</span><span class="m-doc-wrap"><a href="structDiligent_1_1IShaderBindingTable.html" class="m-doc">IShaderBindingTable</a>* pSBT,
+              const <a href="structDiligent_1_1UpdateIndirectRTBufferAttribs.html" class="m-doc">UpdateIndirectRTBufferAttribs</a>* pUpdateIndirectBufferAttribs) <span class="m-label m-flat m-warning">final</span></span>
+            </dt>
+            <dd>Implementation of <a href="structDiligent_1_1IDeviceContext.html#a26cac2085ad720b73ec5a2cc82e652d4" class="m-doc">IDeviceContext::<wbr />UpdateSBT()</a> in OpenGL backend.</dd>
+            <dt id="aada214b26f0289e0a7bcb7f9d4bcd626">
+              <span class="m-doc-wrap-bumper">auto <a href="#aada214b26f0289e0a7bcb7f9d4bcd626" class="m-doc-self">UpdateCurrentGLContext</a>(</span><span class="m-doc-wrap">) -&gt; bool <span class="m-label m-flat m-warning">final</span></span>
+            </dt>
+            <dd>Implementation of <a href="structDiligent_1_1IDeviceContextGL.html#aee5e2e0e34215ec3584fcd661c1abd18" class="m-doc">IDeviceContextGL::<wbr />UpdateCurrentGLContext()</a>.</dd>
+          </dl>
+        </section>
+      </div>
+    </div>
+  </div>
+</article></main>
+<div class="m-doc-search" id="search">
+  <a href="#!" onclick="return hideSearch()"></a>
+  <div class="m-container">
+    <div class="m-row">
+      <div class="m-col-m-8 m-push-m-2">
+        <div class="m-doc-search-header m-text m-small">
+          <div><span class="m-label m-default">Tab</span> / <span class="m-label m-default">T</span> to search, <span class="m-label m-default">Esc</span> to close</div>
+          <div id="search-symbolcount">&hellip;</div>
+        </div>
+        <div class="m-doc-search-content">
+          <form>
+            <input type="search" name="q" id="search-input" placeholder="Loading &hellip;" disabled="disabled" autofocus="autofocus" autocomplete="off" spellcheck="false" />
+          </form>
+          <noscript class="m-text m-danger m-text-center">Unlike everything else in the docs, the search functionality <em>requires</em> JavaScript.</noscript>
+          <div id="search-help" class="m-text m-dim m-text-center">
+            <p class="m-noindent">Search for symbols, directories, files, pages or
+            modules. You can omit any prefix from the symbol or file path; adding a
+            <code>:</code> or <code>/</code> suffix lists all members of given symbol or
+            directory.</p>
+            <p class="m-noindent">Use <span class="m-label m-dim">&darr;</span>
+            / <span class="m-label m-dim">&uarr;</span> to navigate through the list,
+            <span class="m-label m-dim">Enter</span> to go.
+            <span class="m-label m-dim">Tab</span> autocompletes common prefix, you can
+            copy a link to the result using <span class="m-label m-dim">⌘</span>
+            <span class="m-label m-dim">L</span> while <span class="m-label m-dim">⌘</span>
+            <span class="m-label m-dim">M</span> produces a Markdown link.</p>
+          </div>
+          <div id="search-notfound" class="m-text m-warning m-text-center">Sorry, nothing was found.</div>
+          <ul id="search-results"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="search-v1.js"></script>
+<script src="searchdata-v1.js" async="async"></script>
+<footer><nav>
+  <div class="m-container">
+    <div class="m-row">
+      <div class="m-col-l-10 m-push-l-1">
+        <p>Diligent Engine. Created with <a href="https://doxygen.org/">Doxygen</a> 1.8.17 and <a href="https://mcss.mosra.cz/">m.css</a>.</p>
+      </div>
+    </div>
+  </div>
+</nav></footer>
+</body>
+</html>

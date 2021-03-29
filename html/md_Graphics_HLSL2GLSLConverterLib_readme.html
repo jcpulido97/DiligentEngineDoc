@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>HLSL2GLSLConverterLib | Diligent Engine</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i%7CSource+Code+Pro:400,400i,600" />
+  <link rel="stylesheet" href="m-dark+documentation.compiled.css" />
+  <link rel="icon" href="favicon-dark.png" type="image/png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#22272e" />
+</head>
+<body>
+<header><nav id="navigation">
+  <div class="m-container">
+    <div class="m-row">
+      <a href="index.html" id="m-navbar-brand" class="m-col-t-8 m-col-m-none m-left-m">Diligent Engine</a>
+      <div class="m-col-t-4 m-hide-m m-text-right m-nopadr">
+        <a href="#search" class="m-doc-search-icon" title="Search" onclick="return showSearch()"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
+          <path id="m-doc-search-icon-path" d="m6 0c-3.31 0-6 2.69-6 6 0 3.31 2.69 6 6 6 1.49 0 2.85-0.541 3.89-1.44-0.0164 0.338 0.147 0.759 0.5 1.15l3.22 3.79c0.552 0.614 1.45 0.665 2 0.115 0.55-0.55 0.499-1.45-0.115-2l-3.79-3.22c-0.392-0.353-0.812-0.515-1.15-0.5 0.895-1.05 1.44-2.41 1.44-3.89 0-3.31-2.69-6-6-6zm0 1.56a4.44 4.44 0 0 1 4.44 4.44 4.44 4.44 0 0 1-4.44 4.44 4.44 4.44 0 0 1-4.44-4.44 4.44 4.44 0 0 1 4.44-4.44z"/>
+        </svg></a>
+        <a id="m-navbar-show" href="#navigation" title="Show navigation"></a>
+        <a id="m-navbar-hide" href="#" title="Hide navigation"></a>
+      </div>
+      <div id="m-navbar-collapse" class="m-col-t-12 m-show-m m-col-m-none m-right-m">
+        <div class="m-row">
+          <ol class="m-col-t-6 m-col-m-none">
+            <li><a href="pages.html">Pages</a></li>
+            <li><a href="namespaces.html">Namespaces</a></li>
+          </ol>
+          <ol class="m-col-t-6 m-col-m-none" start="3">
+            <li><a href="annotated.html">Classes</a></li>
+            <li><a href="files.html">Files</a></li>
+            <li class="m-show-m"><a href="#search" class="m-doc-search-icon" title="Search" onclick="return showSearch()"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
+              <use href="#m-doc-search-icon-path" />
+            </svg></a></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav></header>
+<main><article>
+  <div class="m-container m-container-inflatable">
+    <div class="m-row">
+      <div class="m-col-l-10 m-push-l-1">
+        <h1>
+          HLSL2GLSLConverterLib
+        </h1>
+<p>Implementation of HLSL to GLSL source converter</p><p>DirectX and OpenGL use different shading languages, which share a lot in common, but sometimes differ substantially. For cross-platform applications, maintaining two versions of each shader is time-consuming and error-prone. <a href="namespaceDiligent.html" class="m-doc">Diligent</a> Engine uses HLSL2GLSL Converter that allows shader authored in HLSL to be converted into GLSL source.</p><section id="autotoc_md29"><h2><a href="#autotoc_md29">Details</a></h2><section id="autotoc_md30"><h3><a href="#autotoc_md30">Requirements</a></h3><p>The converter supports HLSL5.0, all shader types (vertex, geometry, pixel, domain, hull, and compute) as well as most of the language constructs. There are however few special requirements that must be met in order for the HLSL source to be successfully converted to GLSL:</p><ul><li>Inputs to a vertex shader is recommended to have <code>ATTRIBn</code> semantic, where n defines the location of the corresponding GLSL input variable (<code>layout(location = n)</code>). For any other input semantic, the converter automatically assigns input location.</li><li><p>Inputs of a subsequent shader stage must be declared in exact same order as outputs of the previous shader stage. Return value of a function counts as its first output.</p><p>The converter parses all input and output arguments (including structure members) in the order of declaration and automatically assigns locations to every argument. To make sure that input and output locations match, the arguments must be declared in exact same order. For the same reason, if an argument is not used by the shader, it still needs to be declared to preserve original ordering.</p></li></ul><p>The code snippet below gives examples of supported shader declarations:</p><pre class="m-code"><span class="k">struct</span> <span class="n">VSInput</span>
+<span class="p">{</span>
+    <span class="c1">// It is recommended (though not required) to assign </span>
+    <span class="c1">// ATTRIBn semantics to inputs from input assembler</span>
+    <span class="n">in</span> <span class="n">float3</span> <span class="nl">f3PosWS</span> <span class="p">:</span> <span class="n">ATTRIB0</span><span class="p">;</span>
+    <span class="n">in</span> <span class="n">float2</span> <span class="nl">f2UV</span>  <span class="p">:</span> <span class="n">ATTRIB1</span><span class="p">;</span>
+    <span class="n">uint</span> <span class="nl">VertexID</span> <span class="p">:</span> <span class="n">SV_VertexID</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="k">struct</span> <span class="n">VSOutput</span>
+<span class="p">{</span>
+    <span class="n">float2</span> <span class="nl">UV</span> <span class="p">:</span> <span class="n">TEX_COORDINATES</span><span class="p">;</span>
+    <span class="n">float3</span> <span class="nl">Normal</span> <span class="p">:</span> <span class="n">NORMAL</span><span class="p">;</span>
+    <span class="n">float4</span> <span class="nl">f4PosPS</span> <span class="p">:</span> <span class="n">SV_Position</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="n">VSOutput</span> <span class="nf">VertexShader</span> <span class="p">(</span> <span class="n">in</span> <span class="n">VSInput</span> <span class="n">VSIn</span><span class="p">,</span>
+                        <span class="n">in</span> <span class="n">float3</span> <span class="nl">f3UV</span>  <span class="p">:</span> <span class="n">ATTRIB2</span><span class="p">,</span>
+                        <span class="n">uint</span> <span class="nl">InstID</span> <span class="p">:</span> <span class="n">SV_InstanceID</span><span class="p">,</span>
+                        <span class="n">out</span> <span class="n">float3</span> <span class="nl">f3Tangent</span> <span class="p">:</span> <span class="n">TANGENT</span> <span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">VSOutput</span> <span class="n">VSOut</span><span class="p">;</span>
+    <span class="c1">// Body elided</span>
+    <span class="n">f3Tangent</span> <span class="o">=</span> <span class="p">...</span>
+    <span class="k">return</span> <span class="n">VSOut</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">float4</span> <span class="nf">PixelShader</span> <span class="p">(</span> <span class="c1">// Pixel shader inputs must be declared in exact same order </span>
+                     <span class="c1">// as outputs of the vertex shader</span>
+                     <span class="n">VSOutput</span> <span class="n">PSIn</span><span class="p">,</span>
+                     <span class="n">in</span> <span class="n">float3</span> <span class="nl">f3Tangent</span> <span class="p">:</span> <span class="n">TaNgEnT</span> <span class="c1">// Semantics are case-insensitive</span>
+                     <span class="n">out</span> <span class="n">float3</span> <span class="nl">Color2</span> <span class="p">:</span> <span class="n">SV_Target2</span> <span class="p">)</span> <span class="o">:</span>  <span class="n">SV_Target</span>
+<span class="p">{</span>
+    <span class="c1">// Body elided</span>
+<span class="p">}</span></pre><ul><li>When tessellation is enabled in OpenGL, partitioning as well as output patch topology are defined by the tessellation evaluation shader (domain shader) rather than by the tessellation control shader (hull shader). As a result, the converter cannot generate GLSL code without using special hints. To indicate missing attributes, the following specially formatted comment should be added right on top of the domain shader entry function:</li></ul><pre class="m-code"><span class="cm">/* partitioning = {integer|fractional_even|fractional_odd}, outputtopology = {triangle_cw|triangle_ccw} */</span></pre><p>For example, the following is a valid domain shader declaration:</p><pre class="m-code"><span class="p">[</span><span class="n">domain</span><span class="p">(</span><span class="s">&quot;quad&quot;</span><span class="p">)]</span>
+<span class="cm">/* partitioning = fractional_even, outputtopology = triangle_cw */</span>
+<span class="n">DSOutput</span> <span class="n">main</span><span class="p">(</span> <span class="n">HS_CONSTANT_DATA_OUTPUT</span> <span class="n">input</span><span class="p">,</span> 
+               <span class="n">float2</span> <span class="nl">QuadUV</span> <span class="p">:</span> <span class="n">SV_DomainLocation</span><span class="p">,</span> 
+               <span class="n">OutputPatch</span><span class="o">&lt;</span><span class="n">HSOutput</span><span class="p">,</span> <span class="mi">2</span><span class="o">&gt;</span> <span class="n">QuadPatch</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="c1">// Body elided</span>
+<span class="p">}</span></pre><ul><li>Geometry, Domain and Hull shaders must be defined in separate files</li><li>GLSL allows samplers to be declared as global variables or function arguments only. It does not allow local variables of sampler type.</li></ul></section><section id="autotoc_md31"><h3><a href="#autotoc_md31">Textures and samplers</a></h3><p>The following rules are used to convert HLSL texture declaration into GLSL sampler:</p><p>HLSL texture dimension defines GLSL sampler dimension:</p><ul><li><code>Texture2D</code> -&gt; <code>sampler2D</code></li><li><code>TextureCube</code> -&gt; <code>samplerCube</code></li></ul><p>HLSL texture component type defines GLSL sampler type. If no type is specified, <code>float4</code> is assumed:</p><ul><li><code>Texture2D&lt;float&gt;</code> -&gt; <code>sampler2D</code></li><li><code>Texture3D&lt;uint4&gt;</code> -&gt; <code>usampler3D</code></li><li><code>Texture2DArray&lt;int2&gt;</code> -&gt; <code>isampler2DArray</code></li><li><code>Texture2D</code> -&gt; <code>sampler2D</code></li></ul><p>To distinguish if sampler should be shadow or not, the converter tries to find <code>&lt;Texture Name&gt;_sampler</code> among samplers (global variables and function arguments). If the sampler type is comparison, the texture is converted to shadow sampler. If sampler state is either not comparison or not found, regular sampler is used. For example</p><pre class="m-code"><span class="n">Texture2D</span> <span class="n">g_ShadowMap</span><span class="p">;</span>
+<span class="n">SamplerComparisonState</span> <span class="n">g_ShadowMap_sampler</span><span class="p">;</span>
+
+<span class="n">Texture2D</span> <span class="n">g_Tex2D</span><span class="p">;</span>
+<span class="n">SamplerState</span> <span class="n">g_Tex2D_sampler</span><span class="p">;</span>
+
+<span class="n">Texture3D</span> <span class="n">g_Tex3D</span><span class="p">;</span></pre><p>is converted to</p><pre class="m-code"><span class="n">sampler2DShadow</span> <span class="n">g_ShadowMap</span><span class="p">;</span>
+<span class="n">sampler2D</span> <span class="n">g_Tex2D</span><span class="p">;</span>
+<span class="n">sampler3D</span> <span class="n">g_Tex3D</span><span class="p">;</span></pre><p>GLSL requires format to be specified for all images (rw textures) allowing writes. HLSL converter allows GLSL image format specification inside the special comment block: <code class="m-code"><span class="n">RWTexture2D</span><span class="o">&lt;</span><span class="kt">float</span> <span class="cm">/* format=r32f */</span> <span class="o">&gt;</span> <span class="n">Tex2D</span><span class="p">;</span></code></p></section><section id="autotoc_md32"><h3><a href="#autotoc_md32">Important notes/known issues</a></h3><ul><li>GLSL compiler does not handle <code>float3</code> (<code>vec3</code>) structure members correctly. It is strongly suggested avoid using this type in structure definitions</li><li>At least NVidia GLSL compiler does not apply layout(row_major) to structure members. By default, all matrices in both HLSL and GLSL are column major</li><li>GLSL compiler does not properly handle structs passed as function arguments!!!!</li></ul><pre class="m-code"><span class="k">struct</span> <span class="n">MyStruct</span>
+<span class="p">{</span>
+    <span class="n">matrix</span> <span class="n">Matr</span><span class="p">;</span> 
+<span class="p">}</span> 
+<span class="kt">void</span> <span class="n">Func</span><span class="p">(</span><span class="n">in</span> <span class="n">MyStruct</span> <span class="n">S</span><span class="p">)</span>
+<span class="p">{</span> 
+    <span class="p">...</span> 
+    <span class="n">mul</span><span class="p">(</span><span class="n">f4PosWS</span><span class="p">,</span> <span class="n">S</span><span class="p">.</span><span class="n">Matr</span><span class="p">);</span> <span class="c1">// This will not work!!! </span>
+<span class="p">}</span></pre><p>DO NOT pass structs to functions, use only built-in types!!!</p><ul><li>GLSL does not support most of the implicit type conversions. The following are some examples of the required modifications to HLSL code:<ul><li><code>float4 vec = 0;</code> -&gt; <code>float4 vec = float4(0.0, 0.0, 0.0, 0.0);</code></li><li><code>float x = 0;</code> -&gt; <code>float x = 0.0;</code></li><li><code>uint x = 0;</code> -&gt; <code>uint x = 0u;</code></li></ul></li><li>GLES is immensely strict about type conversions. For instance, this code will produce compiler error: <code><a href="GLSLDefinitions_8h.html#ada97ec01294ee3122f2f2c8f4058db0c" class="m-doc">float4(0, 0, 0, 0)</a></code>. It must be written as <code>float4(0.0, 0.0, 0.0, 0.0)</code></li><li>GLSL does not support relational and boolean operations on vector types:</li></ul><pre class="m-code"><span class="n">float2</span> <span class="n">p</span> <span class="o">=</span> <span class="n">float2</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">),</span> <span class="n">q</span> <span class="o">=</span> <span class="n">float2</span><span class="p">(</span><span class="mf">3.0</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">);</span>
+<span class="n">bool2</span> <span class="n">b</span> <span class="o">=</span> <span class="n">p</span> <span class="o">&lt;</span> <span class="n">q</span><span class="p">;</span> <span class="c1">// Error</span>
+<span class="n">all</span><span class="p">(</span><span class="n">p</span> <span class="o">&lt;</span> <span class="n">q</span><span class="p">);</span> <span class="c1">// Error</span></pre><ul><li>To facilitate relational and Boolean operations on vector types, the following functions are predefined:<ul><li><code>Less</code></li><li><code>LessEqual</code></li><li><code>Greater</code></li><li><code>GreaterEqual</code></li><li><code>Equal</code></li><li><code>NotEqual</code></li><li><code>Not</code></li><li><code>And</code></li><li><code>Or</code></li><li><code>BoolToFloat</code></li></ul></li><li>Examples:<ul><li><code>bool2 b = x &lt; y;</code> -&gt; <code>b = <a href="GLSLDefinitions_8h.html#aaa04fcfa00f6b8cfd8d8260532052b5f" class="m-doc">Less(x, y)</a>;</code></li><li><code>all(p&gt;=q)</code> -&gt; <code>all( GreaterEqual(p,q) )</code></li></ul></li><li>When accessing elements of an HLSL matrix, the first index is always a row: <code>mat[row][column]</code> In GLSL, the first index is always a column: <code>mat[column][row]</code> <code><a href="GLSLDefinitions_8h.html#aa02df143b7f10111608b34e63032ca09" class="m-doc">MATRIX_<wbr />ELEMENT(mat, row, col)</a></code> macros is provided to facilitate matrix element retrieval</li><li>The following functions do not have counterparts in GLSL and should be avoided:<ul><li><code>Texture2DArray.SampleCmpLevelZero()</code></li><li><code>TextureCube.SampleCmpLevelZero()</code></li><li><code>TextureCubeArray.SampleCmpLevelZero()</code></li></ul></li></ul></section><section id="autotoc_md33"><h3><a href="#autotoc_md33">Limitations</a></h3><p>Converter does not perform macros expansion, so usage of preprocessor directives is limited to text block that do not need to be converted. The following are some examples that are not supported.</p><p>Using macros in declarations of shader entry points:</p><pre class="m-code"><span class="n">VSOut</span> <span class="n">TestVS</span>  <span class="p">(</span>
+<span class="cp">#ifdef SOME_MACRO</span>
+               <span class="n">in</span> <span class="n">VSInput0</span> <span class="n">VSInput</span>
+<span class="cp">#else</span>
+               <span class="n">in</span> <span class="n">VSInput1</span> <span class="n">VSInput</span>
+<span class="cp">#endif</span>
+               <span class="p">)</span></pre><p>The following is not allowed as well:</p><pre class="m-code"><span class="cp">#ifdef SOME_MACRO</span>
+<span class="n">VSOut</span> <span class="n">TestVS</span>  <span class="p">(</span><span class="n">in</span> <span class="n">VSInput0</span> <span class="n">VSInput</span><span class="p">)</span>
+<span class="cp">#else</span>
+<span class="n">VSOut</span> <span class="n">TestVS</span>  <span class="p">(</span><span class="n">in</span> <span class="n">VSInput1</span> <span class="n">VSInput</span><span class="p">)</span>
+<span class="cp">#endif</span></pre><p>In cases like that it is necessary to create two separate shader entry points and give them distinctive names. Likewise, macros cannot be used in definitions of structures that are used to pass data between shader stages:</p><pre class="m-code"><span class="k">struct</span> <span class="n">VSInput</span>
+<span class="p">{</span>
+    <span class="n">in</span> <span class="n">float3</span> <span class="nl">f3PosWS</span> <span class="p">:</span> <span class="n">ATTRIB0</span><span class="p">;</span>
+<span class="cp">#ifdef SOME_MACRO</span>
+    <span class="n">in</span> <span class="n">float2</span> <span class="nl">f2UV</span>  <span class="p">:</span> <span class="n">ATTRIB1</span><span class="p">;</span>
+<span class="cp">#else</span>
+    <span class="n">in</span> <span class="n">float4</span> <span class="nl">f4UV</span>  <span class="p">:</span> <span class="n">ATTRIB1</span><span class="p">;</span>
+<span class="cp">#endif</span>
+    <span class="n">uint</span> <span class="nl">VertexID</span> <span class="p">:</span> <span class="n">SV_VertexID</span><span class="p">;</span>
+<span class="p">};</span></pre><p>Similarly to shader entry points, in the scenario above, the two structures need to be defined with distinctive names. Shader macros are allowed in structures that are not used to pass data between shader stages.</p><p>Defining language keywords with macros is not allowed:</p><pre class="m-code"><span class="cp">#define TEXTURE2D Texture2D</span>
+<span class="n">TEXTURE2D</span> <span class="n">MacroTex2D</span><span class="p">;</span></pre><p>Macros can be used within function bodies:</p><pre class="m-code"><span class="n">VSOut</span> <span class="nf">VSTes</span><span class="p">(...)</span>
+<span class="p">{</span>
+<span class="cp">#ifdef SOME_MACRO</span>
+    <span class="c1">// OK</span>
+<span class="cp">#else</span>
+    <span class="c1">// OK</span>
+<span class="cp">#endif</span>
+<span class="p">}</span></pre></section></section><section id="autotoc_md34"><h2><a href="#autotoc_md34">Features</a></h2><p>Please visit <a href="http://diligentgraphics.com/diligent-engine/shader-converter/supported-features/">this page</a> for the full list of supported language features.</p></section><section id="autotoc_md35"><h2><a href="#autotoc_md35">References</a></h2><p><a href="http://diligentgraphics.com/diligent-engine/shader-converter/">HLSL to GLSL Source Converter</a></p></section><section id="autotoc_md36"><h2><a href="#autotoc_md36">Release Notes</a></h2><section id="autotoc_md37"><h3><a href="#autotoc_md37">2.1</a></h3><section id="autotoc_md38"><h4><a href="#autotoc_md38">New features</a></h4><ul><li>Support for structured buffers</li><li>HLSL-&gt;GLSL conversion is now a two-stage process:<ul><li>Creating conversion stream</li><li>Creating GLSL source from the stream</li></ul></li><li>Geometry shader support</li><li>Tessellation control and tessellation evaluation shader support</li><li>Support for non-void shader functions</li><li>Allowing structs as input parameters for shader functions</li></ul></section></section><section id="autotoc_md39"><h3><a href="#autotoc_md39">2.0</a></h3><p>Reworked the API to follow D3D12 style</p></section><section id="autotoc_md40"><h3><a href="#autotoc_md40">1.0</a></h3><p>Initial release</p><p><strong>Copyright 2015-2018 Egor Yusov</strong></p><p><a href="http://diligentgraphics.com">diligentgraphics.com</a></p></section></section>
+      </div>
+    </div>
+  </div>
+</article></main>
+<div class="m-doc-search" id="search">
+  <a href="#!" onclick="return hideSearch()"></a>
+  <div class="m-container">
+    <div class="m-row">
+      <div class="m-col-m-8 m-push-m-2">
+        <div class="m-doc-search-header m-text m-small">
+          <div><span class="m-label m-default">Tab</span> / <span class="m-label m-default">T</span> to search, <span class="m-label m-default">Esc</span> to close</div>
+          <div id="search-symbolcount">&hellip;</div>
+        </div>
+        <div class="m-doc-search-content">
+          <form>
+            <input type="search" name="q" id="search-input" placeholder="Loading &hellip;" disabled="disabled" autofocus="autofocus" autocomplete="off" spellcheck="false" />
+          </form>
+          <noscript class="m-text m-danger m-text-center">Unlike everything else in the docs, the search functionality <em>requires</em> JavaScript.</noscript>
+          <div id="search-help" class="m-text m-dim m-text-center">
+            <p class="m-noindent">Search for symbols, directories, files, pages or
+            modules. You can omit any prefix from the symbol or file path; adding a
+            <code>:</code> or <code>/</code> suffix lists all members of given symbol or
+            directory.</p>
+            <p class="m-noindent">Use <span class="m-label m-dim">&darr;</span>
+            / <span class="m-label m-dim">&uarr;</span> to navigate through the list,
+            <span class="m-label m-dim">Enter</span> to go.
+            <span class="m-label m-dim">Tab</span> autocompletes common prefix, you can
+            copy a link to the result using <span class="m-label m-dim">⌘</span>
+            <span class="m-label m-dim">L</span> while <span class="m-label m-dim">⌘</span>
+            <span class="m-label m-dim">M</span> produces a Markdown link.</p>
+          </div>
+          <div id="search-notfound" class="m-text m-warning m-text-center">Sorry, nothing was found.</div>
+          <ul id="search-results"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="search-v1.js"></script>
+<script src="searchdata-v1.js" async="async"></script>
+<footer><nav>
+  <div class="m-container">
+    <div class="m-row">
+      <div class="m-col-l-10 m-push-l-1">
+        <p>Diligent Engine. Created with <a href="https://doxygen.org/">Doxygen</a> 1.8.17 and <a href="https://mcss.mosra.cz/">m.css</a>.</p>
+      </div>
+    </div>
+  </div>
+</nav></footer>
+</body>
+</html>

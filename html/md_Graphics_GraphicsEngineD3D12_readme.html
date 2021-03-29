@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>GraphicsEngineD3D12 | Diligent Engine</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i%7CSource+Code+Pro:400,400i,600" />
+  <link rel="stylesheet" href="m-dark+documentation.compiled.css" />
+  <link rel="icon" href="favicon-dark.png" type="image/png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#22272e" />
+</head>
+<body>
+<header><nav id="navigation">
+  <div class="m-container">
+    <div class="m-row">
+      <a href="index.html" id="m-navbar-brand" class="m-col-t-8 m-col-m-none m-left-m">Diligent Engine</a>
+      <div class="m-col-t-4 m-hide-m m-text-right m-nopadr">
+        <a href="#search" class="m-doc-search-icon" title="Search" onclick="return showSearch()"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
+          <path id="m-doc-search-icon-path" d="m6 0c-3.31 0-6 2.69-6 6 0 3.31 2.69 6 6 6 1.49 0 2.85-0.541 3.89-1.44-0.0164 0.338 0.147 0.759 0.5 1.15l3.22 3.79c0.552 0.614 1.45 0.665 2 0.115 0.55-0.55 0.499-1.45-0.115-2l-3.79-3.22c-0.392-0.353-0.812-0.515-1.15-0.5 0.895-1.05 1.44-2.41 1.44-3.89 0-3.31-2.69-6-6-6zm0 1.56a4.44 4.44 0 0 1 4.44 4.44 4.44 4.44 0 0 1-4.44 4.44 4.44 4.44 0 0 1-4.44-4.44 4.44 4.44 0 0 1 4.44-4.44z"/>
+        </svg></a>
+        <a id="m-navbar-show" href="#navigation" title="Show navigation"></a>
+        <a id="m-navbar-hide" href="#" title="Hide navigation"></a>
+      </div>
+      <div id="m-navbar-collapse" class="m-col-t-12 m-show-m m-col-m-none m-right-m">
+        <div class="m-row">
+          <ol class="m-col-t-6 m-col-m-none">
+            <li><a href="pages.html">Pages</a></li>
+            <li><a href="namespaces.html">Namespaces</a></li>
+          </ol>
+          <ol class="m-col-t-6 m-col-m-none" start="3">
+            <li><a href="annotated.html">Classes</a></li>
+            <li><a href="files.html">Files</a></li>
+            <li class="m-show-m"><a href="#search" class="m-doc-search-icon" title="Search" onclick="return showSearch()"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
+              <use href="#m-doc-search-icon-path" />
+            </svg></a></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav></header>
+<main><article>
+  <div class="m-container m-container-inflatable">
+    <div class="m-row">
+      <div class="m-col-l-10 m-push-l-1">
+        <h1>
+          GraphicsEngineD3D12
+        </h1>
+<p>Implementation of Direct3D12 back-end</p><section id="autotoc_md9"><h2><a href="#autotoc_md9">Initialization</a></h2><p>The following code snippet shows how to initialize <a href="namespaceDiligent.html" class="m-doc">Diligent</a> Engine in Direct3D12 mode.</p><pre class="m-code"><span class="cp">#include</span> <span class="cpf">&quot;EngineFactoryD3D12.h&quot;</span><span class="cp"></span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">Diligent</span><span class="p">;</span>
+
+<span class="c1">// ...</span>
+<span class="cp">#if ENGINE_DLL</span>
+    <span class="c1">// Load the dll and import GetEngineFactoryD3D12() function</span>
+    <span class="k">auto</span> <span class="n">GetEngineFactoryD3D12</span> <span class="o">=</span> <span class="n">LoadGraphicsEngineD3D12</span><span class="p">();</span>
+<span class="cp">#endif</span>
+<span class="k">auto</span><span class="o">*</span> <span class="n">pFactoryD3D12</span> <span class="o">=</span> <span class="n">GetEngineFactoryD3D12</span><span class="p">();</span>
+<span class="n">EngineD3D12CreateInfo</span> <span class="n">EngineCI</span><span class="p">;</span>
+<span class="n">EngineCI</span><span class="p">.</span><span class="n">CPUDescriptorHeapAllocationSize</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1024</span><span class="p">;</span>
+<span class="n">EngineCI</span><span class="p">.</span><span class="n">CPUDescriptorHeapAllocationSize</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">32</span><span class="p">;</span>
+<span class="n">EngineCI</span><span class="p">.</span><span class="n">CPUDescriptorHeapAllocationSize</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">16</span><span class="p">;</span>
+<span class="n">EngineCI</span><span class="p">.</span><span class="n">CPUDescriptorHeapAllocationSize</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="mi">16</span><span class="p">;</span>
+<span class="n">EngineCI</span><span class="p">.</span><span class="n">NumCommandsToFlushCmdList</span> <span class="o">=</span> <span class="mi">64</span><span class="p">;</span>
+<span class="n">RefCntAutoPtr</span><span class="o">&lt;</span><span class="n">IRenderDevice</span><span class="o">&gt;</span>  <span class="n">pRenderDevice</span><span class="p">;</span>
+<span class="n">RefCntAutoPtr</span><span class="o">&lt;</span><span class="n">IDeviceContext</span><span class="o">&gt;</span> <span class="n">pImmediateContext</span><span class="p">;</span>
+<span class="n">SwapChainDesc</span> <span class="n">SwapChainDesc</span><span class="p">;</span>
+<span class="n">RefCntAutoPtr</span><span class="o">&lt;</span><span class="n">ISwapChain</span><span class="o">&gt;</span> <span class="n">pSwapChain</span><span class="p">;</span>
+<span class="n">pFactoryD3D12</span><span class="o">-&gt;</span><span class="n">CreateDeviceAndContextsD3D12</span><span class="p">(</span><span class="n">EngineCI</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">pRenderDevice</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">pImmediateContext</span><span class="p">);</span>
+<span class="n">NativeWindow</span> <span class="n">Window</span><span class="p">;</span>
+<span class="n">Window</span><span class="p">.</span><span class="n">hWnd</span> <span class="o">=</span> <span class="n">hWnd</span><span class="p">;</span>
+<span class="n">pFactoryD3D12</span><span class="o">-&gt;</span><span class="n">CreateSwapChainD3D12</span><span class="p">(</span><span class="n">pRenderDevice</span><span class="p">,</span> <span class="n">pImmediateContext</span><span class="p">,</span> <span class="n">SwapChainDesc</span><span class="p">,</span> <span class="n">Window</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">pSwapChain</span><span class="p">);</span></pre><p>Alternatively, the engine can be initialized by attaching to existing Direct3D12 device (see below).</p></section><section id="autotoc_md10"><h2><a href="#autotoc_md10">Interoperability with Direct3D12</a></h2><p><a href="namespaceDiligent.html" class="m-doc">Diligent</a> Engine exposes methods to access internal Direct3D12 objects, is able to create diligent engine buffers and textures from existing Direct3D12 resources, and can be initialized by attaching to existing Direct3D12 device and provide synchronization tools.</p><section id="autotoc_md11"><h3><a href="#autotoc_md11">Accessing Native Direct3D12 Resources</a></h3><p>Below are some of the methods that provide access to internal Direct3D12 objects:</p><table class="m-table"><thead><tr><th>Function</th><th>Description</th></tr></thead><tbody><tr><td><code>ID3D12Resource* IBufferD3D12::GetD3D12Buffer(size_t&amp; DataStartByteOffset, Uint32 ContextId)</code></td><td>returns a pointer to the <code>ID3D12Resource</code> interface of the internal Direct3D12 buffer object. Note that dynamic buffers are suballocated from dynamic heap, and every context has its own dynamic heap. Offset from the beginning of the dynamic heap for a context identified by <code>ContextId</code> is returned in <code>DataStartByteOffset</code> parameter</td></tr><tr><td><code>void IBufferD3D12::SetD3D12ResourceState(D3D12_RESOURCE_STATES state)</code></td><td>sets the buffer usage state. This method should be used when an application transitions the buffer to inform diligent engine about the current usage state</td></tr><tr><td><code>D3D12_CPU_DESCRIPTOR_HANDLE IBufferViewD3D12::GetCPUDescriptorHandle()</code></td><td>returns CPU descriptor handle of the buffer view</td></tr><tr><td><code>ID3D12Resource* ITextureD3D12::GetD3D12Texture()</code></td><td>returns a pointer to the <code>ID3D12Resource</code> interface of the internal Direct3D12 texture object</td></tr><tr><td><code>void ITextureD3D12::SetD3D12ResourceState(D3D12_RESOURCE_STATES state)</code></td><td>sets the texture usage state. This method should be used when an application transitions the texture to inform diligent engine about the current usage state</td></tr><tr><td><code>D3D12_CPU_DESCRIPTOR_HANDLE ITextureViewD3D12::GetCPUDescriptorHandle()</code></td><td>returns CPU descriptor handle of the texture view</td></tr><tr><td><code>void IDeviceContextD3D12::TransitionTextureState(ITexture* pTexture, D3D12_RESOURCE_STATES State)</code></td><td>transitions internal Direct3D12 texture object to a specified state</td></tr><tr><td><code>void IDeviceContextD3D12::TransitionBufferState(IBuffer* pBuffer, D3D12_RESOURCE_STATES State)</code></td><td>transitions internal Direct3D12 buffer object to a specified state</td></tr><tr><td><code>ID3D12PipelineState* IPipelineStateD3D12::GetD3D12PipelineState()</code></td><td>returns ID3D12PipelineState interface of the internal Direct3D12 pipeline state object object</td></tr><tr><td><code>ID3D12RootSignature* IPipelineStateD3D12::GetD3D12RootSignature()</code></td><td>returns a pointer to the root signature object associated with this pipeline state</td></tr><tr><td><code>D3D12_CPU_DESCRIPTOR_HANDLE ISamplerD3D12::GetCPUDescriptorHandle()</code></td><td>returns a CPU descriptor handle of the Direct3D12 sampler object</td></tr><tr><td><code>ID3D12Device* IRenderDeviceD3D12::GetD3D12Device()</code></td><td>returns ID3D12Device interface of the internal Direct3D12 device object</td></tr></tbody></table></section><section id="autotoc_md12"><h3><a href="#autotoc_md12">Synchronization Tools</a></h3><table class="m-table"><thead><tr><th>Function</th><th>Description</th></tr></thead><tbody><tr><td><code>Uint64 IRenderDeviceD3D12::GetNextFenceValue()</code></td><td>returns the fence value that will be signaled by the GPU command queue when the next command list is submitted for execution</td></tr><tr><td><code>Bool IRenderDeviceD3D12::IsFenceSignaled(Uint64 FenceValue)</code></td><td>checks if the fence value has been signaled by the GPU. True means that all associated work has been finished</td></tr><tr><td><code>void IRenderDeviceD3D12::FinishFrame()</code></td><td>this method should be called at the end of the frame when attached to existing Direct3D12 device. Otherwise the method is automatically called before present</td></tr></tbody></table></section><section id="autotoc_md13"><h3><a href="#autotoc_md13">Creating Diligent Engine Objects from D3D12 Resources</a></h3><ul><li><code>void IRenderDeviceD3D12::CreateTextureFromD3DResource(ID3D12Resource* pd3d12Texture, RESOURCE_STATE InitialState, ITexture** ppTexture)</code> - creates a <a href="namespaceDiligent.html" class="m-doc">Diligent</a> Engine texture object from native Direct3D12 resource.</li><li><code>void IRenderDeviceD3D12::CreateBufferFromD3DResource(ID3D12Resource* pd3d12Buffer, const BufferDesc&amp; BuffDesc, RESOURCE_STATE InitialState, IBuffer** ppBuffer)</code> - creates a <a href="namespaceDiligent.html" class="m-doc">Diligent</a> Engine buffer object from native Direct3D12 resource. The method takes a pointer to the native Direct3D12 resiyrce <code>pd3d12Buffer</code>, buffer description <code>BuffDesc</code> and writes a pointer to the <code>IBuffer</code> interface at the memory location pointed to by <code>ppBuffer</code>. The system can recover buffer size, but the rest of the fields of BuffDesc structure need to be populated by the client as they cannot be recovered from Direct3D12 resource description.</li></ul></section><section id="autotoc_md14"><h3><a href="#autotoc_md14">Initializing the Engine by Attaching to Existing D3D12 Device</a></h3><p>To attach diligent engine to existing D3D12 device, use the following factory function:</p><pre class="m-code"><span class="kt">void</span> <span class="n">IEngineFactoryD3D12</span><span class="o">::</span><span class="n">AttachToD3D12Device</span><span class="p">(</span><span class="kt">void</span><span class="o">*</span>                         <span class="n">pd3d12NativeDevice</span><span class="p">,</span>
+                                              <span class="k">class</span> <span class="nc">ICommandQueueD3D12</span><span class="o">*</span>     <span class="n">pCommandQueue</span><span class="p">,</span>
+                                              <span class="k">const</span> <span class="n">EngineD3D12CreateInfo</span><span class="o">&amp;</span>  <span class="n">EngineCI</span><span class="p">,</span>
+                                              <span class="n">IRenderDevice</span><span class="o">**</span>               <span class="n">ppDevice</span><span class="p">,</span>
+                                              <span class="n">IDeviceContext</span><span class="o">**</span>              <span class="n">ppContexts</span><span class="p">);</span></pre><p>The method takes a pointer to the native D3D12 device <code>pd3d12NativeDevice</code>, initialization parameters <code>EngineCI</code>, and returns diligent engine device interface in <code>ppDevice</code>, and diligent engine contexts in <code>ppContexts</code>. Pointer to the immediate goes at position 0. If <code>EngineCI.NumDeferredContexts</code> &gt; 0, pointers to deferred contexts go afterwards. The function also takes a pointer to the command queue object <code>pCommandQueue</code>, which needs to implement <code>ICommandQueueD3D12</code> interface.</p><p>For more information about interoperability with Direct3D12, please visit <a href="http://diligentgraphics.com/diligent-engine/native-api-interoperability/direct3d12-interoperability/">Diligent Engine web site</a></p></section></section><section id="autotoc_md15"><h2><a href="#autotoc_md15">References</a></h2><p><a href="http://diligentgraphics.com/diligent-engine/native-api-interoperability/direct3d12-interoperability/">Interoperability with Direct3D12</a></p><p><a href="http://diligentgraphics.com/diligent-engine/architecture/D3D12">Architecture of D3D12-based implementation</a></p><hr/><p><a href="http://diligentgraphics.com">diligentgraphics.com</a></p><p><a href="https://twitter.com/diligentengine"><img class="m-image" src="twitter.png" alt="Image" /></a> <a href="https://www.facebook.com/DiligentGraphics/"><img class="m-image" src="facebook.png" alt="Image" /></a></p></section>
+      </div>
+    </div>
+  </div>
+</article></main>
+<div class="m-doc-search" id="search">
+  <a href="#!" onclick="return hideSearch()"></a>
+  <div class="m-container">
+    <div class="m-row">
+      <div class="m-col-m-8 m-push-m-2">
+        <div class="m-doc-search-header m-text m-small">
+          <div><span class="m-label m-default">Tab</span> / <span class="m-label m-default">T</span> to search, <span class="m-label m-default">Esc</span> to close</div>
+          <div id="search-symbolcount">&hellip;</div>
+        </div>
+        <div class="m-doc-search-content">
+          <form>
+            <input type="search" name="q" id="search-input" placeholder="Loading &hellip;" disabled="disabled" autofocus="autofocus" autocomplete="off" spellcheck="false" />
+          </form>
+          <noscript class="m-text m-danger m-text-center">Unlike everything else in the docs, the search functionality <em>requires</em> JavaScript.</noscript>
+          <div id="search-help" class="m-text m-dim m-text-center">
+            <p class="m-noindent">Search for symbols, directories, files, pages or
+            modules. You can omit any prefix from the symbol or file path; adding a
+            <code>:</code> or <code>/</code> suffix lists all members of given symbol or
+            directory.</p>
+            <p class="m-noindent">Use <span class="m-label m-dim">&darr;</span>
+            / <span class="m-label m-dim">&uarr;</span> to navigate through the list,
+            <span class="m-label m-dim">Enter</span> to go.
+            <span class="m-label m-dim">Tab</span> autocompletes common prefix, you can
+            copy a link to the result using <span class="m-label m-dim">⌘</span>
+            <span class="m-label m-dim">L</span> while <span class="m-label m-dim">⌘</span>
+            <span class="m-label m-dim">M</span> produces a Markdown link.</p>
+          </div>
+          <div id="search-notfound" class="m-text m-warning m-text-center">Sorry, nothing was found.</div>
+          <ul id="search-results"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="search-v1.js"></script>
+<script src="searchdata-v1.js" async="async"></script>
+<footer><nav>
+  <div class="m-container">
+    <div class="m-row">
+      <div class="m-col-l-10 m-push-l-1">
+        <p>Diligent Engine. Created with <a href="https://doxygen.org/">Doxygen</a> 1.8.17 and <a href="https://mcss.mosra.cz/">m.css</a>.</p>
+      </div>
+    </div>
+  </div>
+</nav></footer>
+</body>
+</html>

@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Diligent::DeviceContextBase class | Diligent Engine</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i%7CSource+Code+Pro:400,400i,600" />
+  <link rel="stylesheet" href="m-dark+documentation.compiled.css" />
+  <link rel="icon" href="favicon-dark.png" type="image/png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#22272e" />
+</head>
+<body>
+<header><nav id="navigation">
+  <div class="m-container">
+    <div class="m-row">
+      <a href="index.html" id="m-navbar-brand" class="m-col-t-8 m-col-m-none m-left-m">Diligent Engine</a>
+      <div class="m-col-t-4 m-hide-m m-text-right m-nopadr">
+        <a href="#search" class="m-doc-search-icon" title="Search" onclick="return showSearch()"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
+          <path id="m-doc-search-icon-path" d="m6 0c-3.31 0-6 2.69-6 6 0 3.31 2.69 6 6 6 1.49 0 2.85-0.541 3.89-1.44-0.0164 0.338 0.147 0.759 0.5 1.15l3.22 3.79c0.552 0.614 1.45 0.665 2 0.115 0.55-0.55 0.499-1.45-0.115-2l-3.79-3.22c-0.392-0.353-0.812-0.515-1.15-0.5 0.895-1.05 1.44-2.41 1.44-3.89 0-3.31-2.69-6-6-6zm0 1.56a4.44 4.44 0 0 1 4.44 4.44 4.44 4.44 0 0 1-4.44 4.44 4.44 4.44 0 0 1-4.44-4.44 4.44 4.44 0 0 1 4.44-4.44z"/>
+        </svg></a>
+        <a id="m-navbar-show" href="#navigation" title="Show navigation"></a>
+        <a id="m-navbar-hide" href="#" title="Hide navigation"></a>
+      </div>
+      <div id="m-navbar-collapse" class="m-col-t-12 m-show-m m-col-m-none m-right-m">
+        <div class="m-row">
+          <ol class="m-col-t-6 m-col-m-none">
+            <li><a href="pages.html">Pages</a></li>
+            <li><a href="namespaces.html">Namespaces</a></li>
+          </ol>
+          <ol class="m-col-t-6 m-col-m-none" start="3">
+            <li><a href="annotated.html">Classes</a></li>
+            <li><a href="files.html">Files</a></li>
+            <li class="m-show-m"><a href="#search" class="m-doc-search-icon" title="Search" onclick="return showSearch()"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
+              <use href="#m-doc-search-icon-path" />
+            </svg></a></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav></header>
+<main><article>
+  <div class="m-container m-container-inflatable">
+    <div class="m-row">
+      <div class="m-col-l-10 m-push-l-1">
+        <h1>
+          <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="DeviceContextBase_8hpp.html">&lt;Graphics/GraphicsEngine/include/DeviceContextBase.hpp&gt;</a></div>
+          <div class="m-doc-template">template&lt;typename EngineImplTraits&gt;</div>
+          <span class="m-breadcrumb"><a href="namespaceDiligent.html">Diligent</a>::<wbr/></span>DeviceContextBase <span class="m-thin">class</span>
+        </h1>
+        <p>Base implementation of the device context.</p>
+        <table class="m-table m-fullwidth m-flat">
+          <thead>
+            <tr><th colspan="2">Template parameters</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="width: 1%">EngineImplTraits</td>
+              <td>- Engine implementation traits that define specific implementation details (texture implemenation type, buffer implementation type, etc.)</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="m-block m-default">
+          <h3>Contents</h3>
+          <ul>
+            <li>
+              Reference
+              <ul>
+                <li><a href="#base-classes">Base classes</a></li>
+                <li><a href="#derived-classes">Derived classes</a></li>
+                <li><a href="#typeless-methods">Constructors, destructors, conversion operators</a></li>
+                <li><a href="#pub-methods">Public functions</a></li>
+                <li><a href="#pro-types">Protected types</a></li>
+                <li><a href="#pro-methods">Protected functions</a></li>
+                <li><a href="#pro-attribs">Protected variables</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+<aside class="m-note m-default"><h4>Remark</h4><p>Device context keeps strong references to all objects currently bound to the pipeline: buffers, tetxures, states, SRBs, etc. The context also keeps strong references to the device and the swap chain.</p></aside>
+        <section id="base-classes">
+          <h2><a href="#base-classes">Base classes</a></h2>
+          <dl class="m-doc">
+            <dt>
+              <div class="m-doc-template">template&lt;typename BaseInterface&gt;</div>
+              class <a href="classDiligent_1_1ObjectBase.html" class="m-doc">ObjectBase&lt;EngineImplTraits::DeviceContextInterface&gt;</a>
+            </dt>
+            <dd>Template class implementing base functionality for an object.</dd>
+          </dl>
+        </section>
+        <section id="derived-classes">
+          <h2><a href="#derived-classes">Derived classes</a></h2>
+          <dl class="m-doc">
+            <dt>
+              <div class="m-doc-template">template&lt;typename EngineImplTraits&gt;</div>
+              class <a href="classDiligent_1_1DeviceContextNextGenBase.html" class="m-doc">DeviceContextNextGenBase</a>
+            </dt>
+            <dd>Base implementation of the device context for next-generation backends.</dd>
+          </dl>
+        </section>
+        <section id="typeless-methods">
+          <h2><a href="#typeless-methods">Constructors, destructors, conversion operators</a></h2>
+          <dl class="m-doc">
+            <dt>
+              <span class="m-doc-wrap-bumper"><a href="#a1b7d5f816becb5a9a9c8cd61f09dfe8c" class="m-doc">DeviceContextBase</a>(</span><span class="m-doc-wrap"><a href="classDiligent_1_1IReferenceCounters.html" class="m-doc">IReferenceCounters</a>* pRefCounters,
+              <a href="classDiligent_1_1DeviceContextBase.html#a4be70d77a62c550d76c75919a733522b" class="m-doc">DeviceImplType</a>* pRenderDevice,
+              bool bIsDeferred)</span>
+            </dt>
+            <dd></dd>
+          </dl>
+        </section>
+        <section id="pub-methods">
+          <h2><a href="#pub-methods">Public functions</a></h2>
+          <dl class="m-doc">
+            <dt id="a0e714ee5a3b8e7a7528c3c19a5ea334c">
+              <span class="m-doc-wrap-bumper">void <a href="#a0e714ee5a3b8e7a7528c3c19a5ea334c" class="m-doc-self">SetVertexBuffers</a>(</span><span class="m-doc-wrap"><a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> StartSlot,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> NumBuffersSet,
+              <a href="structDiligent_1_1IBuffer.html" class="m-doc">IBuffer</a>** ppBuffers,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a>* pOffsets,
+              <a href="namespaceDiligent.html#a98f5c3e5380889788f96c5d5be690d25" class="m-doc">RESOURCE_<wbr />STATE_<wbr />TRANSITION_<wbr />MODE</a> StateTransitionMode,
+              <a href="namespaceDiligent.html#acd12f4066d547aa66c98e96b0e66ebe5" class="m-doc">SET_<wbr />VERTEX_<wbr />BUFFERS_<wbr />FLAGS</a> Flags) <span class="m-label m-flat m-warning">override</span></span>
+            </dt>
+            <dd>Base implementation of <a href="structDiligent_1_1IDeviceContext.html#ab6cf19eaf1087d020fa445983a38106a" class="m-doc">IDeviceContext::<wbr />SetVertexBuffers()</a>; validates parameters and caches references to the buffers.</dd>
+            <dt id="a4dc6dfc24052f2c5f397ca36a0d76f87">
+              <span class="m-doc-wrap-bumper">void <a href="#a4dc6dfc24052f2c5f397ca36a0d76f87" class="m-doc-self">CommitShaderResources</a>(</span><span class="m-doc-wrap"><a href="structDiligent_1_1IShaderResourceBinding.html" class="m-doc">IShaderResourceBinding</a>* pShaderResourceBinding,
+              <a href="namespaceDiligent.html#a98f5c3e5380889788f96c5d5be690d25" class="m-doc">RESOURCE_<wbr />STATE_<wbr />TRANSITION_<wbr />MODE</a> StateTransitionMode,
+              int)</span>
+            </dt>
+            <dd>Base implementation of <a href="structDiligent_1_1IDeviceContext.html#a24e82a3c38e7d3a496a82e67d02c9b57" class="m-doc">IDeviceContext::<wbr />CommitShaderResources()</a>; validates parameters.</dd>
+            <dt id="a771318f163ecc3db2940d9ea4beb8af6">
+              <span class="m-doc-wrap-bumper">void <a href="#a771318f163ecc3db2940d9ea4beb8af6" class="m-doc-self">SetIndexBuffer</a>(</span><span class="m-doc-wrap"><a href="structDiligent_1_1IBuffer.html" class="m-doc">IBuffer</a>* pIndexBuffer,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> ByteOffset,
+              <a href="namespaceDiligent.html#a98f5c3e5380889788f96c5d5be690d25" class="m-doc">RESOURCE_<wbr />STATE_<wbr />TRANSITION_<wbr />MODE</a> StateTransitionMode) <span class="m-label m-flat m-warning">override</span></span>
+            </dt>
+            <dd>Base implementation of <a href="structDiligent_1_1IDeviceContext.html#a7223ba351e883d66de749cd936892d1c" class="m-doc">IDeviceContext::<wbr />SetIndexBuffer()</a>; caches the strong reference to the index buffer.</dd>
+            <dt id="a5ed61f252a8ced6157c5a86378a034dd">
+              <span class="m-doc-wrap-bumper">void <a href="#a5ed61f252a8ced6157c5a86378a034dd" class="m-doc-self">SetViewports</a>(</span><span class="m-doc-wrap"><a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> NumViewports,
+              const <a href="structDiligent_1_1Viewport.html" class="m-doc">Viewport</a>* pViewports,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a>&amp; RTWidth,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a>&amp; RTHeight)</span>
+            </dt>
+            <dd>Caches the viewports.</dd>
+            <dt id="a368bb4668c4cf981ed4103785813d593">
+              <span class="m-doc-wrap-bumper">void <a href="#a368bb4668c4cf981ed4103785813d593" class="m-doc-self">SetScissorRects</a>(</span><span class="m-doc-wrap"><a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> NumRects,
+              const <a href="structDiligent_1_1Rect.html" class="m-doc">Rect</a>* pRects,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a>&amp; RTWidth,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a>&amp; RTHeight)</span>
+            </dt>
+            <dd>Caches the scissor rects.</dd>
+            <dt id="a1545ceae6a278eda28808c64c79afb89">
+              <span class="m-doc-wrap-bumper">void <a href="#a1545ceae6a278eda28808c64c79afb89" class="m-doc-self">UpdateBuffer</a>(</span><span class="m-doc-wrap"><a href="structDiligent_1_1IBuffer.html" class="m-doc">IBuffer</a>* pBuffer,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> Offset,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> Size,
+              const void* pData,
+              <a href="namespaceDiligent.html#a98f5c3e5380889788f96c5d5be690d25" class="m-doc">RESOURCE_<wbr />STATE_<wbr />TRANSITION_<wbr />MODE</a> StateTransitionMode) <span class="m-label m-flat m-warning">override</span></span>
+            </dt>
+            <dd>Base implementation of <a href="structDiligent_1_1IDeviceContext.html#af3419d0e2e6b807c820b044e641c9b02" class="m-doc">IDeviceContext::<wbr />UpdateBuffer()</a>; validates input parameters.</dd>
+            <dt id="abfedca190e13705bb5013b43e63806cc">
+              <span class="m-doc-wrap-bumper">void <a href="#abfedca190e13705bb5013b43e63806cc" class="m-doc-self">CopyBuffer</a>(</span><span class="m-doc-wrap"><a href="structDiligent_1_1IBuffer.html" class="m-doc">IBuffer</a>* pSrcBuffer,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> SrcOffset,
+              <a href="namespaceDiligent.html#a98f5c3e5380889788f96c5d5be690d25" class="m-doc">RESOURCE_<wbr />STATE_<wbr />TRANSITION_<wbr />MODE</a> SrcBufferTransitionMode,
+              <a href="structDiligent_1_1IBuffer.html" class="m-doc">IBuffer</a>* pDstBuffer,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> DstOffset,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> Size,
+              <a href="namespaceDiligent.html#a98f5c3e5380889788f96c5d5be690d25" class="m-doc">RESOURCE_<wbr />STATE_<wbr />TRANSITION_<wbr />MODE</a> DstBufferTransitionMode) <span class="m-label m-flat m-warning">override</span></span>
+            </dt>
+            <dd>Base implementation of <a href="structDiligent_1_1IDeviceContext.html#af6b64b9da6b81609de66e79af4b01588" class="m-doc">IDeviceContext::<wbr />CopyBuffer()</a>; validates input parameters.</dd>
+            <dt id="a54d13b66e6a5ed4f4d23449814537291">
+              <span class="m-doc-wrap-bumper">void <a href="#a54d13b66e6a5ed4f4d23449814537291" class="m-doc-self">MapBuffer</a>(</span><span class="m-doc-wrap"><a href="structDiligent_1_1IBuffer.html" class="m-doc">IBuffer</a>* pBuffer,
+              <a href="namespaceDiligent.html#ae99eefec15316dbbafa59a5152549c85" class="m-doc">MAP_<wbr />TYPE</a> MapType,
+              <a href="namespaceDiligent.html#ac1596c9005fe32da5e301ce461e429b0" class="m-doc">MAP_<wbr />FLAGS</a> MapFlags,
+              <a href="namespaceDiligent.html#ab746b3990e4a102158fee263db57425a" class="m-doc">PVoid</a>&amp; pMappedData) <span class="m-label m-flat m-warning">override</span></span>
+            </dt>
+            <dd>Base implementation of <a href="structDiligent_1_1IDeviceContext.html#a6b144284efaec465addf3d682f7a9879" class="m-doc">IDeviceContext::<wbr />MapBuffer()</a>; validates input parameters.</dd>
+            <dt id="aafdc6202fd8aeed9c5f5211f5b8aac78">
+              <span class="m-doc-wrap-bumper">void <a href="#aafdc6202fd8aeed9c5f5211f5b8aac78" class="m-doc-self">UnmapBuffer</a>(</span><span class="m-doc-wrap"><a href="structDiligent_1_1IBuffer.html" class="m-doc">IBuffer</a>* pBuffer,
+              <a href="namespaceDiligent.html#ae99eefec15316dbbafa59a5152549c85" class="m-doc">MAP_<wbr />TYPE</a> MapType) <span class="m-label m-flat m-warning">override</span></span>
+            </dt>
+            <dd>Base implementation of <a href="structDiligent_1_1IDeviceContext.html#a70db5f1760415d1635ef9cbd45a8552e" class="m-doc">IDeviceContext::<wbr />UnmapBuffer()</a></dd>
+            <dt id="ac7c9eba04ce8c604204dcdc787abccd0">
+              <span class="m-doc-wrap-bumper">void <a href="#ac7c9eba04ce8c604204dcdc787abccd0" class="m-doc-self">UpdateTexture</a>(</span><span class="m-doc-wrap"><a href="structDiligent_1_1ITexture.html" class="m-doc">ITexture</a>* pTexture,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> MipLevel,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> Slice,
+              const <a href="structDiligent_1_1Box.html" class="m-doc">Box</a>&amp; DstBox,
+              const <a href="structDiligent_1_1TextureSubResData.html" class="m-doc">TextureSubResData</a>&amp; SubresData,
+              <a href="namespaceDiligent.html#a98f5c3e5380889788f96c5d5be690d25" class="m-doc">RESOURCE_<wbr />STATE_<wbr />TRANSITION_<wbr />MODE</a> SrcBufferTransitionMode,
+              <a href="namespaceDiligent.html#a98f5c3e5380889788f96c5d5be690d25" class="m-doc">RESOURCE_<wbr />STATE_<wbr />TRANSITION_<wbr />MODE</a> TextureTransitionMode) <span class="m-label m-flat m-warning">override</span></span>
+            </dt>
+            <dd>Base implementaiton of IDeviceContext::UpdateData(); validates input parameters.</dd>
+            <dt id="a5a69963b1f8471a0bc3092998204f0f7">
+              <span class="m-doc-wrap-bumper">void <a href="#a5a69963b1f8471a0bc3092998204f0f7" class="m-doc-self">CopyTexture</a>(</span><span class="m-doc-wrap">const <a href="structDiligent_1_1CopyTextureAttribs.html" class="m-doc">CopyTextureAttribs</a>&amp; CopyAttribs) <span class="m-label m-flat m-warning">override</span></span>
+            </dt>
+            <dd>Base implementaiton of <a href="structDiligent_1_1IDeviceContext.html#aaa03a7bc175c5abe6e1a2129553efa3d" class="m-doc">IDeviceContext::<wbr />CopyTexture()</a>; validates input parameters.</dd>
+            <dt id="a72d2e7bee5ee0c9be6402fe8f9164379">
+              <span class="m-doc-wrap-bumper">void <a href="#a72d2e7bee5ee0c9be6402fe8f9164379" class="m-doc-self">MapTextureSubresource</a>(</span><span class="m-doc-wrap"><a href="structDiligent_1_1ITexture.html" class="m-doc">ITexture</a>* pTexture,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> MipLevel,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> ArraySlice,
+              <a href="namespaceDiligent.html#ae99eefec15316dbbafa59a5152549c85" class="m-doc">MAP_<wbr />TYPE</a> MapType,
+              <a href="namespaceDiligent.html#ac1596c9005fe32da5e301ce461e429b0" class="m-doc">MAP_<wbr />FLAGS</a> MapFlags,
+              const <a href="structDiligent_1_1Box.html" class="m-doc">Box</a>* pMapRegion,
+              <a href="structDiligent_1_1MappedTextureSubresource.html" class="m-doc">MappedTextureSubresource</a>&amp; MappedData) <span class="m-label m-flat m-warning">override</span></span>
+            </dt>
+            <dd>Base implementaiton of <a href="structDiligent_1_1IDeviceContext.html#a8b5aa2e397cbc3500d22764fdddd3930" class="m-doc">IDeviceContext::<wbr />MapTextureSubresource()</a></dd>
+            <dt id="a67a61d969cd8c62dce16117e4ee008bd">
+              <span class="m-doc-wrap-bumper">void <a href="#a67a61d969cd8c62dce16117e4ee008bd" class="m-doc-self">UnmapTextureSubresource</a>(</span><span class="m-doc-wrap"><a href="structDiligent_1_1ITexture.html" class="m-doc">ITexture</a>* pTexture,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> MipLevel,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> ArraySlice) <span class="m-label m-flat m-warning">override</span></span>
+            </dt>
+            <dd>Base implementaiton of <a href="structDiligent_1_1IDeviceContext.html#ad0c19b40b711b39e4a91caef88a78e7f" class="m-doc">IDeviceContext::<wbr />UnmapTextureSubresource()</a></dd>
+            <dt id="a3a7205166c455f6d1dea3268633f845d">
+              <span class="m-doc-wrap-bumper">void <a href="#a3a7205166c455f6d1dea3268633f845d" class="m-doc-self">GetPipelineState</a>(</span><span class="m-doc-wrap"><a href="structDiligent_1_1IPipelineState.html" class="m-doc">IPipelineState</a>** ppPSO,
+              float* BlendFactors,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a>&amp; StencilRef)</span>
+            </dt>
+            <dd>Returns currently bound pipeline state and blend factors.</dd>
+            <dt id="ac0b0150af15bc43d0b08b7a2fb4838c6">
+              <span class="m-doc-wrap-bumper">void <a href="#ac0b0150af15bc43d0b08b7a2fb4838c6" class="m-doc-self">GetRenderTargets</a>(</span><span class="m-doc-wrap"><a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a>&amp; NumRenderTargets,
+              <a href="structDiligent_1_1ITextureView.html" class="m-doc">ITextureView</a>** ppRTVs,
+              <a href="structDiligent_1_1ITextureView.html" class="m-doc">ITextureView</a>** ppDSV)</span>
+            </dt>
+            <dd>Returns currently bound render targets.</dd>
+            <dt id="a7064012ef3c10a0db1a28f9e4a914031">
+              <span class="m-doc-wrap-bumper">void <a href="#a7064012ef3c10a0db1a28f9e4a914031" class="m-doc-self">GetViewports</a>(</span><span class="m-doc-wrap"><a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a>&amp; NumViewports,
+              <a href="structDiligent_1_1Viewport.html" class="m-doc">Viewport</a>* pViewports)</span>
+            </dt>
+            <dd>Returns currently set viewports.</dd>
+            <dt id="a10361c1ea6ba204903bdc0f0f1a670b2">
+              <span class="m-doc-wrap-bumper">auto <a href="#a10361c1ea6ba204903bdc0f0f1a670b2" class="m-doc-self">GetDevice</a>(</span><span class="m-doc-wrap">) -&gt; <a href="structDiligent_1_1IRenderDevice.html" class="m-doc">IRenderDevice</a>*</span>
+            </dt>
+            <dd>Returns the render device.</dd>
+            <dt id="ac08de0d7a54ff4ffd1d652f06121f708">
+              <span class="m-doc-wrap-bumper">auto <a href="#ac08de0d7a54ff4ffd1d652f06121f708" class="m-doc-self">UnbindTextureFromFramebuffer</a>(</span><span class="m-doc-wrap"><a href="classDiligent_1_1DeviceContextBase.html#a542e22eb1d7665a25366a688f684d999" class="m-doc">TextureImplType</a>* pTexture,
+              bool bShowMessage) -&gt; bool</span>
+            </dt>
+            <dd>Checks if a texture is bound as a render target or depth-stencil buffer and resets render targets if it is.</dd>
+          </dl>
+        </section>
+        <section id="pro-types">
+          <h2><a href="#pro-types">Protected types</a></h2>
+          <dl class="m-doc">
+            <dt>
+              struct <a href="structDiligent_1_1DeviceContextBase_1_1CommittedShaderResources.html" class="m-doc">CommittedShaderResources</a>
+            </dt>
+            <dd>Committed shader resources for each resource signature.</dd>
+          </dl>
+        </section>
+        <section id="pro-methods">
+          <h2><a href="#pro-methods">Protected functions</a></h2>
+          <dl class="m-doc">
+            <dt id="a38f52d769b65122ebd2439d30f424e62">
+              <span class="m-doc-wrap-bumper">auto <a href="#a38f52d769b65122ebd2439d30f424e62" class="m-doc-self">SetRenderTargets</a>(</span><span class="m-doc-wrap"><a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> NumRenderTargets,
+              <a href="structDiligent_1_1ITextureView.html" class="m-doc">ITextureView</a>* ppRenderTargets[],
+              <a href="structDiligent_1_1ITextureView.html" class="m-doc">ITextureView</a>* pDepthStencil) -&gt; bool</span>
+            </dt>
+            <dd>Caches the render target and depth stencil views. Returns true if any view is different from the cached value and false otherwise.</dd>
+            <dt id="a417a770985e98ff9899f9abfcffc5aec">
+              <span class="m-doc-wrap-bumper">auto <a href="#a417a770985e98ff9899f9abfcffc5aec" class="m-doc-self">SetSubpassRenderTargets</a>(</span><span class="m-doc-wrap">) -&gt; bool</span>
+            </dt>
+            <dd>Initializes render targets for the current subpass.</dd>
+            <dt id="a9571cef5e6283d5b8ac6652d51e0a896">
+              <span class="m-doc-wrap-bumper">void <a href="#a9571cef5e6283d5b8ac6652d51e0a896" class="m-doc-self">ClearStateCache</a>(</span><span class="m-doc-wrap">)</span>
+            </dt>
+            <dd>Clears all cached resources.</dd>
+            <dt id="a0496781540f5e47058aeb6dd2e38c81e">
+              <span class="m-doc-wrap-bumper">auto <a href="#a0496781540f5e47058aeb6dd2e38c81e" class="m-doc-self">CheckIfBoundAsRenderTarget</a>(</span><span class="m-doc-wrap"><a href="classDiligent_1_1DeviceContextBase.html#a542e22eb1d7665a25366a688f684d999" class="m-doc">TextureImplType</a>* pTexture) -&gt; bool</span>
+            </dt>
+            <dd>Checks if the texture is currently bound as a render target.</dd>
+            <dt id="a160bb90f54c7ca7b50b7f1cf9806305f">
+              <span class="m-doc-wrap-bumper">auto <a href="#a160bb90f54c7ca7b50b7f1cf9806305f" class="m-doc-self">CheckIfBoundAsDepthStencil</a>(</span><span class="m-doc-wrap"><a href="classDiligent_1_1DeviceContextBase.html#a542e22eb1d7665a25366a688f684d999" class="m-doc">TextureImplType</a>* pTexture) -&gt; bool</span>
+            </dt>
+            <dd>Checks if the texture is currently bound as depth-stencil buffer.</dd>
+            <dt id="ac58d69b912fae49eef0f65a2ccbb2f10">
+              <span class="m-doc-wrap-bumper">void <a href="#ac58d69b912fae49eef0f65a2ccbb2f10" class="m-doc-self">UpdateAttachmentStates</a>(</span><span class="m-doc-wrap"><a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> SubpassIndex)</span>
+            </dt>
+            <dd>Updates the states of render pass attachments to match states within the gievn subpass.</dd>
+          </dl>
+        </section>
+        <section id="pro-attribs">
+          <h2><a href="#pro-attribs">Protected variables</a></h2>
+          <dl class="m-doc">
+            <dt id="a813b1b8f810936448d83d060436b42de">
+              <a href="classDiligent_1_1RefCntAutoPtr.html" class="m-doc">RefCntAutoPtr</a>&lt;<a href="classDiligent_1_1DeviceContextBase.html#a4be70d77a62c550d76c75919a733522b" class="m-doc">DeviceImplType</a>&gt; <a href="#a813b1b8f810936448d83d060436b42de" class="m-doc-self">m_pDevice</a>
+            </dt>
+            <dd>Strong reference to the device.</dd>
+            <dt id="a757a3b92987a3ae5a1ea21b0e96d56cb">
+              <a href="structDiligent_1_1VertexStreamInfo.html" class="m-doc">VertexStreamInfo</a>&lt;<a href="classDiligent_1_1DeviceContextBase.html#ab4cc3804527cd4a2c737c000f8a63a2a" class="m-doc">BufferImplType</a>&gt; <a href="#a757a3b92987a3ae5a1ea21b0e96d56cb" class="m-doc-self">m_VertexStreams</a>
+            </dt>
+            <dd>Vertex streams. Every stream holds strong reference to the buffer.</dd>
+            <dt id="aee91f2f65c2e7d90d7ba47d815a4823f">
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> <a href="#aee91f2f65c2e7d90d7ba47d815a4823f" class="m-doc-self">m_NumVertexStreams</a>
+            </dt>
+            <dd>Number of bound vertex streams.</dd>
+            <dt id="a589b114a592b18110d089f9981b9f306">
+              <a href="classDiligent_1_1RefCntAutoPtr.html" class="m-doc">RefCntAutoPtr</a>&lt;<a href="classDiligent_1_1DeviceContextBase.html#aa36d072fad76a253cff12c5801de8c18" class="m-doc">PipelineStateImplType</a>&gt; <a href="#a589b114a592b18110d089f9981b9f306" class="m-doc-self">m_pPipelineState</a>
+            </dt>
+            <dd>Strong reference to the bound pipeline state object. Use final PSO implementation type to avoid virtual calls to <a href="classDiligent_1_1RefCountedObject.html#a1cae521a4ad5ea84b09b7e2a9a8d75b2" class="m-doc">AddRef()</a>/Release(). We need to keep strong reference as we examine previous pipeline state in <a href="classDiligent_1_1DeviceContextBase.html#a023304bd2f23a033fe8860e008e98ece" class="m-doc">SetPipelineState()</a></dd>
+            <dt id="aba47bc26631f790bba20844eae22689e">
+              <a href="classDiligent_1_1RefCntAutoPtr.html" class="m-doc">RefCntAutoPtr</a>&lt;<a href="classDiligent_1_1DeviceContextBase.html#ab4cc3804527cd4a2c737c000f8a63a2a" class="m-doc">BufferImplType</a>&gt; <a href="#aba47bc26631f790bba20844eae22689e" class="m-doc-self">m_pIndexBuffer</a>
+            </dt>
+            <dd>Strong reference to the bound index buffer. Use final buffer implementation type to avoid virtual calls to <a href="classDiligent_1_1RefCountedObject.html#a1cae521a4ad5ea84b09b7e2a9a8d75b2" class="m-doc">AddRef()</a>/Release()</dd>
+            <dt id="a4c2743d6b45c7670383c26745593e6b0">
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> <a href="#a4c2743d6b45c7670383c26745593e6b0" class="m-doc-self">m_IndexDataStartOffset</a>
+            </dt>
+            <dd>Offset from the beginning of the index buffer to the start of the index data, in bytes.</dd>
+            <dt id="a9a18fcab88b2387a52dd2bf9f5fb53e9">
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> <a href="#a9a18fcab88b2387a52dd2bf9f5fb53e9" class="m-doc-self">m_StencilRef</a>
+            </dt>
+            <dd>Current stencil reference value.</dd>
+            <dt id="a46ed5c9269ffe67363808a843dc47994">
+              <a href="namespaceDiligent.html#a32283d7134e62a58530ba1b0afb4e59e" class="m-doc">Float32</a> <a href="#a46ed5c9269ffe67363808a843dc47994" class="m-doc-self">m_BlendFactors</a>
+            </dt>
+            <dd>Curent blend factors.</dd>
+            <dt id="a6c40547525d42f45ad5eabc786fc5af5">
+              <a href="structDiligent_1_1Viewport.html" class="m-doc">Viewport</a> <a href="#a6c40547525d42f45ad5eabc786fc5af5" class="m-doc-self">m_Viewports</a>
+            </dt>
+            <dd>Current viewports.</dd>
+            <dt id="ad9d0e3f26a2ac5605f3d5bd0195d8cfd">
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> <a href="#ad9d0e3f26a2ac5605f3d5bd0195d8cfd" class="m-doc-self">m_NumViewports</a>
+            </dt>
+            <dd>Number of current viewports.</dd>
+            <dt id="a2e9ffb5da526c8e5565f474895dbfe8e">
+              <a href="structDiligent_1_1Rect.html" class="m-doc">Rect</a> <a href="#a2e9ffb5da526c8e5565f474895dbfe8e" class="m-doc-self">m_ScissorRects</a>
+            </dt>
+            <dd>Current scissor rects.</dd>
+            <dt id="adb30b0eb1bb9d29b67e7e644900cc941">
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> <a href="#adb30b0eb1bb9d29b67e7e644900cc941" class="m-doc-self">m_NumScissorRects</a>
+            </dt>
+            <dd>Number of current scissor rects.</dd>
+            <dt id="a12105e451ec202b7e2213129b01b46cb">
+              <a href="classDiligent_1_1RefCntAutoPtr.html" class="m-doc">RefCntAutoPtr</a>&lt;<a href="classDiligent_1_1DeviceContextBase.html#afda8e626d99a90565dde88c6d94bcc16" class="m-doc">TextureViewImplType</a>&gt; <a href="#a12105e451ec202b7e2213129b01b46cb" class="m-doc-self">m_pBoundRenderTargets</a>
+            </dt>
+            <dd>Vector of strong references to the bound render targets. Use final texture view implementation type to avoid virtual calls to <a href="classDiligent_1_1RefCountedObject.html#a1cae521a4ad5ea84b09b7e2a9a8d75b2" class="m-doc">AddRef()</a>/Release()</dd>
+            <dt id="ab36e3381790a8c06d0287eaaa21081e0">
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> <a href="#ab36e3381790a8c06d0287eaaa21081e0" class="m-doc-self">m_NumBoundRenderTargets</a>
+            </dt>
+            <dd>Number of bound render targets.</dd>
+            <dt id="a702ac732a486518e477b8d908f934466">
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> <a href="#a702ac732a486518e477b8d908f934466" class="m-doc-self">m_FramebufferWidth</a>
+            </dt>
+            <dd>Width of the currently bound framebuffer.</dd>
+            <dt id="a1da1a164a21ca0fce53c071939886e46">
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> <a href="#a1da1a164a21ca0fce53c071939886e46" class="m-doc-self">m_FramebufferHeight</a>
+            </dt>
+            <dd>Height of the currently bound framebuffer.</dd>
+            <dt id="aca4c6314ad6ee95865c1b3a00bc8b659">
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> <a href="#aca4c6314ad6ee95865c1b3a00bc8b659" class="m-doc-self">m_FramebufferSlices</a>
+            </dt>
+            <dd>Number of array slices in the currently bound framebuffer.</dd>
+            <dt id="a3e604cda95758547d946d82c53c56ddc">
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> <a href="#a3e604cda95758547d946d82c53c56ddc" class="m-doc-self">m_FramebufferSamples</a>
+            </dt>
+            <dd>Number of samples in the currently bound framebuffer.</dd>
+            <dt id="a865744e2abfb94a12b7799e603dbadfb">
+              <a href="classDiligent_1_1RefCntAutoPtr.html" class="m-doc">RefCntAutoPtr</a>&lt;<a href="classDiligent_1_1DeviceContextBase.html#afda8e626d99a90565dde88c6d94bcc16" class="m-doc">TextureViewImplType</a>&gt; <a href="#a865744e2abfb94a12b7799e603dbadfb" class="m-doc-self">m_pBoundDepthStencil</a>
+            </dt>
+            <dd>Strong references to the bound depth stencil view. Use final texture view implementation type to avoid virtual calls to <a href="classDiligent_1_1RefCountedObject.html#a1cae521a4ad5ea84b09b7e2a9a8d75b2" class="m-doc">AddRef()</a>/Release()</dd>
+            <dt id="a8dc9a29eeb4c5d216d4a82b37b2ddc87">
+              <a href="classDiligent_1_1RefCntAutoPtr.html" class="m-doc">RefCntAutoPtr</a>&lt;<a href="classDiligent_1_1DeviceContextBase.html#aa635628a1771c5f062cba678a88c143e" class="m-doc">FramebufferImplType</a>&gt; <a href="#a8dc9a29eeb4c5d216d4a82b37b2ddc87" class="m-doc-self">m_pBoundFramebuffer</a>
+            </dt>
+            <dd>Strong reference to the bound framebuffer.</dd>
+            <dt id="ae64abf76e699ebc415230033adeb0f31">
+              <a href="classDiligent_1_1RefCntAutoPtr.html" class="m-doc">RefCntAutoPtr</a>&lt;<a href="classDiligent_1_1DeviceContextBase.html#ae03f8a9aa2ebd159cb0e681f4a7cfdaa" class="m-doc">RenderPassImplType</a>&gt; <a href="#ae64abf76e699ebc415230033adeb0f31" class="m-doc-self">m_pActiveRenderPass</a>
+            </dt>
+            <dd>Strong reference to the render pass.</dd>
+            <dt id="a2258858be604cb877755a3ddf275fe4e">
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> <a href="#a2258858be604cb877755a3ddf275fe4e" class="m-doc-self">m_SubpassIndex</a>
+            </dt>
+            <dd>Current subpass index.</dd>
+            <dt id="a97a133a8635fdff560be856c5c416469">
+              <a href="namespaceDiligent.html#a98f5c3e5380889788f96c5d5be690d25" class="m-doc">RESOURCE_<wbr />STATE_<wbr />TRANSITION_<wbr />MODE</a> <a href="#a97a133a8635fdff560be856c5c416469" class="m-doc-self">m_RenderPassAttachmentsTransitionMode</a>
+            </dt>
+            <dd>Render pass attachments transition mode.</dd>
+          </dl>
+        </section>
+        <section>
+          <h2>Function documentation</h2>
+          <section class="m-doc-details" id="a1b7d5f816becb5a9a9c8cd61f09dfe8c"><div>
+            <h3>
+              <div class="m-doc-template">
+                template&lt;typename EngineImplTraits&gt;
+              </div>
+              <span class="m-doc-wrap-bumper"> Diligent::<wbr />DeviceContextBase&lt;EngineImplTraits&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a1b7d5f816becb5a9a9c8cd61f09dfe8c" class="m-doc-self">DeviceContextBase</a>(</span><span class="m-doc-wrap"><a href="classDiligent_1_1IReferenceCounters.html" class="m-doc">IReferenceCounters</a>* pRefCounters,
+              <a href="classDiligent_1_1DeviceContextBase.html#a4be70d77a62c550d76c75919a733522b" class="m-doc">DeviceImplType</a>* pRenderDevice,
+              bool bIsDeferred)</span></span>
+            </h3>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">pRefCounters</td>
+                  <td>- Reference counters object that controls the lifetime of this device context.</td>
+                </tr>
+                <tr>
+                  <td>pRenderDevice</td>
+                  <td>- Render device.</td>
+                </tr>
+                <tr>
+                  <td>bIsDeferred</td>
+                  <td>- Flag indicating if this instance is a deferred context</td>
+                </tr>
+              </tbody>
+            </table>
+          </div></section>
+        </section>
+      </div>
+    </div>
+  </div>
+</article></main>
+<div class="m-doc-search" id="search">
+  <a href="#!" onclick="return hideSearch()"></a>
+  <div class="m-container">
+    <div class="m-row">
+      <div class="m-col-m-8 m-push-m-2">
+        <div class="m-doc-search-header m-text m-small">
+          <div><span class="m-label m-default">Tab</span> / <span class="m-label m-default">T</span> to search, <span class="m-label m-default">Esc</span> to close</div>
+          <div id="search-symbolcount">&hellip;</div>
+        </div>
+        <div class="m-doc-search-content">
+          <form>
+            <input type="search" name="q" id="search-input" placeholder="Loading &hellip;" disabled="disabled" autofocus="autofocus" autocomplete="off" spellcheck="false" />
+          </form>
+          <noscript class="m-text m-danger m-text-center">Unlike everything else in the docs, the search functionality <em>requires</em> JavaScript.</noscript>
+          <div id="search-help" class="m-text m-dim m-text-center">
+            <p class="m-noindent">Search for symbols, directories, files, pages or
+            modules. You can omit any prefix from the symbol or file path; adding a
+            <code>:</code> or <code>/</code> suffix lists all members of given symbol or
+            directory.</p>
+            <p class="m-noindent">Use <span class="m-label m-dim">&darr;</span>
+            / <span class="m-label m-dim">&uarr;</span> to navigate through the list,
+            <span class="m-label m-dim">Enter</span> to go.
+            <span class="m-label m-dim">Tab</span> autocompletes common prefix, you can
+            copy a link to the result using <span class="m-label m-dim">⌘</span>
+            <span class="m-label m-dim">L</span> while <span class="m-label m-dim">⌘</span>
+            <span class="m-label m-dim">M</span> produces a Markdown link.</p>
+          </div>
+          <div id="search-notfound" class="m-text m-warning m-text-center">Sorry, nothing was found.</div>
+          <ul id="search-results"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="search-v1.js"></script>
+<script src="searchdata-v1.js" async="async"></script>
+<footer><nav>
+  <div class="m-container">
+    <div class="m-row">
+      <div class="m-col-l-10 m-push-l-1">
+        <p>Diligent Engine. Created with <a href="https://doxygen.org/">Doxygen</a> 1.8.17 and <a href="https://mcss.mosra.cz/">m.css</a>.</p>
+      </div>
+    </div>
+  </div>
+</nav></footer>
+</body>
+</html>

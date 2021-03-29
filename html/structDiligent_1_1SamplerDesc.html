@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Diligent::SamplerDesc struct | Diligent Engine</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i%7CSource+Code+Pro:400,400i,600" />
+  <link rel="stylesheet" href="m-dark+documentation.compiled.css" />
+  <link rel="icon" href="favicon-dark.png" type="image/png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#22272e" />
+</head>
+<body>
+<header><nav id="navigation">
+  <div class="m-container">
+    <div class="m-row">
+      <a href="index.html" id="m-navbar-brand" class="m-col-t-8 m-col-m-none m-left-m">Diligent Engine</a>
+      <div class="m-col-t-4 m-hide-m m-text-right m-nopadr">
+        <a href="#search" class="m-doc-search-icon" title="Search" onclick="return showSearch()"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
+          <path id="m-doc-search-icon-path" d="m6 0c-3.31 0-6 2.69-6 6 0 3.31 2.69 6 6 6 1.49 0 2.85-0.541 3.89-1.44-0.0164 0.338 0.147 0.759 0.5 1.15l3.22 3.79c0.552 0.614 1.45 0.665 2 0.115 0.55-0.55 0.499-1.45-0.115-2l-3.79-3.22c-0.392-0.353-0.812-0.515-1.15-0.5 0.895-1.05 1.44-2.41 1.44-3.89 0-3.31-2.69-6-6-6zm0 1.56a4.44 4.44 0 0 1 4.44 4.44 4.44 4.44 0 0 1-4.44 4.44 4.44 4.44 0 0 1-4.44-4.44 4.44 4.44 0 0 1 4.44-4.44z"/>
+        </svg></a>
+        <a id="m-navbar-show" href="#navigation" title="Show navigation"></a>
+        <a id="m-navbar-hide" href="#" title="Hide navigation"></a>
+      </div>
+      <div id="m-navbar-collapse" class="m-col-t-12 m-show-m m-col-m-none m-right-m">
+        <div class="m-row">
+          <ol class="m-col-t-6 m-col-m-none">
+            <li><a href="pages.html">Pages</a></li>
+            <li><a href="namespaces.html">Namespaces</a></li>
+          </ol>
+          <ol class="m-col-t-6 m-col-m-none" start="3">
+            <li><a href="annotated.html">Classes</a></li>
+            <li><a href="files.html">Files</a></li>
+            <li class="m-show-m"><a href="#search" class="m-doc-search-icon" title="Search" onclick="return showSearch()"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
+              <use href="#m-doc-search-icon-path" />
+            </svg></a></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav></header>
+<main><article>
+  <div class="m-container m-container-inflatable">
+    <div class="m-row">
+      <div class="m-col-l-10 m-push-l-1">
+        <h1>
+          <span class="m-breadcrumb"><a href="namespaceDiligent.html">Diligent</a>::<wbr/></span>SamplerDesc <span class="m-thin">struct</span>
+          <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="Sampler_8h.html">&lt;Graphics/GraphicsEngine/interface/Sampler.h&gt;</a></div>
+        </h1>
+        <p>Sampler description.</p>
+        <div class="m-block m-default">
+          <h3>Contents</h3>
+          <ul>
+            <li>
+              Reference
+              <ul>
+                <li><a href="#base-classes">Base classes</a></li>
+                <li><a href="#pub-methods">Public functions</a></li>
+                <li><a href="#pub-attribs">Public variables</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+<p>This structure describes the sampler state which is used in a call to <a href="structDiligent_1_1IRenderDevice.html#aaecc7b76d2ae556c1ef5608f937f3f8a" class="m-doc">IRenderDevice::<wbr />CreateSampler()</a> to create a sampler object.</p><p>To create an anisotropic filter, all three filters must either be <a href="namespaceDiligent.html#ac43ff638039b6eca49783786d7d94fc2a9160b185205e04ac49ba0031934ee459" class="m-doc">Diligent::<wbr />FILTER_TYPE_ANISOTROPIC</a> or <a href="namespaceDiligent.html#ac43ff638039b6eca49783786d7d94fc2a67ae6207484380e2b88d2d90d9e34e97" class="m-doc">Diligent::<wbr />FILTER_TYPE_COMPARISON_ANISOTROPIC</a>.</p><p>MipFilter cannot be comparison filter except for <a href="namespaceDiligent.html#ac43ff638039b6eca49783786d7d94fc2a9160b185205e04ac49ba0031934ee459" class="m-doc">Diligent::<wbr />FILTER_TYPE_ANISOTROPIC</a> if all three filters have that value.</p><p>Both MinFilter and MagFilter must either be regular filters or comparison filters. Mixing comparison and regular filters is an error.</p>
+        <section id="base-classes">
+          <h2><a href="#base-classes">Base classes</a></h2>
+          <dl class="m-doc">
+            <dt>
+              struct <a href="structDiligent_1_1DeviceObjectAttribs.html" class="m-doc">DeviceObjectAttribs</a>
+            </dt>
+            <dd>Describes common device object attributes.</dd>
+          </dl>
+        </section>
+        <section id="pub-methods">
+          <h2><a href="#pub-methods">Public functions</a></h2>
+          <dl class="m-doc">
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#ae8684fb685c5e6e6accc6dbbca52e26d" class="m-doc">operator==</a>(</span><span class="m-doc-wrap">const <a href="structDiligent_1_1SamplerDesc.html" class="m-doc">SamplerDesc</a>&amp; RHS) const -&gt; bool</span>
+            </dt>
+            <dd>Tests if two structures are equivalent.</dd>
+          </dl>
+        </section>
+        <section id="pub-attribs">
+          <h2><a href="#pub-attribs">Public variables</a></h2>
+          <dl class="m-doc">
+            <dt id="a033ebb2c7d97f8c4ec464d05499a9107">
+              <a href="namespaceDiligent.html#ac43ff638039b6eca49783786d7d94fc2" class="m-doc">FILTER_<wbr />TYPE</a> <a href="#a033ebb2c7d97f8c4ec464d05499a9107" class="m-doc-self">MinFilter</a>
+            </dt>
+            <dd>Texture minification filter, see <a href="namespaceDiligent.html#ac43ff638039b6eca49783786d7d94fc2" class="m-doc">Diligent::<wbr />FILTER_TYPE</a> for details. Default value: <a href="namespaceDiligent.html#ac43ff638039b6eca49783786d7d94fc2a167655f3ace23033921e2e4066796751" class="m-doc">Diligent::<wbr />FILTER_TYPE_LINEAR</a>.</dd>
+            <dt id="a86e07a8b1c2943695b996dc5043e26bd">
+              <a href="namespaceDiligent.html#ac43ff638039b6eca49783786d7d94fc2" class="m-doc">FILTER_<wbr />TYPE</a> <a href="#a86e07a8b1c2943695b996dc5043e26bd" class="m-doc-self">MagFilter</a>
+            </dt>
+            <dd>Texture magnification filter, see <a href="namespaceDiligent.html#ac43ff638039b6eca49783786d7d94fc2" class="m-doc">Diligent::<wbr />FILTER_TYPE</a> for details. Default value: <a href="namespaceDiligent.html#ac43ff638039b6eca49783786d7d94fc2a167655f3ace23033921e2e4066796751" class="m-doc">Diligent::<wbr />FILTER_TYPE_LINEAR</a>.</dd>
+            <dt id="a64df7cb18ed8d2ed09f2fdd106f17dce">
+              <a href="namespaceDiligent.html#ac43ff638039b6eca49783786d7d94fc2" class="m-doc">FILTER_<wbr />TYPE</a> <a href="#a64df7cb18ed8d2ed09f2fdd106f17dce" class="m-doc-self">MipFilter</a>
+            </dt>
+            <dd>Mip filter, see <a href="namespaceDiligent.html#ac43ff638039b6eca49783786d7d94fc2" class="m-doc">Diligent::<wbr />FILTER_TYPE</a> for details. Only FILTER_TYPE_POINT, FILTER_TYPE_LINEAR, FILTER_TYPE_ANISOTROPIC, and FILTER_TYPE_COMPARISON_ANISOTROPIC are allowed. Default value: <a href="namespaceDiligent.html#ac43ff638039b6eca49783786d7d94fc2a167655f3ace23033921e2e4066796751" class="m-doc">Diligent::<wbr />FILTER_TYPE_LINEAR</a>.</dd>
+            <dt id="a47c2269a565a1260a2bb8f07fef57e24">
+              <a href="namespaceDiligent.html#a94d39934c718883f2f0a22a45f0ccfce" class="m-doc">TEXTURE_<wbr />ADDRESS_<wbr />MODE</a> <a href="#a47c2269a565a1260a2bb8f07fef57e24" class="m-doc-self">AddressU</a>
+            </dt>
+            <dd>Texture address mode for U coordinate, see <a href="namespaceDiligent.html#a94d39934c718883f2f0a22a45f0ccfce" class="m-doc">Diligent::<wbr />TEXTURE_ADDRESS_MODE</a> for details Default value: <a href="namespaceDiligent.html#a94d39934c718883f2f0a22a45f0ccfcea5fc53ee0a53cc9c08ab0ede8c1305c7f" class="m-doc">Diligent::<wbr />TEXTURE_ADDRESS_CLAMP</a>.</dd>
+            <dt id="a751e2c38fde79fca035b90316f2b4f89">
+              <a href="namespaceDiligent.html#a94d39934c718883f2f0a22a45f0ccfce" class="m-doc">TEXTURE_<wbr />ADDRESS_<wbr />MODE</a> <a href="#a751e2c38fde79fca035b90316f2b4f89" class="m-doc-self">AddressV</a>
+            </dt>
+            <dd>Texture address mode for V coordinate, see <a href="namespaceDiligent.html#a94d39934c718883f2f0a22a45f0ccfce" class="m-doc">Diligent::<wbr />TEXTURE_ADDRESS_MODE</a> for details Default value: <a href="namespaceDiligent.html#a94d39934c718883f2f0a22a45f0ccfcea5fc53ee0a53cc9c08ab0ede8c1305c7f" class="m-doc">Diligent::<wbr />TEXTURE_ADDRESS_CLAMP</a>.</dd>
+            <dt id="af674beea5aed837b3f3423f81bef13a2">
+              <a href="namespaceDiligent.html#a94d39934c718883f2f0a22a45f0ccfce" class="m-doc">TEXTURE_<wbr />ADDRESS_<wbr />MODE</a> <a href="#af674beea5aed837b3f3423f81bef13a2" class="m-doc-self">AddressW</a>
+            </dt>
+            <dd>Texture address mode for W coordinate, see <a href="namespaceDiligent.html#a94d39934c718883f2f0a22a45f0ccfce" class="m-doc">Diligent::<wbr />TEXTURE_ADDRESS_MODE</a> for details Default value: <a href="namespaceDiligent.html#a94d39934c718883f2f0a22a45f0ccfcea5fc53ee0a53cc9c08ab0ede8c1305c7f" class="m-doc">Diligent::<wbr />TEXTURE_ADDRESS_CLAMP</a>.</dd>
+            <dt id="ae63028ae64656ff35520dab609f94696">
+              <a href="namespaceDiligent.html#a32283d7134e62a58530ba1b0afb4e59e" class="m-doc">Float32</a> <a href="#ae63028ae64656ff35520dab609f94696" class="m-doc-self">MipLODBias</a>
+            </dt>
+            <dd>Offset from the calculated mipmap level. For example, if a sampler calculates that a texture should be sampled at mipmap level 1.2 and MipLODBias is 2.3, then the texture will be sampled at mipmap level 3.5. Default value: 0.</dd>
+            <dt id="a20c78bf3c4e7c05781f1e32dce60f025">
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> <a href="#a20c78bf3c4e7c05781f1e32dce60f025" class="m-doc-self">MaxAnisotropy</a>
+            </dt>
+            <dd>Maximum anisotropy level for the anisotropic filter. Default value: 0.</dd>
+            <dt id="ad20a594bd0a1bf52da3612a73753bf48">
+              <a href="namespaceDiligent.html#ab8ee91bd5a84066a39df42bbb278d51a" class="m-doc">COMPARISON_<wbr />FUNCTION</a> <a href="#ad20a594bd0a1bf52da3612a73753bf48" class="m-doc-self">ComparisonFunc</a>
+            </dt>
+            <dd>A function that compares sampled data against existing sampled data when comparsion filter is used. Default value: <a href="namespaceDiligent.html#ab8ee91bd5a84066a39df42bbb278d51aa00b70a0d0b44e0eb2e2ab88ca2a509bb" class="m-doc">Diligent::<wbr />COMPARISON_FUNC_NEVER</a>.</dd>
+            <dt id="a6ce9635826a946dfbadacd2adcff63e9">
+              <a href="namespaceDiligent.html#a32283d7134e62a58530ba1b0afb4e59e" class="m-doc">Float32</a> <a href="#a6ce9635826a946dfbadacd2adcff63e9" class="m-doc-self">BorderColor</a>
+            </dt>
+            <dd>Border color to use if TEXTURE_ADDRESS_BORDER is specified for AddressU, AddressV, or AddressW. Default value: {0,0,0,0}.</dd>
+            <dt id="a5af812014f093aeea8edaf2dd26e0f61">
+              float <a href="#a5af812014f093aeea8edaf2dd26e0f61" class="m-doc-self">MinLOD</a>
+            </dt>
+            <dd>Specifies the minimum value that LOD is clamped to before accessing the texture MIP levels. Must be less than or equal to MaxLOD. Default value: 0.</dd>
+            <dt id="a8e476ea05829137b4d53c47f41c1f306">
+              float <a href="#a8e476ea05829137b4d53c47f41c1f306" class="m-doc-self">MaxLOD</a>
+            </dt>
+            <dd>Specifies the maximum value that LOD is clamped to before accessing the texture MIP levels. Must be greater than or equal to MinLOD. Default value: +FLT_MAX.</dd>
+          </dl>
+        </section>
+        <section>
+          <h2>Function documentation</h2>
+          <section class="m-doc-details" id="ae8684fb685c5e6e6accc6dbbca52e26d"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">bool Diligent::<wbr />SamplerDesc::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#ae8684fb685c5e6e6accc6dbbca52e26d" class="m-doc-self">operator==</a>(</span><span class="m-doc-wrap">const <a href="structDiligent_1_1SamplerDesc.html" class="m-doc">SamplerDesc</a>&amp; RHS) const</span></span>
+            </h3>
+            <p>Tests if two structures are equivalent.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">RHS&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- reference to the structure to perform comparison with</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td><ul><li>True if all members of the two structures are equal.</li><li>False otherwise. The operator ignores <a href="structDiligent_1_1DeviceObjectAttribs.html#a14a31dc6ad69e0b79514e5349e9b4fc0" class="m-doc">DeviceObjectAttribs::<wbr />Name</a> field as it does not affect the sampler state.</li></ul></td>
+                </tr>
+              </tfoot>
+            </table>
+          </div></section>
+        </section>
+      </div>
+    </div>
+  </div>
+</article></main>
+<div class="m-doc-search" id="search">
+  <a href="#!" onclick="return hideSearch()"></a>
+  <div class="m-container">
+    <div class="m-row">
+      <div class="m-col-m-8 m-push-m-2">
+        <div class="m-doc-search-header m-text m-small">
+          <div><span class="m-label m-default">Tab</span> / <span class="m-label m-default">T</span> to search, <span class="m-label m-default">Esc</span> to close</div>
+          <div id="search-symbolcount">&hellip;</div>
+        </div>
+        <div class="m-doc-search-content">
+          <form>
+            <input type="search" name="q" id="search-input" placeholder="Loading &hellip;" disabled="disabled" autofocus="autofocus" autocomplete="off" spellcheck="false" />
+          </form>
+          <noscript class="m-text m-danger m-text-center">Unlike everything else in the docs, the search functionality <em>requires</em> JavaScript.</noscript>
+          <div id="search-help" class="m-text m-dim m-text-center">
+            <p class="m-noindent">Search for symbols, directories, files, pages or
+            modules. You can omit any prefix from the symbol or file path; adding a
+            <code>:</code> or <code>/</code> suffix lists all members of given symbol or
+            directory.</p>
+            <p class="m-noindent">Use <span class="m-label m-dim">&darr;</span>
+            / <span class="m-label m-dim">&uarr;</span> to navigate through the list,
+            <span class="m-label m-dim">Enter</span> to go.
+            <span class="m-label m-dim">Tab</span> autocompletes common prefix, you can
+            copy a link to the result using <span class="m-label m-dim">⌘</span>
+            <span class="m-label m-dim">L</span> while <span class="m-label m-dim">⌘</span>
+            <span class="m-label m-dim">M</span> produces a Markdown link.</p>
+          </div>
+          <div id="search-notfound" class="m-text m-warning m-text-center">Sorry, nothing was found.</div>
+          <ul id="search-results"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="search-v1.js"></script>
+<script src="searchdata-v1.js" async="async"></script>
+<footer><nav>
+  <div class="m-container">
+    <div class="m-row">
+      <div class="m-col-l-10 m-push-l-1">
+        <p>Diligent Engine. Created with <a href="https://doxygen.org/">Doxygen</a> 1.8.17 and <a href="https://mcss.mosra.cz/">m.css</a>.</p>
+      </div>
+    </div>
+  </div>
+</nav></footer>
+</body>
+</html>

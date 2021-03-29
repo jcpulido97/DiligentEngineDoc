@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Diligent::LayoutElement struct | Diligent Engine</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i%7CSource+Code+Pro:400,400i,600" />
+  <link rel="stylesheet" href="m-dark+documentation.compiled.css" />
+  <link rel="icon" href="favicon-dark.png" type="image/png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#22272e" />
+</head>
+<body>
+<header><nav id="navigation">
+  <div class="m-container">
+    <div class="m-row">
+      <a href="index.html" id="m-navbar-brand" class="m-col-t-8 m-col-m-none m-left-m">Diligent Engine</a>
+      <div class="m-col-t-4 m-hide-m m-text-right m-nopadr">
+        <a href="#search" class="m-doc-search-icon" title="Search" onclick="return showSearch()"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
+          <path id="m-doc-search-icon-path" d="m6 0c-3.31 0-6 2.69-6 6 0 3.31 2.69 6 6 6 1.49 0 2.85-0.541 3.89-1.44-0.0164 0.338 0.147 0.759 0.5 1.15l3.22 3.79c0.552 0.614 1.45 0.665 2 0.115 0.55-0.55 0.499-1.45-0.115-2l-3.79-3.22c-0.392-0.353-0.812-0.515-1.15-0.5 0.895-1.05 1.44-2.41 1.44-3.89 0-3.31-2.69-6-6-6zm0 1.56a4.44 4.44 0 0 1 4.44 4.44 4.44 4.44 0 0 1-4.44 4.44 4.44 4.44 0 0 1-4.44-4.44 4.44 4.44 0 0 1 4.44-4.44z"/>
+        </svg></a>
+        <a id="m-navbar-show" href="#navigation" title="Show navigation"></a>
+        <a id="m-navbar-hide" href="#" title="Hide navigation"></a>
+      </div>
+      <div id="m-navbar-collapse" class="m-col-t-12 m-show-m m-col-m-none m-right-m">
+        <div class="m-row">
+          <ol class="m-col-t-6 m-col-m-none">
+            <li><a href="pages.html">Pages</a></li>
+            <li><a href="namespaces.html">Namespaces</a></li>
+          </ol>
+          <ol class="m-col-t-6 m-col-m-none" start="3">
+            <li><a href="annotated.html">Classes</a></li>
+            <li><a href="files.html">Files</a></li>
+            <li class="m-show-m"><a href="#search" class="m-doc-search-icon" title="Search" onclick="return showSearch()"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
+              <use href="#m-doc-search-icon-path" />
+            </svg></a></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav></header>
+<main><article>
+  <div class="m-container m-container-inflatable">
+    <div class="m-row">
+      <div class="m-col-l-10 m-push-l-1">
+        <h1>
+          <span class="m-breadcrumb"><a href="namespaceDiligent.html">Diligent</a>::<wbr/></span>LayoutElement <span class="m-thin">struct</span>
+          <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="InputLayout_8h.html">&lt;Graphics/GraphicsEngine/interface/InputLayout.h&gt;</a></div>
+        </h1>
+        <p>Description of a single element of the input layout.</p>
+        <div class="m-block m-default">
+          <h3>Contents</h3>
+          <ul>
+            <li>
+              Reference
+              <ul>
+                <li><a href="#typeless-methods">Constructors, destructors, conversion operators</a></li>
+                <li><a href="#pub-attribs">Public variables</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <section id="typeless-methods">
+          <h2><a href="#typeless-methods">Constructors, destructors, conversion operators</a></h2>
+          <dl class="m-doc">
+            <dt id="ac2468ad649d624f6a78c16eb214f358a">
+              <span class="m-doc-wrap-bumper"><a href="#ac2468ad649d624f6a78c16eb214f358a" class="m-doc-self">LayoutElement</a>(</span><span class="m-doc-wrap"><a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> _InputIndex,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> _BufferSlot,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> _NumComponents,
+              <a href="namespaceDiligent.html#ae3e4a2a0e5dc5c0e72a395d455e8cbb9" class="m-doc">VALUE_<wbr />TYPE</a> _ValueType,
+              <a href="namespaceDiligent.html#a1348d994a23f6b38215d775be3931056" class="m-doc">Bool</a> _IsNormalized = <a href="structDiligent_1_1LayoutElement.html" class="m-doc">LayoutElement</a>{}.<a href="structDiligent_1_1LayoutElement.html#abd37625caf1c0490740517b662a8a1ae" class="m-doc">IsNormalized</a>,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> _RelativeOffset = <a href="structDiligent_1_1LayoutElement.html" class="m-doc">LayoutElement</a>{}.<a href="structDiligent_1_1LayoutElement.html#af3f43010e8ffcd1a9b92e500ae0eefaf" class="m-doc">RelativeOffset</a>,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> _Stride = <a href="structDiligent_1_1LayoutElement.html" class="m-doc">LayoutElement</a>{}.<a href="structDiligent_1_1LayoutElement.html#a3d98a57e7dd5f5e2ea9e2c6ab9b21379" class="m-doc">Stride</a>,
+              <a href="namespaceDiligent.html#a2111f2f131a942477de3626327174164" class="m-doc">INPUT_<wbr />ELEMENT_<wbr />FREQUENCY</a> _Frequency = <a href="structDiligent_1_1LayoutElement.html" class="m-doc">LayoutElement</a>{}.<a href="structDiligent_1_1LayoutElement.html#ada1d2f01d9293a50ad6154e1673d3eb5" class="m-doc">Frequency</a>,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> _InstanceDataStepRate = <a href="structDiligent_1_1LayoutElement.html" class="m-doc">LayoutElement</a>{}.<a href="structDiligent_1_1LayoutElement.html#a7d7ba6ee279ffdb1ab101c164b32a203" class="m-doc">InstanceDataStepRate</a>) <span class="m-label m-flat m-success">noexcept</span></span>
+            </dt>
+            <dd>Initializes the structure.</dd>
+            <dt id="a92ed705b3d1715915189ee9d7fc767d5">
+              <span class="m-doc-wrap-bumper"><a href="#a92ed705b3d1715915189ee9d7fc767d5" class="m-doc-self">LayoutElement</a>(</span><span class="m-doc-wrap">const char* _HLSLSemantic,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> _InputIndex,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> _BufferSlot,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> _NumComponents,
+              <a href="namespaceDiligent.html#ae3e4a2a0e5dc5c0e72a395d455e8cbb9" class="m-doc">VALUE_<wbr />TYPE</a> _ValueType,
+              <a href="namespaceDiligent.html#a1348d994a23f6b38215d775be3931056" class="m-doc">Bool</a> _IsNormalized = <a href="structDiligent_1_1LayoutElement.html" class="m-doc">LayoutElement</a>{}.<a href="structDiligent_1_1LayoutElement.html#abd37625caf1c0490740517b662a8a1ae" class="m-doc">IsNormalized</a>,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> _RelativeOffset = <a href="structDiligent_1_1LayoutElement.html" class="m-doc">LayoutElement</a>{}.<a href="structDiligent_1_1LayoutElement.html#af3f43010e8ffcd1a9b92e500ae0eefaf" class="m-doc">RelativeOffset</a>,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> _Stride = <a href="structDiligent_1_1LayoutElement.html" class="m-doc">LayoutElement</a>{}.<a href="structDiligent_1_1LayoutElement.html#a3d98a57e7dd5f5e2ea9e2c6ab9b21379" class="m-doc">Stride</a>,
+              <a href="namespaceDiligent.html#a2111f2f131a942477de3626327174164" class="m-doc">INPUT_<wbr />ELEMENT_<wbr />FREQUENCY</a> _Frequency = <a href="structDiligent_1_1LayoutElement.html" class="m-doc">LayoutElement</a>{}.<a href="structDiligent_1_1LayoutElement.html#ada1d2f01d9293a50ad6154e1673d3eb5" class="m-doc">Frequency</a>,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> _InstanceDataStepRate = <a href="structDiligent_1_1LayoutElement.html" class="m-doc">LayoutElement</a>{}.<a href="structDiligent_1_1LayoutElement.html#a7d7ba6ee279ffdb1ab101c164b32a203" class="m-doc">InstanceDataStepRate</a>) <span class="m-label m-flat m-success">noexcept</span></span>
+            </dt>
+            <dd>Initializes the structure.</dd>
+            <dt id="aa29f311f2968b411779774d921b28d92">
+              <span class="m-doc-wrap-bumper"><a href="#aa29f311f2968b411779774d921b28d92" class="m-doc-self">LayoutElement</a>(</span><span class="m-doc-wrap"><a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> _InputIndex,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> _BufferSlot,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> _NumComponents,
+              <a href="namespaceDiligent.html#ae3e4a2a0e5dc5c0e72a395d455e8cbb9" class="m-doc">VALUE_<wbr />TYPE</a> _ValueType,
+              <a href="namespaceDiligent.html#a1348d994a23f6b38215d775be3931056" class="m-doc">Bool</a> _IsNormalized,
+              <a href="namespaceDiligent.html#a2111f2f131a942477de3626327174164" class="m-doc">INPUT_<wbr />ELEMENT_<wbr />FREQUENCY</a> _Frequency,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> _InstanceDataStepRate = <a href="structDiligent_1_1LayoutElement.html" class="m-doc">LayoutElement</a>{}.<a href="structDiligent_1_1LayoutElement.html#a7d7ba6ee279ffdb1ab101c164b32a203" class="m-doc">InstanceDataStepRate</a>) <span class="m-label m-flat m-success">noexcept</span></span>
+            </dt>
+            <dd>Initializes the structure.</dd>
+          </dl>
+        </section>
+        <section id="pub-attribs">
+          <h2><a href="#pub-attribs">Public variables</a></h2>
+          <dl class="m-doc">
+            <dt id="a4461f3e61a913ee83091fb9627f261cf">
+              const char* <a href="#a4461f3e61a913ee83091fb9627f261cf" class="m-doc-self">HLSLSemantic</a>
+            </dt>
+            <dd>HLSL semantic. Default value (&quot;ATTRIB&quot;) allows HLSL shaders to be converted to GLSL and used in OpenGL backend as well as compiled to SPIRV and used in Vulkan backend. Any value other than default will only work in Direct3D11 and Direct3D12 backends.</dd>
+            <dt id="add2a1cf886367647a6b5897793328ba9">
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> <a href="#add2a1cf886367647a6b5897793328ba9" class="m-doc-self">InputIndex</a>
+            </dt>
+            <dd>Input index of the element that is specified in the vertex shader. In Direct3D11 and Direct3D12 backends this is the semantic index.</dd>
+            <dt id="abeef86e4713b4345f1b11887f4be5eb8">
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> <a href="#abeef86e4713b4345f1b11887f4be5eb8" class="m-doc-self">BufferSlot</a>
+            </dt>
+            <dd>Buffer slot index that this element is read from.</dd>
+            <dt id="ab3e9d89fa173939af8b440d597a3ff49">
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> <a href="#ab3e9d89fa173939af8b440d597a3ff49" class="m-doc-self">NumComponents</a>
+            </dt>
+            <dd>Number of components in the element. Allowed values are 1, 2, 3, and 4.</dd>
+            <dt id="ac271843df1d7e276a504c12b4315e6e0">
+              <a href="namespaceDiligent.html#ae3e4a2a0e5dc5c0e72a395d455e8cbb9" class="m-doc">VALUE_<wbr />TYPE</a> <a href="#ac271843df1d7e276a504c12b4315e6e0" class="m-doc-self">ValueType</a>
+            </dt>
+            <dd>Type of the element components, see <a href="namespaceDiligent.html#ae3e4a2a0e5dc5c0e72a395d455e8cbb9" class="m-doc">Diligent::<wbr />VALUE_TYPE</a> for details.</dd>
+            <dt id="abd37625caf1c0490740517b662a8a1ae">
+              <a href="namespaceDiligent.html#a1348d994a23f6b38215d775be3931056" class="m-doc">Bool</a> <a href="#abd37625caf1c0490740517b662a8a1ae" class="m-doc-self">IsNormalized</a>
+            </dt>
+            <dd>For signed and unsigned integer value types (VT_INT8, VT_INT16, VT_INT32, VT_UINT8, VT_UINT16, VT_UINT32) indicates if the value should be normalized to [-1,+1] or [0, 1] range respectively. For floating point types (VT_FLOAT16 and VT_FLOAT32), this member is ignored.</dd>
+            <dt id="af3f43010e8ffcd1a9b92e500ae0eefaf">
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> <a href="#af3f43010e8ffcd1a9b92e500ae0eefaf" class="m-doc-self">RelativeOffset</a>
+            </dt>
+            <dd>Relative offset, in bytes, to the element bits. If this value is set to LAYOUT_ELEMENT_AUTO_OFFSET (default value), the offset will be computed automatically by placing the element right after the previous one.</dd>
+            <dt id="a3d98a57e7dd5f5e2ea9e2c6ab9b21379">
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> <a href="#a3d98a57e7dd5f5e2ea9e2c6ab9b21379" class="m-doc-self">Stride</a>
+            </dt>
+            <dd>Stride, in bytes, between two elements, for this buffer slot. If this value is set to LAYOUT_ELEMENT_AUTO_STRIDE, the stride will be computed automatically assuming that all elements in the same buffer slot are packed one after another. If the buffer slot contains multiple layout elements, they all must specify the same stride or use LAYOUT_ELEMENT_AUTO_STRIDE value.</dd>
+            <dt id="a7d7ba6ee279ffdb1ab101c164b32a203">
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> <a href="#a7d7ba6ee279ffdb1ab101c164b32a203" class="m-doc-self">InstanceDataStepRate</a>
+            </dt>
+            <dd>The number of instances to draw using the same per-instance data before advancing in the buffer by one element.</dd>
+          </dl>
+        </section>
+      </div>
+    </div>
+  </div>
+</article></main>
+<div class="m-doc-search" id="search">
+  <a href="#!" onclick="return hideSearch()"></a>
+  <div class="m-container">
+    <div class="m-row">
+      <div class="m-col-m-8 m-push-m-2">
+        <div class="m-doc-search-header m-text m-small">
+          <div><span class="m-label m-default">Tab</span> / <span class="m-label m-default">T</span> to search, <span class="m-label m-default">Esc</span> to close</div>
+          <div id="search-symbolcount">&hellip;</div>
+        </div>
+        <div class="m-doc-search-content">
+          <form>
+            <input type="search" name="q" id="search-input" placeholder="Loading &hellip;" disabled="disabled" autofocus="autofocus" autocomplete="off" spellcheck="false" />
+          </form>
+          <noscript class="m-text m-danger m-text-center">Unlike everything else in the docs, the search functionality <em>requires</em> JavaScript.</noscript>
+          <div id="search-help" class="m-text m-dim m-text-center">
+            <p class="m-noindent">Search for symbols, directories, files, pages or
+            modules. You can omit any prefix from the symbol or file path; adding a
+            <code>:</code> or <code>/</code> suffix lists all members of given symbol or
+            directory.</p>
+            <p class="m-noindent">Use <span class="m-label m-dim">&darr;</span>
+            / <span class="m-label m-dim">&uarr;</span> to navigate through the list,
+            <span class="m-label m-dim">Enter</span> to go.
+            <span class="m-label m-dim">Tab</span> autocompletes common prefix, you can
+            copy a link to the result using <span class="m-label m-dim">⌘</span>
+            <span class="m-label m-dim">L</span> while <span class="m-label m-dim">⌘</span>
+            <span class="m-label m-dim">M</span> produces a Markdown link.</p>
+          </div>
+          <div id="search-notfound" class="m-text m-warning m-text-center">Sorry, nothing was found.</div>
+          <ul id="search-results"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="search-v1.js"></script>
+<script src="searchdata-v1.js" async="async"></script>
+<footer><nav>
+  <div class="m-container">
+    <div class="m-row">
+      <div class="m-col-l-10 m-push-l-1">
+        <p>Diligent Engine. Created with <a href="https://doxygen.org/">Doxygen</a> 1.8.17 and <a href="https://mcss.mosra.cz/">m.css</a>.</p>
+      </div>
+    </div>
+  </div>
+</nav></footer>
+</body>
+</html>

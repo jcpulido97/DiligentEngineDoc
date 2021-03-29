@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Diligent::IShaderBindingTable struct | Diligent Engine</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i%7CSource+Code+Pro:400,400i,600" />
+  <link rel="stylesheet" href="m-dark+documentation.compiled.css" />
+  <link rel="icon" href="favicon-dark.png" type="image/png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#22272e" />
+</head>
+<body>
+<header><nav id="navigation">
+  <div class="m-container">
+    <div class="m-row">
+      <a href="index.html" id="m-navbar-brand" class="m-col-t-8 m-col-m-none m-left-m">Diligent Engine</a>
+      <div class="m-col-t-4 m-hide-m m-text-right m-nopadr">
+        <a href="#search" class="m-doc-search-icon" title="Search" onclick="return showSearch()"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
+          <path id="m-doc-search-icon-path" d="m6 0c-3.31 0-6 2.69-6 6 0 3.31 2.69 6 6 6 1.49 0 2.85-0.541 3.89-1.44-0.0164 0.338 0.147 0.759 0.5 1.15l3.22 3.79c0.552 0.614 1.45 0.665 2 0.115 0.55-0.55 0.499-1.45-0.115-2l-3.79-3.22c-0.392-0.353-0.812-0.515-1.15-0.5 0.895-1.05 1.44-2.41 1.44-3.89 0-3.31-2.69-6-6-6zm0 1.56a4.44 4.44 0 0 1 4.44 4.44 4.44 4.44 0 0 1-4.44 4.44 4.44 4.44 0 0 1-4.44-4.44 4.44 4.44 0 0 1 4.44-4.44z"/>
+        </svg></a>
+        <a id="m-navbar-show" href="#navigation" title="Show navigation"></a>
+        <a id="m-navbar-hide" href="#" title="Hide navigation"></a>
+      </div>
+      <div id="m-navbar-collapse" class="m-col-t-12 m-show-m m-col-m-none m-right-m">
+        <div class="m-row">
+          <ol class="m-col-t-6 m-col-m-none">
+            <li><a href="pages.html">Pages</a></li>
+            <li><a href="namespaces.html">Namespaces</a></li>
+          </ol>
+          <ol class="m-col-t-6 m-col-m-none" start="3">
+            <li><a href="annotated.html">Classes</a></li>
+            <li><a href="files.html">Files</a></li>
+            <li class="m-show-m"><a href="#search" class="m-doc-search-icon" title="Search" onclick="return showSearch()"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
+              <use href="#m-doc-search-icon-path" />
+            </svg></a></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav></header>
+<main><article>
+  <div class="m-container m-container-inflatable">
+    <div class="m-row">
+      <div class="m-col-l-10 m-push-l-1">
+        <h1>
+          <span class="m-breadcrumb"><a href="namespaceDiligent.html">Diligent</a>::<wbr/></span>IShaderBindingTable <span class="m-thin">struct</span>
+          <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="ShaderBindingTable_8h.html">&lt;Graphics/GraphicsEngine/interface/ShaderBindingTable.h&gt;</a></div>
+        </h1>
+        <p>Shader binding table interface.</p>
+        <div class="m-block m-default">
+          <h3>Contents</h3>
+          <ul>
+            <li>
+              Reference
+              <ul>
+                <li><a href="#base-classes">Base classes</a></li>
+                <li><a href="#derived-classes">Derived classes</a></li>
+                <li><a href="#pub-methods">Public functions</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+<p>Defines the methods to manipulate an SBT object</p>
+        <section id="base-classes">
+          <h2><a href="#base-classes">Base classes</a></h2>
+          <dl class="m-doc">
+            <dt>
+              struct <a href="structDiligent_1_1IDeviceObject.html" class="m-doc">IDeviceObject</a>
+            </dt>
+            <dd>Base interface for all objects created by the render device <a href="structDiligent_1_1IRenderDevice.html" class="m-doc">Diligent::<wbr />IRenderDevice</a>.</dd>
+          </dl>
+        </section>
+        <section id="derived-classes">
+          <h2><a href="#derived-classes">Derived classes</a></h2>
+          <dl class="m-doc">
+            <dt>
+              struct <a href="structDiligent_1_1IShaderBindingTableD3D12.html" class="m-doc">IShaderBindingTableD3D12</a>
+            </dt>
+            <dd>Exposes Direct3D12-specific functionality of a shader binding table object.</dd>
+            <dt>
+              struct <a href="structDiligent_1_1IShaderBindingTableVk.html" class="m-doc">IShaderBindingTableVk</a>
+            </dt>
+            <dd>Exposes Vulkan-specific functionality of a Shader binding table object.</dd>
+          </dl>
+        </section>
+        <section id="pub-methods">
+          <h2><a href="#pub-methods">Public functions</a></h2>
+          <dl class="m-doc">
+            <dt id="a20ce5e559e0f3756f7bbc93f687e3ca9">
+              <span class="m-doc-wrap-bumper">auto <a href="#a20ce5e559e0f3756f7bbc93f687e3ca9" class="m-doc-self">GetDesc</a>(</span><span class="m-doc-wrap">) const -&gt; const <a href="structDiligent_1_1ShaderBindingTableDesc.html" class="m-doc">ShaderBindingTableDesc</a>&amp; <span class="m-label m-flat m-warning">override</span></span>
+            </dt>
+            <dd>Returns the shader binding table description that was used to create the object.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a3a5d3e26991d8668b3e81411e9d152a2" class="m-doc">Verify</a>(</span><span class="m-doc-wrap"><a href="namespaceDiligent.html#ab4430f1a3a58740a05961797dc503875" class="m-doc">VERIFY_<wbr />SBT_<wbr />FLAGS</a> Flags) const -&gt; <a href="namespaceDiligent.html#a1348d994a23f6b38215d775be3931056" class="m-doc">Bool</a> <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd>Checks that all shaders are bound, instances and geometries have not changed, shader record data are initialized.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a78b43efa32b4aaa24c59799829904bd9" class="m-doc">Reset</a>(</span><span class="m-doc-wrap"><a href="structDiligent_1_1IPipelineState.html" class="m-doc">IPipelineState</a>* pPSO) -&gt; void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd>Resets the SBT with the new pipeline state. This is more effecient than creating a new SBT.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#ab024fbf9632cc2112cbc0f51f9934413" class="m-doc">ResetHitGroups</a>(</span><span class="m-doc-wrap">) -&gt; void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd>After TLAS or BLAS was rebuilt or updated, hit group shader bindings may have become invalid, you can reset hit groups only and keep ray-gen, miss and callable shader bindings intact.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a2061060a25ce5d455c27872e719f85cd" class="m-doc">BindRayGenShader</a>(</span><span class="m-doc-wrap">const char* pShaderGroupName,
+              const void* pData = nullptr,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> DataSize = 0) -&gt; void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd>Binds a ray-generation shader.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#ab21dbdb45df3cbdaa2646aa20675b61e" class="m-doc">BindMissShader</a>(</span><span class="m-doc-wrap">const char* pShaderGroupName,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> MissIndex,
+              const void* pData = nullptr,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> DataSize = 0) -&gt; void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd>Binds a ray-miss shader.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#adcfeadbd4b0f4e71b026b165cbf48fdb" class="m-doc">BindHitGroupForGeometry</a>(</span><span class="m-doc-wrap"><a href="structDiligent_1_1ITopLevelAS.html" class="m-doc">ITopLevelAS</a>* pTLAS,
+              const char* pInstanceName,
+              const char* pGeometryName,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> RayOffsetInHitGroupIndex,
+              const char* pShaderGroupName,
+              const void* pData = nullptr,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> DataSize = 0) -&gt; void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd>Binds a hit group for the the specified geometry in the instance.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a63c8b7f1adc9009664840f8c82695286" class="m-doc">BindHitGroupByIndex</a>(</span><span class="m-doc-wrap"><a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> BindingIndex,
+              const char* pShaderGroupName,
+              const void* pData = nullptr,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> DataSize = 0) -&gt; void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd>Binds a hit group to the specified location in the table.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#ae5da53ff30ee69905d9d44c503acb243" class="m-doc">BindHitGroupForInstance</a>(</span><span class="m-doc-wrap"><a href="structDiligent_1_1ITopLevelAS.html" class="m-doc">ITopLevelAS</a>* pTLAS,
+              const char* pInstanceName,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> RayOffsetInHitGroupIndex,
+              const char* pShaderGroupName,
+              const void* pData = nullptr,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> DataSize = 0) -&gt; void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd>Binds a hit group for all geometries in the specified instance.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a83e93fb78c75a1edaebdbcfd760ac37f" class="m-doc">BindHitGroupForTLAS</a>(</span><span class="m-doc-wrap"><a href="structDiligent_1_1ITopLevelAS.html" class="m-doc">ITopLevelAS</a>* pTLAS,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> RayOffsetInHitGroupIndex,
+              const char* pShaderGroupName,
+              const void* pData = nullptr,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> DataSize = 0) -&gt; void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd>Binds a hit group for all instances in the given top-level AS.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#aef548f5ff0a8e60f99846a625eaa6b98" class="m-doc">BindCallableShader</a>(</span><span class="m-doc-wrap">const char* pShaderGroupName,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> CallableIndex,
+              const void* pData = nullptr,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> DataSize = 0) -&gt; void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd>Binds a callable shader.</dd>
+          </dl>
+        </section>
+        <section>
+          <h2>Function documentation</h2>
+          <section class="m-doc-details" id="a3a5d3e26991d8668b3e81411e9d152a2"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a href="namespaceDiligent.html#a1348d994a23f6b38215d775be3931056" class="m-doc">Bool</a> <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() Diligent::<wbr />IShaderBindingTable::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a3a5d3e26991d8668b3e81411e9d152a2" class="m-doc-self">Verify</a>(</span><span class="m-doc-wrap"><a href="namespaceDiligent.html#ab4430f1a3a58740a05961797dc503875" class="m-doc">VERIFY_<wbr />SBT_<wbr />FLAGS</a> Flags) const <span class="m-label m-warning">virtual</span></span></span>
+            </h3>
+            <p>Checks that all shaders are bound, instances and geometries have not changed, shader record data are initialized.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">Flags&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Flags that specify which type of validation to perform.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>True if SBT content is valid, and false otherwise.</td>
+                </tr>
+              </tfoot>
+            </table>
+<aside class="m-note m-info"><h4>Note</h4><p>Access to the SBT must be externally synchronized. The function does not modify the data used by <a href="structDiligent_1_1IDeviceContext.html#a94c8be3284566605f3e148f64b6a1b48" class="m-doc">IDeviceContext::<wbr />TraceRays()</a> and <a href="structDiligent_1_1IDeviceContext.html#aec2ceb7575300c297dc263581237edda" class="m-doc">IDeviceContext::<wbr />TraceRaysIndirect()</a> commands, so they can run in parallel. This method is only implemented in development build and has no effect in release build.</p></aside>
+          </div></section>
+          <section class="m-doc-details" id="a78b43efa32b4aaa24c59799829904bd9"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() Diligent::<wbr />IShaderBindingTable::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a78b43efa32b4aaa24c59799829904bd9" class="m-doc-self">Reset</a>(</span><span class="m-doc-wrap"><a href="structDiligent_1_1IPipelineState.html" class="m-doc">IPipelineState</a>* pPSO) <span class="m-label m-warning">virtual</span></span></span>
+            </h3>
+            <p>Resets the SBT with the new pipeline state. This is more effecient than creating a new SBT.</p>
+<aside class="m-note m-info"><h4>Note</h4><p>Access to the SBT must be externally synchronized. The function does not modify the data used by <a href="structDiligent_1_1IDeviceContext.html#a94c8be3284566605f3e148f64b6a1b48" class="m-doc">IDeviceContext::<wbr />TraceRays()</a> and <a href="structDiligent_1_1IDeviceContext.html#aec2ceb7575300c297dc263581237edda" class="m-doc">IDeviceContext::<wbr />TraceRaysIndirect()</a> commands, so they can run in parallel.</p></aside>
+          </div></section>
+          <section class="m-doc-details" id="ab024fbf9632cc2112cbc0f51f9934413"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() Diligent::<wbr />IShaderBindingTable::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#ab024fbf9632cc2112cbc0f51f9934413" class="m-doc-self">ResetHitGroups</a>(</span><span class="m-doc-wrap">) <span class="m-label m-warning">virtual</span></span></span>
+            </h3>
+            <p>After TLAS or BLAS was rebuilt or updated, hit group shader bindings may have become invalid, you can reset hit groups only and keep ray-gen, miss and callable shader bindings intact.</p>
+<aside class="m-note m-info"><h4>Note</h4><p>Access to the SBT must be externally synchronized. The function does not modify the data used by <a href="structDiligent_1_1IDeviceContext.html#a94c8be3284566605f3e148f64b6a1b48" class="m-doc">IDeviceContext::<wbr />TraceRays()</a> and <a href="structDiligent_1_1IDeviceContext.html#aec2ceb7575300c297dc263581237edda" class="m-doc">IDeviceContext::<wbr />TraceRaysIndirect()</a> commands, so they can run in parallel.</p></aside>
+          </div></section>
+          <section class="m-doc-details" id="a2061060a25ce5d455c27872e719f85cd"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() Diligent::<wbr />IShaderBindingTable::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a2061060a25ce5d455c27872e719f85cd" class="m-doc-self">BindRayGenShader</a>(</span><span class="m-doc-wrap">const char* pShaderGroupName,
+              const void* pData = nullptr,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> DataSize = 0) <span class="m-label m-warning">virtual</span></span></span>
+            </h3>
+            <p>Binds a ray-generation shader.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">pShaderGroupName&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Ray-generation shader name that was specified in <a href="structDiligent_1_1RayTracingGeneralShaderGroup.html#a37095293f324fe9d02448920740016a6" class="m-doc">RayTracingGeneralShaderGroup::<wbr />Name</a> when the pipeline state was created.</td>
+                </tr>
+                <tr>
+                  <td>pData&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Shader record data, can be null.</td>
+                </tr>
+                <tr>
+                  <td>DataSize&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Shader record data size, should be equal to <a href="structDiligent_1_1RayTracingPipelineDesc.html#a4beed31eec37cd70c7549202365b3f34" class="m-doc">RayTracingPipelineDesc::<wbr />ShaderRecordSize</a>.</td>
+                </tr>
+              </tbody>
+            </table>
+<aside class="m-note m-info"><h4>Note</h4><p>Access to the SBT must be externally synchronized. The function does not modify the data used by <a href="structDiligent_1_1IDeviceContext.html#a94c8be3284566605f3e148f64b6a1b48" class="m-doc">IDeviceContext::<wbr />TraceRays()</a> and <a href="structDiligent_1_1IDeviceContext.html#aec2ceb7575300c297dc263581237edda" class="m-doc">IDeviceContext::<wbr />TraceRaysIndirect()</a> commands, so they can run in parallel.</p></aside>
+          </div></section>
+          <section class="m-doc-details" id="ab21dbdb45df3cbdaa2646aa20675b61e"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() Diligent::<wbr />IShaderBindingTable::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#ab21dbdb45df3cbdaa2646aa20675b61e" class="m-doc-self">BindMissShader</a>(</span><span class="m-doc-wrap">const char* pShaderGroupName,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> MissIndex,
+              const void* pData = nullptr,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> DataSize = 0) <span class="m-label m-warning">virtual</span></span></span>
+            </h3>
+            <p>Binds a ray-miss shader.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">pShaderGroupName&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Ray-miss shader name that was specified in <a href="structDiligent_1_1RayTracingGeneralShaderGroup.html#a37095293f324fe9d02448920740016a6" class="m-doc">RayTracingGeneralShaderGroup::<wbr />Name</a> when the pipeline state was created. Can be null to make the shader inactive.</td>
+                </tr>
+                <tr>
+                  <td>MissIndex&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Miss shader offset in the shader binding table (aka ray type). This offset will correspond to &#x27;MissShaderIndex&#x27; argument of TraceRay() function in HLSL, and &#x27;missIndex&#x27; argument of traceRay() function in GLSL.</td>
+                </tr>
+                <tr>
+                  <td>pData&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Shader record data, can be null.</td>
+                </tr>
+                <tr>
+                  <td>DataSize&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Shader record data size, should be equal to <a href="structDiligent_1_1RayTracingPipelineDesc.html#a4beed31eec37cd70c7549202365b3f34" class="m-doc">RayTracingPipelineDesc::<wbr />ShaderRecordSize</a>.</td>
+                </tr>
+              </tbody>
+            </table>
+<aside class="m-note m-info"><h4>Note</h4><p>Access to the SBT must be externally synchronized. The function does not modify the data used by <a href="structDiligent_1_1IDeviceContext.html#a94c8be3284566605f3e148f64b6a1b48" class="m-doc">IDeviceContext::<wbr />TraceRays()</a> and <a href="structDiligent_1_1IDeviceContext.html#aec2ceb7575300c297dc263581237edda" class="m-doc">IDeviceContext::<wbr />TraceRaysIndirect()</a> commands, so they can run in parallel.</p></aside>
+          </div></section>
+          <section class="m-doc-details" id="adcfeadbd4b0f4e71b026b165cbf48fdb"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() Diligent::<wbr />IShaderBindingTable::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#adcfeadbd4b0f4e71b026b165cbf48fdb" class="m-doc-self">BindHitGroupForGeometry</a>(</span><span class="m-doc-wrap"><a href="structDiligent_1_1ITopLevelAS.html" class="m-doc">ITopLevelAS</a>* pTLAS,
+              const char* pInstanceName,
+              const char* pGeometryName,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> RayOffsetInHitGroupIndex,
+              const char* pShaderGroupName,
+              const void* pData = nullptr,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> DataSize = 0) <span class="m-label m-warning">virtual</span></span></span>
+            </h3>
+            <p>Binds a hit group for the the specified geometry in the instance.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">pTLAS&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Top-level AS that contains the given instance.</td>
+                </tr>
+                <tr>
+                  <td>pInstanceName&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Instance name that contains the geometry. This is the name that was used when the TLAS was created, see <a href="structDiligent_1_1TLASBuildInstanceData.html#ac5f3a9e4c2853df760a20078dc195687" class="m-doc">TLASBuildInstanceData::<wbr />InstanceName</a>.</td>
+                </tr>
+                <tr>
+                  <td>pGeometryName&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Geometry name in the instance, for which to bind the hit group. This is the name that was given to geometry when BLAS was created, see <a href="structDiligent_1_1BLASBuildTriangleData.html#a2f0478c3e814b6763cfc0df27295f028" class="m-doc">BLASBuildTriangleData::<wbr />GeometryName</a> and <a href="structDiligent_1_1BLASBuildBoundingBoxData.html#a35c940c967d16017ea0686a07af8fec9" class="m-doc">BLASBuildBoundingBoxData::<wbr />GeometryName</a>.</td>
+                </tr>
+                <tr>
+                  <td>RayOffsetInHitGroupIndex&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Ray offset in the shader binding table (aka ray type). This offset will correspond to &#x27;RayContributionToHitGroupIndex&#x27; argument of TraceRay() function in HLSL, and &#x27;sbtRecordOffset&#x27; argument of traceRay() function in GLSL. Must be less than HitShadersPerInstance.</td>
+                </tr>
+                <tr>
+                  <td>pShaderGroupName&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Hit group name that was specified in <a href="structDiligent_1_1RayTracingTriangleHitShaderGroup.html#a4480057f90091014ef9b830614425ed7" class="m-doc">RayTracingTriangleHitShaderGroup::<wbr />Name</a> or <a href="structDiligent_1_1RayTracingProceduralHitShaderGroup.html#ae8f88385684f30ab384842ef5bfb7bf6" class="m-doc">RayTracingProceduralHitShaderGroup::<wbr />Name</a> when the pipeline state was created. Can be null to make the shader group inactive.</td>
+                </tr>
+                <tr>
+                  <td>pData&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Shader record data, can be null.</td>
+                </tr>
+                <tr>
+                  <td>DataSize&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Shader record data size, should be equal to <a href="structDiligent_1_1RayTracingPipelineDesc.html#a4beed31eec37cd70c7549202365b3f34" class="m-doc">RayTracingPipelineDesc::<wbr />ShaderRecordSize</a>.</td>
+                </tr>
+              </tbody>
+            </table>
+<aside class="m-note m-info"><h4>Note</h4><p>Access to the SBT must be externally synchronized. The function does not modify the data used by <a href="structDiligent_1_1IDeviceContext.html#a94c8be3284566605f3e148f64b6a1b48" class="m-doc">IDeviceContext::<wbr />TraceRays()</a> and <a href="structDiligent_1_1IDeviceContext.html#aec2ceb7575300c297dc263581237edda" class="m-doc">IDeviceContext::<wbr />TraceRaysIndirect()</a> commands, so they can run in parallel. Access to the TLAS must be externally synchronized. Access to the BLAS that was used in the TLAS instance with name pInstanceName must be externally synchronized.</p></aside>
+          </div></section>
+          <section class="m-doc-details" id="a63c8b7f1adc9009664840f8c82695286"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() Diligent::<wbr />IShaderBindingTable::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a63c8b7f1adc9009664840f8c82695286" class="m-doc-self">BindHitGroupByIndex</a>(</span><span class="m-doc-wrap"><a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> BindingIndex,
+              const char* pShaderGroupName,
+              const void* pData = nullptr,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> DataSize = 0) <span class="m-label m-warning">virtual</span></span></span>
+            </h3>
+            <p>Binds a hit group to the specified location in the table.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">BindingIndex&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Location of the hit group in the table.</td>
+                </tr>
+                <tr>
+                  <td>pShaderGroupName&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Hit group name that was specified in <a href="structDiligent_1_1RayTracingTriangleHitShaderGroup.html#a4480057f90091014ef9b830614425ed7" class="m-doc">RayTracingTriangleHitShaderGroup::<wbr />Name</a> or <a href="structDiligent_1_1RayTracingProceduralHitShaderGroup.html#ae8f88385684f30ab384842ef5bfb7bf6" class="m-doc">RayTracingProceduralHitShaderGroup::<wbr />Name</a> when the pipeline state was created. Can be null to make the shader group inactive.</td>
+                </tr>
+                <tr>
+                  <td>pData&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Shader record data, can be null.</td>
+                </tr>
+                <tr>
+                  <td>DataSize&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Shader record data size, should equal to <a href="structDiligent_1_1RayTracingPipelineDesc.html#a4beed31eec37cd70c7549202365b3f34" class="m-doc">RayTracingPipelineDesc::<wbr />ShaderRecordSize</a>.</td>
+                </tr>
+              </tbody>
+            </table>
+<aside class="m-note m-info"><h4>Note</h4><p>Access to the SBT must be externally synchronized. The function does not modify the data used by <a href="structDiligent_1_1IDeviceContext.html#a94c8be3284566605f3e148f64b6a1b48" class="m-doc">IDeviceContext::<wbr />TraceRays()</a> and <a href="structDiligent_1_1IDeviceContext.html#aec2ceb7575300c297dc263581237edda" class="m-doc">IDeviceContext::<wbr />TraceRaysIndirect()</a> commands, so they can run in parallel.</p></aside><aside class="m-note m-default"><h4>Remark</h4><p>Use <a href="structDiligent_1_1IBottomLevelAS.html#a4fc9e2927df30a06eaedd6cef6605378" class="m-doc">IBottomLevelAS::<wbr />GetGeometryIndex()</a>, <a href="structDiligent_1_1ITopLevelAS.html#af461d0ab4848264584880494ca035f4d" class="m-doc">ITopLevelAS::<wbr />GetBuildInfo()</a>, <a href="structDiligent_1_1ITopLevelAS.html#a7235bd2fd1518020fbd12c2f0a82cf35" class="m-doc">ITopLevelAS::<wbr />GetInstanceDesc()</a>.ContributionToHitGroupIndex to calculate the binding index.</p></aside>
+          </div></section>
+          <section class="m-doc-details" id="ae5da53ff30ee69905d9d44c503acb243"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() Diligent::<wbr />IShaderBindingTable::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#ae5da53ff30ee69905d9d44c503acb243" class="m-doc-self">BindHitGroupForInstance</a>(</span><span class="m-doc-wrap"><a href="structDiligent_1_1ITopLevelAS.html" class="m-doc">ITopLevelAS</a>* pTLAS,
+              const char* pInstanceName,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> RayOffsetInHitGroupIndex,
+              const char* pShaderGroupName,
+              const void* pData = nullptr,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> DataSize = 0) <span class="m-label m-warning">virtual</span></span></span>
+            </h3>
+            <p>Binds a hit group for all geometries in the specified instance.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">pTLAS&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Top-level AS that contains the given instance.</td>
+                </tr>
+                <tr>
+                  <td>pInstanceName&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Instance name, for which to bind the hit group. This is the name that was used when the TLAS was created, see <a href="structDiligent_1_1TLASBuildInstanceData.html#ac5f3a9e4c2853df760a20078dc195687" class="m-doc">TLASBuildInstanceData::<wbr />InstanceName</a>.</td>
+                </tr>
+                <tr>
+                  <td>RayOffsetInHitGroupIndex&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Ray offset in the shader binding table (aka ray type). This offset will correspond to &#x27;RayContributionToHitGroupIndex&#x27; argument of TraceRay() function in HLSL, and &#x27;sbtRecordOffset&#x27; argument of traceRay() function in GLSL. Must be less than HitShadersPerInstance.</td>
+                </tr>
+                <tr>
+                  <td>pShaderGroupName&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Hit group name that was specified in <a href="structDiligent_1_1RayTracingTriangleHitShaderGroup.html#a4480057f90091014ef9b830614425ed7" class="m-doc">RayTracingTriangleHitShaderGroup::<wbr />Name</a> or <a href="structDiligent_1_1RayTracingProceduralHitShaderGroup.html#ae8f88385684f30ab384842ef5bfb7bf6" class="m-doc">RayTracingProceduralHitShaderGroup::<wbr />Name</a> when the pipeline state was created. Can be null to make the shader group inactive.</td>
+                </tr>
+                <tr>
+                  <td>pData&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Shader record data, can be null.</td>
+                </tr>
+                <tr>
+                  <td>DataSize&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Shader record data size, should be equal to <a href="structDiligent_1_1RayTracingPipelineDesc.html#a4beed31eec37cd70c7549202365b3f34" class="m-doc">RayTracingPipelineDesc::<wbr />ShaderRecordSize</a>.</td>
+                </tr>
+              </tbody>
+            </table>
+<aside class="m-note m-info"><h4>Note</h4><p>Access to the SBT and TLAS must be externally synchronized. The function does not modify the data used by <a href="structDiligent_1_1IDeviceContext.html#a94c8be3284566605f3e148f64b6a1b48" class="m-doc">IDeviceContext::<wbr />TraceRays()</a> and <a href="structDiligent_1_1IDeviceContext.html#aec2ceb7575300c297dc263581237edda" class="m-doc">IDeviceContext::<wbr />TraceRaysIndirect()</a> commands, so they can run in parallel.</p></aside>
+          </div></section>
+          <section class="m-doc-details" id="a83e93fb78c75a1edaebdbcfd760ac37f"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() Diligent::<wbr />IShaderBindingTable::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a83e93fb78c75a1edaebdbcfd760ac37f" class="m-doc-self">BindHitGroupForTLAS</a>(</span><span class="m-doc-wrap"><a href="structDiligent_1_1ITopLevelAS.html" class="m-doc">ITopLevelAS</a>* pTLAS,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> RayOffsetInHitGroupIndex,
+              const char* pShaderGroupName,
+              const void* pData = nullptr,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> DataSize = 0) <span class="m-label m-warning">virtual</span></span></span>
+            </h3>
+            <p>Binds a hit group for all instances in the given top-level AS.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">pTLAS&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Top-level AS, for which to bind the hit group.</td>
+                </tr>
+                <tr>
+                  <td>RayOffsetInHitGroupIndex&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Ray offset in the shader binding table (aka ray type). This offset will correspond to &#x27;RayContributionToHitGroupIndex&#x27; argument of TraceRay() function in HLSL, and &#x27;sbtRecordOffset&#x27; argument of traceRay() function in GLSL. Must be less than HitShadersPerInstance.</td>
+                </tr>
+                <tr>
+                  <td>pShaderGroupName&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Hit group name that was specified in <a href="structDiligent_1_1RayTracingTriangleHitShaderGroup.html#a4480057f90091014ef9b830614425ed7" class="m-doc">RayTracingTriangleHitShaderGroup::<wbr />Name</a> or <a href="structDiligent_1_1RayTracingProceduralHitShaderGroup.html#ae8f88385684f30ab384842ef5bfb7bf6" class="m-doc">RayTracingProceduralHitShaderGroup::<wbr />Name</a> when the pipeline state was created. Can be null to make the shader group inactive.</td>
+                </tr>
+                <tr>
+                  <td>pData&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Shader record data, can be null.</td>
+                </tr>
+                <tr>
+                  <td>DataSize&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Shader record data size, should be equal to <a href="structDiligent_1_1RayTracingPipelineDesc.html#a4beed31eec37cd70c7549202365b3f34" class="m-doc">RayTracingPipelineDesc::<wbr />ShaderRecordSize</a>.</td>
+                </tr>
+              </tbody>
+            </table>
+<aside class="m-note m-info"><h4>Note</h4><p>Access to the SBT and TLAS must be externally synchronized. The function does not modify the data used by <a href="structDiligent_1_1IDeviceContext.html#a94c8be3284566605f3e148f64b6a1b48" class="m-doc">IDeviceContext::<wbr />TraceRays()</a> and <a href="structDiligent_1_1IDeviceContext.html#aec2ceb7575300c297dc263581237edda" class="m-doc">IDeviceContext::<wbr />TraceRaysIndirect()</a> commands, so they can run in parallel.</p></aside>
+          </div></section>
+          <section class="m-doc-details" id="aef548f5ff0a8e60f99846a625eaa6b98"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() Diligent::<wbr />IShaderBindingTable::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#aef548f5ff0a8e60f99846a625eaa6b98" class="m-doc-self">BindCallableShader</a>(</span><span class="m-doc-wrap">const char* pShaderGroupName,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> CallableIndex,
+              const void* pData = nullptr,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> DataSize = 0) <span class="m-label m-warning">virtual</span></span></span>
+            </h3>
+            <p>Binds a callable shader.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">pShaderGroupName&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Callable shader name that was specified in <a href="structDiligent_1_1RayTracingGeneralShaderGroup.html#a37095293f324fe9d02448920740016a6" class="m-doc">RayTracingGeneralShaderGroup::<wbr />Name</a> when the pipeline state was created. Can be null to make the shader inactive.</td>
+                </tr>
+                <tr>
+                  <td>CallableIndex&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Callable shader offset in the shader binding table. This offset will correspond to &#x27;ShaderIndex&#x27; argument of CallShader() function in HLSL, and &#x27;callable&#x27; argument of executeCallable() function in GLSL.</td>
+                </tr>
+                <tr>
+                  <td>pData&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Shader record data, can be null.</td>
+                </tr>
+                <tr>
+                  <td>DataSize&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Shader record data size, should be equal to <a href="structDiligent_1_1RayTracingPipelineDesc.html#a4beed31eec37cd70c7549202365b3f34" class="m-doc">RayTracingPipelineDesc::<wbr />ShaderRecordSize</a>.</td>
+                </tr>
+              </tbody>
+            </table>
+<aside class="m-note m-info"><h4>Note</h4><p>Access to the SBT must be externally synchronized. The function does not modify the data used by <a href="structDiligent_1_1IDeviceContext.html#a94c8be3284566605f3e148f64b6a1b48" class="m-doc">IDeviceContext::<wbr />TraceRays()</a> and <a href="structDiligent_1_1IDeviceContext.html#aec2ceb7575300c297dc263581237edda" class="m-doc">IDeviceContext::<wbr />TraceRaysIndirect()</a> commands, so they can run in parallel.</p></aside>
+          </div></section>
+        </section>
+      </div>
+    </div>
+  </div>
+</article></main>
+<div class="m-doc-search" id="search">
+  <a href="#!" onclick="return hideSearch()"></a>
+  <div class="m-container">
+    <div class="m-row">
+      <div class="m-col-m-8 m-push-m-2">
+        <div class="m-doc-search-header m-text m-small">
+          <div><span class="m-label m-default">Tab</span> / <span class="m-label m-default">T</span> to search, <span class="m-label m-default">Esc</span> to close</div>
+          <div id="search-symbolcount">&hellip;</div>
+        </div>
+        <div class="m-doc-search-content">
+          <form>
+            <input type="search" name="q" id="search-input" placeholder="Loading &hellip;" disabled="disabled" autofocus="autofocus" autocomplete="off" spellcheck="false" />
+          </form>
+          <noscript class="m-text m-danger m-text-center">Unlike everything else in the docs, the search functionality <em>requires</em> JavaScript.</noscript>
+          <div id="search-help" class="m-text m-dim m-text-center">
+            <p class="m-noindent">Search for symbols, directories, files, pages or
+            modules. You can omit any prefix from the symbol or file path; adding a
+            <code>:</code> or <code>/</code> suffix lists all members of given symbol or
+            directory.</p>
+            <p class="m-noindent">Use <span class="m-label m-dim">&darr;</span>
+            / <span class="m-label m-dim">&uarr;</span> to navigate through the list,
+            <span class="m-label m-dim">Enter</span> to go.
+            <span class="m-label m-dim">Tab</span> autocompletes common prefix, you can
+            copy a link to the result using <span class="m-label m-dim">⌘</span>
+            <span class="m-label m-dim">L</span> while <span class="m-label m-dim">⌘</span>
+            <span class="m-label m-dim">M</span> produces a Markdown link.</p>
+          </div>
+          <div id="search-notfound" class="m-text m-warning m-text-center">Sorry, nothing was found.</div>
+          <ul id="search-results"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="search-v1.js"></script>
+<script src="searchdata-v1.js" async="async"></script>
+<footer><nav>
+  <div class="m-container">
+    <div class="m-row">
+      <div class="m-col-l-10 m-push-l-1">
+        <p>Diligent Engine. Created with <a href="https://doxygen.org/">Doxygen</a> 1.8.17 and <a href="https://mcss.mosra.cz/">m.css</a>.</p>
+      </div>
+    </div>
+  </div>
+</nav></footer>
+</body>
+</html>

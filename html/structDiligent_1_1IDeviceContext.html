@@ -1,0 +1,1672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Diligent::IDeviceContext struct | Diligent Engine</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i%7CSource+Code+Pro:400,400i,600" />
+  <link rel="stylesheet" href="m-dark+documentation.compiled.css" />
+  <link rel="icon" href="favicon-dark.png" type="image/png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#22272e" />
+</head>
+<body>
+<header><nav id="navigation">
+  <div class="m-container">
+    <div class="m-row">
+      <a href="index.html" id="m-navbar-brand" class="m-col-t-8 m-col-m-none m-left-m">Diligent Engine</a>
+      <div class="m-col-t-4 m-hide-m m-text-right m-nopadr">
+        <a href="#search" class="m-doc-search-icon" title="Search" onclick="return showSearch()"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
+          <path id="m-doc-search-icon-path" d="m6 0c-3.31 0-6 2.69-6 6 0 3.31 2.69 6 6 6 1.49 0 2.85-0.541 3.89-1.44-0.0164 0.338 0.147 0.759 0.5 1.15l3.22 3.79c0.552 0.614 1.45 0.665 2 0.115 0.55-0.55 0.499-1.45-0.115-2l-3.79-3.22c-0.392-0.353-0.812-0.515-1.15-0.5 0.895-1.05 1.44-2.41 1.44-3.89 0-3.31-2.69-6-6-6zm0 1.56a4.44 4.44 0 0 1 4.44 4.44 4.44 4.44 0 0 1-4.44 4.44 4.44 4.44 0 0 1-4.44-4.44 4.44 4.44 0 0 1 4.44-4.44z"/>
+        </svg></a>
+        <a id="m-navbar-show" href="#navigation" title="Show navigation"></a>
+        <a id="m-navbar-hide" href="#" title="Hide navigation"></a>
+      </div>
+      <div id="m-navbar-collapse" class="m-col-t-12 m-show-m m-col-m-none m-right-m">
+        <div class="m-row">
+          <ol class="m-col-t-6 m-col-m-none">
+            <li><a href="pages.html">Pages</a></li>
+            <li><a href="namespaces.html">Namespaces</a></li>
+          </ol>
+          <ol class="m-col-t-6 m-col-m-none" start="3">
+            <li><a href="annotated.html">Classes</a></li>
+            <li><a href="files.html">Files</a></li>
+            <li class="m-show-m"><a href="#search" class="m-doc-search-icon" title="Search" onclick="return showSearch()"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
+              <use href="#m-doc-search-icon-path" />
+            </svg></a></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav></header>
+<main><article>
+  <div class="m-container m-container-inflatable">
+    <div class="m-row">
+      <div class="m-col-l-10 m-push-l-1">
+        <h1>
+          <span class="m-breadcrumb"><a href="namespaceDiligent.html">Diligent</a>::<wbr/></span>IDeviceContext <span class="m-thin">struct</span>
+          <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="DeviceContext_8h.html">&lt;Graphics/GraphicsEngine/interface/DeviceContext.h&gt;</a></div>
+        </h1>
+        <p>Device context interface.</p>
+        <div class="m-block m-default">
+          <h3>Contents</h3>
+          <ul>
+            <li>
+              Reference
+              <ul>
+                <li><a href="#base-classes">Base classes</a></li>
+                <li><a href="#derived-classes">Derived classes</a></li>
+                <li><a href="#pub-methods">Public functions</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+<aside class="m-note m-default"><h4>Remark</h4><p>Device context keeps strong references to all objects currently bound to the pipeline: buffers, states, samplers, shaders, etc. The context also keeps strong reference to the device and the swap chain.</p></aside>
+        <section id="base-classes">
+          <h2><a href="#base-classes">Base classes</a></h2>
+          <dl class="m-doc">
+            <dt>
+              struct <a href="structDiligent_1_1IObject.html" class="m-doc">IObject</a>
+            </dt>
+            <dd>Base interface for all dynamic objects in the engine.</dd>
+          </dl>
+        </section>
+        <section id="derived-classes">
+          <h2><a href="#derived-classes">Derived classes</a></h2>
+          <dl class="m-doc">
+            <dt>
+              struct <a href="structDiligent_1_1IDeviceContextD3D11.html" class="m-doc">IDeviceContextD3D11</a>
+            </dt>
+            <dd>Exposes Direct3D11-specific functionality of a device context.</dd>
+            <dt>
+              struct <a href="structDiligent_1_1IDeviceContextD3D12.html" class="m-doc">IDeviceContextD3D12</a>
+            </dt>
+            <dd>Exposes Direct3D12-specific functionality of a device context.</dd>
+            <dt>
+              struct <a href="structDiligent_1_1IDeviceContextGL.html" class="m-doc">IDeviceContextGL</a>
+            </dt>
+            <dd>Exposes OpenGL-specific functionality of a device context.</dd>
+            <dt>
+              class <a href="classDiligent_1_1IDeviceContextMtl.html" class="m-doc">IDeviceContextMtl</a>
+            </dt>
+            <dd>Exposes Metal-specific functionality of a device context.</dd>
+            <dt>
+              struct <a href="structDiligent_1_1IDeviceContextVk.html" class="m-doc">IDeviceContextVk</a>
+            </dt>
+            <dd>Exposes Vulkan-specific functionality of a device context.</dd>
+          </dl>
+        </section>
+        <section id="pub-methods">
+          <h2><a href="#pub-methods">Public functions</a></h2>
+          <dl class="m-doc">
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#af4a6e47ff8ead2a402196d5ea9550a70" class="m-doc">SetPipelineState</a>(</span><span class="m-doc-wrap"><a href="structDiligent_1_1IPipelineState.html" class="m-doc">IPipelineState</a>* pPipelineState) -&gt; void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd>Sets the pipeline state.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a2616e1f70ce6e9df377bf9b7c971cbc5" class="m-doc">TransitionShaderResources</a>(</span><span class="m-doc-wrap"><a href="structDiligent_1_1IPipelineState.html" class="m-doc">IPipelineState</a>* pPipelineState,
+              <a href="structDiligent_1_1IShaderResourceBinding.html" class="m-doc">IShaderResourceBinding</a>* pShaderResourceBinding) -&gt; void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd>Transitions shader resources to the states required by Draw or Dispatch command.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a24e82a3c38e7d3a496a82e67d02c9b57" class="m-doc">CommitShaderResources</a>(</span><span class="m-doc-wrap"><a href="structDiligent_1_1IShaderResourceBinding.html" class="m-doc">IShaderResourceBinding</a>* pShaderResourceBinding,
+              <a href="namespaceDiligent.html#a98f5c3e5380889788f96c5d5be690d25" class="m-doc">RESOURCE_<wbr />STATE_<wbr />TRANSITION_<wbr />MODE</a> StateTransitionMode) -&gt; void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd>Commits shader resources to the device context.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a2288a7ff92ad792bed06a5b6ed064316" class="m-doc">SetStencilRef</a>(</span><span class="m-doc-wrap"><a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> StencilRef) -&gt; void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd>Sets the stencil reference value.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#afbaacfa9752d4b4a629a6938149d039e" class="m-doc">SetBlendFactors</a>(</span><span class="m-doc-wrap">const float* pBlendFactors = nullptr) -&gt; void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#ab6cf19eaf1087d020fa445983a38106a" class="m-doc">SetVertexBuffers</a>(</span><span class="m-doc-wrap"><a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> StartSlot,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> NumBuffersSet,
+              <a href="structDiligent_1_1IBuffer.html" class="m-doc">IBuffer</a>** ppBuffers,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a>* pOffsets,
+              <a href="namespaceDiligent.html#a98f5c3e5380889788f96c5d5be690d25" class="m-doc">RESOURCE_<wbr />STATE_<wbr />TRANSITION_<wbr />MODE</a> StateTransitionMode,
+              <a href="namespaceDiligent.html#acd12f4066d547aa66c98e96b0e66ebe5" class="m-doc">SET_<wbr />VERTEX_<wbr />BUFFERS_<wbr />FLAGS</a> Flags) -&gt; void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd>Binds vertex buffers to the pipeline.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a5b75652981655918dd759a8320730440" class="m-doc">InvalidateState</a>(</span><span class="m-doc-wrap">) -&gt; void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd>Invalidates the cached context state.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a7223ba351e883d66de749cd936892d1c" class="m-doc">SetIndexBuffer</a>(</span><span class="m-doc-wrap"><a href="structDiligent_1_1IBuffer.html" class="m-doc">IBuffer</a>* pIndexBuffer,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> ByteOffset,
+              <a href="namespaceDiligent.html#a98f5c3e5380889788f96c5d5be690d25" class="m-doc">RESOURCE_<wbr />STATE_<wbr />TRANSITION_<wbr />MODE</a> StateTransitionMode) -&gt; void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd>Binds an index buffer to the pipeline.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#af82cd1fbb88febb8f19a6ab4226dea19" class="m-doc">SetViewports</a>(</span><span class="m-doc-wrap"><a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> NumViewports,
+              const <a href="structDiligent_1_1Viewport.html" class="m-doc">Viewport</a>* pViewports,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> RTWidth,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> RTHeight) -&gt; void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd>Sets an array of viewports.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#ade3b55e65461253aa02fa48b2c1908c9" class="m-doc">SetScissorRects</a>(</span><span class="m-doc-wrap"><a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> NumRects,
+              const <a href="structDiligent_1_1Rect.html" class="m-doc">Rect</a>* pRects,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> RTWidth,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> RTHeight) -&gt; void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd>Sets active scissor rects.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a9f860cf38e7957e9a9a6842e59135400" class="m-doc">SetRenderTargets</a>(</span><span class="m-doc-wrap"><a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> NumRenderTargets,
+              <a href="structDiligent_1_1ITextureView.html" class="m-doc">ITextureView</a>* ppRenderTargets[],
+              <a href="structDiligent_1_1ITextureView.html" class="m-doc">ITextureView</a>* pDepthStencil,
+              <a href="namespaceDiligent.html#a98f5c3e5380889788f96c5d5be690d25" class="m-doc">RESOURCE_<wbr />STATE_<wbr />TRANSITION_<wbr />MODE</a> StateTransitionMode) -&gt; void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd>Binds one or more render targets and the depth-stencil buffer to the context. It also sets the viewport to match the first non-null render target or depth-stencil buffer.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a873e85ef4a5d4eae499dfd472d0f24a5" class="m-doc">BeginRenderPass</a>(</span><span class="m-doc-wrap">const <a href="structDiligent_1_1BeginRenderPassAttribs.html" class="m-doc">BeginRenderPassAttribs</a>&amp; Attribs) -&gt; void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd>Begins a new render pass.</dd>
+            <dt id="abe3fa17fede6a5c230455976326bd50e">
+              <span class="m-doc-wrap-bumper">auto <a href="#abe3fa17fede6a5c230455976326bd50e" class="m-doc-self">NextSubpass</a>(</span><span class="m-doc-wrap">) -&gt; void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd>Transitions to the next subpass in the render pass instance.</dd>
+            <dt id="ab956846e37b6ef715d3dccaaaf27da35">
+              <span class="m-doc-wrap-bumper">auto <a href="#ab956846e37b6ef715d3dccaaaf27da35" class="m-doc-self">EndRenderPass</a>(</span><span class="m-doc-wrap">) -&gt; void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd>Ends current render pass.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#aa624c433889d7cc4e3bb1dabc56ddb94" class="m-doc">Draw</a>(</span><span class="m-doc-wrap">const <a href="structDiligent_1_1DrawAttribs.html" class="m-doc">DrawAttribs</a>&amp; Attribs) -&gt; void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd>Executes a draw command.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a51d3cb7fa1bfd78dad43e8e7fee98e84" class="m-doc">DrawIndexed</a>(</span><span class="m-doc-wrap">const <a href="structDiligent_1_1DrawIndexedAttribs.html" class="m-doc">DrawIndexedAttribs</a>&amp; Attribs) -&gt; void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd>Executes an indexed draw command.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a045369ea09159295a39b200f57668b82" class="m-doc">DrawIndirect</a>(</span><span class="m-doc-wrap">const <a href="structDiligent_1_1DrawIndirectAttribs.html" class="m-doc">DrawIndirectAttribs</a>&amp; Attribs,
+              <a href="structDiligent_1_1IBuffer.html" class="m-doc">IBuffer</a>* pAttribsBuffer) -&gt; void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd>Executes an indirect draw command.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a82144365757da5027de8ddfdad9d9863" class="m-doc">DrawIndexedIndirect</a>(</span><span class="m-doc-wrap">const <a href="structDiligent_1_1DrawIndexedIndirectAttribs.html" class="m-doc">DrawIndexedIndirectAttribs</a>&amp; Attribs,
+              <a href="structDiligent_1_1IBuffer.html" class="m-doc">IBuffer</a>* pAttribsBuffer) -&gt; void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd>Executes an indexed indirect draw command.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a39391aec36be3c7d13b90fba08792945" class="m-doc">DrawMesh</a>(</span><span class="m-doc-wrap">const <a href="structDiligent_1_1DrawMeshAttribs.html" class="m-doc">DrawMeshAttribs</a>&amp; Attribs) -&gt; void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd>Executes a mesh draw command.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#aff9bed598888c3a474fb4730e860174e" class="m-doc">DrawMeshIndirect</a>(</span><span class="m-doc-wrap">const <a href="structDiligent_1_1DrawMeshIndirectAttribs.html" class="m-doc">DrawMeshIndirectAttribs</a>&amp; Attribs,
+              <a href="structDiligent_1_1IBuffer.html" class="m-doc">IBuffer</a>* pAttribsBuffer) -&gt; void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd>Executes an mesh indirect draw command.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a753bdaf1e1266de38484aa3baa605d1c" class="m-doc">DrawMeshIndirectCount</a>(</span><span class="m-doc-wrap">const <a href="structDiligent_1_1DrawMeshIndirectCountAttribs.html" class="m-doc">DrawMeshIndirectCountAttribs</a>&amp; Attribs,
+              <a href="structDiligent_1_1IBuffer.html" class="m-doc">IBuffer</a>* pAttribsBuffer,
+              <a href="structDiligent_1_1IBuffer.html" class="m-doc">IBuffer</a>* pCountBuffer) -&gt; void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd>Executes an mesh indirect draw command with indirect command count buffer.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a93bbc3bcf3dd623122cbf3a0a0fc8a94" class="m-doc">DispatchCompute</a>(</span><span class="m-doc-wrap">const <a href="structDiligent_1_1DispatchComputeAttribs.html" class="m-doc">DispatchComputeAttribs</a>&amp; Attribs) -&gt; void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd>Executes a dispatch compute command.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#ab98ba753a0c72d6c7e4492a2b186eea7" class="m-doc">DispatchComputeIndirect</a>(</span><span class="m-doc-wrap">const <a href="structDiligent_1_1DispatchComputeIndirectAttribs.html" class="m-doc">DispatchComputeIndirectAttribs</a>&amp; Attribs,
+              <a href="structDiligent_1_1IBuffer.html" class="m-doc">IBuffer</a>* pAttribsBuffer) -&gt; void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd>Executes an indirect dispatch compute command.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a6b9d095ef678c1216dcce51af19254af" class="m-doc">ClearDepthStencil</a>(</span><span class="m-doc-wrap"><a href="structDiligent_1_1ITextureView.html" class="m-doc">ITextureView</a>* pView,
+              <a href="namespaceDiligent.html#af57c7d3ed407283c49ab3751f6a46358" class="m-doc">CLEAR_<wbr />DEPTH_<wbr />STENCIL_<wbr />FLAGS</a> ClearFlags,
+              float fDepth,
+              <a href="namespaceDiligent.html#a3392c10112f826c3bcc60366e0f533db" class="m-doc">Uint8</a> Stencil,
+              <a href="namespaceDiligent.html#a98f5c3e5380889788f96c5d5be690d25" class="m-doc">RESOURCE_<wbr />STATE_<wbr />TRANSITION_<wbr />MODE</a> StateTransitionMode) -&gt; void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd>Clears a depth-stencil view.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#aa5715220150119fa685159ef8a8dd728" class="m-doc">ClearRenderTarget</a>(</span><span class="m-doc-wrap"><a href="structDiligent_1_1ITextureView.html" class="m-doc">ITextureView</a>* pView,
+              const float* RGBA,
+              <a href="namespaceDiligent.html#a98f5c3e5380889788f96c5d5be690d25" class="m-doc">RESOURCE_<wbr />STATE_<wbr />TRANSITION_<wbr />MODE</a> StateTransitionMode) -&gt; void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd>Clears a render target view.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a5c683e708259f324ceb4af195aa2a95d" class="m-doc">FinishCommandList</a>(</span><span class="m-doc-wrap"><a href="classDiligent_1_1ICommandList.html" class="m-doc">ICommandList</a>** ppCommandList) -&gt; void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd>Finishes recording commands and generates a command list.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#ae788037b1bcfdbfb6a6e52fd97f83116" class="m-doc">ExecuteCommandLists</a>(</span><span class="m-doc-wrap"><a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> NumCommandLists,
+              <a href="classDiligent_1_1ICommandList.html" class="m-doc">ICommandList</a>*const* ppCommandLists) -&gt; void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd>Submits an array of recorded command lists for execution.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#aa477c378514974d97845d0720a5d5775" class="m-doc">SignalFence</a>(</span><span class="m-doc-wrap"><a href="structDiligent_1_1IFence.html" class="m-doc">IFence</a>* pFence,
+              <a href="namespaceDiligent.html#a217aba875c8d4bd7843939762d6ff492" class="m-doc">Uint64</a> Value) -&gt; void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd>Tells the GPU to set a fence to a specified value after all previous work has completed.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#af6ab8c4386c130917e1f51b79833661a" class="m-doc">WaitForFence</a>(</span><span class="m-doc-wrap"><a href="structDiligent_1_1IFence.html" class="m-doc">IFence</a>* pFence,
+              <a href="namespaceDiligent.html#a217aba875c8d4bd7843939762d6ff492" class="m-doc">Uint64</a> Value,
+              bool FlushContext) -&gt; void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd>Waits until the specified fence reaches or exceeds the specified value, on the host.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a0b4d0b8d3b6e8859d29df8ae4607f6c8" class="m-doc">WaitForIdle</a>(</span><span class="m-doc-wrap">) -&gt; void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd>Submits all outstanding commands for execution to the GPU and waits until they are complete.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#ae63099621d51fed55262295e9ba3da69" class="m-doc">BeginQuery</a>(</span><span class="m-doc-wrap"><a href="structDiligent_1_1IQuery.html" class="m-doc">IQuery</a>* pQuery) -&gt; void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd>Marks the beginning of a query.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a3f66ae2389fb243fdd62f240ce895013" class="m-doc">EndQuery</a>(</span><span class="m-doc-wrap"><a href="structDiligent_1_1IQuery.html" class="m-doc">IQuery</a>* pQuery) -&gt; void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd>Marks the end of a query.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a41bf41de5f483dcbe550e6cb2f3ddecb" class="m-doc">Flush</a>(</span><span class="m-doc-wrap">) -&gt; void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd>Submits all pending commands in the context for execution to the command queue.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#af3419d0e2e6b807c820b044e641c9b02" class="m-doc">UpdateBuffer</a>(</span><span class="m-doc-wrap"><a href="structDiligent_1_1IBuffer.html" class="m-doc">IBuffer</a>* pBuffer,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> Offset,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> Size,
+              const void* pData,
+              <a href="namespaceDiligent.html#a98f5c3e5380889788f96c5d5be690d25" class="m-doc">RESOURCE_<wbr />STATE_<wbr />TRANSITION_<wbr />MODE</a> StateTransitionMode) -&gt; void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd>Updates the data in the buffer.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#af6b64b9da6b81609de66e79af4b01588" class="m-doc">CopyBuffer</a>(</span><span class="m-doc-wrap"><a href="structDiligent_1_1IBuffer.html" class="m-doc">IBuffer</a>* pSrcBuffer,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> SrcOffset,
+              <a href="namespaceDiligent.html#a98f5c3e5380889788f96c5d5be690d25" class="m-doc">RESOURCE_<wbr />STATE_<wbr />TRANSITION_<wbr />MODE</a> SrcBufferTransitionMode,
+              <a href="structDiligent_1_1IBuffer.html" class="m-doc">IBuffer</a>* pDstBuffer,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> DstOffset,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> Size,
+              <a href="namespaceDiligent.html#a98f5c3e5380889788f96c5d5be690d25" class="m-doc">RESOURCE_<wbr />STATE_<wbr />TRANSITION_<wbr />MODE</a> DstBufferTransitionMode) -&gt; void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd>Copies the data from one buffer to another.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a6b144284efaec465addf3d682f7a9879" class="m-doc">MapBuffer</a>(</span><span class="m-doc-wrap"><a href="structDiligent_1_1IBuffer.html" class="m-doc">IBuffer</a>* pBuffer,
+              <a href="namespaceDiligent.html#ae99eefec15316dbbafa59a5152549c85" class="m-doc">MAP_<wbr />TYPE</a> MapType,
+              <a href="namespaceDiligent.html#ac1596c9005fe32da5e301ce461e429b0" class="m-doc">MAP_<wbr />FLAGS</a> MapFlags,
+              <a href="namespaceDiligent.html#ab746b3990e4a102158fee263db57425a" class="m-doc">PVoid</a>&amp; pMappedData) -&gt; void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd>Maps the buffer.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a70db5f1760415d1635ef9cbd45a8552e" class="m-doc">UnmapBuffer</a>(</span><span class="m-doc-wrap"><a href="structDiligent_1_1IBuffer.html" class="m-doc">IBuffer</a>* pBuffer,
+              <a href="namespaceDiligent.html#ae99eefec15316dbbafa59a5152549c85" class="m-doc">MAP_<wbr />TYPE</a> MapType) -&gt; void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd>Unmaps the previously mapped buffer.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a932875a3b618199bbb2b7d9ad9ddf038" class="m-doc">UpdateTexture</a>(</span><span class="m-doc-wrap"><a href="structDiligent_1_1ITexture.html" class="m-doc">ITexture</a>* pTexture,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> MipLevel,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> Slice,
+              const <a href="structDiligent_1_1Box.html" class="m-doc">Box</a>&amp; DstBox,
+              const <a href="structDiligent_1_1TextureSubResData.html" class="m-doc">TextureSubResData</a>&amp; SubresData,
+              <a href="namespaceDiligent.html#a98f5c3e5380889788f96c5d5be690d25" class="m-doc">RESOURCE_<wbr />STATE_<wbr />TRANSITION_<wbr />MODE</a> SrcBufferTransitionMode,
+              <a href="namespaceDiligent.html#a98f5c3e5380889788f96c5d5be690d25" class="m-doc">RESOURCE_<wbr />STATE_<wbr />TRANSITION_<wbr />MODE</a> TextureTransitionMode) -&gt; void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd>Updates the data in the texture.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#aaa03a7bc175c5abe6e1a2129553efa3d" class="m-doc">CopyTexture</a>(</span><span class="m-doc-wrap">const <a href="structDiligent_1_1CopyTextureAttribs.html" class="m-doc">CopyTextureAttribs</a>&amp; CopyAttribs) -&gt; void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd>Copies data from one texture to another.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a8b5aa2e397cbc3500d22764fdddd3930" class="m-doc">MapTextureSubresource</a>(</span><span class="m-doc-wrap"><a href="structDiligent_1_1ITexture.html" class="m-doc">ITexture</a>* pTexture,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> MipLevel,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> ArraySlice,
+              <a href="namespaceDiligent.html#ae99eefec15316dbbafa59a5152549c85" class="m-doc">MAP_<wbr />TYPE</a> MapType,
+              <a href="namespaceDiligent.html#ac1596c9005fe32da5e301ce461e429b0" class="m-doc">MAP_<wbr />FLAGS</a> MapFlags,
+              const <a href="structDiligent_1_1Box.html" class="m-doc">Box</a>* pMapRegion,
+              <a href="structDiligent_1_1MappedTextureSubresource.html" class="m-doc">MappedTextureSubresource</a>&amp; MappedData) -&gt; void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd>Maps the texture subresource.</dd>
+            <dt id="ad0c19b40b711b39e4a91caef88a78e7f">
+              <span class="m-doc-wrap-bumper">auto <a href="#ad0c19b40b711b39e4a91caef88a78e7f" class="m-doc-self">UnmapTextureSubresource</a>(</span><span class="m-doc-wrap"><a href="structDiligent_1_1ITexture.html" class="m-doc">ITexture</a>* pTexture,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> MipLevel,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> ArraySlice) -&gt; void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd>Unmaps the texture subresource.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a8d864e69c0d1b8dc3875077b9c9a626d" class="m-doc">GenerateMips</a>(</span><span class="m-doc-wrap"><a href="structDiligent_1_1ITextureView.html" class="m-doc">ITextureView</a>* pTextureView) -&gt; void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd>Generates a mipmap chain.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a5d7b2da64c084f4fb71f5366d293ec20" class="m-doc">FinishFrame</a>(</span><span class="m-doc-wrap">) -&gt; void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd>Finishes the current frame and releases dynamic resources allocated by the context.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#ab55985d011afda4b05eb822edd9f2e8a" class="m-doc">GetFrameNumber</a>(</span><span class="m-doc-wrap">) const -&gt; <a href="namespaceDiligent.html#a217aba875c8d4bd7843939762d6ff492" class="m-doc">Uint64</a> <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd>Returns the current frame number.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#ad70dbcda9db81d06f3641baabf02f5c4" class="m-doc">TransitionResourceStates</a>(</span><span class="m-doc-wrap"><a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> BarrierCount,
+              <a href="structDiligent_1_1StateTransitionDesc.html" class="m-doc">StateTransitionDesc</a>* pResourceBarriers) -&gt; void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd>Transitions resource states.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#adee0f7797e3e655c9b1371a8fc3b011b" class="m-doc">ResolveTextureSubresource</a>(</span><span class="m-doc-wrap"><a href="structDiligent_1_1ITexture.html" class="m-doc">ITexture</a>* pSrcTexture,
+              <a href="structDiligent_1_1ITexture.html" class="m-doc">ITexture</a>* pDstTexture,
+              const <a href="structDiligent_1_1ResolveTextureSubresourceAttribs.html" class="m-doc">ResolveTextureSubresourceAttribs</a>&amp; ResolveAttribs) -&gt; void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd>Resolves a multi-sampled texture subresource into a non-multi-sampled texture subresource.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a89db6e03acac373db00f0684662e88ab" class="m-doc">BuildBLAS</a>(</span><span class="m-doc-wrap">const <a href="structDiligent_1_1BuildBLASAttribs.html" class="m-doc">BuildBLASAttribs</a>&amp; Attribs) -&gt; void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd>Builds a bottom-level acceleration structure with the specified geometries.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a1fb8b288eb8c248a6382886a2eba7826" class="m-doc">BuildTLAS</a>(</span><span class="m-doc-wrap">const <a href="structDiligent_1_1BuildTLASAttribs.html" class="m-doc">BuildTLASAttribs</a>&amp; Attribs) -&gt; void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd>Builds a top-level acceleration structure with the specified instances.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#af02bf98912c0b6cee78e2a4bae149db4" class="m-doc">CopyBLAS</a>(</span><span class="m-doc-wrap">const <a href="structDiligent_1_1CopyBLASAttribs.html" class="m-doc">CopyBLASAttribs</a>&amp; Attribs) -&gt; void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd>Copies data from one acceleration structure to another.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a4ed3b8f22faf96cfb7c11890474b724c" class="m-doc">CopyTLAS</a>(</span><span class="m-doc-wrap">const <a href="structDiligent_1_1CopyTLASAttribs.html" class="m-doc">CopyTLASAttribs</a>&amp; Attribs) -&gt; void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd>Copies data from one acceleration structure to another.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#aa8dabc934efda7ac25b0a111c1b73337" class="m-doc">WriteBLASCompactedSize</a>(</span><span class="m-doc-wrap">const <a href="structDiligent_1_1WriteBLASCompactedSizeAttribs.html" class="m-doc">WriteBLASCompactedSizeAttribs</a>&amp; Attribs) -&gt; void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd>Writes a bottom-level acceleration structure memory size required for compacting operation to a buffer.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#ad28d9d361f25966138ffa8c8baeba935" class="m-doc">WriteTLASCompactedSize</a>(</span><span class="m-doc-wrap">const <a href="structDiligent_1_1WriteTLASCompactedSizeAttribs.html" class="m-doc">WriteTLASCompactedSizeAttribs</a>&amp; Attribs) -&gt; void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd>Writes a top-level acceleration structure memory size required for compacting operation to a buffer.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a94c8be3284566605f3e148f64b6a1b48" class="m-doc">TraceRays</a>(</span><span class="m-doc-wrap">const <a href="structDiligent_1_1TraceRaysAttribs.html" class="m-doc">TraceRaysAttribs</a>&amp; Attribs) -&gt; void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd>Executes a trace rays command.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#aec2ceb7575300c297dc263581237edda" class="m-doc">TraceRaysIndirect</a>(</span><span class="m-doc-wrap">const <a href="structDiligent_1_1TraceRaysIndirectAttribs.html" class="m-doc">TraceRaysIndirectAttribs</a>&amp; Attribs,
+              <a href="structDiligent_1_1IBuffer.html" class="m-doc">IBuffer</a>* pAttribsBuffer) -&gt; void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd>Executes an indirect trace rays command.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a26cac2085ad720b73ec5a2cc82e652d4" class="m-doc">UpdateSBT</a>(</span><span class="m-doc-wrap"><a href="structDiligent_1_1IShaderBindingTable.html" class="m-doc">IShaderBindingTable</a>* pSBT,
+              const <a href="structDiligent_1_1UpdateIndirectRTBufferAttribs.html" class="m-doc">UpdateIndirectRTBufferAttribs</a>* pUpdateIndirectBufferAttribs = nullptr) -&gt; void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd>Updates SBT with the pending data that were recorded in IShaderBindingTable::Bind*** calls.</dd>
+          </dl>
+        </section>
+        <section>
+          <h2>Function documentation</h2>
+          <section class="m-doc-details" id="af4a6e47ff8ead2a402196d5ea9550a70"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() Diligent::<wbr />IDeviceContext::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#af4a6e47ff8ead2a402196d5ea9550a70" class="m-doc-self">SetPipelineState</a>(</span><span class="m-doc-wrap"><a href="structDiligent_1_1IPipelineState.html" class="m-doc">IPipelineState</a>* pPipelineState) <span class="m-label m-warning">virtual</span></span></span>
+            </h3>
+            <p>Sets the pipeline state.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">pPipelineState&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Pointer to <a href="structDiligent_1_1IPipelineState.html" class="m-doc">IPipelineState</a> interface to bind to the context.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div></section>
+          <section class="m-doc-details" id="a2616e1f70ce6e9df377bf9b7c971cbc5"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() Diligent::<wbr />IDeviceContext::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a2616e1f70ce6e9df377bf9b7c971cbc5" class="m-doc-self">TransitionShaderResources</a>(</span><span class="m-doc-wrap"><a href="structDiligent_1_1IPipelineState.html" class="m-doc">IPipelineState</a>* pPipelineState,
+              <a href="structDiligent_1_1IShaderResourceBinding.html" class="m-doc">IShaderResourceBinding</a>* pShaderResourceBinding) <span class="m-label m-warning">virtual</span></span></span>
+            </h3>
+            <p>Transitions shader resources to the states required by Draw or Dispatch command.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">pPipelineState&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Pipeline state object that was used to create the shader resource binding.</td>
+                </tr>
+                <tr>
+                  <td>pShaderResourceBinding&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Shader resource binding whose resources will be transitioned.</td>
+                </tr>
+              </tbody>
+            </table>
+<aside class="m-note m-default"><h4>Remark</h4><p>This method explicitly transitiones all resources except ones in unknown state to the states required by Draw or Dispatch command. If this method was called, there is no need to use <a href="namespaceDiligent.html#a98f5c3e5380889788f96c5d5be690d25abfe1be305a8a0725a7c6403aefcabac2" class="m-doc">Diligent::<wbr />RESOURCE_STATE_TRANSITION_MODE_TRANSITION</a> when calling <a href="structDiligent_1_1IDeviceContext.html#a24e82a3c38e7d3a496a82e67d02c9b57" class="m-doc">IDeviceContext::<wbr />CommitShaderResources()</a></p><p>Resource state transitioning is not thread safe. As the method may alter the states of resources referenced by the shader resource binding, no other thread is allowed to read or write these states.</p></aside><p>If the application intends to use the same resources in other threads simultaneously, it needs to explicitly manage the states using <a href="structDiligent_1_1IDeviceContext.html#ad70dbcda9db81d06f3641baabf02f5c4" class="m-doc">IDeviceContext::<wbr />TransitionResourceStates()</a> method. Refer to <a href="http://diligentgraphics.com/2018/12/09/resource-state-management/">http:/<wbr />/<wbr />diligentgraphics.com/<wbr />2018/<wbr />12/<wbr />09/<wbr />resource-state-management/<wbr /></a> for detailed explanation of resource state management in <a href="namespaceDiligent.html" class="m-doc">Diligent</a> Engine.</p>
+          </div></section>
+          <section class="m-doc-details" id="a24e82a3c38e7d3a496a82e67d02c9b57"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() Diligent::<wbr />IDeviceContext::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a24e82a3c38e7d3a496a82e67d02c9b57" class="m-doc-self">CommitShaderResources</a>(</span><span class="m-doc-wrap"><a href="structDiligent_1_1IShaderResourceBinding.html" class="m-doc">IShaderResourceBinding</a>* pShaderResourceBinding,
+              <a href="namespaceDiligent.html#a98f5c3e5380889788f96c5d5be690d25" class="m-doc">RESOURCE_<wbr />STATE_<wbr />TRANSITION_<wbr />MODE</a> StateTransitionMode) <span class="m-label m-warning">virtual</span></span></span>
+            </h3>
+            <p>Commits shader resources to the device context.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">pShaderResourceBinding&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Shader resource binding whose resources will be committed. If pipeline state contains no shader resources, this parameter can be null.</td>
+                </tr>
+                <tr>
+                  <td>StateTransitionMode&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- State transition mode (see <a href="namespaceDiligent.html#a98f5c3e5380889788f96c5d5be690d25" class="m-doc">Diligent::<wbr />RESOURCE_STATE_TRANSITION_MODE</a>).</td>
+                </tr>
+              </tbody>
+            </table>
+<aside class="m-note m-default"><h4>Remark</h4><p>Pipeline state object that was used to create the shader resource binding must be bound to the pipeline when <a href="structDiligent_1_1IDeviceContext.html#a24e82a3c38e7d3a496a82e67d02c9b57" class="m-doc">CommitShaderResources()</a> is called. If no pipeline state object is bound or the pipeline state object does not match the shader resource binding, the method will fail.<br />If <a href="namespaceDiligent.html#a98f5c3e5380889788f96c5d5be690d25abfe1be305a8a0725a7c6403aefcabac2" class="m-doc">Diligent::<wbr />RESOURCE_STATE_TRANSITION_MODE_TRANSITION</a> mode is used, the engine will also transition all shader resources to required states. If the flag is not set, it is assumed that all resources are already in correct states.<br />Resources can be explicitly transitioned to required states by calling <a href="structDiligent_1_1IDeviceContext.html#a2616e1f70ce6e9df377bf9b7c971cbc5" class="m-doc">IDeviceContext::<wbr />TransitionShaderResources()</a> or <a href="structDiligent_1_1IDeviceContext.html#ad70dbcda9db81d06f3641baabf02f5c4" class="m-doc">IDeviceContext::<wbr />TransitionResourceStates()</a>.<br /></p><p>Automatic resource state transitioning is not thread-safe.</p><pre>     - If Diligent::RESOURCE_STATE_TRANSITION_MODE_TRANSITION mode is used, the method may alter the states 
+       of resources referenced by the shader resource binding and no other thread is allowed to read or write these states.
+
+     - If Diligent::RESOURCE_STATE_TRANSITION_MODE_VERIFY mode is used, the method will read the states, so no other thread
+       should alter the states by calling any of the methods that use Diligent::RESOURCE_STATE_TRANSITION_MODE_TRANSITION mode.
+       It is safe for other threads to read the states.
+
+     - If Diligent::RESOURCE_STATE_TRANSITION_MODE_NONE mode is used, the method does not access the states of resources.
+
+     If the application intends to use the same resources in other threads simultaneously, it should manage the states
+     manually by setting the state to Diligent::RESOURCE_STATE_UNKNOWN (which will disable automatic state 
+     management) using IBuffer::SetState() or ITexture::SetState() and explicitly transitioning the states with 
+     IDeviceContext::TransitionResourceStates().
+     Refer to http://diligentgraphics.com/2018/12/09/resource-state-management/ for detailed explanation
+     of resource state management in Diligent Engine.
+
+     If an application calls any method that changes the state of any resource after it has been committed, the
+     application is responsible for transitioning the resource back to correct state using one of the available methods
+     before issuing the next draw or dispatch command.
+</pre></aside>
+          </div></section>
+          <section class="m-doc-details" id="a2288a7ff92ad792bed06a5b6ed064316"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() Diligent::<wbr />IDeviceContext::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a2288a7ff92ad792bed06a5b6ed064316" class="m-doc-self">SetStencilRef</a>(</span><span class="m-doc-wrap"><a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> StencilRef) <span class="m-label m-warning">virtual</span></span></span>
+            </h3>
+            <p>Sets the stencil reference value.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">StencilRef&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Stencil reference value.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div></section>
+          <section class="m-doc-details" id="afbaacfa9752d4b4a629a6938149d039e"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() Diligent::<wbr />IDeviceContext::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#afbaacfa9752d4b4a629a6938149d039e" class="m-doc-self">SetBlendFactors</a>(</span><span class="m-doc-wrap">const float* pBlendFactors = nullptr) <span class="m-label m-warning">virtual</span></span></span>
+            </h3>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">pBlendFactors&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Array of four blend factors, one for each RGBA component. Theses factors are used if the blend state uses one of the <a href="namespaceDiligent.html#a781bf760ca4b6e5258059a857c2f70b1a55990a5c0e48e2ecd81090e433e6ef06" class="m-doc">Diligent::<wbr />BLEND_FACTOR_BLEND_FACTOR</a> or <a href="namespaceDiligent.html#a781bf760ca4b6e5258059a857c2f70b1a636346de2f019fa3a3ae3392e37f1af8" class="m-doc">Diligent::<wbr />BLEND_FACTOR_INV_BLEND_FACTOR</a> blend factors. If nullptr is provided, default blend factors array {1,1,1,1} will be used.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div></section>
+          <section class="m-doc-details" id="ab6cf19eaf1087d020fa445983a38106a"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() Diligent::<wbr />IDeviceContext::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#ab6cf19eaf1087d020fa445983a38106a" class="m-doc-self">SetVertexBuffers</a>(</span><span class="m-doc-wrap"><a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> StartSlot,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> NumBuffersSet,
+              <a href="structDiligent_1_1IBuffer.html" class="m-doc">IBuffer</a>** ppBuffers,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a>* pOffsets,
+              <a href="namespaceDiligent.html#a98f5c3e5380889788f96c5d5be690d25" class="m-doc">RESOURCE_<wbr />STATE_<wbr />TRANSITION_<wbr />MODE</a> StateTransitionMode,
+              <a href="namespaceDiligent.html#acd12f4066d547aa66c98e96b0e66ebe5" class="m-doc">SET_<wbr />VERTEX_<wbr />BUFFERS_<wbr />FLAGS</a> Flags) <span class="m-label m-warning">virtual</span></span></span>
+            </h3>
+            <p>Binds vertex buffers to the pipeline.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">StartSlot&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- The first input slot for binding. The first vertex buffer is explicitly bound to the start slot; each additional vertex buffer in the array is implicitly bound to each subsequent input slot.</td>
+                </tr>
+                <tr>
+                  <td>NumBuffersSet&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- The number of vertex buffers in the array.</td>
+                </tr>
+                <tr>
+                  <td>ppBuffers&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- A pointer to an array of vertex buffers. The buffers must have been created with the <a href="namespaceDiligent.html#af2f0c1dfb8f93a9ef6444b0cdd64203ca07e85db16b80e8505aaf17b8dd9c626c" class="m-doc">Diligent::<wbr />BIND_VERTEX_BUFFER</a> flag.</td>
+                </tr>
+                <tr>
+                  <td>pOffsets&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Pointer to an array of offset values; one offset value for each buffer in the vertex-buffer array. Each offset is the number of bytes between the first element of a vertex buffer and the first element that will be used. If this parameter is nullptr, zero offsets for all buffers will be used.</td>
+                </tr>
+                <tr>
+                  <td>StateTransitionMode&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- State transition mode for buffers being set (see <a href="namespaceDiligent.html#a98f5c3e5380889788f96c5d5be690d25" class="m-doc">Diligent::<wbr />RESOURCE_STATE_TRANSITION_MODE</a>).</td>
+                </tr>
+                <tr>
+                  <td>Flags&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Additional flags. See <a href="namespaceDiligent.html#acd12f4066d547aa66c98e96b0e66ebe5" class="m-doc">Diligent::<wbr />SET_VERTEX_BUFFERS_FLAGS</a> for a list of allowed values.</td>
+                </tr>
+              </tbody>
+            </table>
+<aside class="m-note m-default"><h4>Remark</h4><p>The device context keeps strong references to all bound vertex buffers. Thus a buffer cannot be released until it is unbound from the context.<br />It is suggested to specify <a href="namespaceDiligent.html#acd12f4066d547aa66c98e96b0e66ebe5a9d845821b9a5867760597bb117189aa8" class="m-doc">Diligent::<wbr />SET_VERTEX_BUFFERS_FLAG_RESET</a> flag whenever possible. This will assure that no buffers from previous draw calls are bound to the pipeline.</p><p>When StateTransitionMode is <a href="namespaceDiligent.html#a98f5c3e5380889788f96c5d5be690d25abfe1be305a8a0725a7c6403aefcabac2" class="m-doc">Diligent::<wbr />RESOURCE_STATE_TRANSITION_MODE_TRANSITION</a>, the method will transition all buffers in known states to <a href="namespaceDiligent.html#a85d1543061f540a6539307191fbefaa6a91a486e1278a192e821f8dfb47ae5eb6" class="m-doc">Diligent::<wbr />RESOURCE_STATE_VERTEX_BUFFER</a>. Resource state transitioning is not thread safe, so no other thread is allowed to read or write the states of these buffers.</p></aside><p>If the application intends to use the same resources in other threads simultaneously, it needs to explicitly manage the states using <a href="structDiligent_1_1IDeviceContext.html#ad70dbcda9db81d06f3641baabf02f5c4" class="m-doc">IDeviceContext::<wbr />TransitionResourceStates()</a> method. Refer to <a href="http://diligentgraphics.com/2018/12/09/resource-state-management/">http:/<wbr />/<wbr />diligentgraphics.com/<wbr />2018/<wbr />12/<wbr />09/<wbr />resource-state-management/<wbr /></a> for detailed explanation of resource state management in <a href="namespaceDiligent.html" class="m-doc">Diligent</a> Engine.</p>
+          </div></section>
+          <section class="m-doc-details" id="a5b75652981655918dd759a8320730440"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() Diligent::<wbr />IDeviceContext::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a5b75652981655918dd759a8320730440" class="m-doc-self">InvalidateState</a>(</span><span class="m-doc-wrap">) <span class="m-label m-warning">virtual</span></span></span>
+            </h3>
+            <p>Invalidates the cached context state.</p>
+<p>This method should be called by an application to invalidate internal cached states.</p>
+          </div></section>
+          <section class="m-doc-details" id="a7223ba351e883d66de749cd936892d1c"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() Diligent::<wbr />IDeviceContext::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a7223ba351e883d66de749cd936892d1c" class="m-doc-self">SetIndexBuffer</a>(</span><span class="m-doc-wrap"><a href="structDiligent_1_1IBuffer.html" class="m-doc">IBuffer</a>* pIndexBuffer,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> ByteOffset,
+              <a href="namespaceDiligent.html#a98f5c3e5380889788f96c5d5be690d25" class="m-doc">RESOURCE_<wbr />STATE_<wbr />TRANSITION_<wbr />MODE</a> StateTransitionMode) <span class="m-label m-warning">virtual</span></span></span>
+            </h3>
+            <p>Binds an index buffer to the pipeline.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">pIndexBuffer&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Pointer to the index buffer. The buffer must have been created with the <a href="namespaceDiligent.html#af2f0c1dfb8f93a9ef6444b0cdd64203cab548348e977fcc0e815a888d156b5c03" class="m-doc">Diligent::<wbr />BIND_INDEX_BUFFER</a> flag.</td>
+                </tr>
+                <tr>
+                  <td>ByteOffset&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Offset from the beginning of the buffer to the start of index data.</td>
+                </tr>
+                <tr>
+                  <td>StateTransitionMode&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- State transiton mode for the index buffer to bind (see <a href="namespaceDiligent.html#a98f5c3e5380889788f96c5d5be690d25" class="m-doc">Diligent::<wbr />RESOURCE_STATE_TRANSITION_MODE</a>).</td>
+                </tr>
+              </tbody>
+            </table>
+<aside class="m-note m-default"><h4>Remark</h4><p>The device context keeps strong reference to the index buffer. Thus an index buffer object cannot be released until it is unbound from the context.</p><p>When StateTransitionMode is <a href="namespaceDiligent.html#a98f5c3e5380889788f96c5d5be690d25abfe1be305a8a0725a7c6403aefcabac2" class="m-doc">Diligent::<wbr />RESOURCE_STATE_TRANSITION_MODE_TRANSITION</a>, the method will transition the buffer to <a href="namespaceDiligent.html#a85d1543061f540a6539307191fbefaa6ad0c8fbaa4e701b808c378d92d3171acc" class="m-doc">Diligent::<wbr />RESOURCE_STATE_INDEX_BUFFER</a> (if its state is not unknown). Resource state transitioning is not thread safe, so no other thread is allowed to read or write the state of the buffer.</p></aside><p>If the application intends to use the same resource in other threads simultaneously, it needs to explicitly manage the states using <a href="structDiligent_1_1IDeviceContext.html#ad70dbcda9db81d06f3641baabf02f5c4" class="m-doc">IDeviceContext::<wbr />TransitionResourceStates()</a> method. Refer to <a href="http://diligentgraphics.com/2018/12/09/resource-state-management/">http:/<wbr />/<wbr />diligentgraphics.com/<wbr />2018/<wbr />12/<wbr />09/<wbr />resource-state-management/<wbr /></a> for detailed explanation of resource state management in <a href="namespaceDiligent.html" class="m-doc">Diligent</a> Engine.</p>
+          </div></section>
+          <section class="m-doc-details" id="af82cd1fbb88febb8f19a6ab4226dea19"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() Diligent::<wbr />IDeviceContext::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#af82cd1fbb88febb8f19a6ab4226dea19" class="m-doc-self">SetViewports</a>(</span><span class="m-doc-wrap"><a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> NumViewports,
+              const <a href="structDiligent_1_1Viewport.html" class="m-doc">Viewport</a>* pViewports,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> RTWidth,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> RTHeight) <span class="m-label m-warning">virtual</span></span></span>
+            </h3>
+            <p>Sets an array of viewports.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">NumViewports&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Number of viewports to set.</td>
+                </tr>
+                <tr>
+                  <td>pViewports&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- An array of <a href="structDiligent_1_1Viewport.html" class="m-doc">Viewport</a> structures describing the viewports to bind.</td>
+                </tr>
+                <tr>
+                  <td>RTWidth&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Render target width. If 0 is provided, width of the currently bound render target will be used.</td>
+                </tr>
+                <tr>
+                  <td>RTHeight&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Render target height. If 0 is provided, height of the currently bound render target will be used.</td>
+                </tr>
+              </tbody>
+            </table>
+<aside class="m-note m-default"><h4>Remark</h4><p>DirectX and OpenGL use different window coordinate systems. In DirectX, the coordinate system origin is in the left top corner of the screen with Y axis pointing down. In OpenGL, the origin is in the left bottom corener of the screen with Y axis pointing up. Render target size is required to convert viewport from DirectX to OpenGL coordinate system if OpenGL device is used.<br /><br />All viewports must be set atomically as one operation. Any viewports not defined by the call are disabled.<br /><br />You can set the viewport size to match the currently bound render target using the following call:</p><pre>pContext-&gt;SetViewports(1, nullptr, 0, 0);
+</pre></aside>
+          </div></section>
+          <section class="m-doc-details" id="ade3b55e65461253aa02fa48b2c1908c9"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() Diligent::<wbr />IDeviceContext::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#ade3b55e65461253aa02fa48b2c1908c9" class="m-doc-self">SetScissorRects</a>(</span><span class="m-doc-wrap"><a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> NumRects,
+              const <a href="structDiligent_1_1Rect.html" class="m-doc">Rect</a>* pRects,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> RTWidth,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> RTHeight) <span class="m-label m-warning">virtual</span></span></span>
+            </h3>
+            <p>Sets active scissor rects.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">NumRects&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Number of scissor rectangles to set.</td>
+                </tr>
+                <tr>
+                  <td>pRects&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- An array of <a href="structDiligent_1_1Rect.html" class="m-doc">Rect</a> structures describing the scissor rectangles to bind.</td>
+                </tr>
+                <tr>
+                  <td>RTWidth&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Render target width. If 0 is provided, width of the currently bound render target will be used.</td>
+                </tr>
+                <tr>
+                  <td>RTHeight&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Render target height. If 0 is provided, height of the currently bound render target will be used.</td>
+                </tr>
+              </tbody>
+            </table>
+<aside class="m-note m-default"><h4>Remark</h4><p>DirectX and OpenGL use different window coordinate systems. In DirectX, the coordinate system origin is in the left top corner of the screen with Y axis pointing down. In OpenGL, the origin is in the left bottom corener of the screen with Y axis pointing up. Render target size is required to convert viewport from DirectX to OpenGL coordinate system if OpenGL device is used.<br /><br />All scissor rects must be set atomically as one operation. Any rects not defined by the call are disabled.</p></aside>
+          </div></section>
+          <section class="m-doc-details" id="a9f860cf38e7957e9a9a6842e59135400"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() Diligent::<wbr />IDeviceContext::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a9f860cf38e7957e9a9a6842e59135400" class="m-doc-self">SetRenderTargets</a>(</span><span class="m-doc-wrap"><a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> NumRenderTargets,
+              <a href="structDiligent_1_1ITextureView.html" class="m-doc">ITextureView</a>* ppRenderTargets[],
+              <a href="structDiligent_1_1ITextureView.html" class="m-doc">ITextureView</a>* pDepthStencil,
+              <a href="namespaceDiligent.html#a98f5c3e5380889788f96c5d5be690d25" class="m-doc">RESOURCE_<wbr />STATE_<wbr />TRANSITION_<wbr />MODE</a> StateTransitionMode) <span class="m-label m-warning">virtual</span></span></span>
+            </h3>
+            <p>Binds one or more render targets and the depth-stencil buffer to the context. It also sets the viewport to match the first non-null render target or depth-stencil buffer.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">NumRenderTargets&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Number of render targets to bind.</td>
+                </tr>
+                <tr>
+                  <td>ppRenderTargets&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Array of pointers to <a href="structDiligent_1_1ITextureView.html" class="m-doc">ITextureView</a> that represent the render targets to bind to the device. The type of each view in the array must be <a href="namespaceDiligent.html#a6863a150530d5abe1cc5627b23ebce68ae7e090499e01b1aa0e57e7d71c9e7d22" class="m-doc">Diligent::<wbr />TEXTURE_VIEW_RENDER_TARGET</a>.</td>
+                </tr>
+                <tr>
+                  <td>pDepthStencil&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Pointer to the <a href="structDiligent_1_1ITextureView.html" class="m-doc">ITextureView</a> that represents the depth stencil to bind to the device. The view type must be <a href="namespaceDiligent.html#a6863a150530d5abe1cc5627b23ebce68af974362f40fbd2a6062e8220124a86aa" class="m-doc">Diligent::<wbr />TEXTURE_VIEW_DEPTH_STENCIL</a>.</td>
+                </tr>
+                <tr>
+                  <td>StateTransitionMode&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- State transition mode of the render targets and depth stencil buffer being set (see <a href="namespaceDiligent.html#a98f5c3e5380889788f96c5d5be690d25" class="m-doc">Diligent::<wbr />RESOURCE_STATE_TRANSITION_MODE</a>).</td>
+                </tr>
+              </tbody>
+            </table>
+<aside class="m-note m-default"><h4>Remark</h4><p>The device context will keep strong references to all bound render target and depth-stencil views. Thus these views (and consequently referenced textures) cannot be released until they are unbound from the context.<br />Any render targets not defined by this call are set to nullptr.<br /><br /></p><p>When StateTransitionMode is <a href="namespaceDiligent.html#a98f5c3e5380889788f96c5d5be690d25abfe1be305a8a0725a7c6403aefcabac2" class="m-doc">Diligent::<wbr />RESOURCE_STATE_TRANSITION_MODE_TRANSITION</a>, the method will transition all render targets in known states to Diligent::RESOURCE_STATE_REDER_TARGET, and the depth-stencil buffer to <a href="namespaceDiligent.html#a85d1543061f540a6539307191fbefaa6a52f4c77419a4e439d909ec732f7b995a" class="m-doc">Diligent::<wbr />RESOURCE_STATE_DEPTH_WRITE</a> state. Resource state transitioning is not thread safe, so no other thread is allowed to read or write the states of resources used by the command.</p></aside><p>If the application intends to use the same resource in other threads simultaneously, it needs to explicitly manage the states using <a href="structDiligent_1_1IDeviceContext.html#ad70dbcda9db81d06f3641baabf02f5c4" class="m-doc">IDeviceContext::<wbr />TransitionResourceStates()</a> method. Refer to <a href="http://diligentgraphics.com/2018/12/09/resource-state-management/">http:/<wbr />/<wbr />diligentgraphics.com/<wbr />2018/<wbr />12/<wbr />09/<wbr />resource-state-management/<wbr /></a> for detailed explanation of resource state management in <a href="namespaceDiligent.html" class="m-doc">Diligent</a> Engine.</p>
+          </div></section>
+          <section class="m-doc-details" id="a873e85ef4a5d4eae499dfd472d0f24a5"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() Diligent::<wbr />IDeviceContext::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a873e85ef4a5d4eae499dfd472d0f24a5" class="m-doc-self">BeginRenderPass</a>(</span><span class="m-doc-wrap">const <a href="structDiligent_1_1BeginRenderPassAttribs.html" class="m-doc">BeginRenderPassAttribs</a>&amp; Attribs) <span class="m-label m-warning">virtual</span></span></span>
+            </h3>
+            <p>Begins a new render pass.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">Attribs&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- The command attributes, see <a href="structDiligent_1_1BeginRenderPassAttribs.html" class="m-doc">Diligent::<wbr />BeginRenderPassAttribs</a> for details.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div></section>
+          <section class="m-doc-details" id="aa624c433889d7cc4e3bb1dabc56ddb94"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() Diligent::<wbr />IDeviceContext::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#aa624c433889d7cc4e3bb1dabc56ddb94" class="m-doc-self">Draw</a>(</span><span class="m-doc-wrap">const <a href="structDiligent_1_1DrawAttribs.html" class="m-doc">DrawAttribs</a>&amp; Attribs) <span class="m-label m-warning">virtual</span></span></span>
+            </h3>
+            <p>Executes a draw command.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">Attribs&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Draw command attributes, see <a href="structDiligent_1_1DrawAttribs.html" class="m-doc">Diligent::<wbr />DrawAttribs</a> for details.</td>
+                </tr>
+              </tbody>
+            </table>
+<aside class="m-note m-default"><h4>Remark</h4><p>If <a href="namespaceDiligent.html#ac342cb6e95f4622ccaf97243342d3408a2dd18d26e36bfa59b649d90b7ad33a8a" class="m-doc">Diligent::<wbr />DRAW_FLAG_VERIFY_STATES</a> flag is set, the method reads the state of vertex buffers, so no other threads are allowed to alter the states of the same resources. It is OK to read these states.</p></aside><p>If the application intends to use the same resources in other threads simultaneously, it needs to explicitly manage the states using <a href="structDiligent_1_1IDeviceContext.html#ad70dbcda9db81d06f3641baabf02f5c4" class="m-doc">IDeviceContext::<wbr />TransitionResourceStates()</a> method.</p>
+          </div></section>
+          <section class="m-doc-details" id="a51d3cb7fa1bfd78dad43e8e7fee98e84"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() Diligent::<wbr />IDeviceContext::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a51d3cb7fa1bfd78dad43e8e7fee98e84" class="m-doc-self">DrawIndexed</a>(</span><span class="m-doc-wrap">const <a href="structDiligent_1_1DrawIndexedAttribs.html" class="m-doc">DrawIndexedAttribs</a>&amp; Attribs) <span class="m-label m-warning">virtual</span></span></span>
+            </h3>
+            <p>Executes an indexed draw command.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">Attribs&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Draw command attributes, see <a href="structDiligent_1_1DrawIndexedAttribs.html" class="m-doc">Diligent::<wbr />DrawIndexedAttribs</a> for details.</td>
+                </tr>
+              </tbody>
+            </table>
+<aside class="m-note m-default"><h4>Remark</h4><p>If <a href="namespaceDiligent.html#ac342cb6e95f4622ccaf97243342d3408a2dd18d26e36bfa59b649d90b7ad33a8a" class="m-doc">Diligent::<wbr />DRAW_FLAG_VERIFY_STATES</a> flag is set, the method reads the state of vertex/index buffers, so no other threads are allowed to alter the states of the same resources. It is OK to read these states.</p></aside><p>If the application intends to use the same resources in other threads simultaneously, it needs to explicitly manage the states using <a href="structDiligent_1_1IDeviceContext.html#ad70dbcda9db81d06f3641baabf02f5c4" class="m-doc">IDeviceContext::<wbr />TransitionResourceStates()</a> method.</p>
+          </div></section>
+          <section class="m-doc-details" id="a045369ea09159295a39b200f57668b82"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() Diligent::<wbr />IDeviceContext::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a045369ea09159295a39b200f57668b82" class="m-doc-self">DrawIndirect</a>(</span><span class="m-doc-wrap">const <a href="structDiligent_1_1DrawIndirectAttribs.html" class="m-doc">DrawIndirectAttribs</a>&amp; Attribs,
+              <a href="structDiligent_1_1IBuffer.html" class="m-doc">IBuffer</a>* pAttribsBuffer) <span class="m-label m-warning">virtual</span></span></span>
+            </h3>
+            <p>Executes an indirect draw command.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">Attribs&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Structure describing the command attributes, see <a href="structDiligent_1_1DrawIndirectAttribs.html" class="m-doc">Diligent::<wbr />DrawIndirectAttribs</a> for details.</td>
+                </tr>
+                <tr>
+                  <td>pAttribsBuffer&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Pointer to the buffer, from which indirect draw attributes will be read. The buffer must contain the following arguments at the specified offset: Uint32 NumVertices; Uint32 NumInstances; Uint32 StartVertexLocation; Uint32 FirstInstanceLocation;</td>
+                </tr>
+              </tbody>
+            </table>
+<aside class="m-note m-default"><h4>Remark</h4><p>If IndirectAttribsBufferStateTransitionMode member is <a href="namespaceDiligent.html#a98f5c3e5380889788f96c5d5be690d25abfe1be305a8a0725a7c6403aefcabac2" class="m-doc">Diligent::<wbr />RESOURCE_STATE_TRANSITION_MODE_TRANSITION</a>, the method may transition the state of the indirect draw arguments buffer. This is not a thread safe operation, so no other thread is allowed to read or write the state of the buffer.</p></aside><p>If <a href="namespaceDiligent.html#ac342cb6e95f4622ccaf97243342d3408a2dd18d26e36bfa59b649d90b7ad33a8a" class="m-doc">Diligent::<wbr />DRAW_FLAG_VERIFY_STATES</a> flag is set, the method reads the state of vertex/index buffers, so no other threads are allowed to alter the states of the same resources. It is OK to read these states.</p><p>If the application intends to use the same resources in other threads simultaneously, it needs to explicitly manage the states using <a href="structDiligent_1_1IDeviceContext.html#ad70dbcda9db81d06f3641baabf02f5c4" class="m-doc">IDeviceContext::<wbr />TransitionResourceStates()</a> method.</p>
+          </div></section>
+          <section class="m-doc-details" id="a82144365757da5027de8ddfdad9d9863"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() Diligent::<wbr />IDeviceContext::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a82144365757da5027de8ddfdad9d9863" class="m-doc-self">DrawIndexedIndirect</a>(</span><span class="m-doc-wrap">const <a href="structDiligent_1_1DrawIndexedIndirectAttribs.html" class="m-doc">DrawIndexedIndirectAttribs</a>&amp; Attribs,
+              <a href="structDiligent_1_1IBuffer.html" class="m-doc">IBuffer</a>* pAttribsBuffer) <span class="m-label m-warning">virtual</span></span></span>
+            </h3>
+            <p>Executes an indexed indirect draw command.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">Attribs&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Structure describing the command attributes, see <a href="structDiligent_1_1DrawIndexedIndirectAttribs.html" class="m-doc">Diligent::<wbr />DrawIndexedIndirectAttribs</a> for details.</td>
+                </tr>
+                <tr>
+                  <td>pAttribsBuffer&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Pointer to the buffer, from which indirect draw attributes will be read. The buffer must contain the following arguments at the specified offset: Uint32 NumIndices; Uint32 NumInstances; Uint32 FirstIndexLocation; Uint32 BaseVertex; Uint32 FirstInstanceLocation</td>
+                </tr>
+              </tbody>
+            </table>
+<aside class="m-note m-default"><h4>Remark</h4><p>If IndirectAttribsBufferStateTransitionMode member is <a href="namespaceDiligent.html#a98f5c3e5380889788f96c5d5be690d25abfe1be305a8a0725a7c6403aefcabac2" class="m-doc">Diligent::<wbr />RESOURCE_STATE_TRANSITION_MODE_TRANSITION</a>, the method may transition the state of the indirect draw arguments buffer. This is not a thread safe operation, so no other thread is allowed to read or write the state of the buffer.</p></aside><p>If <a href="namespaceDiligent.html#ac342cb6e95f4622ccaf97243342d3408a2dd18d26e36bfa59b649d90b7ad33a8a" class="m-doc">Diligent::<wbr />DRAW_FLAG_VERIFY_STATES</a> flag is set, the method reads the state of vertex/index buffers, so no other threads are allowed to alter the states of the same resources. It is OK to read these states.</p><p>If the application intends to use the same resources in other threads simultaneously, it needs to explicitly manage the states using <a href="structDiligent_1_1IDeviceContext.html#ad70dbcda9db81d06f3641baabf02f5c4" class="m-doc">IDeviceContext::<wbr />TransitionResourceStates()</a> method.</p>
+          </div></section>
+          <section class="m-doc-details" id="a39391aec36be3c7d13b90fba08792945"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() Diligent::<wbr />IDeviceContext::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a39391aec36be3c7d13b90fba08792945" class="m-doc-self">DrawMesh</a>(</span><span class="m-doc-wrap">const <a href="structDiligent_1_1DrawMeshAttribs.html" class="m-doc">DrawMeshAttribs</a>&amp; Attribs) <span class="m-label m-warning">virtual</span></span></span>
+            </h3>
+            <p>Executes a mesh draw command.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">Attribs&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Draw command attributes, see <a href="structDiligent_1_1DrawMeshAttribs.html" class="m-doc">Diligent::<wbr />DrawMeshAttribs</a> for details.</td>
+                </tr>
+              </tbody>
+            </table>
+<aside class="m-note m-default"><h4>Remark</h4><p>For compatibility between Direct3D12 and Vulkan, only a single work group dimension is used. Also in the shader, &#x27;numthreads&#x27; and &#x27;local_size&#x27; attributes must define only the first dimension, for example: &#x27;[numthreads(ThreadCount, 1, 1)]&#x27; or &#x27;layout(local_size_x = ThreadCount) in&#x27;.</p></aside>
+          </div></section>
+          <section class="m-doc-details" id="aff9bed598888c3a474fb4730e860174e"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() Diligent::<wbr />IDeviceContext::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#aff9bed598888c3a474fb4730e860174e" class="m-doc-self">DrawMeshIndirect</a>(</span><span class="m-doc-wrap">const <a href="structDiligent_1_1DrawMeshIndirectAttribs.html" class="m-doc">DrawMeshIndirectAttribs</a>&amp; Attribs,
+              <a href="structDiligent_1_1IBuffer.html" class="m-doc">IBuffer</a>* pAttribsBuffer) <span class="m-label m-warning">virtual</span></span></span>
+            </h3>
+            <p>Executes an mesh indirect draw command.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">Attribs&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Structure describing the command attributes, see <a href="structDiligent_1_1DrawMeshIndirectAttribs.html" class="m-doc">Diligent::<wbr />DrawMeshIndirectAttribs</a> for details.</td>
+                </tr>
+                <tr>
+                  <td>pAttribsBuffer&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Pointer to the buffer, from which indirect draw attributes will be read. The buffer must contain the following arguments at the specified offset: Direct3D12: Uint32 ThreadGroupCountX; Uint32 ThreadGroupCountY; Uint32 ThreadGroupCountZ; Vulkan: Uint32 TaskCount; Uint32 FirstTask;</td>
+                </tr>
+              </tbody>
+            </table>
+<aside class="m-note m-default"><h4>Remark</h4><p>For compatibility between Direct3D12 and Vulkan and with direct call (DrawMesh) use the first element in the structure, for example: Direct3D12 {TaskCount, 1, 1}, Vulkan {TaskCount, 0}.</p><p>If IndirectAttribsBufferStateTransitionMode member is <a href="namespaceDiligent.html#a98f5c3e5380889788f96c5d5be690d25abfe1be305a8a0725a7c6403aefcabac2" class="m-doc">Diligent::<wbr />RESOURCE_STATE_TRANSITION_MODE_TRANSITION</a>, the method may transition the state of the indirect draw arguments buffer. This is not a thread safe operation, so no other thread is allowed to read or write the state of the buffer.</p></aside><p>If the application intends to use the same resources in other threads simultaneously, it needs to explicitly manage the states using <a href="structDiligent_1_1IDeviceContext.html#ad70dbcda9db81d06f3641baabf02f5c4" class="m-doc">IDeviceContext::<wbr />TransitionResourceStates()</a> method.</p>
+          </div></section>
+          <section class="m-doc-details" id="a753bdaf1e1266de38484aa3baa605d1c"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() Diligent::<wbr />IDeviceContext::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a753bdaf1e1266de38484aa3baa605d1c" class="m-doc-self">DrawMeshIndirectCount</a>(</span><span class="m-doc-wrap">const <a href="structDiligent_1_1DrawMeshIndirectCountAttribs.html" class="m-doc">DrawMeshIndirectCountAttribs</a>&amp; Attribs,
+              <a href="structDiligent_1_1IBuffer.html" class="m-doc">IBuffer</a>* pAttribsBuffer,
+              <a href="structDiligent_1_1IBuffer.html" class="m-doc">IBuffer</a>* pCountBuffer) <span class="m-label m-warning">virtual</span></span></span>
+            </h3>
+            <p>Executes an mesh indirect draw command with indirect command count buffer.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">Attribs&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Structure describing the command attributes, see <a href="structDiligent_1_1DrawMeshIndirectCountAttribs.html" class="m-doc">Diligent::<wbr />DrawMeshIndirectCountAttribs</a> for details.</td>
+                </tr>
+                <tr>
+                  <td>pAttribsBuffer&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Pointer to the buffer, from which indirect draw attributes will be read. The buffer must contain the following arguments at the specified offset: Direct3D12: Uint32 ThreadGroupCountX; Uint32 ThreadGroupCountY; Uint32 ThreadGroupCountZ; Vulkan: Uint32 TaskCount; Uint32 FirstTask; Size of the buffer must be sizeof(Uint32[3]) * Attribs.MaxDrawCommands.</td>
+                </tr>
+                <tr>
+                  <td>pCountBuffer&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Pointer to the buffer, from which Uint32 value with draw count will be read.</td>
+                </tr>
+              </tbody>
+            </table>
+<aside class="m-note m-default"><h4>Remark</h4><p>For compatibility between Direct3D12 and Vulkan and with direct call (DrawMesh) use the first element in the structure, for example: Direct3D12 {TaskCount, 1, 1}, Vulkan {TaskCount, 0}.</p><p>If IndirectAttribsBufferStateTransitionMode member is <a href="namespaceDiligent.html#a98f5c3e5380889788f96c5d5be690d25abfe1be305a8a0725a7c6403aefcabac2" class="m-doc">Diligent::<wbr />RESOURCE_STATE_TRANSITION_MODE_TRANSITION</a>, the method may transition the state of the indirect draw arguments buffer. This is not a thread safe operation, so no other thread is allowed to read or write the state of the buffer.</p></aside><p>If the application intends to use the same resources in other threads simultaneously, it needs to explicitly manage the states using <a href="structDiligent_1_1IDeviceContext.html#ad70dbcda9db81d06f3641baabf02f5c4" class="m-doc">IDeviceContext::<wbr />TransitionResourceStates()</a> method.</p>
+          </div></section>
+          <section class="m-doc-details" id="a93bbc3bcf3dd623122cbf3a0a0fc8a94"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() Diligent::<wbr />IDeviceContext::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a93bbc3bcf3dd623122cbf3a0a0fc8a94" class="m-doc-self">DispatchCompute</a>(</span><span class="m-doc-wrap">const <a href="structDiligent_1_1DispatchComputeAttribs.html" class="m-doc">DispatchComputeAttribs</a>&amp; Attribs) <span class="m-label m-warning">virtual</span></span></span>
+            </h3>
+            <p>Executes a dispatch compute command.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">Attribs&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Dispatch command attributes, see <a href="structDiligent_1_1DispatchComputeAttribs.html" class="m-doc">Diligent::<wbr />DispatchComputeAttribs</a> for details.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div></section>
+          <section class="m-doc-details" id="ab98ba753a0c72d6c7e4492a2b186eea7"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() Diligent::<wbr />IDeviceContext::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#ab98ba753a0c72d6c7e4492a2b186eea7" class="m-doc-self">DispatchComputeIndirect</a>(</span><span class="m-doc-wrap">const <a href="structDiligent_1_1DispatchComputeIndirectAttribs.html" class="m-doc">DispatchComputeIndirectAttribs</a>&amp; Attribs,
+              <a href="structDiligent_1_1IBuffer.html" class="m-doc">IBuffer</a>* pAttribsBuffer) <span class="m-label m-warning">virtual</span></span></span>
+            </h3>
+            <p>Executes an indirect dispatch compute command.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">Attribs&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- The command attributes, see <a href="structDiligent_1_1DispatchComputeIndirectAttribs.html" class="m-doc">Diligent::<wbr />DispatchComputeIndirectAttribs</a> for details.</td>
+                </tr>
+                <tr>
+                  <td>pAttribsBuffer&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Pointer to the buffer containing indirect dispatch attributes. The buffer must contain the following arguments at the specified offset: Uint32 ThreadGroupCountX; Uint32 ThreadGroupCountY; Uint32 ThreadGroupCountZ;</td>
+                </tr>
+              </tbody>
+            </table>
+<aside class="m-note m-default"><h4>Remark</h4><p>If IndirectAttribsBufferStateTransitionMode member is <a href="namespaceDiligent.html#a98f5c3e5380889788f96c5d5be690d25abfe1be305a8a0725a7c6403aefcabac2" class="m-doc">Diligent::<wbr />RESOURCE_STATE_TRANSITION_MODE_TRANSITION</a>, the method may transition the state of indirect dispatch arguments buffer. This is not a thread safe operation, so no other thread is allowed to read or write the state of the same resource.</p></aside><p>If the application intends to use the same resources in other threads simultaneously, it needs to explicitly manage the states using <a href="structDiligent_1_1IDeviceContext.html#ad70dbcda9db81d06f3641baabf02f5c4" class="m-doc">IDeviceContext::<wbr />TransitionResourceStates()</a> method.</p>
+          </div></section>
+          <section class="m-doc-details" id="a6b9d095ef678c1216dcce51af19254af"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() Diligent::<wbr />IDeviceContext::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a6b9d095ef678c1216dcce51af19254af" class="m-doc-self">ClearDepthStencil</a>(</span><span class="m-doc-wrap"><a href="structDiligent_1_1ITextureView.html" class="m-doc">ITextureView</a>* pView,
+              <a href="namespaceDiligent.html#af57c7d3ed407283c49ab3751f6a46358" class="m-doc">CLEAR_<wbr />DEPTH_<wbr />STENCIL_<wbr />FLAGS</a> ClearFlags,
+              float fDepth,
+              <a href="namespaceDiligent.html#a3392c10112f826c3bcc60366e0f533db" class="m-doc">Uint8</a> Stencil,
+              <a href="namespaceDiligent.html#a98f5c3e5380889788f96c5d5be690d25" class="m-doc">RESOURCE_<wbr />STATE_<wbr />TRANSITION_<wbr />MODE</a> StateTransitionMode) <span class="m-label m-warning">virtual</span></span></span>
+            </h3>
+            <p>Clears a depth-stencil view.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">pView&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Pointer to <a href="structDiligent_1_1ITextureView.html" class="m-doc">ITextureView</a> interface to clear. The view type must be <a href="namespaceDiligent.html#a6863a150530d5abe1cc5627b23ebce68af974362f40fbd2a6062e8220124a86aa" class="m-doc">Diligent::<wbr />TEXTURE_VIEW_DEPTH_STENCIL</a>.</td>
+                </tr>
+                <tr>
+                  <td>ClearFlags&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Idicates which parts of the buffer to clear, see <a href="namespaceDiligent.html#af57c7d3ed407283c49ab3751f6a46358" class="m-doc">Diligent::<wbr />CLEAR_DEPTH_STENCIL_FLAGS</a>.</td>
+                </tr>
+                <tr>
+                  <td>fDepth&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Value to clear depth part of the view with.</td>
+                </tr>
+                <tr>
+                  <td>Stencil&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Value to clear stencil part of the view with.</td>
+                </tr>
+                <tr>
+                  <td>StateTransitionMode&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- state transition mode of the depth-stencil buffer to clear.</td>
+                </tr>
+              </tbody>
+            </table>
+<aside class="m-note m-default"><h4>Remark</h4><p>The full extent of the view is always cleared. <a href="structDiligent_1_1Viewport.html" class="m-doc">Viewport</a> and scissor settings are not applied.</p></aside><aside class="m-note m-info"><h4>Note</h4><p>The depth-stencil view must be bound to the pipeline for clear operation to be performed.</p></aside><aside class="m-note m-default"><h4>Remark</h4><p>When StateTransitionMode is <a href="namespaceDiligent.html#a98f5c3e5380889788f96c5d5be690d25abfe1be305a8a0725a7c6403aefcabac2" class="m-doc">Diligent::<wbr />RESOURCE_STATE_TRANSITION_MODE_TRANSITION</a>, the method will transition the state of the texture to the state required by clear operation. In Direct3D12, this satate is always <a href="namespaceDiligent.html#a85d1543061f540a6539307191fbefaa6a52f4c77419a4e439d909ec732f7b995a" class="m-doc">Diligent::<wbr />RESOURCE_STATE_DEPTH_WRITE</a>, however in Vulkan the state depends on whether the depth buffer is bound to the pipeline.</p></aside><p>Resource state transitioning is not thread safe, so no other thread is allowed to read or write the state of resources used by the command. Refer to <a href="http://diligentgraphics.com/2018/12/09/resource-state-management/">http:/<wbr />/<wbr />diligentgraphics.com/<wbr />2018/<wbr />12/<wbr />09/<wbr />resource-state-management/<wbr /></a> for detailed explanation of resource state management in <a href="namespaceDiligent.html" class="m-doc">Diligent</a> Engine.</p>
+          </div></section>
+          <section class="m-doc-details" id="aa5715220150119fa685159ef8a8dd728"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() Diligent::<wbr />IDeviceContext::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#aa5715220150119fa685159ef8a8dd728" class="m-doc-self">ClearRenderTarget</a>(</span><span class="m-doc-wrap"><a href="structDiligent_1_1ITextureView.html" class="m-doc">ITextureView</a>* pView,
+              const float* RGBA,
+              <a href="namespaceDiligent.html#a98f5c3e5380889788f96c5d5be690d25" class="m-doc">RESOURCE_<wbr />STATE_<wbr />TRANSITION_<wbr />MODE</a> StateTransitionMode) <span class="m-label m-warning">virtual</span></span></span>
+            </h3>
+            <p>Clears a render target view.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">pView&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Pointer to <a href="structDiligent_1_1ITextureView.html" class="m-doc">ITextureView</a> interface to clear. The view type must be <a href="namespaceDiligent.html#a6863a150530d5abe1cc5627b23ebce68ae7e090499e01b1aa0e57e7d71c9e7d22" class="m-doc">Diligent::<wbr />TEXTURE_VIEW_RENDER_TARGET</a>.</td>
+                </tr>
+                <tr>
+                  <td>RGBA&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- A 4-component array that represents the color to fill the render target with. If nullptr is provided, the default array {0,0,0,0} will be used.</td>
+                </tr>
+                <tr>
+                  <td>StateTransitionMode&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Defines required state transitions (see <a href="namespaceDiligent.html#a98f5c3e5380889788f96c5d5be690d25" class="m-doc">Diligent::<wbr />RESOURCE_STATE_TRANSITION_MODE</a>)</td>
+                </tr>
+              </tbody>
+            </table>
+<aside class="m-note m-default"><h4>Remark</h4><p>The full extent of the view is always cleared. <a href="structDiligent_1_1Viewport.html" class="m-doc">Viewport</a> and scissor settings are not applied.</p><pre>     The render target view must be bound to the pipeline for clear operation to be performed in OpenGL backend.
+</pre><p>When StateTransitionMode is <a href="namespaceDiligent.html#a98f5c3e5380889788f96c5d5be690d25abfe1be305a8a0725a7c6403aefcabac2" class="m-doc">Diligent::<wbr />RESOURCE_STATE_TRANSITION_MODE_TRANSITION</a>, the method will transition the texture to the state required by the command. Resource state transitioning is not thread safe, so no other thread is allowed to read or write the states of the same textures.</p></aside><p>If the application intends to use the same resource in other threads simultaneously, it needs to explicitly manage the states using <a href="structDiligent_1_1IDeviceContext.html#ad70dbcda9db81d06f3641baabf02f5c4" class="m-doc">IDeviceContext::<wbr />TransitionResourceStates()</a> method.</p><aside class="m-note m-info"><h4>Note</h4><p>In D3D12 backend clearing render targets requires textures to always be transitioned to <a href="namespaceDiligent.html#a85d1543061f540a6539307191fbefaa6a37d2566c3bc06f603ff7472d6cda6f3b" class="m-doc">Diligent::<wbr />RESOURCE_STATE_RENDER_TARGET</a> state. In Vulkan backend however this depends on whether a render pass has been started. To clear render target outside of a render pass, the texture must be transitioned to <a href="namespaceDiligent.html#a85d1543061f540a6539307191fbefaa6a8409efa82650f9f2380b9c948c22d675" class="m-doc">Diligent::<wbr />RESOURCE_STATE_COPY_DEST</a> state. Inside a render pass it must be in <a href="namespaceDiligent.html#a85d1543061f540a6539307191fbefaa6a37d2566c3bc06f603ff7472d6cda6f3b" class="m-doc">Diligent::<wbr />RESOURCE_STATE_RENDER_TARGET</a> state. When using Diligent::RESOURCE_STATE_TRANSITION_TRANSITION mode, the engine takes care of proper resource state transition, otherwise it is the responsibility of the application.</p></aside>
+          </div></section>
+          <section class="m-doc-details" id="a5c683e708259f324ceb4af195aa2a95d"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() Diligent::<wbr />IDeviceContext::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a5c683e708259f324ceb4af195aa2a95d" class="m-doc-self">FinishCommandList</a>(</span><span class="m-doc-wrap"><a href="classDiligent_1_1ICommandList.html" class="m-doc">ICommandList</a>** ppCommandList) <span class="m-label m-warning">virtual</span></span></span>
+            </h3>
+            <p>Finishes recording commands and generates a command list.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">ppCommandList&nbsp;<span class="m-label m-flat m-warning">out</span></td>
+                  <td>- Memory location where pointer to the recorded command list will be written.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div></section>
+          <section class="m-doc-details" id="ae788037b1bcfdbfb6a6e52fd97f83116"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() Diligent::<wbr />IDeviceContext::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#ae788037b1bcfdbfb6a6e52fd97f83116" class="m-doc-self">ExecuteCommandLists</a>(</span><span class="m-doc-wrap"><a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> NumCommandLists,
+              <a href="classDiligent_1_1ICommandList.html" class="m-doc">ICommandList</a>*const* ppCommandLists) <span class="m-label m-warning">virtual</span></span></span>
+            </h3>
+            <p>Submits an array of recorded command lists for execution.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">NumCommandLists&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- The number of command lists to execute.</td>
+                </tr>
+                <tr>
+                  <td>ppCommandLists&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Pointer to the array of NumCommandLists command lists to execute.</td>
+                </tr>
+              </tbody>
+            </table>
+<aside class="m-note m-default"><h4>Remark</h4><p>After a command list is executed, it is no longer valid and must be released.</p></aside>
+          </div></section>
+          <section class="m-doc-details" id="aa477c378514974d97845d0720a5d5775"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() Diligent::<wbr />IDeviceContext::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#aa477c378514974d97845d0720a5d5775" class="m-doc-self">SignalFence</a>(</span><span class="m-doc-wrap"><a href="structDiligent_1_1IFence.html" class="m-doc">IFence</a>* pFence,
+              <a href="namespaceDiligent.html#a217aba875c8d4bd7843939762d6ff492" class="m-doc">Uint64</a> Value) <span class="m-label m-warning">virtual</span></span></span>
+            </h3>
+            <p>Tells the GPU to set a fence to a specified value after all previous work has completed.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">pFence&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- The fence to signal</td>
+                </tr>
+                <tr>
+                  <td>Value&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- The value to set the fence to. This value must be greater than the previously signaled value on the same fence.</td>
+                </tr>
+              </tbody>
+            </table>
+<aside class="m-note m-info"><h4>Note</h4><p>The method does not flush the context (an application can do this explcitly if needed) and the fence will be signaled only when the command context is flushed next time. If an application needs to wait for the fence in a loop, it must flush the context after signalling the fence.</p></aside>
+          </div></section>
+          <section class="m-doc-details" id="af6ab8c4386c130917e1f51b79833661a"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() Diligent::<wbr />IDeviceContext::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#af6ab8c4386c130917e1f51b79833661a" class="m-doc-self">WaitForFence</a>(</span><span class="m-doc-wrap"><a href="structDiligent_1_1IFence.html" class="m-doc">IFence</a>* pFence,
+              <a href="namespaceDiligent.html#a217aba875c8d4bd7843939762d6ff492" class="m-doc">Uint64</a> Value,
+              bool FlushContext) <span class="m-label m-warning">virtual</span></span></span>
+            </h3>
+            <p>Waits until the specified fence reaches or exceeds the specified value, on the host.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">pFence&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- The fence to wait.</td>
+                </tr>
+                <tr>
+                  <td>Value&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- The value that the context is waiting for the fence to reach.</td>
+                </tr>
+                <tr>
+                  <td>FlushContext&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Whether to flush the commands in the context before initiating the wait.</td>
+                </tr>
+              </tbody>
+            </table>
+<aside class="m-note m-info"><h4>Note</h4><p>The method blocks the execution of the calling thread until the wait is complete.</p></aside><aside class="m-note m-default"><h4>Remark</h4><p>Wait is only allowed for immediate contexts.<br />When FlushContext is true, the method flushes the context before initiating the wait (see <a href="structDiligent_1_1IDeviceContext.html#a41bf41de5f483dcbe550e6cb2f3ddecb" class="m-doc">IDeviceContext::<wbr />Flush()</a>), so an application must explicitly reset the PSO and bind all required shader resources after waiting for the fence.<br />If FlushContext is false, the commands preceding the fence (including signaling the fence itself) may not have been submitted to the GPU and the method may never return. If an application does not explicitly flush the context, it should typically set FlushContext to true.<br />If the value the context is waiting for has never been signaled, the method may never return.<br />The fence can only be waited for from the same context it has previously been signaled.</p></aside>
+          </div></section>
+          <section class="m-doc-details" id="a0b4d0b8d3b6e8859d29df8ae4607f6c8"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() Diligent::<wbr />IDeviceContext::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a0b4d0b8d3b6e8859d29df8ae4607f6c8" class="m-doc-self">WaitForIdle</a>(</span><span class="m-doc-wrap">) <span class="m-label m-warning">virtual</span></span></span>
+            </h3>
+            <p>Submits all outstanding commands for execution to the GPU and waits until they are complete.</p>
+<aside class="m-note m-info"><h4>Note</h4><p>The method blocks the execution of the calling thread until the wait is complete.</p></aside><aside class="m-note m-default"><h4>Remark</h4><p>Only immediate contexts can be idled.<br />The methods implicitly flushes the context (see <a href="structDiligent_1_1IDeviceContext.html#a41bf41de5f483dcbe550e6cb2f3ddecb" class="m-doc">IDeviceContext::<wbr />Flush()</a>), so an application must explicitly reset the PSO and bind all required shader resources after idling the context.<br /></p></aside>
+          </div></section>
+          <section class="m-doc-details" id="ae63099621d51fed55262295e9ba3da69"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() Diligent::<wbr />IDeviceContext::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#ae63099621d51fed55262295e9ba3da69" class="m-doc-self">BeginQuery</a>(</span><span class="m-doc-wrap"><a href="structDiligent_1_1IQuery.html" class="m-doc">IQuery</a>* pQuery) <span class="m-label m-warning">virtual</span></span></span>
+            </h3>
+            <p>Marks the beginning of a query.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">pQuery&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- A pointer to a query object.</td>
+                </tr>
+              </tbody>
+            </table>
+<aside class="m-note m-default"><h4>Remark</h4><p>Only immediate contexts can begin a query.</p><pre>        Vulkan requires that a query must either begin and end inside the same
+        subpass of a render pass instance, or must both begin and end outside of
+        a render pass instance. This means that an application must either begin
+        and end a query while preserving render targets, or begin it when no render
+        targets are bound to the context. In the latter case the engine will automaticaly
+        end the render pass, if needed, when the query is ended.
+        Also note that resource transitions must be performed outside of a render pass,
+        and may thus require ending current render pass.
+        To explicitly end current render pass, call
+        SetRenderTargets(0, nullptr, nullptr, RESOURCE_STATE_TRANSITION_MODE_NONE).
+</pre></aside><aside class="m-note m-danger"><h4>Warning</h4><p>OpenGL and Vulkan do not support nested queries of the same type.</p></aside>
+          </div></section>
+          <section class="m-doc-details" id="a3f66ae2389fb243fdd62f240ce895013"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() Diligent::<wbr />IDeviceContext::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a3f66ae2389fb243fdd62f240ce895013" class="m-doc-self">EndQuery</a>(</span><span class="m-doc-wrap"><a href="structDiligent_1_1IQuery.html" class="m-doc">IQuery</a>* pQuery) <span class="m-label m-warning">virtual</span></span></span>
+            </h3>
+            <p>Marks the end of a query.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">pQuery&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- A pointer to a query object.</td>
+                </tr>
+              </tbody>
+            </table>
+<aside class="m-note m-default"><h4>Remark</h4><p>A query must be ended by the same context that began it.</p><pre>        In Direct3D12 and Vulkan, queries (except for timestamp queries)
+        cannot span command list boundaries, so the engine will never flush
+        the context even if the number of commands exceeds the user-specified limit
+        when there is an active query.
+        It is an error to explicitly flush the context while a query is active. 
+
+        All queries must be ended when IDeviceContext::FinishFrame() is called.
+</pre></aside>
+          </div></section>
+          <section class="m-doc-details" id="a41bf41de5f483dcbe550e6cb2f3ddecb"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() Diligent::<wbr />IDeviceContext::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a41bf41de5f483dcbe550e6cb2f3ddecb" class="m-doc-self">Flush</a>(</span><span class="m-doc-wrap">) <span class="m-label m-warning">virtual</span></span></span>
+            </h3>
+            <p>Submits all pending commands in the context for execution to the command queue.</p>
+<aside class="m-note m-default"><h4>Remark</h4><p>Only immediate contexts can be flushed.<br />Internally the method resets the state of the current command list/buffer. When the next draw command is issued, the engine will restore all states (rebind render targets and depth-stencil buffer as well as index and vertex buffers, restore viewports and scissor rects, etc.) except for the pipeline state and shader resource bindings. An application must explicitly reset the PSO and bind all required shader resources after flushing the context.</p></aside>
+          </div></section>
+          <section class="m-doc-details" id="af3419d0e2e6b807c820b044e641c9b02"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() Diligent::<wbr />IDeviceContext::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#af3419d0e2e6b807c820b044e641c9b02" class="m-doc-self">UpdateBuffer</a>(</span><span class="m-doc-wrap"><a href="structDiligent_1_1IBuffer.html" class="m-doc">IBuffer</a>* pBuffer,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> Offset,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> Size,
+              const void* pData,
+              <a href="namespaceDiligent.html#a98f5c3e5380889788f96c5d5be690d25" class="m-doc">RESOURCE_<wbr />STATE_<wbr />TRANSITION_<wbr />MODE</a> StateTransitionMode) <span class="m-label m-warning">virtual</span></span></span>
+            </h3>
+            <p>Updates the data in the buffer.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">pBuffer&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Pointer to the buffer to updates.</td>
+                </tr>
+                <tr>
+                  <td>Offset&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Offset in bytes from the beginning of the buffer to the update region.</td>
+                </tr>
+                <tr>
+                  <td>Size&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Size in bytes of the data region to update.</td>
+                </tr>
+                <tr>
+                  <td>pData&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Pointer to the data to write to the buffer.</td>
+                </tr>
+                <tr>
+                  <td>StateTransitionMode&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Buffer state transition mode (see <a href="namespaceDiligent.html#a98f5c3e5380889788f96c5d5be690d25" class="m-doc">Diligent::<wbr />RESOURCE_STATE_TRANSITION_MODE</a>)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div></section>
+          <section class="m-doc-details" id="af6b64b9da6b81609de66e79af4b01588"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() Diligent::<wbr />IDeviceContext::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#af6b64b9da6b81609de66e79af4b01588" class="m-doc-self">CopyBuffer</a>(</span><span class="m-doc-wrap"><a href="structDiligent_1_1IBuffer.html" class="m-doc">IBuffer</a>* pSrcBuffer,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> SrcOffset,
+              <a href="namespaceDiligent.html#a98f5c3e5380889788f96c5d5be690d25" class="m-doc">RESOURCE_<wbr />STATE_<wbr />TRANSITION_<wbr />MODE</a> SrcBufferTransitionMode,
+              <a href="structDiligent_1_1IBuffer.html" class="m-doc">IBuffer</a>* pDstBuffer,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> DstOffset,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> Size,
+              <a href="namespaceDiligent.html#a98f5c3e5380889788f96c5d5be690d25" class="m-doc">RESOURCE_<wbr />STATE_<wbr />TRANSITION_<wbr />MODE</a> DstBufferTransitionMode) <span class="m-label m-warning">virtual</span></span></span>
+            </h3>
+            <p>Copies the data from one buffer to another.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">pSrcBuffer&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Source buffer to copy data from.</td>
+                </tr>
+                <tr>
+                  <td>SrcOffset&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Offset in bytes from the beginning of the source buffer to the beginning of data to copy.</td>
+                </tr>
+                <tr>
+                  <td>SrcBufferTransitionMode&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- State transition mode of the source buffer (see <a href="namespaceDiligent.html#a98f5c3e5380889788f96c5d5be690d25" class="m-doc">Diligent::<wbr />RESOURCE_STATE_TRANSITION_MODE</a>).</td>
+                </tr>
+                <tr>
+                  <td>pDstBuffer&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Destination buffer to copy data to.</td>
+                </tr>
+                <tr>
+                  <td>DstOffset&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Offset in bytes from the beginning of the destination buffer to the beginning of the destination region.</td>
+                </tr>
+                <tr>
+                  <td>Size&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Size in bytes of data to copy.</td>
+                </tr>
+                <tr>
+                  <td>DstBufferTransitionMode&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- State transition mode of the destination buffer (see <a href="namespaceDiligent.html#a98f5c3e5380889788f96c5d5be690d25" class="m-doc">Diligent::<wbr />RESOURCE_STATE_TRANSITION_MODE</a>).</td>
+                </tr>
+              </tbody>
+            </table>
+          </div></section>
+          <section class="m-doc-details" id="a6b144284efaec465addf3d682f7a9879"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() Diligent::<wbr />IDeviceContext::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a6b144284efaec465addf3d682f7a9879" class="m-doc-self">MapBuffer</a>(</span><span class="m-doc-wrap"><a href="structDiligent_1_1IBuffer.html" class="m-doc">IBuffer</a>* pBuffer,
+              <a href="namespaceDiligent.html#ae99eefec15316dbbafa59a5152549c85" class="m-doc">MAP_<wbr />TYPE</a> MapType,
+              <a href="namespaceDiligent.html#ac1596c9005fe32da5e301ce461e429b0" class="m-doc">MAP_<wbr />FLAGS</a> MapFlags,
+              <a href="namespaceDiligent.html#ab746b3990e4a102158fee263db57425a" class="m-doc">PVoid</a>&amp; pMappedData) <span class="m-label m-warning">virtual</span></span></span>
+            </h3>
+            <p>Maps the buffer.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">pBuffer&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Pointer to the buffer to map.</td>
+                </tr>
+                <tr>
+                  <td>MapType&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Type of the map operation. See <a href="namespaceDiligent.html#ae99eefec15316dbbafa59a5152549c85" class="m-doc">Diligent::<wbr />MAP_TYPE</a>.</td>
+                </tr>
+                <tr>
+                  <td>MapFlags&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Special map flags. See <a href="namespaceDiligent.html#ac1596c9005fe32da5e301ce461e429b0" class="m-doc">Diligent::<wbr />MAP_FLAGS</a>.</td>
+                </tr>
+                <tr>
+                  <td>pMappedData&nbsp;<span class="m-label m-flat m-warning">out</span></td>
+                  <td>- Reference to the void pointer to store the address of the mapped region.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div></section>
+          <section class="m-doc-details" id="a70db5f1760415d1635ef9cbd45a8552e"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() Diligent::<wbr />IDeviceContext::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a70db5f1760415d1635ef9cbd45a8552e" class="m-doc-self">UnmapBuffer</a>(</span><span class="m-doc-wrap"><a href="structDiligent_1_1IBuffer.html" class="m-doc">IBuffer</a>* pBuffer,
+              <a href="namespaceDiligent.html#ae99eefec15316dbbafa59a5152549c85" class="m-doc">MAP_<wbr />TYPE</a> MapType) <span class="m-label m-warning">virtual</span></span></span>
+            </h3>
+            <p>Unmaps the previously mapped buffer.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">pBuffer&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Pointer to the buffer to unmap.</td>
+                </tr>
+                <tr>
+                  <td>MapType&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Type of the map operation. This parameter must match the type that was provided to the Map() method.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div></section>
+          <section class="m-doc-details" id="a932875a3b618199bbb2b7d9ad9ddf038"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() Diligent::<wbr />IDeviceContext::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a932875a3b618199bbb2b7d9ad9ddf038" class="m-doc-self">UpdateTexture</a>(</span><span class="m-doc-wrap"><a href="structDiligent_1_1ITexture.html" class="m-doc">ITexture</a>* pTexture,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> MipLevel,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> Slice,
+              const <a href="structDiligent_1_1Box.html" class="m-doc">Box</a>&amp; DstBox,
+              const <a href="structDiligent_1_1TextureSubResData.html" class="m-doc">TextureSubResData</a>&amp; SubresData,
+              <a href="namespaceDiligent.html#a98f5c3e5380889788f96c5d5be690d25" class="m-doc">RESOURCE_<wbr />STATE_<wbr />TRANSITION_<wbr />MODE</a> SrcBufferTransitionMode,
+              <a href="namespaceDiligent.html#a98f5c3e5380889788f96c5d5be690d25" class="m-doc">RESOURCE_<wbr />STATE_<wbr />TRANSITION_<wbr />MODE</a> TextureTransitionMode) <span class="m-label m-warning">virtual</span></span></span>
+            </h3>
+            <p>Updates the data in the texture.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">pTexture&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Pointer to the device context interface to be used to perform the operation.</td>
+                </tr>
+                <tr>
+                  <td>MipLevel&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Mip level of the texture subresource to update.</td>
+                </tr>
+                <tr>
+                  <td>Slice&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Array slice. Should be 0 for non-array textures.</td>
+                </tr>
+                <tr>
+                  <td>DstBox&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Destination region on the texture to update.</td>
+                </tr>
+                <tr>
+                  <td>SubresData&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Source data to copy to the texture.</td>
+                </tr>
+                <tr>
+                  <td>SrcBufferTransitionMode&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- If pSrcBuffer member of <a href="structDiligent_1_1TextureSubResData.html" class="m-doc">TextureSubResData</a> structure is not null, this parameter defines state transition mode of the source buffer. If pSrcBuffer is null, this parameter is ignored.</td>
+                </tr>
+                <tr>
+                  <td>TextureTransitionMode&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Texture state transition mode (see <a href="namespaceDiligent.html#a98f5c3e5380889788f96c5d5be690d25" class="m-doc">Diligent::<wbr />RESOURCE_STATE_TRANSITION_MODE</a>)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div></section>
+          <section class="m-doc-details" id="aaa03a7bc175c5abe6e1a2129553efa3d"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() Diligent::<wbr />IDeviceContext::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#aaa03a7bc175c5abe6e1a2129553efa3d" class="m-doc-self">CopyTexture</a>(</span><span class="m-doc-wrap">const <a href="structDiligent_1_1CopyTextureAttribs.html" class="m-doc">CopyTextureAttribs</a>&amp; CopyAttribs) <span class="m-label m-warning">virtual</span></span></span>
+            </h3>
+            <p>Copies data from one texture to another.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">CopyAttribs&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Structure describing copy command attributes, see <a href="structDiligent_1_1CopyTextureAttribs.html" class="m-doc">Diligent::<wbr />CopyTextureAttribs</a> for details.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div></section>
+          <section class="m-doc-details" id="a8b5aa2e397cbc3500d22764fdddd3930"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() Diligent::<wbr />IDeviceContext::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a8b5aa2e397cbc3500d22764fdddd3930" class="m-doc-self">MapTextureSubresource</a>(</span><span class="m-doc-wrap"><a href="structDiligent_1_1ITexture.html" class="m-doc">ITexture</a>* pTexture,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> MipLevel,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> ArraySlice,
+              <a href="namespaceDiligent.html#ae99eefec15316dbbafa59a5152549c85" class="m-doc">MAP_<wbr />TYPE</a> MapType,
+              <a href="namespaceDiligent.html#ac1596c9005fe32da5e301ce461e429b0" class="m-doc">MAP_<wbr />FLAGS</a> MapFlags,
+              const <a href="structDiligent_1_1Box.html" class="m-doc">Box</a>* pMapRegion,
+              <a href="structDiligent_1_1MappedTextureSubresource.html" class="m-doc">MappedTextureSubresource</a>&amp; MappedData) <span class="m-label m-warning">virtual</span></span></span>
+            </h3>
+            <p>Maps the texture subresource.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">pTexture&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Pointer to the texture to map.</td>
+                </tr>
+                <tr>
+                  <td>MipLevel&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Mip level to map.</td>
+                </tr>
+                <tr>
+                  <td>ArraySlice&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Array slice to map. This parameter must be 0 for non-array textures.</td>
+                </tr>
+                <tr>
+                  <td>MapType&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Type of the map operation. See <a href="namespaceDiligent.html#ae99eefec15316dbbafa59a5152549c85" class="m-doc">Diligent::<wbr />MAP_TYPE</a>.</td>
+                </tr>
+                <tr>
+                  <td>MapFlags&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Special map flags. See <a href="namespaceDiligent.html#ac1596c9005fe32da5e301ce461e429b0" class="m-doc">Diligent::<wbr />MAP_FLAGS</a>.</td>
+                </tr>
+                <tr>
+                  <td>pMapRegion&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Texture region to map. If this parameter is null, the entire subresource is mapped.</td>
+                </tr>
+                <tr>
+                  <td>MappedData&nbsp;<span class="m-label m-flat m-warning">out</span></td>
+                  <td>- Mapped texture region data</td>
+                </tr>
+              </tbody>
+            </table>
+<aside class="m-note m-default"><h4>Remark</h4><p>This method is supported in D3D11, D3D12 and Vulkan backends. In D3D11 backend, only the entire subresource can be mapped, so pMapRegion must either be null, or cover the entire subresource. In D3D11 and Vulkan backends, dynamic textures are no different from non-dynamic textures, and mapping with MAP_FLAG_DISCARD has exactly the same behavior.</p></aside>
+          </div></section>
+          <section class="m-doc-details" id="a8d864e69c0d1b8dc3875077b9c9a626d"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() Diligent::<wbr />IDeviceContext::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a8d864e69c0d1b8dc3875077b9c9a626d" class="m-doc-self">GenerateMips</a>(</span><span class="m-doc-wrap"><a href="structDiligent_1_1ITextureView.html" class="m-doc">ITextureView</a>* pTextureView) <span class="m-label m-warning">virtual</span></span></span>
+            </h3>
+            <p>Generates a mipmap chain.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">pTextureView&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Texture view to generate mip maps for.</td>
+                </tr>
+              </tbody>
+            </table>
+<aside class="m-note m-default"><h4>Remark</h4><p>This function can only be called for a shader resource view. The texture must be created with MISC_TEXTURE_FLAG_GENERATE_MIPS flag.</p></aside>
+          </div></section>
+          <section class="m-doc-details" id="a5d7b2da64c084f4fb71f5366d293ec20"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() Diligent::<wbr />IDeviceContext::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a5d7b2da64c084f4fb71f5366d293ec20" class="m-doc-self">FinishFrame</a>(</span><span class="m-doc-wrap">) <span class="m-label m-warning">virtual</span></span></span>
+            </h3>
+            <p>Finishes the current frame and releases dynamic resources allocated by the context.</p>
+<p>For immediate context, this method is called automatically by <a href="structDiligent_1_1ISwapChain.html#ab61de85011325aea7beaadaf684b032d" class="m-doc">ISwapChain::<wbr />Present()</a> of the primary swap chain, but can also be called explicitly. For deferred contexts, the method must be called by the application to release dynamic resources. The method has some overhead, so it is better to call it once per frame, though it can be called with different frequency. Note that unless the GPU is idled, the resources may actually be released several frames after the one they were used in last time.</p><aside class="m-note m-info"><h4>Note</h4><p>After the call all dynamic resources become invalid and must be written again before the next use. Also, all committed resources become invalid.<br />For deferred contexts, this method must be called after all command lists referencing dynamic resources have been executed through immediate context.<br />The method does not <a href="structDiligent_1_1IDeviceContext.html#a41bf41de5f483dcbe550e6cb2f3ddecb" class="m-doc">Flush()</a> the context.</p></aside>
+          </div></section>
+          <section class="m-doc-details" id="ab55985d011afda4b05eb822edd9f2e8a"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a href="namespaceDiligent.html#a217aba875c8d4bd7843939762d6ff492" class="m-doc">Uint64</a> <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() Diligent::<wbr />IDeviceContext::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#ab55985d011afda4b05eb822edd9f2e8a" class="m-doc-self">GetFrameNumber</a>(</span><span class="m-doc-wrap">) const <span class="m-label m-warning">virtual</span></span></span>
+            </h3>
+            <p>Returns the current frame number.</p>
+<aside class="m-note m-info"><h4>Note</h4><p>The frame number is incremented every time <a href="structDiligent_1_1IDeviceContext.html#a5d7b2da64c084f4fb71f5366d293ec20" class="m-doc">FinishFrame()</a> is called.</p></aside>
+          </div></section>
+          <section class="m-doc-details" id="ad70dbcda9db81d06f3641baabf02f5c4"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() Diligent::<wbr />IDeviceContext::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#ad70dbcda9db81d06f3641baabf02f5c4" class="m-doc-self">TransitionResourceStates</a>(</span><span class="m-doc-wrap"><a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> BarrierCount,
+              <a href="structDiligent_1_1StateTransitionDesc.html" class="m-doc">StateTransitionDesc</a>* pResourceBarriers) <span class="m-label m-warning">virtual</span></span></span>
+            </h3>
+            <p>Transitions resource states.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">BarrierCount&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Number of barriers in pResourceBarriers array</td>
+                </tr>
+                <tr>
+                  <td>pResourceBarriers&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Pointer to the array of resource barriers</td>
+                </tr>
+              </tbody>
+            </table>
+<aside class="m-note m-default"><h4>Remark</h4><p>When both old and new states are RESOURCE_STATE_UNORDERED_ACCESS, the engine executes UAV barrier on the resource. The barrier makes sure that all UAV accesses (reads or writes) are complete before any future UAV accesses (read or write) can begin.<br />There are two main usage scenarios for this method:</p><ol><li>An application knows specifics of resource state transitions not available to the engine. For example, only single mip level needs to be transitioned.</li><li>An application manages resource states in multiple threads in parallel.</li></ol></aside><p>The method always reads the states of all resources to transition. If the state of a resource is managed by multiple threads in parallel, the resource must first be transitioned to unknown state (<a href="namespaceDiligent.html#a85d1543061f540a6539307191fbefaa6a981d90f1f3a202cea50fe142ce6e20f7" class="m-doc">Diligent::<wbr />RESOURCE_STATE_UNKNOWN</a>) to disable automatic state management in the engine.</p><p>When <a href="structDiligent_1_1StateTransitionDesc.html#a657f42830e4040db61af2357ff364af8" class="m-doc">StateTransitionDesc::<wbr />UpdateResourceState</a> is set to true, the method may update the state of the corresponding resource which is not thread safe. No other threads should read or write the sate of that resource.</p><aside class="m-note m-info"><h4>Note</h4><p>Any method that uses <a href="namespaceDiligent.html#a98f5c3e5380889788f96c5d5be690d25abfe1be305a8a0725a7c6403aefcabac2" class="m-doc">Diligent::<wbr />RESOURCE_STATE_TRANSITION_MODE_TRANSITION</a> mode may alter the state of resources it works with. <a href="namespaceDiligent.html#a98f5c3e5380889788f96c5d5be690d25ad3c0f33c4f38112f005228d115b264ba" class="m-doc">Diligent::<wbr />RESOURCE_STATE_TRANSITION_MODE_VERIFY</a> mode makes the method read the states, but not write them. When <a href="namespaceDiligent.html#a98f5c3e5380889788f96c5d5be690d25a6b6ee1ab1ffdd44a256de31652a8a6f2" class="m-doc">Diligent::<wbr />RESOURCE_STATE_TRANSITION_MODE_NONE</a> is used, the method assumes the states are guaranteed to be correct and does not read or write them. It is the responsibility of the application to make sure this is indeed true.</p></aside><p>Refer to <a href="http://diligentgraphics.com/2018/12/09/resource-state-management/">http:/<wbr />/<wbr />diligentgraphics.com/<wbr />2018/<wbr />12/<wbr />09/<wbr />resource-state-management/<wbr /></a> for detailed explanation of resource state management in <a href="namespaceDiligent.html" class="m-doc">Diligent</a> Engine.</p>
+          </div></section>
+          <section class="m-doc-details" id="adee0f7797e3e655c9b1371a8fc3b011b"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() Diligent::<wbr />IDeviceContext::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#adee0f7797e3e655c9b1371a8fc3b011b" class="m-doc-self">ResolveTextureSubresource</a>(</span><span class="m-doc-wrap"><a href="structDiligent_1_1ITexture.html" class="m-doc">ITexture</a>* pSrcTexture,
+              <a href="structDiligent_1_1ITexture.html" class="m-doc">ITexture</a>* pDstTexture,
+              const <a href="structDiligent_1_1ResolveTextureSubresourceAttribs.html" class="m-doc">ResolveTextureSubresourceAttribs</a>&amp; ResolveAttribs) <span class="m-label m-warning">virtual</span></span></span>
+            </h3>
+            <p>Resolves a multi-sampled texture subresource into a non-multi-sampled texture subresource.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">pSrcTexture&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Source multi-sampled texture.</td>
+                </tr>
+                <tr>
+                  <td>pDstTexture&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Destination non-multi-sampled texture.</td>
+                </tr>
+                <tr>
+                  <td>ResolveAttribs&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Resolve command attributes, see <a href="structDiligent_1_1ResolveTextureSubresourceAttribs.html" class="m-doc">Diligent::<wbr />ResolveTextureSubresourceAttribs</a> for details.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div></section>
+          <section class="m-doc-details" id="a89db6e03acac373db00f0684662e88ab"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() Diligent::<wbr />IDeviceContext::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a89db6e03acac373db00f0684662e88ab" class="m-doc-self">BuildBLAS</a>(</span><span class="m-doc-wrap">const <a href="structDiligent_1_1BuildBLASAttribs.html" class="m-doc">BuildBLASAttribs</a>&amp; Attribs) <span class="m-label m-warning">virtual</span></span></span>
+            </h3>
+            <p>Builds a bottom-level acceleration structure with the specified geometries.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">Attribs&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Structure describing build BLAS command attributes, see <a href="structDiligent_1_1BuildBLASAttribs.html" class="m-doc">Diligent::<wbr />BuildBLASAttribs</a> for details.</td>
+                </tr>
+              </tbody>
+            </table>
+<aside class="m-note m-info"><h4>Note</h4><p>Don&#x27;t call build or copy operation on the same BLAS in a different contexts, because BLAS has CPU-side data that will not match with GPU-side, so shader binding were incorrect.</p></aside>
+          </div></section>
+          <section class="m-doc-details" id="a1fb8b288eb8c248a6382886a2eba7826"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() Diligent::<wbr />IDeviceContext::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a1fb8b288eb8c248a6382886a2eba7826" class="m-doc-self">BuildTLAS</a>(</span><span class="m-doc-wrap">const <a href="structDiligent_1_1BuildTLASAttribs.html" class="m-doc">BuildTLASAttribs</a>&amp; Attribs) <span class="m-label m-warning">virtual</span></span></span>
+            </h3>
+            <p>Builds a top-level acceleration structure with the specified instances.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">Attribs&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Structure describing build TLAS command attributes, see <a href="structDiligent_1_1BuildTLASAttribs.html" class="m-doc">Diligent::<wbr />BuildTLASAttribs</a> for details.</td>
+                </tr>
+              </tbody>
+            </table>
+<aside class="m-note m-info"><h4>Note</h4><p>Don&#x27;t call build or copy operation on the same TLAS in a different contexts, because TLAS has CPU-side data that will not match with GPU-side, so shader binding were incorrect.</p></aside>
+          </div></section>
+          <section class="m-doc-details" id="af02bf98912c0b6cee78e2a4bae149db4"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() Diligent::<wbr />IDeviceContext::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#af02bf98912c0b6cee78e2a4bae149db4" class="m-doc-self">CopyBLAS</a>(</span><span class="m-doc-wrap">const <a href="structDiligent_1_1CopyBLASAttribs.html" class="m-doc">CopyBLASAttribs</a>&amp; Attribs) <span class="m-label m-warning">virtual</span></span></span>
+            </h3>
+            <p>Copies data from one acceleration structure to another.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">Attribs&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Structure describing copy BLAS command attributes, see <a href="structDiligent_1_1CopyBLASAttribs.html" class="m-doc">Diligent::<wbr />CopyBLASAttribs</a> for details.</td>
+                </tr>
+              </tbody>
+            </table>
+<aside class="m-note m-info"><h4>Note</h4><p>Don&#x27;t call build or copy operation on the same BLAS in a different contexts, because BLAS has CPU-side data that will not match with GPU-side, so shader binding were incorrect.</p></aside>
+          </div></section>
+          <section class="m-doc-details" id="a4ed3b8f22faf96cfb7c11890474b724c"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() Diligent::<wbr />IDeviceContext::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a4ed3b8f22faf96cfb7c11890474b724c" class="m-doc-self">CopyTLAS</a>(</span><span class="m-doc-wrap">const <a href="structDiligent_1_1CopyTLASAttribs.html" class="m-doc">CopyTLASAttribs</a>&amp; Attribs) <span class="m-label m-warning">virtual</span></span></span>
+            </h3>
+            <p>Copies data from one acceleration structure to another.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">Attribs&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Structure describing copy TLAS command attributes, see <a href="structDiligent_1_1CopyTLASAttribs.html" class="m-doc">Diligent::<wbr />CopyTLASAttribs</a> for details.</td>
+                </tr>
+              </tbody>
+            </table>
+<aside class="m-note m-info"><h4>Note</h4><p>Don&#x27;t call build or copy operation on the same TLAS in a different contexts, because TLAS has CPU-side data that will not match with GPU-side, so shader binding were incorrect.</p></aside>
+          </div></section>
+          <section class="m-doc-details" id="aa8dabc934efda7ac25b0a111c1b73337"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() Diligent::<wbr />IDeviceContext::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#aa8dabc934efda7ac25b0a111c1b73337" class="m-doc-self">WriteBLASCompactedSize</a>(</span><span class="m-doc-wrap">const <a href="structDiligent_1_1WriteBLASCompactedSizeAttribs.html" class="m-doc">WriteBLASCompactedSizeAttribs</a>&amp; Attribs) <span class="m-label m-warning">virtual</span></span></span>
+            </h3>
+            <p>Writes a bottom-level acceleration structure memory size required for compacting operation to a buffer.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">Attribs&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Structure describing write BLAS compacted size command attributes, see <a href="structDiligent_1_1WriteBLASCompactedSizeAttribs.html" class="m-doc">Diligent::<wbr />WriteBLASCompactedSizeAttribs</a> for details.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div></section>
+          <section class="m-doc-details" id="ad28d9d361f25966138ffa8c8baeba935"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() Diligent::<wbr />IDeviceContext::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#ad28d9d361f25966138ffa8c8baeba935" class="m-doc-self">WriteTLASCompactedSize</a>(</span><span class="m-doc-wrap">const <a href="structDiligent_1_1WriteTLASCompactedSizeAttribs.html" class="m-doc">WriteTLASCompactedSizeAttribs</a>&amp; Attribs) <span class="m-label m-warning">virtual</span></span></span>
+            </h3>
+            <p>Writes a top-level acceleration structure memory size required for compacting operation to a buffer.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">Attribs&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Structure describing write TLAS compacted size command attributes, see <a href="structDiligent_1_1WriteTLASCompactedSizeAttribs.html" class="m-doc">Diligent::<wbr />WriteTLASCompactedSizeAttribs</a> for details.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div></section>
+          <section class="m-doc-details" id="a94c8be3284566605f3e148f64b6a1b48"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() Diligent::<wbr />IDeviceContext::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a94c8be3284566605f3e148f64b6a1b48" class="m-doc-self">TraceRays</a>(</span><span class="m-doc-wrap">const <a href="structDiligent_1_1TraceRaysAttribs.html" class="m-doc">TraceRaysAttribs</a>&amp; Attribs) <span class="m-label m-warning">virtual</span></span></span>
+            </h3>
+            <p>Executes a trace rays command.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">Attribs&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Trace rays command attributes, see <a href="structDiligent_1_1TraceRaysAttribs.html" class="m-doc">Diligent::<wbr />TraceRaysAttribs</a> for details.</td>
+                </tr>
+              </tbody>
+            </table>
+<aside class="m-note m-default"><h4>Remark</h4><p>The method is not thread-safe. An application must externally synchronize the access to the shader binding table (SBT) passed as an argument to the function. The function does not modify the state of the SBT and can be executed in parallel with other functions that don&#x27;t modify the SBT (e.g. TraceRaysIndirect).</p></aside>
+          </div></section>
+          <section class="m-doc-details" id="aec2ceb7575300c297dc263581237edda"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() Diligent::<wbr />IDeviceContext::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#aec2ceb7575300c297dc263581237edda" class="m-doc-self">TraceRaysIndirect</a>(</span><span class="m-doc-wrap">const <a href="structDiligent_1_1TraceRaysIndirectAttribs.html" class="m-doc">TraceRaysIndirectAttribs</a>&amp; Attribs,
+              <a href="structDiligent_1_1IBuffer.html" class="m-doc">IBuffer</a>* pAttribsBuffer) <span class="m-label m-warning">virtual</span></span></span>
+            </h3>
+            <p>Executes an indirect trace rays command.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">Attribs</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>pAttribsBuffer&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Pointer to the buffer containing indirect trace rays attributes. The buffer must contain the following arguments at the specified offset: [88 bytes reserved] - for Direct3D12 backend Uint32 DimensionX; Uint32 DimensionY; Uint32 DimensionZ; You must call <a href="structDiligent_1_1IDeviceContext.html#a26cac2085ad720b73ec5a2cc82e652d4" class="m-doc">IDeviceContext::<wbr />UpdateSBT()</a> to initialize the first 88 bytes with the same shader binding table as specified in <a href="structDiligent_1_1TraceRaysIndirectAttribs.html#a6eea310cb5bccf25acc4379c73fea1a7" class="m-doc">TraceRaysIndirectAttribs::<wbr />pSBT</a>.</td>
+                </tr>
+              </tbody>
+            </table>
+<aside class="m-note m-default"><h4>Remark</h4><p>The method is not thread-safe. An application must externally synchronize the access to the shader binding table (SBT) passed as an argument to the function. The function does not modify the state of the SBT and can be executed in parallel with other functions that don&#x27;t modify the SBT (e.g. TraceRays).</p></aside>
+          </div></section>
+          <section class="m-doc-details" id="a26cac2085ad720b73ec5a2cc82e652d4"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() Diligent::<wbr />IDeviceContext::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a26cac2085ad720b73ec5a2cc82e652d4" class="m-doc-self">UpdateSBT</a>(</span><span class="m-doc-wrap"><a href="structDiligent_1_1IShaderBindingTable.html" class="m-doc">IShaderBindingTable</a>* pSBT,
+              const <a href="structDiligent_1_1UpdateIndirectRTBufferAttribs.html" class="m-doc">UpdateIndirectRTBufferAttribs</a>* pUpdateIndirectBufferAttribs = nullptr) <span class="m-label m-warning">virtual</span></span></span>
+            </h3>
+            <p>Updates SBT with the pending data that were recorded in IShaderBindingTable::Bind*** calls.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">pSBT&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Shader binding table that will be updated if there are pending data.</td>
+                </tr>
+                <tr>
+                  <td>pUpdateIndirectBufferAttribs&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Indirect ray tracing attributes buffer update attributes (optional, may be null).</td>
+                </tr>
+              </tbody>
+            </table>
+<aside class="m-note m-info"><h4>Note</h4><p>When pUpdateIndirectBufferAttribs is not null, the indirect ray tracing attributes will be written to the pAttribsBuffer buffer specified by the structure and can be used by <a href="structDiligent_1_1IDeviceContext.html#aec2ceb7575300c297dc263581237edda" class="m-doc">IDeviceContext::<wbr />TraceRaysIndirect()</a> command. In Direct3D12 backend, the pAttribsBuffer buffer will be initialized with D3D12_DISPATCH_RAYS_DESC structure that contains GPU addresses of the ray tracing shaders in the first 88 bytes and 12 bytes for dimension (see <a href="structDiligent_1_1IDeviceContext.html#aec2ceb7575300c297dc263581237edda" class="m-doc">IDeviceContext::<wbr />TraceRaysIndirect()</a> description). In Vulkan backend, the pAttribsBuffer buffer will not be modified, because the SBT is used directly in <a href="structDiligent_1_1IDeviceContext.html#aec2ceb7575300c297dc263581237edda" class="m-doc">IDeviceContext::<wbr />TraceRaysIndirect()</a>.</p></aside><aside class="m-note m-default"><h4>Remark</h4><p>The method is not thread-safe. An application must externally synchronize the access to the shader binding table (SBT) passed as an argument to the function. The function modifies the data in the SBT and must not run in parallel with any other command that uses the same SBT.</p></aside>
+          </div></section>
+        </section>
+      </div>
+    </div>
+  </div>
+</article></main>
+<div class="m-doc-search" id="search">
+  <a href="#!" onclick="return hideSearch()"></a>
+  <div class="m-container">
+    <div class="m-row">
+      <div class="m-col-m-8 m-push-m-2">
+        <div class="m-doc-search-header m-text m-small">
+          <div><span class="m-label m-default">Tab</span> / <span class="m-label m-default">T</span> to search, <span class="m-label m-default">Esc</span> to close</div>
+          <div id="search-symbolcount">&hellip;</div>
+        </div>
+        <div class="m-doc-search-content">
+          <form>
+            <input type="search" name="q" id="search-input" placeholder="Loading &hellip;" disabled="disabled" autofocus="autofocus" autocomplete="off" spellcheck="false" />
+          </form>
+          <noscript class="m-text m-danger m-text-center">Unlike everything else in the docs, the search functionality <em>requires</em> JavaScript.</noscript>
+          <div id="search-help" class="m-text m-dim m-text-center">
+            <p class="m-noindent">Search for symbols, directories, files, pages or
+            modules. You can omit any prefix from the symbol or file path; adding a
+            <code>:</code> or <code>/</code> suffix lists all members of given symbol or
+            directory.</p>
+            <p class="m-noindent">Use <span class="m-label m-dim">&darr;</span>
+            / <span class="m-label m-dim">&uarr;</span> to navigate through the list,
+            <span class="m-label m-dim">Enter</span> to go.
+            <span class="m-label m-dim">Tab</span> autocompletes common prefix, you can
+            copy a link to the result using <span class="m-label m-dim">⌘</span>
+            <span class="m-label m-dim">L</span> while <span class="m-label m-dim">⌘</span>
+            <span class="m-label m-dim">M</span> produces a Markdown link.</p>
+          </div>
+          <div id="search-notfound" class="m-text m-warning m-text-center">Sorry, nothing was found.</div>
+          <ul id="search-results"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="search-v1.js"></script>
+<script src="searchdata-v1.js" async="async"></script>
+<footer><nav>
+  <div class="m-container">
+    <div class="m-row">
+      <div class="m-col-l-10 m-push-l-1">
+        <p>Diligent Engine. Created with <a href="https://doxygen.org/">Doxygen</a> 1.8.17 and <a href="https://mcss.mosra.cz/">m.css</a>.</p>
+      </div>
+    </div>
+  </div>
+</nav></footer>
+</body>
+</html>

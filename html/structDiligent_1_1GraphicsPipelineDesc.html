@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Diligent::GraphicsPipelineDesc struct | Diligent Engine</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i%7CSource+Code+Pro:400,400i,600" />
+  <link rel="stylesheet" href="m-dark+documentation.compiled.css" />
+  <link rel="icon" href="favicon-dark.png" type="image/png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#22272e" />
+</head>
+<body>
+<header><nav id="navigation">
+  <div class="m-container">
+    <div class="m-row">
+      <a href="index.html" id="m-navbar-brand" class="m-col-t-8 m-col-m-none m-left-m">Diligent Engine</a>
+      <div class="m-col-t-4 m-hide-m m-text-right m-nopadr">
+        <a href="#search" class="m-doc-search-icon" title="Search" onclick="return showSearch()"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
+          <path id="m-doc-search-icon-path" d="m6 0c-3.31 0-6 2.69-6 6 0 3.31 2.69 6 6 6 1.49 0 2.85-0.541 3.89-1.44-0.0164 0.338 0.147 0.759 0.5 1.15l3.22 3.79c0.552 0.614 1.45 0.665 2 0.115 0.55-0.55 0.499-1.45-0.115-2l-3.79-3.22c-0.392-0.353-0.812-0.515-1.15-0.5 0.895-1.05 1.44-2.41 1.44-3.89 0-3.31-2.69-6-6-6zm0 1.56a4.44 4.44 0 0 1 4.44 4.44 4.44 4.44 0 0 1-4.44 4.44 4.44 4.44 0 0 1-4.44-4.44 4.44 4.44 0 0 1 4.44-4.44z"/>
+        </svg></a>
+        <a id="m-navbar-show" href="#navigation" title="Show navigation"></a>
+        <a id="m-navbar-hide" href="#" title="Hide navigation"></a>
+      </div>
+      <div id="m-navbar-collapse" class="m-col-t-12 m-show-m m-col-m-none m-right-m">
+        <div class="m-row">
+          <ol class="m-col-t-6 m-col-m-none">
+            <li><a href="pages.html">Pages</a></li>
+            <li><a href="namespaces.html">Namespaces</a></li>
+          </ol>
+          <ol class="m-col-t-6 m-col-m-none" start="3">
+            <li><a href="annotated.html">Classes</a></li>
+            <li><a href="files.html">Files</a></li>
+            <li class="m-show-m"><a href="#search" class="m-doc-search-icon" title="Search" onclick="return showSearch()"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
+              <use href="#m-doc-search-icon-path" />
+            </svg></a></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav></header>
+<main><article>
+  <div class="m-container m-container-inflatable">
+    <div class="m-row">
+      <div class="m-col-l-10 m-push-l-1">
+        <h1>
+          <span class="m-breadcrumb"><a href="namespaceDiligent.html">Diligent</a>::<wbr/></span>GraphicsPipelineDesc <span class="m-thin">struct</span>
+          <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="PipelineState_8h.html">&lt;Graphics/GraphicsEngine/interface/PipelineState.h&gt;</a></div>
+        </h1>
+        <p>Graphics pipeline state description.</p>
+        <div class="m-block m-default">
+          <h3>Contents</h3>
+          <ul>
+            <li>
+              Reference
+              <ul>
+                <li><a href="#pub-attribs">Public variables</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+<p>This structure describes the graphics pipeline state and is part of the <a href="structDiligent_1_1GraphicsPipelineStateCreateInfo.html" class="m-doc">GraphicsPipelineStateCreateInfo</a> structure.</p>
+        <section id="pub-attribs">
+          <h2><a href="#pub-attribs">Public variables</a></h2>
+          <dl class="m-doc">
+            <dt id="ad86efecf9af6740b15aa2858d11d4ead">
+              <a href="structDiligent_1_1BlendStateDesc.html" class="m-doc">BlendStateDesc</a> <a href="#ad86efecf9af6740b15aa2858d11d4ead" class="m-doc-self">BlendDesc</a>
+            </dt>
+            <dd>Blend state description.</dd>
+            <dt id="a48362f4ab2fc255d29bdf4c1c6d527f4">
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> <a href="#a48362f4ab2fc255d29bdf4c1c6d527f4" class="m-doc-self">SampleMask</a>
+            </dt>
+            <dd>32-bit sample mask that determines which samples get updated in all the active render targets. A sample mask is always applied; it is independent of whether multisampling is enabled, and does not depend on whether an application uses multisample render targets.</dd>
+            <dt id="a03e5103a65698b8adc75ad0bd8fba27e">
+              <a href="structDiligent_1_1RasterizerStateDesc.html" class="m-doc">RasterizerStateDesc</a> <a href="#a03e5103a65698b8adc75ad0bd8fba27e" class="m-doc-self">RasterizerDesc</a>
+            </dt>
+            <dd>Rasterizer state description.</dd>
+            <dt id="ac88b622f9d8305a39e5098abb3f1868b">
+              <a href="structDiligent_1_1DepthStencilStateDesc.html" class="m-doc">DepthStencilStateDesc</a> <a href="#ac88b622f9d8305a39e5098abb3f1868b" class="m-doc-self">DepthStencilDesc</a>
+            </dt>
+            <dd>Depth-stencil state description.</dd>
+            <dt id="a1fc9bf9fa965b6c4b666e016e754c180">
+              <a href="structDiligent_1_1InputLayoutDesc.html" class="m-doc">InputLayoutDesc</a> <a href="#a1fc9bf9fa965b6c4b666e016e754c180" class="m-doc-self">InputLayout</a>
+            </dt>
+            <dd>Input layout, ignored in a mesh pipeline.</dd>
+            <dt id="ae0bb7289bdf09b2e19bcaa4d501ab94a">
+              <a href="namespaceDiligent.html#a04ed67ca4facca987691147c4193e546" class="m-doc">PRIMITIVE_<wbr />TOPOLOGY</a> <a href="#ae0bb7289bdf09b2e19bcaa4d501ab94a" class="m-doc-self">PrimitiveTopology</a>
+            </dt>
+            <dd>Primitive topology type, ignored in a mesh pipeline.</dd>
+            <dt id="a3b8847dec40402bd593d84881eab618f">
+              <a href="namespaceDiligent.html#a3392c10112f826c3bcc60366e0f533db" class="m-doc">Uint8</a> <a href="#a3b8847dec40402bd593d84881eab618f" class="m-doc-self">NumViewports</a>
+            </dt>
+            <dd>The number of viewports used by this pipeline.</dd>
+            <dt id="a79e3c1dfb4c148b33a7e5d4ba171ba3e">
+              <a href="namespaceDiligent.html#a3392c10112f826c3bcc60366e0f533db" class="m-doc">Uint8</a> <a href="#a79e3c1dfb4c148b33a7e5d4ba171ba3e" class="m-doc-self">NumRenderTargets</a>
+            </dt>
+            <dd>The number of render targets in the RTVFormats array. Must be 0 when pRenderPass is not null.</dd>
+            <dt id="aca7d87f8cd325d185e1d0de72a4dfff9">
+              <a href="namespaceDiligent.html#a3392c10112f826c3bcc60366e0f533db" class="m-doc">Uint8</a> <a href="#aca7d87f8cd325d185e1d0de72a4dfff9" class="m-doc-self">SubpassIndex</a>
+            </dt>
+            <dd>When pRenderPass is not null, the subpass index within the render pass. When pRenderPass is null, this member must be 0.</dd>
+            <dt id="a8264e6f6d226faf9f648d32c05c93592">
+              <a href="namespaceDiligent.html#afb09d7198220b667023b6d0858abf24e" class="m-doc">TEXTURE_<wbr />FORMAT</a> <a href="#a8264e6f6d226faf9f648d32c05c93592" class="m-doc-self">RTVFormats</a>
+            </dt>
+            <dd>Render target formats. All formats must be TEX_FORMAT_UNKNOWN when pRenderPass is not null.</dd>
+            <dt id="ab64cc07f80b8ab677c34b4a17d445bf5">
+              <a href="namespaceDiligent.html#afb09d7198220b667023b6d0858abf24e" class="m-doc">TEXTURE_<wbr />FORMAT</a> <a href="#ab64cc07f80b8ab677c34b4a17d445bf5" class="m-doc-self">DSVFormat</a>
+            </dt>
+            <dd>Depth-stencil format. Must be TEX_FORMAT_UNKNOWN when pRenderPass is not null.</dd>
+            <dt id="aa505cde7293c238fb23664b412da1388">
+              <a href="structDiligent_1_1SampleDesc.html" class="m-doc">SampleDesc</a> <a href="#aa505cde7293c238fb23664b412da1388" class="m-doc-self">SmplDesc</a>
+            </dt>
+            <dd>Multisampling parameters.</dd>
+            <dt>
+              <a href="classDiligent_1_1IRenderPass.html" class="m-doc">IRenderPass</a>* <a href="#ab565eb53769bc6118afd63b2bf24348a" class="m-doc">pRenderPass</a>
+            </dt>
+            <dd>Pointer to the render pass object.</dd>
+            <dt id="adb8ecb078c4e457b37ba2e01fbbecb34">
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> <a href="#adb8ecb078c4e457b37ba2e01fbbecb34" class="m-doc-self">NodeMask</a>
+            </dt>
+            <dd>Node mask.</dd>
+          </dl>
+        </section>
+        <section>
+          <h2>Variable documentation</h2>
+          <section class="m-doc-details" id="ab565eb53769bc6118afd63b2bf24348a"><div>
+            <h3>
+              <a href="classDiligent_1_1IRenderPass.html" class="m-doc">IRenderPass</a>* Diligent::<wbr />GraphicsPipelineDesc::<wbr /><a href="#ab565eb53769bc6118afd63b2bf24348a" class="m-doc-self">pRenderPass</a>
+            </h3>
+            <p>Pointer to the render pass object.</p>
+<p>When non-null render pass is specified, NumRenderTargets must be 0, and all RTV formats as well as DSV format must be TEX_FORMAT_UNKNOWN.</p>
+          </div></section>
+        </section>
+      </div>
+    </div>
+  </div>
+</article></main>
+<div class="m-doc-search" id="search">
+  <a href="#!" onclick="return hideSearch()"></a>
+  <div class="m-container">
+    <div class="m-row">
+      <div class="m-col-m-8 m-push-m-2">
+        <div class="m-doc-search-header m-text m-small">
+          <div><span class="m-label m-default">Tab</span> / <span class="m-label m-default">T</span> to search, <span class="m-label m-default">Esc</span> to close</div>
+          <div id="search-symbolcount">&hellip;</div>
+        </div>
+        <div class="m-doc-search-content">
+          <form>
+            <input type="search" name="q" id="search-input" placeholder="Loading &hellip;" disabled="disabled" autofocus="autofocus" autocomplete="off" spellcheck="false" />
+          </form>
+          <noscript class="m-text m-danger m-text-center">Unlike everything else in the docs, the search functionality <em>requires</em> JavaScript.</noscript>
+          <div id="search-help" class="m-text m-dim m-text-center">
+            <p class="m-noindent">Search for symbols, directories, files, pages or
+            modules. You can omit any prefix from the symbol or file path; adding a
+            <code>:</code> or <code>/</code> suffix lists all members of given symbol or
+            directory.</p>
+            <p class="m-noindent">Use <span class="m-label m-dim">&darr;</span>
+            / <span class="m-label m-dim">&uarr;</span> to navigate through the list,
+            <span class="m-label m-dim">Enter</span> to go.
+            <span class="m-label m-dim">Tab</span> autocompletes common prefix, you can
+            copy a link to the result using <span class="m-label m-dim">⌘</span>
+            <span class="m-label m-dim">L</span> while <span class="m-label m-dim">⌘</span>
+            <span class="m-label m-dim">M</span> produces a Markdown link.</p>
+          </div>
+          <div id="search-notfound" class="m-text m-warning m-text-center">Sorry, nothing was found.</div>
+          <ul id="search-results"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="search-v1.js"></script>
+<script src="searchdata-v1.js" async="async"></script>
+<footer><nav>
+  <div class="m-container">
+    <div class="m-row">
+      <div class="m-col-l-10 m-push-l-1">
+        <p>Diligent Engine. Created with <a href="https://doxygen.org/">Doxygen</a> 1.8.17 and <a href="https://mcss.mosra.cz/">m.css</a>.</p>
+      </div>
+    </div>
+  </div>
+</nav></footer>
+</body>
+</html>

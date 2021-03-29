@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Diligent::IPipelineResourceSignature struct | Diligent Engine</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i%7CSource+Code+Pro:400,400i,600" />
+  <link rel="stylesheet" href="m-dark+documentation.compiled.css" />
+  <link rel="icon" href="favicon-dark.png" type="image/png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#22272e" />
+</head>
+<body>
+<header><nav id="navigation">
+  <div class="m-container">
+    <div class="m-row">
+      <a href="index.html" id="m-navbar-brand" class="m-col-t-8 m-col-m-none m-left-m">Diligent Engine</a>
+      <div class="m-col-t-4 m-hide-m m-text-right m-nopadr">
+        <a href="#search" class="m-doc-search-icon" title="Search" onclick="return showSearch()"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
+          <path id="m-doc-search-icon-path" d="m6 0c-3.31 0-6 2.69-6 6 0 3.31 2.69 6 6 6 1.49 0 2.85-0.541 3.89-1.44-0.0164 0.338 0.147 0.759 0.5 1.15l3.22 3.79c0.552 0.614 1.45 0.665 2 0.115 0.55-0.55 0.499-1.45-0.115-2l-3.79-3.22c-0.392-0.353-0.812-0.515-1.15-0.5 0.895-1.05 1.44-2.41 1.44-3.89 0-3.31-2.69-6-6-6zm0 1.56a4.44 4.44 0 0 1 4.44 4.44 4.44 4.44 0 0 1-4.44 4.44 4.44 4.44 0 0 1-4.44-4.44 4.44 4.44 0 0 1 4.44-4.44z"/>
+        </svg></a>
+        <a id="m-navbar-show" href="#navigation" title="Show navigation"></a>
+        <a id="m-navbar-hide" href="#" title="Hide navigation"></a>
+      </div>
+      <div id="m-navbar-collapse" class="m-col-t-12 m-show-m m-col-m-none m-right-m">
+        <div class="m-row">
+          <ol class="m-col-t-6 m-col-m-none">
+            <li><a href="pages.html">Pages</a></li>
+            <li><a href="namespaces.html">Namespaces</a></li>
+          </ol>
+          <ol class="m-col-t-6 m-col-m-none" start="3">
+            <li><a href="annotated.html">Classes</a></li>
+            <li><a href="files.html">Files</a></li>
+            <li class="m-show-m"><a href="#search" class="m-doc-search-icon" title="Search" onclick="return showSearch()"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
+              <use href="#m-doc-search-icon-path" />
+            </svg></a></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav></header>
+<main><article>
+  <div class="m-container m-container-inflatable">
+    <div class="m-row">
+      <div class="m-col-l-10 m-push-l-1">
+        <h1>
+          <span class="m-breadcrumb"><a href="namespaceDiligent.html">Diligent</a>::<wbr/></span>IPipelineResourceSignature <span class="m-thin">struct</span>
+          <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="PipelineResourceSignature_8h.html">&lt;Graphics/GraphicsEngine/interface/PipelineResourceSignature.h&gt;</a></div>
+        </h1>
+        <p>Pipeline resource signature interface.</p>
+        <div class="m-block m-default">
+          <h3>Contents</h3>
+          <ul>
+            <li>
+              Reference
+              <ul>
+                <li><a href="#base-classes">Base classes</a></li>
+                <li><a href="#pub-methods">Public functions</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <section id="base-classes">
+          <h2><a href="#base-classes">Base classes</a></h2>
+          <dl class="m-doc">
+            <dt>
+              struct <a href="structDiligent_1_1IDeviceObject.html" class="m-doc">IDeviceObject</a>
+            </dt>
+            <dd>Base interface for all objects created by the render device <a href="structDiligent_1_1IRenderDevice.html" class="m-doc">Diligent::<wbr />IRenderDevice</a>.</dd>
+          </dl>
+        </section>
+        <section id="pub-methods">
+          <h2><a href="#pub-methods">Public functions</a></h2>
+          <dl class="m-doc">
+            <dt id="ae1df32fc997d7ead4d9212a41ff2b40e">
+              <span class="m-doc-wrap-bumper">auto <a href="#ae1df32fc997d7ead4d9212a41ff2b40e" class="m-doc-self">GetDesc</a>(</span><span class="m-doc-wrap">) const -&gt; const <a href="structDiligent_1_1PipelineResourceSignatureDesc.html" class="m-doc">PipelineResourceSignatureDesc</a>&amp;<a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() <span class="m-label m-flat m-warning">override</span></span>
+            </dt>
+            <dd>Returns the pipeline resource signature description, see <a href="structDiligent_1_1PipelineResourceSignatureDesc.html" class="m-doc">Diligent::<wbr />PipelineResourceSignatureDesc</a>.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#ada956c13fcb885d07a6a489109dd3d5b" class="m-doc">CreateShaderResourceBinding</a>(</span><span class="m-doc-wrap"><a href="structDiligent_1_1IShaderResourceBinding.html" class="m-doc">IShaderResourceBinding</a>** ppShaderResourceBinding,
+              bool InitStaticResources = false) -&gt; void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd>Creates a shader resource binding object.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#aad78e06bef9c751c8b3ac1acca5b73ab" class="m-doc">BindStaticResources</a>(</span><span class="m-doc-wrap"><a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> ShaderFlags,
+              <a href="structDiligent_1_1IResourceMapping.html" class="m-doc">IResourceMapping</a>* pResourceMapping,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> Flags) -&gt; void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd>Binds static resources for the specified shader stages in the pipeline resource signature.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#ab869743d8dabf6c143def270690f83e6" class="m-doc">GetStaticVariableByName</a>(</span><span class="m-doc-wrap"><a href="namespaceDiligent.html#abed46a87aef825fee14a0afeb69f25b8" class="m-doc">SHADER_<wbr />TYPE</a> ShaderType,
+              const <a href="namespaceDiligent.html#a912e5e9c3458ec625b7d0f2f2cf07341" class="m-doc">Char</a>* Name) -&gt; <a href="structDiligent_1_1IShaderResourceVariable.html" class="m-doc">IShaderResourceVariable</a>*<a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd>Returns static shader resource variable. If the variable is not found, returns nullptr.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a25d644808f8481b6cb1047e0d0f35d1e" class="m-doc">GetStaticVariableByIndex</a>(</span><span class="m-doc-wrap"><a href="namespaceDiligent.html#abed46a87aef825fee14a0afeb69f25b8" class="m-doc">SHADER_<wbr />TYPE</a> ShaderType,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> Index) -&gt; <a href="structDiligent_1_1IShaderResourceVariable.html" class="m-doc">IShaderResourceVariable</a>*<a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd>Returns static shader resource variable by its index.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#ad72609bdf003cda293968fc8b9bb6392" class="m-doc">GetStaticVariableCount</a>(</span><span class="m-doc-wrap"><a href="namespaceDiligent.html#abed46a87aef825fee14a0afeb69f25b8" class="m-doc">SHADER_<wbr />TYPE</a> ShaderType) const -&gt; <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd>Returns the number of static shader resource variables.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#aeea09e1527a16f5226da1f6f4e531161" class="m-doc">InitializeStaticSRBResources</a>(</span><span class="m-doc-wrap">struct <a href="structDiligent_1_1IShaderResourceBinding.html" class="m-doc">IShaderResourceBinding</a>* pShaderResourceBinding) const -&gt; void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd>Initializes static resources in the shader binding object.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a56c802aba7a79bf31b93f23615a3ebba" class="m-doc">IsCompatibleWith</a>(</span><span class="m-doc-wrap">const struct <a href="structDiligent_1_1IPipelineResourceSignature.html" class="m-doc">IPipelineResourceSignature</a>* pPRS) const -&gt; bool <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd>Returns true if the signature is compatible with another one.</dd>
+          </dl>
+        </section>
+        <section>
+          <h2>Function documentation</h2>
+          <section class="m-doc-details" id="ada956c13fcb885d07a6a489109dd3d5b"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() Diligent::<wbr />IPipelineResourceSignature::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#ada956c13fcb885d07a6a489109dd3d5b" class="m-doc-self">CreateShaderResourceBinding</a>(</span><span class="m-doc-wrap"><a href="structDiligent_1_1IShaderResourceBinding.html" class="m-doc">IShaderResourceBinding</a>** ppShaderResourceBinding,
+              bool InitStaticResources = false) <span class="m-label m-warning">virtual</span></span></span>
+            </h3>
+            <p>Creates a shader resource binding object.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">ppShaderResourceBinding&nbsp;<span class="m-label m-flat m-warning">out</span></td>
+                  <td>- Memory location where pointer to the new shader resource binding object is written.</td>
+                </tr>
+                <tr>
+                  <td>InitStaticResources&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- If set to true, the method will initialize static resources in the created object, which has the exact same effect as calling <a href="structDiligent_1_1IPipelineResourceSignature.html#aeea09e1527a16f5226da1f6f4e531161" class="m-doc">IPipelineResourceSignature::<wbr />InitializeStaticSRBResources()</a>.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div></section>
+          <section class="m-doc-details" id="aad78e06bef9c751c8b3ac1acca5b73ab"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() Diligent::<wbr />IPipelineResourceSignature::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#aad78e06bef9c751c8b3ac1acca5b73ab" class="m-doc-self">BindStaticResources</a>(</span><span class="m-doc-wrap"><a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> ShaderFlags,
+              <a href="structDiligent_1_1IResourceMapping.html" class="m-doc">IResourceMapping</a>* pResourceMapping,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> Flags) <span class="m-label m-warning">virtual</span></span></span>
+            </h3>
+            <p>Binds static resources for the specified shader stages in the pipeline resource signature.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">ShaderFlags&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Flags that specify shader stages, for which resources will be bound. Any combination of <a href="namespaceDiligent.html#abed46a87aef825fee14a0afeb69f25b8" class="m-doc">Diligent::<wbr />SHADER_TYPE</a> may be used.</td>
+                </tr>
+                <tr>
+                  <td>pResourceMapping&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Pointer to the resource mapping interface.</td>
+                </tr>
+                <tr>
+                  <td>Flags&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Additional flags. See <a href="namespaceDiligent.html#aa389100bf98c982e616de744377f8746" class="m-doc">Diligent::<wbr />BIND_SHADER_RESOURCES_FLAGS</a>.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div></section>
+          <section class="m-doc-details" id="ab869743d8dabf6c143def270690f83e6"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a href="structDiligent_1_1IShaderResourceVariable.html" class="m-doc">IShaderResourceVariable</a>*<a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() Diligent::<wbr />IPipelineResourceSignature::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#ab869743d8dabf6c143def270690f83e6" class="m-doc-self">GetStaticVariableByName</a>(</span><span class="m-doc-wrap"><a href="namespaceDiligent.html#abed46a87aef825fee14a0afeb69f25b8" class="m-doc">SHADER_<wbr />TYPE</a> ShaderType,
+              const <a href="namespaceDiligent.html#a912e5e9c3458ec625b7d0f2f2cf07341" class="m-doc">Char</a>* Name) <span class="m-label m-warning">virtual</span></span></span>
+            </h3>
+            <p>Returns static shader resource variable. If the variable is not found, returns nullptr.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">ShaderType&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Type of the shader to look up the variable. Must be one of <a href="namespaceDiligent.html#abed46a87aef825fee14a0afeb69f25b8" class="m-doc">Diligent::<wbr />SHADER_TYPE</a>.</td>
+                </tr>
+                <tr>
+                  <td>Name&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Name of the variable.</td>
+                </tr>
+              </tbody>
+            </table>
+<aside class="m-note m-default"><h4>Remark</h4><p>If a variable is shared between multiple shader stages, it can be accessed using any of those shader stages. Even though <a href="structDiligent_1_1IShaderResourceVariable.html" class="m-doc">IShaderResourceVariable</a> instances returned by the method may be different for different stages, internally they will reference the same resource.</p></aside><p>Only static shader resource variables can be accessed using this method. Mutable and dynamic variables are accessed through Shader Resource Binding object.</p><p>The method does not increment the reference counter of the returned interface, and the application must <em>not</em> call <a href="structDiligent_1_1IObject.html#ab2831985889078027ccc9a77d63b6056" class="m-doc">Release()</a> unless it explicitly called <a href="structDiligent_1_1IObject.html#a3be0a7e36040e69b8158ee4b8482e76b" class="m-doc">AddRef()</a>.</p>
+          </div></section>
+          <section class="m-doc-details" id="a25d644808f8481b6cb1047e0d0f35d1e"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a href="structDiligent_1_1IShaderResourceVariable.html" class="m-doc">IShaderResourceVariable</a>*<a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() Diligent::<wbr />IPipelineResourceSignature::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a25d644808f8481b6cb1047e0d0f35d1e" class="m-doc-self">GetStaticVariableByIndex</a>(</span><span class="m-doc-wrap"><a href="namespaceDiligent.html#abed46a87aef825fee14a0afeb69f25b8" class="m-doc">SHADER_<wbr />TYPE</a> ShaderType,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> Index) <span class="m-label m-warning">virtual</span></span></span>
+            </h3>
+            <p>Returns static shader resource variable by its index.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">ShaderType&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Type of the shader to look up the variable. Must be one of <a href="namespaceDiligent.html#abed46a87aef825fee14a0afeb69f25b8" class="m-doc">Diligent::<wbr />SHADER_TYPE</a>.</td>
+                </tr>
+                <tr>
+                  <td>Index&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Shader variable index. The index must be between 0 and the total number of variables returned by <a href="structDiligent_1_1IPipelineResourceSignature.html#ad72609bdf003cda293968fc8b9bb6392" class="m-doc">GetStaticVariableCount()</a>.</td>
+                </tr>
+              </tbody>
+            </table>
+<aside class="m-note m-default"><h4>Remark</h4><p>If a variable is shared between multiple shader stages, it can be accessed using any of those shader stages. Even though <a href="structDiligent_1_1IShaderResourceVariable.html" class="m-doc">IShaderResourceVariable</a> instances returned by the method may be different for different stages, internally they will reference the same resource.</p></aside><p>Only static shader resource variables can be accessed using this method. Mutable and dynamic variables are accessed through Shader Resource Binding object.</p><p>The method does not increment the reference counter of the returned interface, and the application must <em>not</em> call <a href="structDiligent_1_1IObject.html#ab2831985889078027ccc9a77d63b6056" class="m-doc">Release()</a> unless it explicitly called <a href="structDiligent_1_1IObject.html#a3be0a7e36040e69b8158ee4b8482e76b" class="m-doc">AddRef()</a>.</p>
+          </div></section>
+          <section class="m-doc-details" id="ad72609bdf003cda293968fc8b9bb6392"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() Diligent::<wbr />IPipelineResourceSignature::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#ad72609bdf003cda293968fc8b9bb6392" class="m-doc-self">GetStaticVariableCount</a>(</span><span class="m-doc-wrap"><a href="namespaceDiligent.html#abed46a87aef825fee14a0afeb69f25b8" class="m-doc">SHADER_<wbr />TYPE</a> ShaderType) const <span class="m-label m-warning">virtual</span></span></span>
+            </h3>
+            <p>Returns the number of static shader resource variables.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">ShaderType&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Type of the shader.</td>
+                </tr>
+              </tbody>
+            </table>
+<aside class="m-note m-default"><h4>Remark</h4><p>Only static variables (that can be accessed directly through the PSO) are counted. Mutable and dynamic variables are accessed through Shader Resource Binding object.</p></aside>
+          </div></section>
+          <section class="m-doc-details" id="aeea09e1527a16f5226da1f6f4e531161"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() Diligent::<wbr />IPipelineResourceSignature::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#aeea09e1527a16f5226da1f6f4e531161" class="m-doc-self">InitializeStaticSRBResources</a>(</span><span class="m-doc-wrap">struct <a href="structDiligent_1_1IShaderResourceBinding.html" class="m-doc">IShaderResourceBinding</a>* pShaderResourceBinding) const <span class="m-label m-warning">virtual</span></span></span>
+            </h3>
+            <p>Initializes static resources in the shader binding object.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">pShaderResourceBinding&nbsp;<span class="m-label m-flat m-info">in</span></td>
+                  <td>- Shader resource binding object to initialize. The pipeline resource signature must be compatible with the shader resource binding object.</td>
+                </tr>
+              </tbody>
+            </table>
+<p>If static shader resources were not initialized when the SRB was created, this method must be called to initialize them before the SRB can be used. The method should be called after all static variables have been initialized in the signature.</p><aside class="m-note m-info"><h4>Note</h4><p>If static resources have already been initialized in the SRB and the method is called again, it will have no effect and a warning messge will be displayed.</p></aside>
+          </div></section>
+          <section class="m-doc-details" id="a56c802aba7a79bf31b93f23615a3ebba"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">bool <a href="DefineInterfaceHelperMacros_8h.html#afed0846ac5ff0234b8f4c5cf291f156b" class="m-doc">METHOD</a>() Diligent::<wbr />IPipelineResourceSignature::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a56c802aba7a79bf31b93f23615a3ebba" class="m-doc-self">IsCompatibleWith</a>(</span><span class="m-doc-wrap">const struct <a href="structDiligent_1_1IPipelineResourceSignature.html" class="m-doc">IPipelineResourceSignature</a>* pPRS) const <span class="m-label m-warning">virtual</span></span></span>
+            </h3>
+            <p>Returns true if the signature is compatible with another one.</p>
+<aside class="m-note m-default"><h4>Remark</h4><p>Two signatures are compatible if they contain identical resources, defined in the samer order disregarding their names.</p></aside>
+          </div></section>
+        </section>
+      </div>
+    </div>
+  </div>
+</article></main>
+<div class="m-doc-search" id="search">
+  <a href="#!" onclick="return hideSearch()"></a>
+  <div class="m-container">
+    <div class="m-row">
+      <div class="m-col-m-8 m-push-m-2">
+        <div class="m-doc-search-header m-text m-small">
+          <div><span class="m-label m-default">Tab</span> / <span class="m-label m-default">T</span> to search, <span class="m-label m-default">Esc</span> to close</div>
+          <div id="search-symbolcount">&hellip;</div>
+        </div>
+        <div class="m-doc-search-content">
+          <form>
+            <input type="search" name="q" id="search-input" placeholder="Loading &hellip;" disabled="disabled" autofocus="autofocus" autocomplete="off" spellcheck="false" />
+          </form>
+          <noscript class="m-text m-danger m-text-center">Unlike everything else in the docs, the search functionality <em>requires</em> JavaScript.</noscript>
+          <div id="search-help" class="m-text m-dim m-text-center">
+            <p class="m-noindent">Search for symbols, directories, files, pages or
+            modules. You can omit any prefix from the symbol or file path; adding a
+            <code>:</code> or <code>/</code> suffix lists all members of given symbol or
+            directory.</p>
+            <p class="m-noindent">Use <span class="m-label m-dim">&darr;</span>
+            / <span class="m-label m-dim">&uarr;</span> to navigate through the list,
+            <span class="m-label m-dim">Enter</span> to go.
+            <span class="m-label m-dim">Tab</span> autocompletes common prefix, you can
+            copy a link to the result using <span class="m-label m-dim">⌘</span>
+            <span class="m-label m-dim">L</span> while <span class="m-label m-dim">⌘</span>
+            <span class="m-label m-dim">M</span> produces a Markdown link.</p>
+          </div>
+          <div id="search-notfound" class="m-text m-warning m-text-center">Sorry, nothing was found.</div>
+          <ul id="search-results"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="search-v1.js"></script>
+<script src="searchdata-v1.js" async="async"></script>
+<footer><nav>
+  <div class="m-container">
+    <div class="m-row">
+      <div class="m-col-l-10 m-push-l-1">
+        <p>Diligent Engine. Created with <a href="https://doxygen.org/">Doxygen</a> 1.8.17 and <a href="https://mcss.mosra.cz/">m.css</a>.</p>
+      </div>
+    </div>
+  </div>
+</nav></footer>
+</body>
+</html>

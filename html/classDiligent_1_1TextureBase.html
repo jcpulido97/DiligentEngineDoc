@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Diligent::TextureBase class | Diligent Engine</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i%7CSource+Code+Pro:400,400i,600" />
+  <link rel="stylesheet" href="m-dark+documentation.compiled.css" />
+  <link rel="icon" href="favicon-dark.png" type="image/png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#22272e" />
+</head>
+<body>
+<header><nav id="navigation">
+  <div class="m-container">
+    <div class="m-row">
+      <a href="index.html" id="m-navbar-brand" class="m-col-t-8 m-col-m-none m-left-m">Diligent Engine</a>
+      <div class="m-col-t-4 m-hide-m m-text-right m-nopadr">
+        <a href="#search" class="m-doc-search-icon" title="Search" onclick="return showSearch()"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
+          <path id="m-doc-search-icon-path" d="m6 0c-3.31 0-6 2.69-6 6 0 3.31 2.69 6 6 6 1.49 0 2.85-0.541 3.89-1.44-0.0164 0.338 0.147 0.759 0.5 1.15l3.22 3.79c0.552 0.614 1.45 0.665 2 0.115 0.55-0.55 0.499-1.45-0.115-2l-3.79-3.22c-0.392-0.353-0.812-0.515-1.15-0.5 0.895-1.05 1.44-2.41 1.44-3.89 0-3.31-2.69-6-6-6zm0 1.56a4.44 4.44 0 0 1 4.44 4.44 4.44 4.44 0 0 1-4.44 4.44 4.44 4.44 0 0 1-4.44-4.44 4.44 4.44 0 0 1 4.44-4.44z"/>
+        </svg></a>
+        <a id="m-navbar-show" href="#navigation" title="Show navigation"></a>
+        <a id="m-navbar-hide" href="#" title="Hide navigation"></a>
+      </div>
+      <div id="m-navbar-collapse" class="m-col-t-12 m-show-m m-col-m-none m-right-m">
+        <div class="m-row">
+          <ol class="m-col-t-6 m-col-m-none">
+            <li><a href="pages.html">Pages</a></li>
+            <li><a href="namespaces.html">Namespaces</a></li>
+          </ol>
+          <ol class="m-col-t-6 m-col-m-none" start="3">
+            <li><a href="annotated.html">Classes</a></li>
+            <li><a href="files.html">Files</a></li>
+            <li class="m-show-m"><a href="#search" class="m-doc-search-icon" title="Search" onclick="return showSearch()"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
+              <use href="#m-doc-search-icon-path" />
+            </svg></a></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav></header>
+<main><article>
+  <div class="m-container m-container-inflatable">
+    <div class="m-row">
+      <div class="m-col-l-10 m-push-l-1">
+        <h1>
+          <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="TextureBase_8hpp.html">&lt;Graphics/GraphicsEngine/include/TextureBase.hpp&gt;</a></div>
+          <div class="m-doc-template">template&lt;typename EngineImplTraits&gt;</div>
+          <span class="m-breadcrumb"><a href="namespaceDiligent.html">Diligent</a>::<wbr/></span>TextureBase <span class="m-thin">class</span>
+        </h1>
+        <p>Base implementation of the <a href="structDiligent_1_1ITexture.html" class="m-doc">ITexture</a> interface.</p>
+        <table class="m-table m-fullwidth m-flat">
+          <thead>
+            <tr><th colspan="2">Template parameters</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="width: 1%">EngineImplTraits</td>
+              <td>- Engine implementation type traits.</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="m-block m-default">
+          <h3>Contents</h3>
+          <ul>
+            <li>
+              Reference
+              <ul>
+                <li><a href="#base-classes">Base classes</a></li>
+                <li><a href="#typeless-methods">Constructors, destructors, conversion operators</a></li>
+                <li><a href="#pub-methods">Public functions</a></li>
+                <li><a href="#pro-methods">Protected functions</a></li>
+                <li><a href="#pro-attribs">Protected variables</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <section id="base-classes">
+          <h2><a href="#base-classes">Base classes</a></h2>
+          <dl class="m-doc">
+            <dt>
+              <div class="m-doc-template">template&lt;class BaseInterface, typename RenderDeviceImplType, typename ObjectDescType&gt;</div>
+              class <a href="classDiligent_1_1DeviceObjectBase.html" class="m-doc">DeviceObjectBase&lt;EngineImplTraits::TextureInterface, EngineImplTraits::RenderDeviceImplType, TextureDesc&gt;</a>
+            </dt>
+            <dd>Template class implementing base functionality of the device object.</dd>
+          </dl>
+        </section>
+        <section id="typeless-methods">
+          <h2><a href="#typeless-methods">Constructors, destructors, conversion operators</a></h2>
+          <dl class="m-doc">
+            <dt>
+              <span class="m-doc-wrap-bumper"><a href="#a7479189401957751bb1c1ea861964e94" class="m-doc">TextureBase</a>(</span><span class="m-doc-wrap"><a href="classDiligent_1_1IReferenceCounters.html" class="m-doc">IReferenceCounters</a>* pRefCounters,
+              <a href="classDiligent_1_1TextureBase.html#a8da525ee9d4ba8c1511382692fdc39bb" class="m-doc">TexViewObjAllocatorType</a>&amp; TexViewObjAllocator,
+              <a href="classDiligent_1_1TextureBase.html#a911b80b3f406fe15acefe53fe4141671" class="m-doc">RenderDeviceImplType</a>* pDevice,
+              const <a href="structDiligent_1_1TextureDesc.html" class="m-doc">TextureDesc</a>&amp; Desc,
+              bool bIsDeviceInternal = false)</span>
+            </dt>
+            <dd></dd>
+          </dl>
+        </section>
+        <section id="pub-methods">
+          <h2><a href="#pub-methods">Public functions</a></h2>
+          <dl class="m-doc">
+            <dt id="aa8dc47eaadb770e72324bfa8a1945f76">
+              <span class="m-doc-wrap-bumper">void <a href="#aa8dc47eaadb770e72324bfa8a1945f76" class="m-doc-self">CreateView</a>(</span><span class="m-doc-wrap">const struct <a href="structDiligent_1_1TextureViewDesc.html" class="m-doc">TextureViewDesc</a>&amp; ViewDesc,
+              <a href="structDiligent_1_1ITextureView.html" class="m-doc">ITextureView</a>** ppView) <span class="m-label m-flat m-warning">override</span></span>
+            </dt>
+            <dd>Implementaiton of <a href="structDiligent_1_1ITexture.html#a167a4d7cf9a6a4b5634ecb15dfc8e108" class="m-doc">ITexture::<wbr />CreateView()</a>; calls <a href="classDiligent_1_1TextureBase.html#aaee50d67fbf6e2443a9c1f1800a683ec" class="m-doc">CreateViewInternal()</a> virtual function that creates texture view for the specific engine implementation.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">void <a href="#a732b14a0542713bd3af9a166dc3daaa0" class="m-doc">CreateDefaultViews</a>(</span><span class="m-doc-wrap">)</span>
+            </dt>
+            <dd>Creates default texture views.</dd>
+            <dt id="a84e48ded8f07616802c975527ba6c125">
+              <span class="m-doc-wrap-bumper">auto <a href="#a84e48ded8f07616802c975527ba6c125" class="m-doc-self">GetDefaultView</a>(</span><span class="m-doc-wrap"><a href="namespaceDiligent.html#a6863a150530d5abe1cc5627b23ebce68" class="m-doc">TEXTURE_<wbr />VIEW_<wbr />TYPE</a> ViewType) -&gt; <a href="structDiligent_1_1ITextureView.html" class="m-doc">ITextureView</a>* <span class="m-label m-flat m-warning">override</span></span>
+            </dt>
+            <dd>Implementation of <a href="structDiligent_1_1ITexture.html#ab718eaafd5d4bf799bac38b1dd44685f" class="m-doc">ITexture::<wbr />GetDefaultView()</a>.</dd>
+          </dl>
+        </section>
+        <section id="pro-methods">
+          <h2><a href="#pro-methods">Protected functions</a></h2>
+          <dl class="m-doc">
+            <dt id="aaee50d67fbf6e2443a9c1f1800a683ec">
+              <span class="m-doc-wrap-bumper">void <a href="#aaee50d67fbf6e2443a9c1f1800a683ec" class="m-doc-self">CreateViewInternal</a>(</span><span class="m-doc-wrap">const struct <a href="structDiligent_1_1TextureViewDesc.html" class="m-doc">TextureViewDesc</a>&amp; ViewDesc,
+              <a href="structDiligent_1_1ITextureView.html" class="m-doc">ITextureView</a>** ppView,
+              bool bIsDefaultView) <span class="m-label m-flat m-warning">pure virtual</span></span>
+            </dt>
+            <dd>Pure virtual function that creates texture view for the specific engine implementation.</dd>
+          </dl>
+        </section>
+        <section id="pro-attribs">
+          <h2><a href="#pro-attribs">Protected variables</a></h2>
+          <dl class="m-doc">
+            <dt id="a419fd07df2b276caae72b2907bb36f1f">
+              std::unique_ptr&lt;<a href="classDiligent_1_1TextureBase.html#abf3ac08350c2be5b295c81281a7c6095" class="m-doc">TextureViewImplType</a>, <a href="structDiligent_1_1STDDeleter.html" class="m-doc">STDDeleter</a>&lt;<a href="classDiligent_1_1TextureBase.html#abf3ac08350c2be5b295c81281a7c6095" class="m-doc">TextureViewImplType</a>, <a href="classDiligent_1_1TextureBase.html#a8da525ee9d4ba8c1511382692fdc39bb" class="m-doc">TexViewObjAllocatorType</a>&gt;&gt; <a href="#a419fd07df2b276caae72b2907bb36f1f" class="m-doc-self">m_pDefaultSRV</a>
+            </dt>
+            <dd>Default SRV addressing the entire texture.</dd>
+            <dt id="ad88ce08ea7e1b90f915969e123d38ecd">
+              std::unique_ptr&lt;<a href="classDiligent_1_1TextureBase.html#abf3ac08350c2be5b295c81281a7c6095" class="m-doc">TextureViewImplType</a>, <a href="structDiligent_1_1STDDeleter.html" class="m-doc">STDDeleter</a>&lt;<a href="classDiligent_1_1TextureBase.html#abf3ac08350c2be5b295c81281a7c6095" class="m-doc">TextureViewImplType</a>, <a href="classDiligent_1_1TextureBase.html#a8da525ee9d4ba8c1511382692fdc39bb" class="m-doc">TexViewObjAllocatorType</a>&gt;&gt; <a href="#ad88ce08ea7e1b90f915969e123d38ecd" class="m-doc-self">m_pDefaultRTV</a>
+            </dt>
+            <dd>Default RTV addressing the most detailed mip level.</dd>
+            <dt id="a6a2facc01defe43905bfc68bd8dc098e">
+              std::unique_ptr&lt;<a href="classDiligent_1_1TextureBase.html#abf3ac08350c2be5b295c81281a7c6095" class="m-doc">TextureViewImplType</a>, <a href="structDiligent_1_1STDDeleter.html" class="m-doc">STDDeleter</a>&lt;<a href="classDiligent_1_1TextureBase.html#abf3ac08350c2be5b295c81281a7c6095" class="m-doc">TextureViewImplType</a>, <a href="classDiligent_1_1TextureBase.html#a8da525ee9d4ba8c1511382692fdc39bb" class="m-doc">TexViewObjAllocatorType</a>&gt;&gt; <a href="#a6a2facc01defe43905bfc68bd8dc098e" class="m-doc-self">m_pDefaultDSV</a>
+            </dt>
+            <dd>Default DSV addressing the most detailed mip level.</dd>
+            <dt id="a8ae1c8ca98a3aaa0791ae93f48e1a61e">
+              std::unique_ptr&lt;<a href="classDiligent_1_1TextureBase.html#abf3ac08350c2be5b295c81281a7c6095" class="m-doc">TextureViewImplType</a>, <a href="structDiligent_1_1STDDeleter.html" class="m-doc">STDDeleter</a>&lt;<a href="classDiligent_1_1TextureBase.html#abf3ac08350c2be5b295c81281a7c6095" class="m-doc">TextureViewImplType</a>, <a href="classDiligent_1_1TextureBase.html#a8da525ee9d4ba8c1511382692fdc39bb" class="m-doc">TexViewObjAllocatorType</a>&gt;&gt; <a href="#a8ae1c8ca98a3aaa0791ae93f48e1a61e" class="m-doc-self">m_pDefaultUAV</a>
+            </dt>
+            <dd>Default UAV addressing the entire texture.</dd>
+          </dl>
+        </section>
+        <section>
+          <h2>Function documentation</h2>
+          <section class="m-doc-details" id="a7479189401957751bb1c1ea861964e94"><div>
+            <h3>
+              <div class="m-doc-template">
+                template&lt;typename EngineImplTraits&gt;
+              </div>
+              <span class="m-doc-wrap-bumper"> Diligent::<wbr />TextureBase&lt;EngineImplTraits&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a7479189401957751bb1c1ea861964e94" class="m-doc-self">TextureBase</a>(</span><span class="m-doc-wrap"><a href="classDiligent_1_1IReferenceCounters.html" class="m-doc">IReferenceCounters</a>* pRefCounters,
+              <a href="classDiligent_1_1TextureBase.html#a8da525ee9d4ba8c1511382692fdc39bb" class="m-doc">TexViewObjAllocatorType</a>&amp; TexViewObjAllocator,
+              <a href="classDiligent_1_1TextureBase.html#a911b80b3f406fe15acefe53fe4141671" class="m-doc">RenderDeviceImplType</a>* pDevice,
+              const <a href="structDiligent_1_1TextureDesc.html" class="m-doc">TextureDesc</a>&amp; Desc,
+              bool bIsDeviceInternal = false)</span></span>
+            </h3>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">pRefCounters</td>
+                  <td>- Reference counters object that controls the lifetime of this texture.</td>
+                </tr>
+                <tr>
+                  <td>TexViewObjAllocator</td>
+                  <td>- Allocator that is used to allocate memory for the instances of the texture view object. This parameter is only used for debug purposes.</td>
+                </tr>
+                <tr>
+                  <td>pDevice</td>
+                  <td>- Pointer to the device</td>
+                </tr>
+                <tr>
+                  <td>Desc</td>
+                  <td>- Texture description</td>
+                </tr>
+                <tr>
+                  <td>bIsDeviceInternal</td>
+                  <td>- Flag indicating if the texture is an internal device object and must not keep a strong reference to the device</td>
+                </tr>
+              </tbody>
+            </table>
+          </div></section>
+          <section class="m-doc-details" id="a732b14a0542713bd3af9a166dc3daaa0"><div>
+            <h3>
+              <div class="m-doc-template">
+                template&lt;typename EngineImplTraits&gt;
+              </div>
+              <span class="m-doc-wrap-bumper">void Diligent::<wbr />TextureBase&lt;EngineImplTraits&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a732b14a0542713bd3af9a166dc3daaa0" class="m-doc-self">CreateDefaultViews</a>(</span><span class="m-doc-wrap">)</span></span>
+            </h3>
+            <p>Creates default texture views.</p>
+<ul><li>Creates default shader resource view addressing the entire texture if <a href="namespaceDiligent.html#af2f0c1dfb8f93a9ef6444b0cdd64203caef09415507884d7beea9a716e824a138" class="m-doc">Diligent::<wbr />BIND_SHADER_RESOURCE</a> flag is set.</li><li>Creates default render target view addressing the most detailed mip level if <a href="namespaceDiligent.html#af2f0c1dfb8f93a9ef6444b0cdd64203ca4154c60d5487f7cded7fc1ef4a1bba89" class="m-doc">Diligent::<wbr />BIND_RENDER_TARGET</a> flag is set.</li><li>Creates default depth-stencil view addressing the most detailed mip level if <a href="namespaceDiligent.html#af2f0c1dfb8f93a9ef6444b0cdd64203cad7245b76139a33a218e237afc6748b08" class="m-doc">Diligent::<wbr />BIND_DEPTH_STENCIL</a> flag is set.</li><li>Creates default unordered access view addressing the entire texture if <a href="namespaceDiligent.html#af2f0c1dfb8f93a9ef6444b0cdd64203caf4c7e9aeccba22f01ef46f348551fd0c" class="m-doc">Diligent::<wbr />BIND_UNORDERED_ACCESS</a> flag is set.</li></ul><p>The function calls <a href="classDiligent_1_1TextureBase.html#aaee50d67fbf6e2443a9c1f1800a683ec" class="m-doc">CreateViewInternal()</a>.</p>
+          </div></section>
+        </section>
+      </div>
+    </div>
+  </div>
+</article></main>
+<div class="m-doc-search" id="search">
+  <a href="#!" onclick="return hideSearch()"></a>
+  <div class="m-container">
+    <div class="m-row">
+      <div class="m-col-m-8 m-push-m-2">
+        <div class="m-doc-search-header m-text m-small">
+          <div><span class="m-label m-default">Tab</span> / <span class="m-label m-default">T</span> to search, <span class="m-label m-default">Esc</span> to close</div>
+          <div id="search-symbolcount">&hellip;</div>
+        </div>
+        <div class="m-doc-search-content">
+          <form>
+            <input type="search" name="q" id="search-input" placeholder="Loading &hellip;" disabled="disabled" autofocus="autofocus" autocomplete="off" spellcheck="false" />
+          </form>
+          <noscript class="m-text m-danger m-text-center">Unlike everything else in the docs, the search functionality <em>requires</em> JavaScript.</noscript>
+          <div id="search-help" class="m-text m-dim m-text-center">
+            <p class="m-noindent">Search for symbols, directories, files, pages or
+            modules. You can omit any prefix from the symbol or file path; adding a
+            <code>:</code> or <code>/</code> suffix lists all members of given symbol or
+            directory.</p>
+            <p class="m-noindent">Use <span class="m-label m-dim">&darr;</span>
+            / <span class="m-label m-dim">&uarr;</span> to navigate through the list,
+            <span class="m-label m-dim">Enter</span> to go.
+            <span class="m-label m-dim">Tab</span> autocompletes common prefix, you can
+            copy a link to the result using <span class="m-label m-dim">⌘</span>
+            <span class="m-label m-dim">L</span> while <span class="m-label m-dim">⌘</span>
+            <span class="m-label m-dim">M</span> produces a Markdown link.</p>
+          </div>
+          <div id="search-notfound" class="m-text m-warning m-text-center">Sorry, nothing was found.</div>
+          <ul id="search-results"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="search-v1.js"></script>
+<script src="searchdata-v1.js" async="async"></script>
+<footer><nav>
+  <div class="m-container">
+    <div class="m-row">
+      <div class="m-col-l-10 m-push-l-1">
+        <p>Diligent Engine. Created with <a href="https://doxygen.org/">Doxygen</a> 1.8.17 and <a href="https://mcss.mosra.cz/">m.css</a>.</p>
+      </div>
+    </div>
+  </div>
+</nav></footer>
+</body>
+</html>

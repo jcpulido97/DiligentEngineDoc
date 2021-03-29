@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Diligent::RenderDeviceBase class | Diligent Engine</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i%7CSource+Code+Pro:400,400i,600" />
+  <link rel="stylesheet" href="m-dark+documentation.compiled.css" />
+  <link rel="icon" href="favicon-dark.png" type="image/png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#22272e" />
+</head>
+<body>
+<header><nav id="navigation">
+  <div class="m-container">
+    <div class="m-row">
+      <a href="index.html" id="m-navbar-brand" class="m-col-t-8 m-col-m-none m-left-m">Diligent Engine</a>
+      <div class="m-col-t-4 m-hide-m m-text-right m-nopadr">
+        <a href="#search" class="m-doc-search-icon" title="Search" onclick="return showSearch()"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
+          <path id="m-doc-search-icon-path" d="m6 0c-3.31 0-6 2.69-6 6 0 3.31 2.69 6 6 6 1.49 0 2.85-0.541 3.89-1.44-0.0164 0.338 0.147 0.759 0.5 1.15l3.22 3.79c0.552 0.614 1.45 0.665 2 0.115 0.55-0.55 0.499-1.45-0.115-2l-3.79-3.22c-0.392-0.353-0.812-0.515-1.15-0.5 0.895-1.05 1.44-2.41 1.44-3.89 0-3.31-2.69-6-6-6zm0 1.56a4.44 4.44 0 0 1 4.44 4.44 4.44 4.44 0 0 1-4.44 4.44 4.44 4.44 0 0 1-4.44-4.44 4.44 4.44 0 0 1 4.44-4.44z"/>
+        </svg></a>
+        <a id="m-navbar-show" href="#navigation" title="Show navigation"></a>
+        <a id="m-navbar-hide" href="#" title="Hide navigation"></a>
+      </div>
+      <div id="m-navbar-collapse" class="m-col-t-12 m-show-m m-col-m-none m-right-m">
+        <div class="m-row">
+          <ol class="m-col-t-6 m-col-m-none">
+            <li><a href="pages.html">Pages</a></li>
+            <li><a href="namespaces.html">Namespaces</a></li>
+          </ol>
+          <ol class="m-col-t-6 m-col-m-none" start="3">
+            <li><a href="annotated.html">Classes</a></li>
+            <li><a href="files.html">Files</a></li>
+            <li class="m-show-m"><a href="#search" class="m-doc-search-icon" title="Search" onclick="return showSearch()"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
+              <use href="#m-doc-search-icon-path" />
+            </svg></a></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav></header>
+<main><article>
+  <div class="m-container m-container-inflatable">
+    <div class="m-row">
+      <div class="m-col-l-10 m-push-l-1">
+        <h1>
+          <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="RenderDeviceBase_8hpp.html">&lt;Graphics/GraphicsEngine/include/RenderDeviceBase.hpp&gt;</a></div>
+          <div class="m-doc-template">template&lt;typename EngineImplTraits&gt;</div>
+          <span class="m-breadcrumb"><a href="namespaceDiligent.html">Diligent</a>::<wbr/></span>RenderDeviceBase <span class="m-thin">class</span>
+        </h1>
+        <p>Base implementation of a render device.</p>
+        <table class="m-table m-fullwidth m-flat">
+          <thead>
+            <tr><th colspan="2">Template parameters</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="width: 1%">EngineImplTraits</td>
+              <td>- Engine implementation type traits.</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="m-block m-default">
+          <h3>Contents</h3>
+          <ul>
+            <li>
+              Reference
+              <ul>
+                <li><a href="#base-classes">Base classes</a></li>
+                <li><a href="#derived-classes">Derived classes</a></li>
+                <li><a href="#typeless-methods">Constructors, destructors, conversion operators</a></li>
+                <li><a href="#pub-methods">Public functions</a></li>
+                <li><a href="#pro-methods">Protected functions</a></li>
+                <li><a href="#pro-attribs">Protected variables</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+<aside class="m-note m-danger"><h4>Warning</h4><p>Render device must <em>NOT</em> hold strong references to any object it creates to avoid cyclic dependencies. Device context, swap chain and all object the device creates keep strong reference to the device. Device only holds weak reference to the immediate context.</p></aside>
+        <section id="base-classes">
+          <h2><a href="#base-classes">Base classes</a></h2>
+          <dl class="m-doc">
+            <dt>
+              <div class="m-doc-template">template&lt;typename BaseInterface&gt;</div>
+              class <a href="classDiligent_1_1ObjectBase.html" class="m-doc">ObjectBase&lt;EngineImplTraits::RenderDeviceInterface&gt;</a>
+            </dt>
+            <dd>Template class implementing base functionality for an object.</dd>
+          </dl>
+        </section>
+        <section id="derived-classes">
+          <h2><a href="#derived-classes">Derived classes</a></h2>
+          <dl class="m-doc">
+            <dt>
+              <div class="m-doc-template">template&lt;typename EngineImplTraits&gt;</div>
+              class <a href="classDiligent_1_1RenderDeviceD3DBase.html" class="m-doc">RenderDeviceD3DBase</a>
+            </dt>
+            <dd>Base implementation of a D3D render device.</dd>
+          </dl>
+        </section>
+        <section id="typeless-methods">
+          <h2><a href="#typeless-methods">Constructors, destructors, conversion operators</a></h2>
+          <dl class="m-doc">
+            <dt>
+              <span class="m-doc-wrap-bumper"><a href="#af0ddf611bf0e922dfb40a2e199d1f815" class="m-doc">RenderDeviceBase</a>(</span><span class="m-doc-wrap"><a href="classDiligent_1_1IReferenceCounters.html" class="m-doc">IReferenceCounters</a>* pRefCounters,
+              <a href="structDiligent_1_1IMemoryAllocator.html" class="m-doc">IMemoryAllocator</a>&amp; RawMemAllocator,
+              <a href="structDiligent_1_1IEngineFactory.html" class="m-doc">IEngineFactory</a>* pEngineFactory,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> NumDeferredContexts)</span>
+            </dt>
+            <dd></dd>
+          </dl>
+        </section>
+        <section id="pub-methods">
+          <h2><a href="#pub-methods">Public functions</a></h2>
+          <dl class="m-doc">
+            <dt id="a78d88b8e08ef2d6093665c0162af77d5">
+              <span class="m-doc-wrap-bumper">void <a href="#a78d88b8e08ef2d6093665c0162af77d5" class="m-doc-self">CreateResourceMapping</a>(</span><span class="m-doc-wrap">const <a href="structDiligent_1_1ResourceMappingDesc.html" class="m-doc">ResourceMappingDesc</a>&amp; MappingDesc,
+              <a href="structDiligent_1_1IResourceMapping.html" class="m-doc">IResourceMapping</a>** ppMapping) <span class="m-label m-flat m-warning">final</span></span>
+            </dt>
+            <dd>Implementation of <a href="structDiligent_1_1IRenderDevice.html#abeb45c114ed0c9d169b8708cf207c1bf" class="m-doc">IRenderDevice::<wbr />CreateResourceMapping()</a>.</dd>
+            <dt id="aeef07f64d875d8f5f2022ba0cc74cf0c">
+              <span class="m-doc-wrap-bumper">auto <a href="#aeef07f64d875d8f5f2022ba0cc74cf0c" class="m-doc-self">GetDeviceCaps</a>(</span><span class="m-doc-wrap">) const -&gt; const <a href="structDiligent_1_1DeviceCaps.html" class="m-doc">DeviceCaps</a>&amp; <span class="m-label m-flat m-warning">final</span></span>
+            </dt>
+            <dd>Implementation of <a href="structDiligent_1_1IRenderDevice.html#a8152fb09fae586724427c4041dbed4bc" class="m-doc">IRenderDevice::<wbr />GetDeviceCaps()</a>.</dd>
+            <dt id="ab76c266ddd4afb6e8a5def7064768558">
+              <span class="m-doc-wrap-bumper">auto <a href="#ab76c266ddd4afb6e8a5def7064768558" class="m-doc-self">GetDeviceProperties</a>(</span><span class="m-doc-wrap">) const -&gt; const <a href="structDiligent_1_1DeviceProperties.html" class="m-doc">DeviceProperties</a>&amp; <span class="m-label m-flat m-warning">final</span></span>
+            </dt>
+            <dd>Implementation of <a href="structDiligent_1_1IRenderDevice.html#ac787f993926b83042a1ad836d059567e" class="m-doc">IRenderDevice::<wbr />GetDeviceProperties()</a>.</dd>
+            <dt id="ac4ae28e6b451121f2a5815050e71578e">
+              <span class="m-doc-wrap-bumper">auto <a href="#ac4ae28e6b451121f2a5815050e71578e" class="m-doc-self">GetTextureFormatInfo</a>(</span><span class="m-doc-wrap"><a href="namespaceDiligent.html#afb09d7198220b667023b6d0858abf24e" class="m-doc">TEXTURE_<wbr />FORMAT</a> TexFormat) -&gt; const <a href="structDiligent_1_1TextureFormatInfo.html" class="m-doc">TextureFormatInfo</a>&amp; <span class="m-label m-flat m-warning">final</span></span>
+            </dt>
+            <dd>Implementation of <a href="structDiligent_1_1IRenderDevice.html#a4b52e876b0c6b8d70f9d3e0c3725d090" class="m-doc">IRenderDevice::<wbr />GetTextureFormatInfo()</a>.</dd>
+            <dt id="a4a81eb356f70802fec22a6cde2dfaa5d">
+              <span class="m-doc-wrap-bumper">auto <a href="#a4a81eb356f70802fec22a6cde2dfaa5d" class="m-doc-self">GetTextureFormatInfoExt</a>(</span><span class="m-doc-wrap"><a href="namespaceDiligent.html#afb09d7198220b667023b6d0858abf24e" class="m-doc">TEXTURE_<wbr />FORMAT</a> TexFormat) -&gt; const <a href="structDiligent_1_1TextureFormatInfoExt.html" class="m-doc">TextureFormatInfoExt</a>&amp; <span class="m-label m-flat m-warning">final</span></span>
+            </dt>
+            <dd>Implementation of <a href="structDiligent_1_1IRenderDevice.html#a5a541dbc17993d912baaf0add1ddde5d" class="m-doc">IRenderDevice::<wbr />GetTextureFormatInfoExt()</a>.</dd>
+            <dt id="a6fe52fc46ee867f5c683037655fc413e">
+              <span class="m-doc-wrap-bumper">void <a href="#a6fe52fc46ee867f5c683037655fc413e" class="m-doc-self">SetImmediateContext</a>(</span><span class="m-doc-wrap"><a href="structDiligent_1_1IDeviceContext.html" class="m-doc">IDeviceContext</a>* pImmediateContext)</span>
+            </dt>
+            <dd>Set weak reference to the immediate context.</dd>
+            <dt id="abdd36b4e183d9b87e6641c2d2f7b4a4a">
+              <span class="m-doc-wrap-bumper">void <a href="#abdd36b4e183d9b87e6641c2d2f7b4a4a" class="m-doc-self">SetDeferredContext</a>(</span><span class="m-doc-wrap">size_t Ctx,
+              <a href="structDiligent_1_1IDeviceContext.html" class="m-doc">IDeviceContext</a>* pDeferredCtx)</span>
+            </dt>
+            <dd>Set weak reference to the deferred context.</dd>
+            <dt id="aa17e664f9b9d52ce3e028f01188a6679">
+              <span class="m-doc-wrap-bumper">auto <a href="#aa17e664f9b9d52ce3e028f01188a6679" class="m-doc-self">GetNumDeferredContexts</a>(</span><span class="m-doc-wrap">) const -&gt; size_t</span>
+            </dt>
+            <dd>Returns number of deferred contexts.</dd>
+          </dl>
+        </section>
+        <section id="pro-methods">
+          <h2><a href="#pro-methods">Protected functions</a></h2>
+          <dl class="m-doc">
+            <dt>
+              <div class="m-doc-template">template&lt;typename ObjectType, typename ObjectDescType, typename ObjectConstructorType&gt;</div>
+              <span class="m-doc-wrap-bumper">void <a href="#afbe25e22519a5f1d0d9ba0bcc1c9de68" class="m-doc">CreateDeviceObject</a>(</span><span class="m-doc-wrap">const <a href="namespaceDiligent.html#a912e5e9c3458ec625b7d0f2f2cf07341" class="m-doc">Char</a>* ObjectTypeName,
+              const ObjectDescType&amp; Desc,
+              ObjectType** ppObject,
+              ObjectConstructorType ConstructObject)</span>
+            </dt>
+            <dd>Helper template function to facilitate device object creation.</dd>
+          </dl>
+        </section>
+        <section id="pro-attribs">
+          <h2><a href="#pro-attribs">Protected variables</a></h2>
+          <dl class="m-doc">
+            <dt id="a10d92cfe6e58afc631209bdfe9635339">
+              <a href="classDiligent_1_1StateObjectsRegistry.html" class="m-doc">StateObjectsRegistry</a>&lt;<a href="structDiligent_1_1SamplerDesc.html" class="m-doc">SamplerDesc</a>&gt; <a href="#a10d92cfe6e58afc631209bdfe9635339" class="m-doc-self">m_SamplersRegistry</a>
+            </dt>
+            <dd>Sampler state registry.</dd>
+            <dt id="a2622de94088c280f6f614a7de6a7521f">
+              <a href="classDiligent_1_1RefCntWeakPtr.html" class="m-doc">RefCntWeakPtr</a>&lt;<a href="structDiligent_1_1IDeviceContext.html" class="m-doc">IDeviceContext</a>&gt; <a href="#a2622de94088c280f6f614a7de6a7521f" class="m-doc-self">m_wpImmediateContext</a>
+            </dt>
+            <dd>Weak reference to the immediate context. Immediate context holds strong reference to the device, so we must use weak reference to avoid circular dependencies.</dd>
+            <dt id="afcdc55f1dfc59c93aa24afe3c5a3cf3d">
+              std::vector&lt;<a href="classDiligent_1_1RefCntWeakPtr.html" class="m-doc">RefCntWeakPtr</a>&lt;<a href="structDiligent_1_1IDeviceContext.html" class="m-doc">IDeviceContext</a>&gt;, <a href="namespaceDiligent.html#a6b2e8c11ec061c791f23498c86f42041" class="m-doc">STDAllocatorRawMem</a>&lt;<a href="classDiligent_1_1RefCntWeakPtr.html" class="m-doc">RefCntWeakPtr</a>&lt;<a href="structDiligent_1_1IDeviceContext.html" class="m-doc">IDeviceContext</a>&gt;&gt;&gt; <a href="#afcdc55f1dfc59c93aa24afe3c5a3cf3d" class="m-doc-self">m_wpDeferredContexts</a>
+            </dt>
+            <dd>Weak references to deferred contexts.</dd>
+            <dt id="a0a40b6cdfe3f46fb92ae60f582026811">
+              <a href="structDiligent_1_1IMemoryAllocator.html" class="m-doc">IMemoryAllocator</a>&amp; <a href="#a0a40b6cdfe3f46fb92ae60f582026811" class="m-doc-self">m_RawMemAllocator</a>
+            </dt>
+            <dd>Raw memory allocator.</dd>
+            <dt id="a8bb6068fd8957dc7dfab2093c0b64d9f">
+              <a href="classDiligent_1_1FixedBlockMemoryAllocator.html" class="m-doc">FixedBlockMemoryAllocator</a> <a href="#a8bb6068fd8957dc7dfab2093c0b64d9f" class="m-doc-self">m_TexObjAllocator</a>
+            </dt>
+            <dd>Allocator for texture objects.</dd>
+            <dt id="aaa6fd35bd576f340b510ed7431c875aa">
+              <a href="classDiligent_1_1FixedBlockMemoryAllocator.html" class="m-doc">FixedBlockMemoryAllocator</a> <a href="#aaa6fd35bd576f340b510ed7431c875aa" class="m-doc-self">m_TexViewObjAllocator</a>
+            </dt>
+            <dd>Allocator for texture view objects.</dd>
+            <dt id="a3a48a14dd0b2c1dd3e7086acfc6618df">
+              <a href="classDiligent_1_1FixedBlockMemoryAllocator.html" class="m-doc">FixedBlockMemoryAllocator</a> <a href="#a3a48a14dd0b2c1dd3e7086acfc6618df" class="m-doc-self">m_BufObjAllocator</a>
+            </dt>
+            <dd>Allocator for buffer objects.</dd>
+            <dt id="ac451c7b5026856d21531879d07893ffb">
+              <a href="classDiligent_1_1FixedBlockMemoryAllocator.html" class="m-doc">FixedBlockMemoryAllocator</a> <a href="#ac451c7b5026856d21531879d07893ffb" class="m-doc-self">m_BuffViewObjAllocator</a>
+            </dt>
+            <dd>Allocator for buffer view objects.</dd>
+            <dt id="a69a9b9ee068030f12335bc0451c5581a">
+              <a href="classDiligent_1_1FixedBlockMemoryAllocator.html" class="m-doc">FixedBlockMemoryAllocator</a> <a href="#a69a9b9ee068030f12335bc0451c5581a" class="m-doc-self">m_ShaderObjAllocator</a>
+            </dt>
+            <dd>Allocator for shader objects.</dd>
+            <dt id="a51d39f1b28033dbcfb529354beb89f79">
+              <a href="classDiligent_1_1FixedBlockMemoryAllocator.html" class="m-doc">FixedBlockMemoryAllocator</a> <a href="#a51d39f1b28033dbcfb529354beb89f79" class="m-doc-self">m_SamplerObjAllocator</a>
+            </dt>
+            <dd>Allocator for sampler objects.</dd>
+            <dt id="a91ab4b9012a44b6b4c34854227c0e8fa">
+              <a href="classDiligent_1_1FixedBlockMemoryAllocator.html" class="m-doc">FixedBlockMemoryAllocator</a> <a href="#a91ab4b9012a44b6b4c34854227c0e8fa" class="m-doc-self">m_PSOAllocator</a>
+            </dt>
+            <dd>Allocator for pipeline state objects.</dd>
+            <dt id="ad7760a94b2ad4ef349e9280d91e7767a">
+              <a href="classDiligent_1_1FixedBlockMemoryAllocator.html" class="m-doc">FixedBlockMemoryAllocator</a> <a href="#ad7760a94b2ad4ef349e9280d91e7767a" class="m-doc-self">m_SRBAllocator</a>
+            </dt>
+            <dd>Allocator for shader resource binding objects.</dd>
+            <dt id="afba386add090ad41955e4813de4fed8b">
+              <a href="classDiligent_1_1FixedBlockMemoryAllocator.html" class="m-doc">FixedBlockMemoryAllocator</a> <a href="#afba386add090ad41955e4813de4fed8b" class="m-doc-self">m_ResMappingAllocator</a>
+            </dt>
+            <dd>Allocator for resource mapping objects.</dd>
+            <dt id="a7552ae6707db7f9643d9da42da6579c3">
+              <a href="classDiligent_1_1FixedBlockMemoryAllocator.html" class="m-doc">FixedBlockMemoryAllocator</a> <a href="#a7552ae6707db7f9643d9da42da6579c3" class="m-doc-self">m_FenceAllocator</a>
+            </dt>
+            <dd>Allocator for fence objects.</dd>
+            <dt id="a8b0a5527bd17e942411f3a389a7c4a5e">
+              <a href="classDiligent_1_1FixedBlockMemoryAllocator.html" class="m-doc">FixedBlockMemoryAllocator</a> <a href="#a8b0a5527bd17e942411f3a389a7c4a5e" class="m-doc-self">m_QueryAllocator</a>
+            </dt>
+            <dd>Allocator for query objects.</dd>
+            <dt id="abfbe49fca332954fd0c17ccabe179e0b">
+              <a href="classDiligent_1_1FixedBlockMemoryAllocator.html" class="m-doc">FixedBlockMemoryAllocator</a> <a href="#abfbe49fca332954fd0c17ccabe179e0b" class="m-doc-self">m_RenderPassAllocator</a>
+            </dt>
+            <dd>Allocator for render pass objects.</dd>
+            <dt id="ae77396d61a72b519373424e6953e907f">
+              <a href="classDiligent_1_1FixedBlockMemoryAllocator.html" class="m-doc">FixedBlockMemoryAllocator</a> <a href="#ae77396d61a72b519373424e6953e907f" class="m-doc-self">m_FramebufferAllocator</a>
+            </dt>
+            <dd>Allocator for framebuffer objects.</dd>
+            <dt id="a32b3565fa41347f865a19a4ff4d8f578">
+              <a href="classDiligent_1_1FixedBlockMemoryAllocator.html" class="m-doc">FixedBlockMemoryAllocator</a> <a href="#a32b3565fa41347f865a19a4ff4d8f578" class="m-doc-self">m_BLASAllocator</a>
+            </dt>
+            <dd>Allocator for bottom-level acceleration structure objects.</dd>
+            <dt id="a843d198ef380b0dc8e13c3b816001aee">
+              <a href="classDiligent_1_1FixedBlockMemoryAllocator.html" class="m-doc">FixedBlockMemoryAllocator</a> <a href="#a843d198ef380b0dc8e13c3b816001aee" class="m-doc-self">m_TLASAllocator</a>
+            </dt>
+            <dd>Allocator for top-level acceleration structure objects.</dd>
+            <dt id="aef52cecac71a8b70e9d291a97adb4445">
+              <a href="classDiligent_1_1FixedBlockMemoryAllocator.html" class="m-doc">FixedBlockMemoryAllocator</a> <a href="#aef52cecac71a8b70e9d291a97adb4445" class="m-doc-self">m_SBTAllocator</a>
+            </dt>
+            <dd>Allocator for shader binding table objects.</dd>
+            <dt id="a4dd4a7a4b8b808d891fd2b5034f3c422">
+              <a href="classDiligent_1_1FixedBlockMemoryAllocator.html" class="m-doc">FixedBlockMemoryAllocator</a> <a href="#a4dd4a7a4b8b808d891fd2b5034f3c422" class="m-doc-self">m_PipeResSignAllocator</a>
+            </dt>
+            <dd>Allocator for pipeline resource signature objects.</dd>
+          </dl>
+        </section>
+        <section>
+          <h2>Function documentation</h2>
+          <section class="m-doc-details" id="af0ddf611bf0e922dfb40a2e199d1f815"><div>
+            <h3>
+              <div class="m-doc-template">
+                template&lt;typename EngineImplTraits&gt;
+              </div>
+              <span class="m-doc-wrap-bumper"> Diligent::<wbr />RenderDeviceBase&lt;EngineImplTraits&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#af0ddf611bf0e922dfb40a2e199d1f815" class="m-doc-self">RenderDeviceBase</a>(</span><span class="m-doc-wrap"><a href="classDiligent_1_1IReferenceCounters.html" class="m-doc">IReferenceCounters</a>* pRefCounters,
+              <a href="structDiligent_1_1IMemoryAllocator.html" class="m-doc">IMemoryAllocator</a>&amp; RawMemAllocator,
+              <a href="structDiligent_1_1IEngineFactory.html" class="m-doc">IEngineFactory</a>* pEngineFactory,
+              <a href="namespaceDiligent.html#a9e27ac38f8dccaa4b4f8e967cd1e868e" class="m-doc">Uint32</a> NumDeferredContexts)</span></span>
+            </h3>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">pRefCounters</td>
+                  <td>- Reference counters object that controls the lifetime of this render device</td>
+                </tr>
+                <tr>
+                  <td>RawMemAllocator</td>
+                  <td>- Allocator that will be used to allocate memory for all device objects (including render device itself)</td>
+                </tr>
+                <tr>
+                  <td>pEngineFactory</td>
+                  <td>- Engine factory that was used to create this device</td>
+                </tr>
+                <tr>
+                  <td>NumDeferredContexts</td>
+                  <td>- The number of deferred device contexts</td>
+                </tr>
+              </tbody>
+            </table>
+<aside class="m-note m-default"><h4>Remark</h4><p>Render device uses fixed block allocators (see <a href="classDiligent_1_1FixedBlockMemoryAllocator.html" class="m-doc">FixedBlockMemoryAllocator</a>) to allocate memory for device objects. The object sizes provided to constructor are used to initialize the allocators.</p></aside>
+          </div></section>
+          <section class="m-doc-details" id="afbe25e22519a5f1d0d9ba0bcc1c9de68"><div>
+            <h3>
+              <div class="m-doc-template">
+                template&lt;typename EngineImplTraits&gt;
+                template&lt;typename ObjectType, typename ObjectDescType, typename ObjectConstructorType&gt;
+              </div>
+              <span class="m-doc-wrap-bumper">void Diligent::<wbr />RenderDeviceBase&lt;EngineImplTraits&gt;::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#afbe25e22519a5f1d0d9ba0bcc1c9de68" class="m-doc-self">CreateDeviceObject</a>(</span><span class="m-doc-wrap">const <a href="namespaceDiligent.html#a912e5e9c3458ec625b7d0f2f2cf07341" class="m-doc">Char</a>* ObjectTypeName,
+              const ObjectDescType&amp; Desc,
+              ObjectType** ppObject,
+              ObjectConstructorType ConstructObject) <span class="m-label m-warning">protected</span></span></span>
+            </h3>
+            <p>Helper template function to facilitate device object creation.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Template parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">ObjectType</td>
+                  <td>- The type of the object being created (<a href="structDiligent_1_1IBuffer.html" class="m-doc">IBuffer</a>, <a href="structDiligent_1_1ITexture.html" class="m-doc">ITexture</a>, etc.).</td>
+                </tr>
+                <tr>
+                  <td>ObjectDescType</td>
+                  <td>- The type of the object description structure (<a href="structDiligent_1_1BufferDesc.html" class="m-doc">BufferDesc</a>, <a href="structDiligent_1_1TextureDesc.html" class="m-doc">TextureDesc</a>, etc.).</td>
+                </tr>
+                <tr>
+                  <td>ObjectConstructorType</td>
+                  <td>- The type of the function that constructs the object.</td>
+                </tr>
+              </tbody>
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>ObjectTypeName</td>
+                  <td>- String name of the object type (&quot;buffer&quot;, &quot;texture&quot;, etc.).</td>
+                </tr>
+                <tr>
+                  <td>Desc</td>
+                  <td>- Object description.</td>
+                </tr>
+                <tr>
+                  <td>ppObject</td>
+                  <td>- Memory address where the pointer to the created object will be stored.</td>
+                </tr>
+                <tr>
+                  <td>ConstructObject</td>
+                  <td>- Function that constructs the object.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div></section>
+        </section>
+      </div>
+    </div>
+  </div>
+</article></main>
+<div class="m-doc-search" id="search">
+  <a href="#!" onclick="return hideSearch()"></a>
+  <div class="m-container">
+    <div class="m-row">
+      <div class="m-col-m-8 m-push-m-2">
+        <div class="m-doc-search-header m-text m-small">
+          <div><span class="m-label m-default">Tab</span> / <span class="m-label m-default">T</span> to search, <span class="m-label m-default">Esc</span> to close</div>
+          <div id="search-symbolcount">&hellip;</div>
+        </div>
+        <div class="m-doc-search-content">
+          <form>
+            <input type="search" name="q" id="search-input" placeholder="Loading &hellip;" disabled="disabled" autofocus="autofocus" autocomplete="off" spellcheck="false" />
+          </form>
+          <noscript class="m-text m-danger m-text-center">Unlike everything else in the docs, the search functionality <em>requires</em> JavaScript.</noscript>
+          <div id="search-help" class="m-text m-dim m-text-center">
+            <p class="m-noindent">Search for symbols, directories, files, pages or
+            modules. You can omit any prefix from the symbol or file path; adding a
+            <code>:</code> or <code>/</code> suffix lists all members of given symbol or
+            directory.</p>
+            <p class="m-noindent">Use <span class="m-label m-dim">&darr;</span>
+            / <span class="m-label m-dim">&uarr;</span> to navigate through the list,
+            <span class="m-label m-dim">Enter</span> to go.
+            <span class="m-label m-dim">Tab</span> autocompletes common prefix, you can
+            copy a link to the result using <span class="m-label m-dim">⌘</span>
+            <span class="m-label m-dim">L</span> while <span class="m-label m-dim">⌘</span>
+            <span class="m-label m-dim">M</span> produces a Markdown link.</p>
+          </div>
+          <div id="search-notfound" class="m-text m-warning m-text-center">Sorry, nothing was found.</div>
+          <ul id="search-results"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="search-v1.js"></script>
+<script src="searchdata-v1.js" async="async"></script>
+<footer><nav>
+  <div class="m-container">
+    <div class="m-row">
+      <div class="m-col-l-10 m-push-l-1">
+        <p>Diligent Engine. Created with <a href="https://doxygen.org/">Doxygen</a> 1.8.17 and <a href="https://mcss.mosra.cz/">m.css</a>.</p>
+      </div>
+    </div>
+  </div>
+</nav></footer>
+</body>
+</html>
